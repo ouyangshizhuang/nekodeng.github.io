@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>nekodeng-blog</title>
+  <title>NekoDeng&#39;blog</title>
   
+  <subtitle>its neko</subtitle>
+  <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  
-  <link href="http://yoursite.com/"/>
+  <link href="https://nekodeng.github.io/"/>
   <updated>2020-08-17T14:11:13.685Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://nekodeng.github.io/</id>
   
   <author>
     <name>dengyongfa</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2020/08171.html"/>
-    <id>http://yoursite.com/2020/08171.html</id>
+    <link href="https://nekodeng.github.io/2020/08171.html"/>
+    <id>https://nekodeng.github.io/2020/08171.html</id>
     <published>2020-08-17T14:08:55.524Z</published>
     <updated>2020-08-17T14:11:13.685Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/0817undefined.html"/>
-    <id>http://yoursite.com/2020/0817undefined.html</id>
+    <link href="https://nekodeng.github.io/2020/0817undefined.html"/>
+    <id>https://nekodeng.github.io/2020/0817undefined.html</id>
     <published>2020-08-17T07:32:19.015Z</published>
     <updated>2020-08-17T07:32:19.015Z</updated>
     
