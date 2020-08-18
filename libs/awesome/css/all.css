@@ -204,8 +204,8 @@ readers do not read off random characters that represent icons */
 .fa-ad:before {
   content: "\f641"; }
 
-.fa-address-book:before {
-  content: "\f2b9"; }
+/* .fa-address-book:before {
+  content: "\f2b9"; } */
 
 .fa-address-card:before {
   content: "\f2bb"; }
@@ -276,8 +276,8 @@ readers do not read off random characters that represent icons */
 .fa-angellist:before {
   content: "\f209"; }
 
-.fa-angle-double-down:before {
-  content: "\f103"; }
+/* .fa-angle-double-down:before {
+  content: "\f103"; } */
 
 .fa-angle-double-left:before {
   content: "\f100"; }
@@ -330,8 +330,8 @@ readers do not read off random characters that represent icons */
 .fa-apple-pay:before {
   content: "\f415"; }
 
-.fa-archive:before {
-  content: "\f187"; }
+/* .fa-archive:before {
+  content: "\f187"; } */
 
 .fa-archway:before {
   content: "\f557"; }
@@ -603,8 +603,8 @@ readers do not read off random characters that represent icons */
 .fa-book-reader:before {
   content: "\f5da"; }
 
-.fa-bookmark:before {
-  content: "\f02e"; }
+/* .fa-bookmark:before {
+  content: "\f02e"; } */
 
 .fa-bootstrap:before {
   content: "\f836"; }
@@ -1050,8 +1050,8 @@ readers do not read off random characters that represent icons */
 .fa-comment-slash:before {
   content: "\f4b3"; }
 
-.fa-comments:before {
-  content: "\f086"; }
+/* .fa-comments:before {
+  content: "\f086"; } */
 
 .fa-comments-dollar:before {
   content: "\f653"; }
@@ -2112,8 +2112,8 @@ readers do not read off random characters that represent icons */
 .fa-holly-berry:before {
   content: "\f7aa"; }
 
-.fa-home:before {
-  content: "\f015"; }
+/* .fa-home:before {
+  content: "\f015"; } */
 
 .fa-hooli:before {
   content: "\f427"; }
@@ -3741,8 +3741,8 @@ readers do not read off random characters that represent icons */
 .fa-tag:before {
   content: "\f02b"; }
 
-.fa-tags:before {
-  content: "\f02c"; }
+/* .fa-tags:before {
+  content: "\f02c"; } */
 
 .fa-tape:before {
   content: "\f4db"; }
@@ -4047,8 +4047,8 @@ readers do not read off random characters that represent icons */
 .fa-user-check:before {
   content: "\f4fc"; }
 
-.fa-user-circle:before {
-  content: "\f2bd"; }
+/* .fa-user-circle:before {
+  content: "\f2bd"; } */
 
 .fa-user-clock:before {
   content: "\f4fd"; }

@@ -266,8 +266,9 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4fc08d 0%,  #0f9d58 100%);
-}
+    background-image: linear-gradient(to right, #000 0%,  #222 100%);
+    /* background-color: #222; */
+} 
 
 .text-color {
     color: #0f9d58 !important;
@@ -412,11 +413,11 @@ header .side-nav .social-link {
 }
 
 .cover-btns a:hover {
-    border: 1px solid #f44336;
-    background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
-            0 4px 23px 0 rgba(0, 0, 0, 0.12),
-            0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    border: 1px solid #222;
+    background-color: #000;
+    box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42),
+            0 4px 23px 0 rgba(0, 0, 0, 0.42),
+            0 8px 10px -5px rgbargba(0, 0, 0, 0.42),;
 }
 
 .cover-btns a i {
@@ -1823,7 +1824,8 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    /* background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%); */
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
     width: 48px;
     height: 48px;
 }
