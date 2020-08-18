@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>NekoDeng&#39;blog</title>
+  <title>NekoDeng</title>
   
-  <subtitle>its neko</subtitle>
+  <subtitle>its Neko</subtitle>
   <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://nekodeng.github.io/</id>
   
   <author>
-    <name>dengyongfa</name>
+    <name>NekoDeng</name>
     
   </author>
   
