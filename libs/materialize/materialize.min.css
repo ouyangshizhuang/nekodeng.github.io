@@ -10,6 +10,7 @@ nav ul li{-webkit-transition:background-color .3s;transition:background-color .3
 nav ul li a span {
     transition: all .5s cubic-bezier(0.2, 0.0, 0.2, 1)!important;
     padding-bottom: 9px!important;
+    border-bottom: 0px solid #fff;
 }
 nav ul li:hover a span {
     /* background-color:rgba(0,0,0,0.1) */
