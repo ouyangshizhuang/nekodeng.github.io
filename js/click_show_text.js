@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
             "left": x,
             "position": "absolute",
             "font-weight": "bold",
-            "color": "#FF0000"
+            "color": "linear-gradient(to bottom, green, pink)"
         });
         $("body").append($i);
         $i.animate({
@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
                 $i.remove();
             });
     });
-    setTimeout('delay()', 2000);
+    setTimeout('delay()', 1000);
 });
 
 function delay() {
