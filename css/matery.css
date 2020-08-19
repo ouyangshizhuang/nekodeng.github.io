@@ -577,8 +577,7 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:before,
-.bg-cover:after {
+.bg-cover:before, .bg-cover:after {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -941,7 +940,12 @@ article .article-tags .chip {
         table-layout: fixed;
     }
 }
-
+/* 修改小屏幕下logo文字样式. */
+@media only screen and (max-width: 600px) {
+    header .brand-logo .logo-span {
+        display: none;
+    }
+}
 @media only screen and (min-width: 1418px) {
     #artDetail {
         margin-top: -60px;

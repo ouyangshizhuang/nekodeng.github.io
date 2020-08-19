@@ -414,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    997
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -437,17 +437,77 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p> 顺序结构：按照由上到下的顺序一行一行地执行的程序结构<br> 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）<br> 循环结构：需要重复执行同一操作的程序结构称为循环结构。</p>
-<h3 id="if-判断逻辑语句"><a href="#if-判断逻辑语句" class="headerlink" title="if 判断逻辑语句"></a>if 判断逻辑语句</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre class=" language-hljs javascript"><span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>)&#123;<br>    <span class="hljs-comment">//会执行的语句</span><br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-literal">false</span>)&#123;<br>    <span class="hljs-comment">//会跳过不执行的语句</span><br>&#125;<br><span class="hljs-keyword">if</span>(判断条件)&#123; <span class="hljs-comment">//当if括号中结果为true时执行语句1，否则执行语句2</span><br>    <span class="hljs-comment">//语句1</span><br>&#125;<span class="hljs-keyword">else</span>&#123;<br>    <span class="hljs-comment">//语句2</span><br>&#125;<br><br><span class="hljs-keyword">if</span>(判断条件<span class="hljs-number">1</span>)&#123; <span class="hljs-comment">//当条件1结果为true时执行语句1</span><br>    <span class="hljs-comment">//语句1</span><br>&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(判断条件<span class="hljs-number">2</span>)&#123; <span class="hljs-comment">//当条件1结果为false而且条件2结果为true时执行语句2</span><br>    <span class="hljs-comment">//语句2</span><br>&#125;<span class="hljs-keyword">else</span>&#123; <span class="hljs-comment">//当条件1条件2结果都为false时执行语句3</span><br>    <span class="hljs-comment"><code class="language-hljs javascript"><span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>)&#123;<br>    <span class="hljs-comment">//会执行的语句</span><br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-literal">false</span>)&#123;<br>    <span class="hljs-comment">//会跳过不执行的语句</span><br>&#125;<br><span class="hljs-keyword">if</span>(判断条件)&#123; <span class="hljs-comment">//当if括号中结果为true时执行语句1，否则执行语句2</span><br>    <span class="hljs-comment">//语句1</span><br>&#125;<span class="hljs-keyword">else</span>&#123;<br>    <span class="hljs-comment">//语句2</span><br>&#125;<br><br><span class="hljs-keyword">if</span>(判断条件<span class="hljs-number">1</span>)&#123; <span class="hljs-comment">//当条件1结果为true时执行语句1</span><br>    <span class="hljs-comment">//语句1</span><br>&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(判断条件<span class="hljs-number">2</span>)&#123; <span class="hljs-comment">//当条件1结果为false而且条件2结果为true时执行语句2</span><br>    <span class="hljs-comment">//语句2</span><br>&#125;<span class="hljs-keyword">else</span>&#123; <span class="hljs-comment">//当条件1条件2结果都为false时执行语句3</span><br>    <span class="hljs-comment">//语句3</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="if-判断逻辑语句"><a href="#if-判断逻辑语句" class="headerlink" title="if 判断逻辑语句"></a>if 判断逻辑语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">if(true)&#123;
+    //会执行的语句
+&#125;
+if(false)&#123;
+    //会跳过不执行的语句
+&#125;
+if(判断条件)&#123; //当if括号中结果为true时执行语句1，否则执行语句2
+    //语句1
+&#125;else&#123;
+    //语句2
+&#125;
+
+if(判断条件1)&#123; //当条件1结果为true时执行语句1
+    //语句1
+&#125;else if(判断条件2)&#123; //当条件1结果为false而且条件2结果为true时执行语句2
+    //语句2
+&#125;else&#123; //当条件1条件2结果都为false时执行语句3
+    //语句3
+&#125;
+</code></pre>
 <p>我们都知道，if括号中只需要布尔类型值。那么在if判断中，所有的数据类型都会被隐式转换为布尔类型。<br>注意：0、-0、null、””、false、undefined 或者 NaN在if条件里结果为false</p>
 <h3 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h3><p>除了+运算符具有两层含义以外，- <em> /只有数学意义，所以当进行- </em> /运算的时候默认会将运算符两侧的数据类型隐式转换为数字类型，再进行运算。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre class=" language-hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>, b = <span class="hljs-string">&quot;2&quot;</span>;<br><span class="hljs-keyword">if</span>(a == b)&#123;<br>    alert(<span class="hljs-string">&quot;a和b相等&quot;</span>);    <span class="hljs-comment">// 会弹  </span><br>&#125;<br><span class="hljs-keyword">if</span>(a === b)&#123;<br>    alert(<span class="hljs-string">&quot;a和b相等&quot;</span>);    <span class="hljs-comment">// 不会弹  </span><br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-number">1</span> == <span class="hljs-literal">true</span>)&#123;<br>    alert(<span class="hljs-string">&quot;数字1是true&quot;</span>);<br>&#125;<br><span class="hljs-keyword">if</span>(a = b)&#123;<br>    alert(<span class="hljs-string">&quot;a和b相等&quot;</span>);<br>&#125;<br><span class="hljs-comment"><code class="language-hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>, b = <span class="hljs-string">&quot;2&quot;</span>;<br><span class="hljs-keyword">if</span>(a == b)&#123;<br>    alert(<span class="hljs-string">&quot;a和b相等&quot;</span>);    <span class="hljs-comment">// 会弹  </span><br>&#125;<br><span class="hljs-keyword">if</span>(a === b)&#123;<br>    alert(<span class="hljs-string">&quot;a和b相等&quot;</span>);    <span class="hljs-comment">// 不会弹  </span><br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-number">1</span> == <span class="hljs-literal">true</span>)&#123;<br>    alert(<span class="hljs-string">&quot;数字1是true&quot;</span>);<br>&#125;<br><span class="hljs-keyword">if</span>(a = b)&#123;<br>    alert(<span class="hljs-string">&quot;a和b相等&quot;</span>);<br>&#125;<br><span class="hljs-comment">//一个等号代表赋值操作，结果为等号右边的值</span><br></code></pre></td></tr></table></figure>
-<h3 id="switch-case多分支语句"><a href="#switch-case多分支语句" class="headerlink" title="switch case多分支语句"></a>switch case多分支语句</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre class=" language-hljs javascript"><span class="hljs-keyword">switch</span>(语句)&#123;  <span class="hljs-comment">//语句的结果与每一条case内容进行匹配</span><br>    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>       alert(<span class="hljs-number">1</span>);<br>           <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>             alert(<span class="hljs-number">2</span>);<br>             <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>            alert(<span class="hljs-number">3</span>);<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">default</span>:<br>            alert(<span class="hljs-number"><code class="language-hljs javascript"><span class="hljs-keyword">switch</span>(语句)&#123;  <span class="hljs-comment">//语句的结果与每一条case内容进行匹配</span><br>    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>       alert(<span class="hljs-number">1</span>);<br>           <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>             alert(<span class="hljs-number">2</span>);<br>             <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>            alert(<span class="hljs-number">3</span>);<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">default</span>:<br>            alert(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 2, b = "2";
+if(a == b)&#123;
+    alert("a和b相等");    // 会弹  
+&#125;
+if(a === b)&#123;
+    alert("a和b相等");    // 不会弹  
+&#125;
+if(1 == true)&#123;
+    alert("数字1是true");
+&#125;
+if(a = b)&#123;
+    alert("a和b相等");
+&#125;
+//一个等号代表赋值操作，结果为等号右边的值
+</code></pre>
+<h3 id="switch-case多分支语句"><a href="#switch-case多分支语句" class="headerlink" title="switch case多分支语句"></a>switch case多分支语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">switch(语句)&#123;  //语句的结果与每一条case内容进行匹配
+    case 1:
+       alert(1);
+           break;
+        case 2:
+             alert(2);
+             break;
+        case 3:
+            alert(3);
+            break;
+        default:
+            alert(0);
+&#125;
+</code></pre>
 <p>注意switch的应用场景（有多个确定值需要判断的时候）；<br>注意case穿透，要加break语句（如果程序没有发现break语句，那么解析器会继续向下解析）;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class=" language-hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">switch</span>(a)&#123; <br>    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>       alert(<span class="hljs-number">1</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>        alert(<span class="hljs-number">2</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>        alert(<span class="hljs-number">3</span>);<br>    <span class="hljs-keyword">default</span>:<br>        alert(<span class="hljs-number">0</span>);<br>&#125;<br><span class="hljs-comment"><code class="language-hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">switch</span>(a)&#123; <br>    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>       alert(<span class="hljs-number">1</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>        alert(<span class="hljs-number">2</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>        alert(<span class="hljs-number">3</span>);<br>    <span class="hljs-keyword">default</span>:<br>        alert(<span class="hljs-number">0</span>);<br>&#125;<br><span class="hljs-comment">//每一个alert都会被执行，而且alert会阻断程序进程</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 1;
+switch(a)&#123; 
+    case 1:
+       alert(1);
+    case 2:
+        alert(2);
+    case 3:
+        alert(3);
+    default:
+        alert(0);
+&#125;
+//每一个alert都会被执行，而且alert会阻断程序进程
+</code></pre>
 <h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1.判断一个整数，属于哪个范围：大于0；小于0；等于0<br>2.判断一个整数是偶数还是奇数，并输出判断结果<br>3.开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适<br>4.判断一个三位数是否是水仙花数（如：153 = 1^3 + 5^3 + 3^3，那么153就是水仙花数）</p>
 <h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><p>1.点击切换div颜色<br>2.输入分数，判定成绩等级<br>3.输入年份，计算某一年是否是闰年<br>4.输入月份，显示当月的天数，要求：利用case穿透简化代码<br>5.输入数字，显示星期几，如：输入0，弹出星期日，以此类推（两种方法）<br>6.设计一个猜拳游戏：<br>假设： 1代表石头 2代表剪刀 3代表 布<br>计算机每次随机出现1—3中的任意一个数（parseInt (Math.random()*3) + 1）<br>玩家也有三种状态，用玩家出的数和计算机出的数进行比对，按照游戏规则比出胜负。</p>
 <h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><p>1.根据一个数字日期，判断这个日期是这一年的第几天<br>例如： 20160211，计算后结果为42<br>2.制作一个表单，包括用户名，密码，电话<br>要求：<br>1）做好看点<br>2）点击保存按钮时，使用JS判断用户的联系电话是否为纯数字，如果用户输入有错误，使用alert()弹框警告<br>3）判断用户名是否填写，如果空白，使用alert弹框警告<br>4）判断密码长度，必须大于8位，否则alert警告<br>提示：通过length属性取得字符串的长度</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs javascript"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello&quot;</span>;<br>str.length <span class="hljs-comment"><code class="language-hljs javascript"><span class="hljs-keyword">var</span> str = <span class="hljs-string">&quot;hello&quot;</span>;<br>str.length <span class="hljs-comment">// 得到长度</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "hello";
+str.length // 得到长度
+</code></pre>
 
             </div>
             <hr/>
@@ -710,7 +770,8 @@
                     <div class="summary block-with-text">
                         
                              顺序结构：按照由上到下的顺序一行一行地执行的程序结构 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构） 循环结构：需要重复执行同一操作的程序结构称为循环结构。
-if 判断逻辑语句12345678910111213141
+if 判断逻辑语句if(true)&#123;
+    /
                         
                     </div>
                     <div class="publish-info">
@@ -1025,7 +1086,7 @@ if 判断逻辑语句12345678910111213141
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.7k</span>&nbsp;字
+                class="white-color">1.4k</span>&nbsp;字
             
             
             
