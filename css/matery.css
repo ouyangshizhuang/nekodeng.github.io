@@ -323,6 +323,8 @@ header .brand-logo .logo-img {
 
 header .brand-logo .logo-span {
     font-size: 2rem;
+    font-family: MV Boli;
+    font-weight: 700;
 }
 
 /*修改顶部 logo 的文字垂直对齐为 top，避免默认 middle 看起来偏下*/
@@ -1774,11 +1776,16 @@ footer .copy-right {
 #searchModal {
     min-height: 500px;
     width: 80%;
+    background-color: rgba(0,0,0,0.4);
 }
 
 #searchModal .search-header .title {
-    font-size: 1.6rem;
-    color: #333;
+    font-size: 1.1rem;
+    color: #42b983;
+}
+
+.search-result {
+    color: #fff;
 }
 
 #searchResult {
@@ -1797,7 +1804,7 @@ footer .copy-right {
 }
 
 .search-result-list li {
-    border-bottom: 1px solid #e5e5e5;
+    /* border-bottom: 1px solid #e5e5e5; */
     padding: 15px 0 5px 0;
 }
 

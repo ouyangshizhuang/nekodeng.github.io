@@ -35,26 +35,64 @@
     
     
     <entry>
-      <title></title>
+      <title>JS基础之循环结构</title>
       <link href="/posts/1.html"/>
       <url>/posts/1.html</url>
       
-        <content type="html"><![CDATA[<p>这是测试</p><h1 id="欢迎使用Markd犯得上方法的own编辑器"><a href="#欢迎使用Markd犯得上方法的own编辑器" class="headerlink" title="欢迎使用Markd犯得上方法的own编辑器"></a>欢迎使用Markd犯得上方法的own编辑器</h1><p>你好！ 这是你第一次使用 <strong>Markdown编辑器</strong> 所展示的欢迎页。如果你想学习如何使用Markdown编辑器, 可以仔细阅读这篇文章，了解一下Markdown的基本语法知识。</p><h2 id="新的改房贷首付变"><a href="#新的改房贷首付变" class="headerlink" title="新的改房贷首付变"></a>新的改房贷首付变</h2><p>我们对Markdown编辑器进行了一些功能拓展与语法支持，除了标准的Markdown编辑器功能，我们增加了如下几点新功能，帮助你用它写博客：</p><ol><li><strong>全新的界面设计</strong> ，将会带来全新的写作体验；</li><li>在创作中心设置你喜爱的代码高亮样式，Markdown <strong>将代码片显示选择的高亮样式</strong> 进行展示；</li><li>增加了 <strong>图片拖拽</strong> 功能，你可以将本地的图片直接拖拽到编辑区域直接展示；</li><li>全新的 <strong>KaTeX数学公式</strong> 语法；</li><li>增加了支持<strong>甘特图的mermaid语法<a href="%5Bmermaid%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E%5D(https://mermaidjs.github.io/)">^1</a></strong> 功能；</li><li>增加了 <strong>多屏幕编辑</strong> Markdown文章功能；</li><li>增加了 <strong>焦点写作模式、预览模式、简洁写作模式、左右区域同步滚轮设置</strong> 等功能，功能按钮位于编辑区域与预览区域中间；</li><li>增加了 <strong>检查列表</strong> 功能。</li></ol><h2 id="功能快捷范德萨键"><a href="#功能快捷范德萨键" class="headerlink" title="功能快捷范德萨键"></a>功能快捷范德萨键</h2><p>撤销：<kbd>Ctrl/Command</kbd> + <kbd>Z</kbd><br>重做：<kbd>Ctrl/Command</kbd> + <kbd>Y</kbd><br>加粗：<kbd>Ctrl/Command</kbd> + <kbd>B</kbd></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">while(条件)&#123;    //条件成立就会反复执行这里的代码&#125;var count = 0;while(count < 10)&#123;    count++;    document.write("Hello world");&#125;</code></pre><p>注意死循环： 没有终止条件的循环即为死循环，在代码中应尽量避免死循环</p><h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">do&#123;    //先执行一遍代码    //while条件成立再继续反复执行&#125;while(条件)</code></pre><h3 id="while和do…while循环的区别"><a href="#while和do…while循环的区别" class="headerlink" title="while和do…while循环的区别"></a>while和do…while循环的区别</h3><p>do…while循环至少会执行一遍，不管条件是否成立，但是while循环如果初始条件不成立一遍也不会执行。</p><h3 id="break和continue关键字"><a href="#break和continue关键字" class="headerlink" title="break和continue关键字"></a>break和continue关键字</h3><p>break：跳出循环体，整个循环结束<br>continue：结束本次循环进入下一次循环体</p><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">for (var i = 0; i < 10; i++) &#123;    console.log(i);&#125;</code></pre><p>如下图所示：注意for循环时的执行顺序,并且：for循环1，2，4步是可选的</p><p><img src="/posts/1.htm/for.png" alt="for的循环执行顺序"></p><h3 id="三种循环的联系和区别"><a href="#三种循环的联系和区别" class="headerlink" title="三种循环的联系和区别"></a>三种循环的联系和区别</h3><p>1、都是会反复执行的代码块<br>2、大部分情况下可以互相替换<br>3、do…while至少执行一次，while和for有可能0次，while不太能确定执行次数，for可以</p><h3 id="练习（while和for两种方式）"><a href="#练习（while和for两种方式）" class="headerlink" title="练习（while和for两种方式）"></a>练习（while和for两种方式）</h3><p>1.打印100以内所有偶数的和<br>2.求出1-1/2+1/3-1/4…..1/100的和<br>3.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出<br>4.打印九九乘法表<br>5.求1+2!+3!+…+20!的值<br>6.有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，按每一个格子是前一个格子的二倍（第四个格子放8个）计算，问棋盘上放的所有芝麻的重量是多少？<br>7.打印100–200之间所有能被3或者7整除的数<br>8.计算100的阶乘</p>]]></content>
       
       
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> while循环 </tag>
+            
+            <tag> do...while循环 </tag>
+            
+            <tag> break和continue </tag>
+            
+            <tag> for循环 </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/posts/3eeb.html"/>
-      <url>/posts/3eeb.html</url>
+      <title>文章模板</title>
+      <link href="/posts/8e47.html"/>
+      <url>/posts/8e47.html</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy$ hexo deploy$ hexo deploy$ hexo deploy$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id><a href="#" class="headerlink" title=" "></a> </h2><h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> if/else </tag>
+            
+            <tag> switch/case </tag>
+            
+            <tag> 显/隐式转换 </tag>
+            
+        </tags>
       
     </entry>
     

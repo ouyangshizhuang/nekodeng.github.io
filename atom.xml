@@ -6,7 +6,7 @@
   <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.github.io/"/>
-  <updated>2020-08-19T07:56:31.075Z</updated>
+  <updated>2020-08-19T09:54:06.434Z</updated>
   <id>https://nekodeng.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://nekodeng.github.io/posts/2.html"/>
     <id>https://nekodeng.github.io/posts/2.html</id>
     <published>2020-08-18T15:07:50.018Z</published>
-    <updated>2020-08-19T07:56:31.075Z</updated>
+    <updated>2020-08-19T09:54:06.434Z</updated>
     
     
       
@@ -49,45 +49,66 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>JS基础之循环结构</title>
     <link href="https://nekodeng.github.io/posts/1.html"/>
     <id>https://nekodeng.github.io/posts/1.html</id>
     <published>2020-08-17T14:08:55.524Z</published>
-    <updated>2020-08-17T14:11:13.685Z</updated>
+    <updated>2020-08-19T10:29:30.891Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;这是测试&lt;/p&gt;
-&lt;h1 id=&quot;欢迎使用Markd犯得上方法的own编辑器&quot;&gt;&lt;a href=&quot;#欢迎使用Markd犯得上方法的own编辑器&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;while循环&quot;&gt;&lt;a href=&quot;#while循环&quot; class=&quot;headerlink&quot; title=&quot;while循环&quot;&gt;&lt;/a&gt;while循环&lt;/h3&gt;&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code</summary>
         
       
     
     
     
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="while循环" scheme="https://nekodeng.github.io/tags/while%E5%BE%AA%E7%8E%AF/"/>
+    
+    <category term="do...while循环" scheme="https://nekodeng.github.io/tags/do-while%E5%BE%AA%E7%8E%AF/"/>
+    
+    <category term="break和continue" scheme="https://nekodeng.github.io/tags/break%E5%92%8Ccontinue/"/>
+    
+    <category term="for循环" scheme="https://nekodeng.github.io/tags/for%E5%BE%AA%E7%8E%AF/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://nekodeng.github.io/posts/3eeb.html"/>
-    <id>https://nekodeng.github.io/posts/3eeb.html</id>
+    <title>文章模板</title>
+    <link href="https://nekodeng.github.io/posts/8e47.html"/>
+    <id>https://nekodeng.github.io/posts/8e47.html</id>
     <published>2020-08-17T07:32:19.015Z</published>
-    <updated>2020-08-19T06:10:33.719Z</updated>
+    <updated>2020-08-19T09:55:07.399Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h2&gt;&lt;h3 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h3&gt;&lt;pre class=&quot;</summary>
         
       
     
     
     
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="if/else" scheme="https://nekodeng.github.io/tags/if-else/"/>
+    
+    <category term="switch/case" scheme="https://nekodeng.github.io/tags/switch-case/"/>
+    
+    <category term="显/隐式转换" scheme="https://nekodeng.github.io/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
     
   </entry>
   
