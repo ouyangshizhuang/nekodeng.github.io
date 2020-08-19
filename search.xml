@@ -4,7 +4,36 @@
   
     
     <entry>
-      <title>JS程序执行结构</title>
+      <title>JS函数</title>
+      <link href="/posts/3.html"/>
+      <url>/posts/3.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"><a href="#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一" class="headerlink" title="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"></a>函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一</h2><p>把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（函数名）<br>我们在需要的时候可以调用一个封装好的函数，函数内的一些代码就会被执行，功能就会被实现</p><h3 id="系统函数："><a href="#系统函数：" class="headerlink" title="系统函数："></a>系统函数：</h3><p>parseInt()   alert()  prompt()  eval()</p><h3 id="函数的声明和使用"><a href="#函数的声明和使用" class="headerlink" title="函数的声明和使用"></a>函数的声明和使用</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">//通过function关键字声明一个函数，跟上函数名，一堆小括号，一堆花括号，花括号里面放代码块//提升到顶部function test()&#123;    //可重复执行的代码块&#125;  test();//表达式定义法//不会提升var test1 = function()&#123;    //可重复执行的代码块&#125;for (var i = 0; i < 10; i++) &#123;    test1();&#125;</code></pre><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>  1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>  2.实参个数大于形参，多余实参自动舍弃<br>  3.形参个数大于形参，多余形参默认为undefined<br>  4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;    console.log(arguments);    console.log(arguments.length);&#125;        test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5</code></pre><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><pre><code>作用范围为整个程序的执行范围在函数体外部定义的变量就是全局变量在函数体内部不使用var定义的也是全局变量</code></pre><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><pre><code>作用范围是某个函数体内部在函数体内部通过var关键字定义的变量或者形参，都是局部变量当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</code></pre><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><pre><code>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</code></pre><h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p><h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p><h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p><h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p><pre><code>1. 子问题须与原始问题为同样的事，且更为简单；2. 不能无限制地调用本身，须有个出口，化简为非递归状况处理。</code></pre><p>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</p><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> function </tag>
+            
+            <tag> 函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS程序执行</title>
       <link href="/posts/2.html"/>
       <url>/posts/2.html</url>
       
@@ -35,11 +64,11 @@
     
     
     <entry>
-      <title>JS基础之循环结构</title>
+      <title>JS循环结构</title>
       <link href="/posts/1.html"/>
       <url>/posts/1.html</url>
       
-        <content type="html"><![CDATA[<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">while(条件)&#123;    //条件成立就会反复执行这里的代码&#125;var count = 0;while(count < 10)&#123;    count++;    document.write("Hello world");&#125;</code></pre><p>注意死循环： 没有终止条件的循环即为死循环，在代码中应尽量避免死循环</p><h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">do&#123;    //先执行一遍代码    //while条件成立再继续反复执行&#125;while(条件)</code></pre><h3 id="while和do…while循环的区别"><a href="#while和do…while循环的区别" class="headerlink" title="while和do…while循环的区别"></a>while和do…while循环的区别</h3><p>do…while循环至少会执行一遍，不管条件是否成立，但是while循环如果初始条件不成立一遍也不会执行。</p><h3 id="break和continue关键字"><a href="#break和continue关键字" class="headerlink" title="break和continue关键字"></a>break和continue关键字</h3><p>break：跳出循环体，整个循环结束<br>continue：结束本次循环进入下一次循环体</p><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">for (var i = 0; i < 10; i++) &#123;    console.log(i);&#125;</code></pre><p>如下图所示：注意for循环时的执行顺序,并且：for循环1，2，4步是可选的</p><p><img src="/posts/1.htm/for.png" alt="for的循环执行顺序"></p><h3 id="三种循环的联系和区别"><a href="#三种循环的联系和区别" class="headerlink" title="三种循环的联系和区别"></a>三种循环的联系和区别</h3><p>1、都是会反复执行的代码块<br>2、大部分情况下可以互相替换<br>3、do…while至少执行一次，while和for有可能0次，while不太能确定执行次数，for可以</p><h3 id="练习（while和for两种方式）"><a href="#练习（while和for两种方式）" class="headerlink" title="练习（while和for两种方式）"></a>练习（while和for两种方式）</h3><p>1.打印100以内所有偶数的和<br>2.求出1-1/2+1/3-1/4…..1/100的和<br>3.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出<br>4.打印九九乘法表<br>5.求1+2!+3!+…+20!的值<br>6.有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，按每一个格子是前一个格子的二倍（第四个格子放8个）计算，问棋盘上放的所有芝麻的重量是多少？<br>7.打印100–200之间所有能被3或者7整除的数<br>8.计算100的阶乘</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">while(条件)&#123;    //条件成立就会反复执行这里的代码&#125;var count = 0;while(count < 10)&#123;    count++;    document.write("Hello world");&#125;</code></pre><p>注意死循环： 没有终止条件的循环即为死循环，在代码中应尽量避免死循环</p><h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">do&#123;    //先执行一遍代码    //while条件成立再继续反复执行&#125;while(条件)</code></pre><h3 id="while和do…while循环的区别"><a href="#while和do…while循环的区别" class="headerlink" title="while和do…while循环的区别"></a>while和do…while循环的区别</h3><p>do…while循环至少会执行一遍，不管条件是否成立，但是while循环如果初始条件不成立一遍也不会执行。</p><h3 id="break和continue关键字"><a href="#break和continue关键字" class="headerlink" title="break和continue关键字"></a>break和continue关键字</h3><p>break：跳出循环体，整个循环结束<br>continue：结束本次循环进入下一次循环体</p><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">for (var i = 0; i < 10; i++) &#123;    console.log(i);&#125;</code></pre><p>如下图所示：注意for循环时的执行顺序,并且：for循环1，2，4步是可选的</p><!-- ![for的循环执行顺序](JS循环结构/for.png) 引入的图片 --><h3 id="三种循环的联系和区别"><a href="#三种循环的联系和区别" class="headerlink" title="三种循环的联系和区别"></a>三种循环的联系和区别</h3><p>1、都是会反复执行的代码块<br>2、大部分情况下可以互相替换<br>3、do…while至少执行一次，while和for有可能0次，while不太能确定执行次数，for可以</p><h3 id="练习（while和for两种方式）"><a href="#练习（while和for两种方式）" class="headerlink" title="练习（while和for两种方式）"></a>练习（while和for两种方式）</h3><p>1.打印100以内所有偶数的和<br>2.求出1-1/2+1/3-1/4…..1/100的和<br>3.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出<br>4.打印九九乘法表<br>5.求1+2!+3!+…+20!的值<br>6.有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，按每一个格子是前一个格子的二倍（第四个格子放8个）计算，问棋盘上放的所有芝麻的重量是多少？<br>7.打印100–200之间所有能被3或者7整除的数<br>8.计算100的阶乘</p>]]></content>
       
       
       <categories>
@@ -68,29 +97,19 @@
     
     
     <entry>
-      <title>文章模板</title>
+      <title>博客文章模板</title>
       <link href="/posts/8e47.html"/>
       <url>/posts/8e47.html</url>
       
-        <content type="html"><![CDATA[<h2 id><a href="#" class="headerlink" title=" "></a> </h2><h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码</code></pre>]]></content>
       
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
       
       
         <tags>
             
             <tag> JS </tag>
             
-            <tag> if/else </tag>
-            
-            <tag> switch/case </tag>
-            
-            <tag> 显/隐式转换 </tag>
+            <tag> 标签 </tag>
             
         </tags>
       

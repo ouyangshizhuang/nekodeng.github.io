@@ -6,7 +6,7 @@
   <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.github.io/"/>
-  <updated>2020-08-19T09:54:06.434Z</updated>
+  <updated>2020-08-19T11:00:34.460Z</updated>
   <id>https://nekodeng.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS程序执行结构</title>
+    <title>JS函数</title>
+    <link href="https://nekodeng.github.io/posts/3.html"/>
+    <id>https://nekodeng.github.io/posts/3.html</id>
+    <published>2020-08-19T10:48:32.386Z</published>
+    <updated>2020-08-19T11:00:34.460Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一&quot;&gt;&lt;a href=&quot;#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="function" scheme="https://nekodeng.github.io/tags/function/"/>
+    
+    <category term="函数" scheme="https://nekodeng.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS程序执行</title>
     <link href="https://nekodeng.github.io/posts/2.html"/>
     <id>https://nekodeng.github.io/posts/2.html</id>
     <published>2020-08-18T15:07:50.018Z</published>
-    <updated>2020-08-19T09:54:06.434Z</updated>
+    <updated>2020-08-19T10:42:16.442Z</updated>
     
     
       
@@ -49,11 +78,11 @@
   </entry>
   
   <entry>
-    <title>JS基础之循环结构</title>
+    <title>JS循环结构</title>
     <link href="https://nekodeng.github.io/posts/1.html"/>
     <id>https://nekodeng.github.io/posts/1.html</id>
     <published>2020-08-17T14:08:55.524Z</published>
-    <updated>2020-08-19T10:29:30.891Z</updated>
+    <updated>2020-08-19T10:42:53.271Z</updated>
     
     
       
@@ -82,33 +111,27 @@
   </entry>
   
   <entry>
-    <title>文章模板</title>
+    <title>博客文章模板</title>
     <link href="https://nekodeng.github.io/posts/8e47.html"/>
     <id>https://nekodeng.github.io/posts/8e47.html</id>
     <published>2020-08-17T07:32:19.015Z</published>
-    <updated>2020-08-19T09:55:07.399Z</updated>
+    <updated>2020-08-19T10:43:59.183Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h2&gt;&lt;h3 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h3&gt;&lt;pre class=&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
-    
-    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
     
     <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
     
-    <category term="if/else" scheme="https://nekodeng.github.io/tags/if-else/"/>
-    
-    <category term="switch/case" scheme="https://nekodeng.github.io/tags/switch-case/"/>
-    
-    <category term="显/隐式转换" scheme="https://nekodeng.github.io/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
+    <category term="标签" scheme="https://nekodeng.github.io/tags/%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
