@@ -450,29 +450,26 @@ for (var i = 0; i < 10; i++) &#123;
     test1();
 &#125;
 </code></pre>
-<h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>  1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>  2.实参个数大于形参，多余实参自动舍弃<br>  3.形参个数大于形参，多余形参默认为undefined<br>  4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p>
+<h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>2.实参个数大于形参，多余实参自动舍弃<br>3.形参个数大于形参，多余形参默认为undefined<br>4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p>
 <pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;
     console.log(arguments);
     console.log(arguments.length);
 &#125;        
 test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
 </code></pre>
-<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><pre><code>作用范围为整个程序的执行范围
-在函数体外部定义的变量就是全局变量
-在函数体内部不使用var定义的也是全局变量
-</code></pre><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><pre><code>作用范围是某个函数体内部
-在函数体内部通过var关键字定义的变量或者形参，都是局部变量
-当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量
-</code></pre><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><pre><code>变量的声明会提升至当前作用域的最顶端，但不会提升赋值
-</code></pre><h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>作用范围为整个程序的执行范围<br>在函数体外部定义的变量就是全局变量<br>在函数体内部不使用var定义的也是全局变量</p>
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>作用范围是某个函数体内部<br>在函数体内部通过var关键字定义的变量或者形参，都是局部变量<br>当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</p>
+<h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</p>
+<h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p>
 <h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p>
 <h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p>
 <h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p>
 <h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p>
 <h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p>
-<pre><code>1. 子问题须与原始问题为同样的事，且更为简单；
-2. 不能无限制地调用本身，须有个出口，化简为非递归状况处理。
-</code></pre><p>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</p>
+<ol>
+<li>子问题须与原始问题为同样的事，且更为简单；</li>
+<li>不能无限制地调用本身，须有个出口，化简为非递归状况处理。<br>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</li>
+</ol>
 <h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>
 
             </div>
@@ -714,30 +711,31 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/3.html">
+                <a href="/posts/4.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS函数">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS事件">
                         
-                        <span class="card-title">JS函数</span>
+                        <span class="card-title">JS事件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（
+                            JS运行和编译语法分析查找基本语法有没有错误
+预解析执行之前进行预解析var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。
+变量生命周期全局变量的生命
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -750,20 +748,23 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                        <span class="chip bg-color">变量生命周期</span>
                     </a>
                     
-                    <a href="/tags/function/">
-                        <span class="chip bg-color">function</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                        <span class="chip bg-color">事件</span>
                     </a>
                     
-                    <a href="/tags/%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">函数</span>
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/">
+                        <span class="chip bg-color">运行编译</span>
                     </a>
                     
                 </div>
@@ -1066,7 +1067,7 @@ if 判断逻辑语句if(true)&#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.7k</span>&nbsp;字
+                class="white-color">3.1k</span>&nbsp;字
             
             
             

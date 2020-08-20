@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS程序执行, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS事件, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS程序执行 | itsNekoDeng</title>
+    <title>JS事件 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS程序执行</h1>
+                    <h1 class="description center-align post-title">JS事件</h1>
                 </div>
             </div>
         </div>
@@ -368,20 +368,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
+                            <a href="/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                                <span class="chip bg-color">变量生命周期</span>
                             </a>
                         
-                            <a href="/tags/if-else/">
-                                <span class="chip bg-color">if/else</span>
+                            <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                                <span class="chip bg-color">事件</span>
                             </a>
                         
-                            <a href="/tags/switch-case/">
-                                <span class="chip bg-color">switch/case</span>
+                            <a href="/tags/this/">
+                                <span class="chip bg-color">this</span>
                             </a>
                         
-                            <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                                <span class="chip bg-color">显/隐式转换</span>
+                            <a href="/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/">
+                                <span class="chip bg-color">运行编译</span>
                             </a>
                         
                     </div>
@@ -405,7 +405,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-18
+                    2020-08-20
                 </div>
                 
 
@@ -414,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    997
+                    443
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -436,79 +436,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 顺序结构：按照由上到下的顺序一行一行地执行的程序结构<br> 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）<br> 循环结构：需要重复执行同一操作的程序结构称为循环结构。</p>
-<h3 id="if-判断逻辑语句"><a href="#if-判断逻辑语句" class="headerlink" title="if 判断逻辑语句"></a>if 判断逻辑语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">if(true)&#123;
-    //会执行的语句
-&#125;
-if(false)&#123;
-    //会跳过不执行的语句
-&#125;
-if(判断条件)&#123; //当if括号中结果为true时执行语句1，否则执行语句2
-    //语句1
-&#125;else&#123;
-    //语句2
-&#125;
-
-if(判断条件1)&#123; //当条件1结果为true时执行语句1
-    //语句1
-&#125;else if(判断条件2)&#123; //当条件1结果为false而且条件2结果为true时执行语句2
-    //语句2
-&#125;else&#123; //当条件1条件2结果都为false时执行语句3
-    //语句3
-&#125;
-</code></pre>
-<p>我们都知道，if括号中只需要布尔类型值。那么在if判断中，所有的数据类型都会被隐式转换为布尔类型。<br>注意：0、-0、null、””、false、undefined 或者 NaN在if条件里结果为false</p>
-<h3 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h3><p>除了+运算符具有两层含义以外，- <em> /只有数学意义，所以当进行- </em> /运算的时候默认会将运算符两侧的数据类型隐式转换为数字类型，再进行运算。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 2, b = "2";
-if(a == b)&#123;
-    alert("a和b相等");    // 会弹  
-&#125;
-if(a === b)&#123;
-    alert("a和b相等");    // 不会弹  
-&#125;
-if(1 == true)&#123;
-    alert("数字1是true");
-&#125;
-if(a = b)&#123;
-    alert("a和b相等");
-&#125;
-//一个等号代表赋值操作，结果为等号右边的值
-</code></pre>
-<h3 id="switch-case多分支语句"><a href="#switch-case多分支语句" class="headerlink" title="switch case多分支语句"></a>switch case多分支语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">switch(语句)&#123;  //语句的结果与每一条case内容进行匹配
-    case 1:
-       alert(1);
-           break;
-        case 2:
-             alert(2);
-             break;
-        case 3:
-            alert(3);
-            break;
-        default:
-            alert(0);
-&#125;
-</code></pre>
-<p>注意switch的应用场景（有多个确定值需要判断的时候）；<br>注意case穿透，要加break语句（如果程序没有发现break语句，那么解析器会继续向下解析）;</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 1;
-switch(a)&#123; 
-    case 1:
-       alert(1);
-    case 2:
-        alert(2);
-    case 3:
-        alert(3);
-    default:
-        alert(0);
-&#125;
-//每一个alert都会被执行，而且alert会阻断程序进程
-</code></pre>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1.判断一个整数，属于哪个范围：大于0；小于0；等于0<br>2.判断一个整数是偶数还是奇数，并输出判断结果<br>3.开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适<br>4.判断一个三位数是否是水仙花数（如：153 = 1^3 + 5^3 + 3^3，那么153就是水仙花数）</p>
-<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><p>1.点击切换div颜色<br>2.输入分数，判定成绩等级<br>3.输入年份，计算某一年是否是闰年<br>4.输入月份，显示当月的天数，要求：利用case穿透简化代码<br>5.输入数字，显示星期几，如：输入0，弹出星期日，以此类推（两种方法）<br>6.设计一个猜拳游戏：<br>假设： 1代表石头 2代表剪刀 3代表 布<br>计算机每次随机出现1—3中的任意一个数（parseInt (Math.random()*3) + 1）<br>玩家也有三种状态，用玩家出的数和计算机出的数进行比对，按照游戏规则比出胜负。</p>
-<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><p>1.根据一个数字日期，判断这个日期是这一年的第几天<br>例如： 20160211，计算后结果为42<br>2.制作一个表单，包括用户名，密码，电话<br>要求：<br>1）做好看点<br>2）点击保存按钮时，使用JS判断用户的联系电话是否为纯数字，如果用户输入有错误，使用alert()弹框警告<br>3）判断用户名是否填写，如果空白，使用alert弹框警告<br>4）判断密码长度，必须大于8位，否则alert警告<br>提示：通过length属性取得字符串的长度</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "hello";
-str.length // 得到长度
-</code></pre>
-
+                <h2 id="JS运行和编译"><a href="#JS运行和编译" class="headerlink" title="JS运行和编译"></a>JS运行和编译</h2><h3 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h3><p>查找基本语法有没有错误</p>
+<h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><p>执行之前进行预解析<br>var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。</p>
+<h2 id="变量生命周期"><a href="#变量生命周期" class="headerlink" title="变量生命周期"></a>变量生命周期</h2><p>全局变量的生命周期直至浏览器卸载页面才会结束。<br>局部变量只在函数的执行过程中存在，而在这个过程中会为局部变量在栈或堆上分配相应的空间，以存储它们的值，然后再函数中使用这些变量，直至函数结束</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="用户的行为：onclick、ondblclick、onfocus、onblur、window-onload"><a href="#用户的行为：onclick、ondblclick、onfocus、onblur、window-onload" class="headerlink" title="用户的行为：onclick、ondblclick、onfocus、onblur、window.onload"></a>用户的行为：onclick、ondblclick、onfocus、onblur、window.onload</h3><p>是用户跟页面的交互，当用户跟页面进行一些“交流”的时候，页面通过js就会触发一些事件，比如鼠标点击的时候就会触发onclick事件，给这个事件绑定一个函数，那么这个时候函数就会被调用，代码就会被执行</p>
+<h3 id="事件类型："><a href="#事件类型：" class="headerlink" title="事件类型："></a>事件类型：</h3><p>鼠标事件：click，dbclick，mousedown，mouseup，mouseover，mouseout，mouseenter、     mouseleave、mousemove<br>鼠标滚轮：scroll，mousewheel<br>鼠标右键（上下文菜单：在不同环境下右键菜单不一样）：contextmenu<br>  mouseover：鼠标在元素身上移动穿过子元素的时候会被反复触发<br>  mouseenter：只是在进入元素的时候触发<br>键盘事件：keydown，keyup，keypress<br>表单事件：对表单元素操作之后会触发的事件<br>  单选框、多选框、下拉菜单 状态改变的时候会触发  onchange 事件<br>  表单提交的时候会触发 onsubmit ，触发在<form>元素身上</form></p>
+<h2 id="this关键字-事件函数里面的this指的是事件触发对象"><a href="#this关键字-事件函数里面的this指的是事件触发对象" class="headerlink" title="this关键字:事件函数里面的this指的是事件触发对象"></a>this关键字:事件函数里面的this指的是事件触发对象</h2>
             </div>
             <hr/>
 
@@ -533,7 +466,7 @@ str.length // 得到长度
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.github.io/posts/2.html">https://nekodeng.github.io/posts/2.html</a>
+                    <a href="https://nekodeng.github.io/posts/4.html">https://nekodeng.github.io/posts/4.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,20 +504,20 @@ str.length // 得到长度
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
+                                <a href="/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                                    <span class="chip bg-color">变量生命周期</span>
                                 </a>
                             
-                                <a href="/tags/if-else/">
-                                    <span class="chip bg-color">if/else</span>
+                                <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                                    <span class="chip bg-color">事件</span>
                                 </a>
                             
-                                <a href="/tags/switch-case/">
-                                    <span class="chip bg-color">switch/case</span>
+                                <a href="/tags/this/">
+                                    <span class="chip bg-color">this</span>
                                 </a>
                             
-                                <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                                    <span class="chip bg-color">显/隐式转换</span>
+                                <a href="/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/">
+                                    <span class="chip bg-color">运行编译</span>
                                 </a>
                             
                         </div>
@@ -752,9 +685,74 @@ str.length // 得到长度
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/4.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS事件">
+                        
+                        <span class="card-title">JS事件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JS运行和编译语法分析查找基本语法有没有错误
+预解析执行之前进行预解析var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。
+变量生命周期全局变量的生命
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                        <span class="chip bg-color">变量生命周期</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                        <span class="chip bg-color">事件</span>
+                    </a>
+                    
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/">
+                        <span class="chip bg-color">运行编译</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/3.html">
                     <div class="card-image">
@@ -772,9 +770,9 @@ str.length // 得到长度
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -800,73 +798,6 @@ str.length // 得到长度
                     
                     <a href="/tags/%E5%87%BD%E6%95%B0/">
                         <span class="chip bg-color">函数</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/1.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JS循环结构">
-                        
-                        <span class="card-title">JS循环结构</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            while循环while(条件)&#123;
-    //条件成立就会反复执行这里的代码
-&#125;
-var count = 0;
-while(count < 10)&#123;
-    count++;
-    document.wri
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/break%E5%92%8Ccontinue/">
-                        <span class="chip bg-color">break和continue</span>
-                    </a>
-                    
-                    <a href="/tags/while/">
-                        <span class="chip bg-color">while</span>
-                    </a>
-                    
-                    <a href="/tags/do-while/">
-                        <span class="chip bg-color">do...while</span>
-                    </a>
-                    
-                    <a href="/tags/for/">
-                        <span class="chip bg-color">for</span>
                     </a>
                     
                 </div>

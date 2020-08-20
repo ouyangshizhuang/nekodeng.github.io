@@ -6,7 +6,7 @@
   <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.github.io/"/>
-  <updated>2020-08-19T11:00:34.460Z</updated>
+  <updated>2020-08-20T13:47:28.515Z</updated>
   <id>https://nekodeng.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS事件</title>
+    <link href="https://nekodeng.github.io/posts/4.html"/>
+    <id>https://nekodeng.github.io/posts/4.html</id>
+    <published>2020-08-20T13:48:10.998Z</published>
+    <updated>2020-08-20T13:47:28.515Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JS运行和编译&quot;&gt;&lt;a href=&quot;#JS运行和编译&quot; class=&quot;headerlink&quot; title=&quot;JS运行和编译&quot;&gt;&lt;/a&gt;JS运行和编译&lt;/h2&gt;&lt;h3 id=&quot;语法分析&quot;&gt;&lt;a href=&quot;#语法分析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="变量生命周期" scheme="https://nekodeng.github.io/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+    <category term="事件" scheme="https://nekodeng.github.io/tags/%E4%BA%8B%E4%BB%B6/"/>
+    
+    <category term="this" scheme="https://nekodeng.github.io/tags/this/"/>
+    
+    <category term="运行编译" scheme="https://nekodeng.github.io/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS函数</title>
     <link href="https://nekodeng.github.io/posts/3.html"/>
     <id>https://nekodeng.github.io/posts/3.html</id>
     <published>2020-08-19T10:48:32.386Z</published>
-    <updated>2020-08-19T11:00:34.460Z</updated>
+    <updated>2020-08-20T07:11:47.928Z</updated>
     
     
       
@@ -82,7 +113,7 @@
     <link href="https://nekodeng.github.io/posts/1.html"/>
     <id>https://nekodeng.github.io/posts/1.html</id>
     <published>2020-08-17T14:08:55.524Z</published>
-    <updated>2020-08-19T10:42:53.271Z</updated>
+    <updated>2020-08-20T07:08:19.238Z</updated>
     
     
       
@@ -98,15 +129,13 @@
     <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
-    
-    <category term="while循环" scheme="https://nekodeng.github.io/tags/while%E5%BE%AA%E7%8E%AF/"/>
-    
-    <category term="do...while循环" scheme="https://nekodeng.github.io/tags/do-while%E5%BE%AA%E7%8E%AF/"/>
-    
     <category term="break和continue" scheme="https://nekodeng.github.io/tags/break%E5%92%8Ccontinue/"/>
     
-    <category term="for循环" scheme="https://nekodeng.github.io/tags/for%E5%BE%AA%E7%8E%AF/"/>
+    <category term="while" scheme="https://nekodeng.github.io/tags/while/"/>
+    
+    <category term="do...while" scheme="https://nekodeng.github.io/tags/do-while/"/>
+    
+    <category term="for" scheme="https://nekodeng.github.io/tags/for/"/>
     
   </entry>
   
@@ -115,7 +144,7 @@
     <link href="https://nekodeng.github.io/posts/8e47.html"/>
     <id>https://nekodeng.github.io/posts/8e47.html</id>
     <published>2020-08-17T07:32:19.015Z</published>
-    <updated>2020-08-19T10:43:59.183Z</updated>
+    <updated>2020-08-20T07:09:01.182Z</updated>
     
     
       

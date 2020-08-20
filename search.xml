@@ -4,11 +4,42 @@
   
     
     <entry>
+      <title>JS事件</title>
+      <link href="/posts/4.html"/>
+      <url>/posts/4.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="JS运行和编译"><a href="#JS运行和编译" class="headerlink" title="JS运行和编译"></a>JS运行和编译</h2><h3 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h3><p>查找基本语法有没有错误</p><h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><p>执行之前进行预解析<br>var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。</p><h2 id="变量生命周期"><a href="#变量生命周期" class="headerlink" title="变量生命周期"></a>变量生命周期</h2><p>全局变量的生命周期直至浏览器卸载页面才会结束。<br>局部变量只在函数的执行过程中存在，而在这个过程中会为局部变量在栈或堆上分配相应的空间，以存储它们的值，然后再函数中使用这些变量，直至函数结束</p><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="用户的行为：onclick、ondblclick、onfocus、onblur、window-onload"><a href="#用户的行为：onclick、ondblclick、onfocus、onblur、window-onload" class="headerlink" title="用户的行为：onclick、ondblclick、onfocus、onblur、window.onload"></a>用户的行为：onclick、ondblclick、onfocus、onblur、window.onload</h3><p>是用户跟页面的交互，当用户跟页面进行一些“交流”的时候，页面通过js就会触发一些事件，比如鼠标点击的时候就会触发onclick事件，给这个事件绑定一个函数，那么这个时候函数就会被调用，代码就会被执行</p><h3 id="事件类型："><a href="#事件类型：" class="headerlink" title="事件类型："></a>事件类型：</h3><p>鼠标事件：click，dbclick，mousedown，mouseup，mouseover，mouseout，mouseenter、     mouseleave、mousemove<br>鼠标滚轮：scroll，mousewheel<br>鼠标右键（上下文菜单：在不同环境下右键菜单不一样）：contextmenu<br>  mouseover：鼠标在元素身上移动穿过子元素的时候会被反复触发<br>  mouseenter：只是在进入元素的时候触发<br>键盘事件：keydown，keyup，keypress<br>表单事件：对表单元素操作之后会触发的事件<br>  单选框、多选框、下拉菜单 状态改变的时候会触发  onchange 事件<br>  表单提交的时候会触发 onsubmit ，触发在<form>元素身上</form></p><h2 id="this关键字-事件函数里面的this指的是事件触发对象"><a href="#this关键字-事件函数里面的this指的是事件触发对象" class="headerlink" title="this关键字:事件函数里面的this指的是事件触发对象"></a>this关键字:事件函数里面的this指的是事件触发对象</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 变量生命周期 </tag>
+            
+            <tag> 事件 </tag>
+            
+            <tag> this </tag>
+            
+            <tag> 运行编译 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS函数</title>
       <link href="/posts/3.html"/>
       <url>/posts/3.html</url>
       
-        <content type="html"><![CDATA[<h2 id="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"><a href="#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一" class="headerlink" title="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"></a>函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一</h2><p>把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（函数名）<br>我们在需要的时候可以调用一个封装好的函数，函数内的一些代码就会被执行，功能就会被实现</p><h3 id="系统函数："><a href="#系统函数：" class="headerlink" title="系统函数："></a>系统函数：</h3><p>parseInt()   alert()  prompt()  eval()</p><h3 id="函数的声明和使用"><a href="#函数的声明和使用" class="headerlink" title="函数的声明和使用"></a>函数的声明和使用</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">//通过function关键字声明一个函数，跟上函数名，一堆小括号，一堆花括号，花括号里面放代码块//提升到顶部function test()&#123;    //可重复执行的代码块&#125;  test();//表达式定义法//不会提升var test1 = function()&#123;    //可重复执行的代码块&#125;for (var i = 0; i < 10; i++) &#123;    test1();&#125;</code></pre><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>  1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>  2.实参个数大于形参，多余实参自动舍弃<br>  3.形参个数大于形参，多余形参默认为undefined<br>  4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;    console.log(arguments);    console.log(arguments.length);&#125;        test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5</code></pre><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><pre><code>作用范围为整个程序的执行范围在函数体外部定义的变量就是全局变量在函数体内部不使用var定义的也是全局变量</code></pre><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><pre><code>作用范围是某个函数体内部在函数体内部通过var关键字定义的变量或者形参，都是局部变量当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</code></pre><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><pre><code>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</code></pre><h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p><h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p><h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p><h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p><pre><code>1. 子问题须与原始问题为同样的事，且更为简单；2. 不能无限制地调用本身，须有个出口，化简为非递归状况处理。</code></pre><p>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</p><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"><a href="#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一" class="headerlink" title="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"></a>函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一</h2><p>把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（函数名）<br>我们在需要的时候可以调用一个封装好的函数，函数内的一些代码就会被执行，功能就会被实现</p><h3 id="系统函数："><a href="#系统函数：" class="headerlink" title="系统函数："></a>系统函数：</h3><p>parseInt()   alert()  prompt()  eval()</p><h3 id="函数的声明和使用"><a href="#函数的声明和使用" class="headerlink" title="函数的声明和使用"></a>函数的声明和使用</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">//通过function关键字声明一个函数，跟上函数名，一堆小括号，一堆花括号，花括号里面放代码块//提升到顶部function test()&#123;    //可重复执行的代码块&#125;  test();//表达式定义法//不会提升var test1 = function()&#123;    //可重复执行的代码块&#125;for (var i = 0; i < 10; i++) &#123;    test1();&#125;</code></pre><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>2.实参个数大于形参，多余实参自动舍弃<br>3.形参个数大于形参，多余形参默认为undefined<br>4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;    console.log(arguments);    console.log(arguments.length);&#125;        test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5</code></pre><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>作用范围为整个程序的执行范围<br>在函数体外部定义的变量就是全局变量<br>在函数体内部不使用var定义的也是全局变量</p><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>作用范围是某个函数体内部<br>在函数体内部通过var关键字定义的变量或者形参，都是局部变量<br>当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</p><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</p><h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p><h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p><h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p><h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p><ol><li>子问题须与原始问题为同样的事，且更为简单；</li><li>不能无限制地调用本身，须有个出口，化简为非递归状况处理。<br>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</li></ol><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>]]></content>
       
       
       <categories>
@@ -80,15 +111,13 @@
       
         <tags>
             
-            <tag> JS </tag>
-            
-            <tag> while循环 </tag>
-            
-            <tag> do...while循环 </tag>
-            
             <tag> break和continue </tag>
             
-            <tag> for循环 </tag>
+            <tag> while </tag>
+            
+            <tag> do...while </tag>
+            
+            <tag> for </tag>
             
         </tags>
       
@@ -101,7 +130,7 @@
       <link href="/posts/8e47.html"/>
       <url>/posts/8e47.html</url>
       
-        <content type="html"><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码</code></pre><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题-1"><a href="#三级标题-1" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码</code></pre>]]></content>
       
       
       
