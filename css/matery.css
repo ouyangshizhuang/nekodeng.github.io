@@ -603,6 +603,7 @@ header .go-back i {
     line-height: 1.85em;
     margin-bottom: 20px;
     position: relative;
+    font-family: MV Boli;
 }
 
 .bg-cover .description {
@@ -636,13 +637,13 @@ header .go-back i {
 .music-player .title,
 .video-player .title {
     margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .dream .text {
     opacity: .6;
-    font-size: 1.1rem;
+    font-size: 0.88rem;
 }
 
 .music-player,
@@ -1580,6 +1581,7 @@ thead {
     font-size: 1.8rem;
     font-weight: 500;
     color: #3C4858;
+    font-family: MV Boli;
 }
 
 .profile .author .career {
