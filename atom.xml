@@ -6,7 +6,7 @@
   <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.github.io/"/>
-  <updated>2020-08-20T13:47:28.515Z</updated>
+  <updated>2020-08-20T14:16:39.617Z</updated>
   <id>https://nekodeng.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS对象</title>
+    <link href="https://nekodeng.github.io/posts/5.html"/>
+    <id>https://nekodeng.github.io/posts/5.html</id>
+    <published>2020-08-20T13:56:49.881Z</published>
+    <updated>2020-08-20T14:16:39.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;类——定义属性和方法&lt;br&gt;类的具体实现，继承了类所定义的属性和方法（是一种数据类型）&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="for/in" scheme="https://nekodeng.github.io/tags/for-in/"/>
+    
+    <category term="for/of" scheme="https://nekodeng.github.io/tags/for-of/"/>
+    
+    <category term="对象/类" scheme="https://nekodeng.github.io/tags/%E5%AF%B9%E8%B1%A1-%E7%B1%BB/"/>
+    
+    <category term="稀疏数组" scheme="https://nekodeng.github.io/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>JS事件</title>

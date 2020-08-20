@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客文章模板, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS对象, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博客文章模板 | itsNekoDeng</title>
+    <title>JS对象 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客文章模板</h1>
+                    <h1 class="description center-align post-title">JS对象</h1>
                 </div>
             </div>
         </div>
@@ -368,18 +368,35 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
+                            <a href="/tags/for-in/">
+                                <span class="chip bg-color">for/in</span>
                             </a>
                         
-                            <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                                <span class="chip bg-color">标签</span>
+                            <a href="/tags/for-of/">
+                                <span class="chip bg-color">for/of</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AF%B9%E8%B1%A1-%E7%B1%BB/">
+                                <span class="chip bg-color">对象/类</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">稀疏数组</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                JS基础
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -388,7 +405,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-17
+                    2020-08-20
                 </div>
                 
 
@@ -397,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    40
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -419,12 +436,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码
+                <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>类——定义属性和方法<br>类的具体实现，继承了类所定义的属性和方法（是一种数据类型）</p>
+<h3 id="类是对象的抽象，对象是类的实例"><a href="#类是对象的抽象，对象是类的实例" class="headerlink" title="类是对象的抽象，对象是类的实例"></a>类是对象的抽象，对象是类的实例</h3><p>程序 = 算法 + 数据结构<br>js是基于对象的编程语言<br>对象可以定义和描述很复杂的数据，让算法变的简单高效</p>
+<h3 id="js中的对象"><a href="#js中的对象" class="headerlink" title="js中的对象"></a>js中的对象</h3><p>js语言中一切皆为对象，比如数字、字符串、数组、Math、Object、函数<br>js中对象的本质：属性和方法的集合（无序，所以对象没有length属性）<br>用官方一点的语言来解释对象：<br>什么是对象，其实就是一种类型，即引用类型。而对象的值就是引用类型的实例。在 ECMAScript 中引用类型是一种数据结构，用于将数据和功能组织在一起。它也常被称做为类，但 ECMAScript6以前却没有这种东西。虽然 ECMAScript 是一门面向对象的语言，却不具备传统面向对象语言所支持的类等基本结构。</p>
+<h3 id="创建对象的方式："><a href="#创建对象的方式：" class="headerlink" title="创建对象的方式："></a>创建对象的方式：</h3><p>1、字面量<br>  var obj = {<br>        键值对<br>        key:value<br>    }</p>
+<p>2、通过new运算符<br>  var obj = new Object()<br>对象遍历：for…in循环（隐式迭代）</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj= new Object();
+obj.name = "zhangsan";
+obj.age = 18;
+obj["gender"] = "male";
+for(var key in obj)&#123;
+    console.log(key);
+    console.log(obj[key]);
+&#125;
 </code></pre>
-<h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题-1"><a href="#三级标题-1" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>一组数据（一个变量来承载）</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello world"; // 一个变量存放一个数据
+var arr = [1,2,3,4,5,6,7,8,9];
+//往数组结尾插入元素
+arr[arr.length] = 20
 </code></pre>
+<h3 id="数组有两种定义方式"><a href="#数组有两种定义方式" class="headerlink" title="数组有两种定义方式"></a>数组有两种定义方式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [];
+//字面量的方式
+
+var arr = new Array();
+//构造函数的方式
+var arr = new Array(10);//一个参数指数组长度为10,也被称为稀疏数组
+var arr = new Array(10，20，30);//多个参数指定义数组元素
+</code></pre>
+<h3 id="稀疏数组：、"><a href="#稀疏数组：、" class="headerlink" title="稀疏数组：、"></a>稀疏数组：、</h3><p>就是包含从0开始的不连续索引的数组。也就是说数组中大部分的内容值都未被使用（或都为零）。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = new Array(3);   //数组没有元素，但是length是3
+console.log(arr);    // [empty × 3]
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//另一种生成稀疏数组的方法
+var arr = []
+arr[1000] = 1 //数组的长度为1001，但是实际的元素只有1个
+</code></pre>
+<p>实际上，JavaScript并没有常规的数组，所有的数组其实就是个对象，只不过会自动管理一些”数字”属性和length属性罢了。<br>说的更直接一点，JavaScript中的数组根本没有索引，因为索引应该是数字，而JavaScript中数组的索引其实是字符串：arr[1]其实就是arr[“1”]，给arr[“1000”] = 1，arr.length也会自动变为1001。<br>这些表现的根本原因就是：JavaScript中的对象就是字符串到任意值的键值对。注意键只能是字符串。</p>
+<h3 id="因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素"><a href="#因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素" class="headerlink" title="因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素"></a>因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素</h3><p>数组的长度arr.length<br>数组的索引（下标）arr[0]  - arr[arr.length-1]</p>
+<h3 id="数组遍历-（for循环）"><a href="#数组遍历-（for循环）" class="headerlink" title="数组遍历 （for循环）"></a>数组遍历 （for循环）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [9,2,35,5,74,12,43,4];
+for(var i = 0; i < arr.length; i++)&#123;
+    console.log(arr[i]);
+&#125;
+</code></pre>
+<h3 id="for…in（ES5）-遍历稀疏数组的时候不会遍历到undefined"><a href="#for…in（ES5）-遍历稀疏数组的时候不会遍历到undefined" class="headerlink" title="for…in（ES5）  遍历稀疏数组的时候不会遍历到undefined"></a>for…in（ES5）  遍历稀疏数组的时候不会遍历到undefined</h3><p>主要用于获得数组的索引和对应的值</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [9,2,35,5,74,12,43,4];
+for(var key in arr)&#123;
+    console.log(key); //获得索引值
+    console.log(typeof key); //string类型，证明这个索引值是字符类型
+    console.log(arr[key]);
+&#125;
+</code></pre>
+<h3 id="for…of（ES6）"><a href="#for…of（ES6）" class="headerlink" title="for…of（ES6）"></a>for…of（ES6）</h3><p>主要用于获得数组的值</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [9,2,35,5,74,12,43,4];
+for(var value of arr)&#123;
+    console.log(value);
+&#125;
+</code></pre>
+<h3 id="数组是引用类型"><a href="#数组是引用类型" class="headerlink" title="数组是引用类型"></a>数组是引用类型</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello World";
+var str2 = str;//内存开辟另外一段空间存放str2
+
+var arr = [1,2,3,4,5,6,7,8,9];
+var arr2 = arr;//arr和arr2指向同一段存储空间
+</code></pre>
+<p>基本数据类型：number、string、boolean、undefined、null<br>引用数据类型：object（array也属于object）、function</p>
+<h3 id="函数的值传递和引用传递"><a href="#函数的值传递和引用传递" class="headerlink" title="函数的值传递和引用传递"></a>函数的值传递和引用传递</h3><p>数组常见API（concat\join\reverse\slice\splice\toString\sort）<br>concat()连接两个或更多的数组，并返回结果。<br>join()把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。<br>pop()删除并返回数组的最后一个元素<br>push()向数组的末尾添加一个或更多元素，并返回新的长度。<br>shift()删除并返回数组的第一个元素<br>unshift()向数组的开头添加一个或更多元素，并返回新的长度。<br>reverse()颠倒数组中元素的顺序。<br>slice()从某个已有的数组返回选定的元素<br>sort()对数组的元素进行排序<br>splice()删除元素，并向数组添加新元素。<br>toString()把数组转换为字符串，并返回结果。</p>
 
             </div>
             <hr/>
@@ -450,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.github.io/posts/8e47.html">https://nekodeng.github.io/posts/8e47.html</a>
+                    <a href="https://nekodeng.github.io/posts/5.html">https://nekodeng.github.io/posts/5.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -488,12 +564,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
+                                <a href="/tags/for-in/">
+                                    <span class="chip bg-color">for/in</span>
                                 </a>
                             
-                                <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                                    <span class="chip bg-color">标签</span>
+                                <a href="/tags/for-of/">
+                                    <span class="chip bg-color">for/of</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AF%B9%E8%B1%A1-%E7%B1%BB/">
+                                    <span class="chip bg-color">对象/类</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">稀疏数组</span>
                                 </a>
                             
                         </div>
@@ -661,35 +745,96 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/1.html">
+                <a href="/posts/5.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JS循环结构">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS对象">
                         
-                        <span class="card-title">JS循环结构</span>
+                        <span class="card-title">JS对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            while循环while(条件)&#123;
-    //条件成立就会反复执行这里的代码
-&#125;
-var count = 0;
-while(count < 10)&#123;
-    count++;
-    document.wri
+                            面向对象类——定义属性和方法类的具体实现，继承了类所定义的属性和方法（是一种数据类型）
+类是对象的抽象，对象是类的实例程序 = 算法 + 数据结构js是基于对象的编程语言对象可以定义和描述很复杂的数据，让算法变的简单高效
+js中的对象js语
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/for-in/">
+                        <span class="chip bg-color">for/in</span>
+                    </a>
+                    
+                    <a href="/tags/for-of/">
+                        <span class="chip bg-color">for/of</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AF%B9%E8%B1%A1-%E7%B1%BB/">
+                        <span class="chip bg-color">对象/类</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">稀疏数组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/4.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS事件">
+                        
+                        <span class="card-title">JS事件</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JS运行和编译语法分析查找基本语法有没有错误
+预解析执行之前进行预解析var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。
+变量生命周期全局变量的生命
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -705,76 +850,20 @@ while(count < 10)&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/break%E5%92%8Ccontinue/">
-                        <span class="chip bg-color">break和continue</span>
+                    <a href="/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                        <span class="chip bg-color">变量生命周期</span>
                     </a>
                     
-                    <a href="/tags/while/">
-                        <span class="chip bg-color">while</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6/">
+                        <span class="chip bg-color">事件</span>
                     </a>
                     
-                    <a href="/tags/do-while/">
-                        <span class="chip bg-color">do...while</span>
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
                     </a>
                     
-                    <a href="/tags/for/">
-                        <span class="chip bg-color">for</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/8e47.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="博客文章模板">
-                        
-                        <span class="card-title">博客文章模板</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            二级标题三级标题正文随意发挥。。。。。
-//这里是js代码
-
-二级标题三级标题正文随意发挥。。。。。
-//这里是js代码
-
-
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            NekoDeng
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                        <span class="chip bg-color">标签</span>
+                    <a href="/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/">
+                        <span class="chip bg-color">运行编译</span>
                     </a>
                     
                 </div>

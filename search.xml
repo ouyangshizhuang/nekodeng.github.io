@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>JS对象</title>
+      <link href="/posts/5.html"/>
+      <url>/posts/5.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>类——定义属性和方法<br>类的具体实现，继承了类所定义的属性和方法（是一种数据类型）</p><h3 id="类是对象的抽象，对象是类的实例"><a href="#类是对象的抽象，对象是类的实例" class="headerlink" title="类是对象的抽象，对象是类的实例"></a>类是对象的抽象，对象是类的实例</h3><p>程序 = 算法 + 数据结构<br>js是基于对象的编程语言<br>对象可以定义和描述很复杂的数据，让算法变的简单高效</p><h3 id="js中的对象"><a href="#js中的对象" class="headerlink" title="js中的对象"></a>js中的对象</h3><p>js语言中一切皆为对象，比如数字、字符串、数组、Math、Object、函数<br>js中对象的本质：属性和方法的集合（无序，所以对象没有length属性）<br>用官方一点的语言来解释对象：<br>什么是对象，其实就是一种类型，即引用类型。而对象的值就是引用类型的实例。在 ECMAScript 中引用类型是一种数据结构，用于将数据和功能组织在一起。它也常被称做为类，但 ECMAScript6以前却没有这种东西。虽然 ECMAScript 是一门面向对象的语言，却不具备传统面向对象语言所支持的类等基本结构。</p><h3 id="创建对象的方式："><a href="#创建对象的方式：" class="headerlink" title="创建对象的方式："></a>创建对象的方式：</h3><p>1、字面量<br>  var obj = {<br>        键值对<br>        key:value<br>    }</p><p>2、通过new运算符<br>  var obj = new Object()<br>对象遍历：for…in循环（隐式迭代）</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj= new Object();obj.name = "zhangsan";obj.age = 18;obj["gender"] = "male";for(var key in obj)&#123;    console.log(key);    console.log(obj[key]);&#125;</code></pre><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>一组数据（一个变量来承载）</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello world"; // 一个变量存放一个数据var arr = [1,2,3,4,5,6,7,8,9];//往数组结尾插入元素arr[arr.length] = 20</code></pre><h3 id="数组有两种定义方式"><a href="#数组有两种定义方式" class="headerlink" title="数组有两种定义方式"></a>数组有两种定义方式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [];//字面量的方式var arr = new Array();//构造函数的方式var arr = new Array(10);//一个参数指数组长度为10,也被称为稀疏数组var arr = new Array(10，20，30);//多个参数指定义数组元素</code></pre><h3 id="稀疏数组：、"><a href="#稀疏数组：、" class="headerlink" title="稀疏数组：、"></a>稀疏数组：、</h3><p>就是包含从0开始的不连续索引的数组。也就是说数组中大部分的内容值都未被使用（或都为零）。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = new Array(3);   //数组没有元素，但是length是3console.log(arr);    // [empty × 3]</code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript">//另一种生成稀疏数组的方法var arr = []arr[1000] = 1 //数组的长度为1001，但是实际的元素只有1个</code></pre><p>实际上，JavaScript并没有常规的数组，所有的数组其实就是个对象，只不过会自动管理一些”数字”属性和length属性罢了。<br>说的更直接一点，JavaScript中的数组根本没有索引，因为索引应该是数字，而JavaScript中数组的索引其实是字符串：arr[1]其实就是arr[“1”]，给arr[“1000”] = 1，arr.length也会自动变为1001。<br>这些表现的根本原因就是：JavaScript中的对象就是字符串到任意值的键值对。注意键只能是字符串。</p><h3 id="因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素"><a href="#因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素" class="headerlink" title="因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素"></a>因为js是弱类型语言，所以数组也是弱类型，同一个数组变量里可以有各种不同类型的元素</h3><p>数组的长度arr.length<br>数组的索引（下标）arr[0]  - arr[arr.length-1]</p><h3 id="数组遍历-（for循环）"><a href="#数组遍历-（for循环）" class="headerlink" title="数组遍历 （for循环）"></a>数组遍历 （for循环）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [9,2,35,5,74,12,43,4];for(var i = 0; i < arr.length; i++)&#123;    console.log(arr[i]);&#125;</code></pre><h3 id="for…in（ES5）-遍历稀疏数组的时候不会遍历到undefined"><a href="#for…in（ES5）-遍历稀疏数组的时候不会遍历到undefined" class="headerlink" title="for…in（ES5）  遍历稀疏数组的时候不会遍历到undefined"></a>for…in（ES5）  遍历稀疏数组的时候不会遍历到undefined</h3><p>主要用于获得数组的索引和对应的值</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [9,2,35,5,74,12,43,4];for(var key in arr)&#123;    console.log(key); //获得索引值    console.log(typeof key); //string类型，证明这个索引值是字符类型    console.log(arr[key]);&#125;</code></pre><h3 id="for…of（ES6）"><a href="#for…of（ES6）" class="headerlink" title="for…of（ES6）"></a>for…of（ES6）</h3><p>主要用于获得数组的值</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [9,2,35,5,74,12,43,4];for(var value of arr)&#123;    console.log(value);&#125;</code></pre><h3 id="数组是引用类型"><a href="#数组是引用类型" class="headerlink" title="数组是引用类型"></a>数组是引用类型</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello World";var str2 = str;//内存开辟另外一段空间存放str2var arr = [1,2,3,4,5,6,7,8,9];var arr2 = arr;//arr和arr2指向同一段存储空间</code></pre><p>基本数据类型：number、string、boolean、undefined、null<br>引用数据类型：object（array也属于object）、function</p><h3 id="函数的值传递和引用传递"><a href="#函数的值传递和引用传递" class="headerlink" title="函数的值传递和引用传递"></a>函数的值传递和引用传递</h3><p>数组常见API（concat\join\reverse\slice\splice\toString\sort）<br>concat()连接两个或更多的数组，并返回结果。<br>join()把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。<br>pop()删除并返回数组的最后一个元素<br>push()向数组的末尾添加一个或更多元素，并返回新的长度。<br>shift()删除并返回数组的第一个元素<br>unshift()向数组的开头添加一个或更多元素，并返回新的长度。<br>reverse()颠倒数组中元素的顺序。<br>slice()从某个已有的数组返回选定的元素<br>sort()对数组的元素进行排序<br>splice()删除元素，并向数组添加新元素。<br>toString()把数组转换为字符串，并返回结果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> for/in </tag>
+            
+            <tag> for/of </tag>
+            
+            <tag> 对象/类 </tag>
+            
+            <tag> 稀疏数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS事件</title>
       <link href="/posts/4.html"/>
       <url>/posts/4.html</url>
