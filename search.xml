@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>JS的DOM对象</title>
+      <link href="/posts/8.html"/>
+      <url>/posts/8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="DOM（Document-Object-Model-文档对象模型）"><a href="#DOM（Document-Object-Model-文档对象模型）" class="headerlink" title="DOM（Document Object Model 文档对象模型）"></a>DOM（Document Object Model 文档对象模型）</h2><p>DOM定义了表示和修改文档所需的对象、行为和属性，以及这些对象之间的关系。<br>当你想要改变网页行为的时候 你该怎么办呢？你不会用脚来踹网页或者用头来顶网页吧？这时候怎么办呢 ？<br>而你手中有javascript 这种工具！所以你就会考虑用javascript来改变网页行为.</p><h2 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h2><h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><h3 id="获取DOM节点"><a href="#获取DOM节点" class="headerlink" title="获取DOM节点"></a>获取DOM节点</h3><p>1、 document.getElementById(id名)<br>2、 getElementsByTagName(标签名) 得到的是一个集合（不止一个，是一堆）<br>3、 getElementsByName( ) 通过Name值获取元素，返回值是集合，通常用来获取有name的input的值；<br>注：1<em>不是所有的标签都有name值；  2</em>低版本的浏览器会有兼容问题；<br>4、 children属性，获得DOM元素的所有子元素；返回值是集合<br>5、 parentNode属性，获得DOM元素的父级元素<br>6、 getElementsByClassName(class名称)  但是：IE8以下不能用<br>7、 ES5选择器：<br>    document.querySelector ()  &gt;  一旦匹配成功一个元素，就不往后匹配了<br>    document.querySelectorAll ()  &gt;&gt;&gt;&gt; 强大到超乎想象;匹配到所有满足的元素, 支持IE8+</p><h3 id="属性获取和操作"><a href="#属性获取和操作" class="headerlink" title="属性获取和操作"></a>属性获取和操作</h3><p>1、getAttribute( )获取元素的属性值，他是节点的方法！所以前缀必须是节点！<br>document.getElementById( ID值 ).getAttribute( )<br>什么是元素属性呢？ class就是元素属性，写在标签内的所有东西都是标签属性， 比如link的href比如img的src….都是元素属性。<br>元素自带的属性可以直接用 . 语法获取，但是自定义属性需要 getAttribute() 和 setAttribute( ) 方法<br>2、setAttribute( )设置元素的属性。同上；<br>有些小小的兼容性问题，低版本IE不兼容；<br>设置的属性永远都是字符串类型<br>3、removeAttribute( )删除属性；同上；<br>兼容性问题同上；</p><h3 id="DOM元素类型-元素、文本和属性"><a href="#DOM元素类型-元素、文本和属性" class="headerlink" title="DOM元素类型(元素、文本和属性)"></a>DOM元素类型(元素、文本和属性)</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">nodeObj.nodeName // 节点名称  /*    元素节点：标签名（大写）    属性节点：属性名称    文本节点：#text*/nodeObj.nodeType // 1 ==> 元素节点  2 ==> 属性节点  3 ==> 文本节点</code></pre><h3 id="操作DOM"><a href="#操作DOM" class="headerlink" title="操作DOM"></a>操作DOM</h3><p>增、删、克隆节点<br>1.创建节点<br>var oDiv = document.createElement(“div”);<br>2.克隆节点<br>clonedNode = Node.cloneNode(boolean) // 只有一个参数，传入一个布尔值，true表示深客隆，复制该节点下的所有子节点；false表示浅克隆，只复制该节点<br>3.插入节点<br>parentNode.appendChild(childNode);  // 将新节点追加到子节点列表的末尾<br>parentNode.insertBefore(newNode, targetNode);//将newNode插入targetNode之前<br>4.替换节点<br>parentNode.replaceChild(newNode, targetNode); //使用newNode替换targetNode<br>5.移除节点<br>parentNode.removeChild(childNode);  // 移除目标节点<br>node.parentNode.removeChild(node);    //在不清楚父节点的情况下使用<br>childNode.remove()  //IE不支持</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础#文章分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DOM </tag>
+            
+            <tag> DOM节点 </tag>
+            
+            <tag> 操作DOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS对象</title>
       <link href="/posts/5.html"/>
       <url>/posts/5.html</url>
