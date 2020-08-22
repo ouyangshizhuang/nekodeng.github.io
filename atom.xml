@@ -138,6 +138,35 @@
   </entry>
   
   <entry>
+    <title>JS的BOM对象</title>
+    <link href="https://nekodeng.github.io/posts/7.html"/>
+    <id>https://nekodeng.github.io/posts/7.html</id>
+    <published>2020-08-19T10:45:41.136Z</published>
+    <updated>2020-08-22T07:52:53.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;BOM（Browser-Object-Model-浏览器对象模型）&quot;&gt;&lt;a href=&quot;#BOM（Browser-Object-Model-浏览器对象模型）&quot; class=&quot;headerlink&quot; title=&quot;BOM（Browser Object Model </summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="BOM" scheme="https://nekodeng.github.io/tags/BOM/"/>
+    
+    <category term="定时器" scheme="https://nekodeng.github.io/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+    
+    <category term="window" scheme="https://nekodeng.github.io/tags/window/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS程序执行</title>
     <link href="https://nekodeng.github.io/posts/2.html"/>
     <id>https://nekodeng.github.io/posts/2.html</id>
