@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>JS事件2</title>
+      <link href="/posts/a1a1.html"/>
+      <url>/posts/a1a1.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="事件的原理"><a href="#事件的原理" class="headerlink" title="事件的原理"></a>事件的原理</h3><p>事件的原理和hover类似。可以做到:hover做不到的事，:hover只能操作当前的元素，但是事件绑定之后可以选择任何元素。</p><p>事件触发三要素：通过谁触发？ 通过什么触发？触发后要做什么？</p><p>事件的写法：</p><p>w3c标准：事件写在行内，但是因为结构和行为要分离，所以我们一般情况下用JavaScript的方法来绑定事件，只有再极少数情况下，才将事件写在行内，事件的绑定方法：</p><p>浏览器中的节点(对象).on+事件句柄 = function( ){</p><pre><code> 要干什么？（放在浏览器中，不执行，当事件发生的时候再执行。）</code></pre><p>}</p><p>oDiv.onclick=function(){<br>     alert（1）<br>}</p><p>事件总结：事件是给浏览器定义一个预处理函数，当事件触发的时候，执行函数，这就是事件。</p><p>当事件被触发的时候奥特曼会得到一个信息（事件对象），包含了跟事件相关的一些属性和方法的封装（如：事件发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态等），只有事件在触发的时候才会得到。</p><p>oDiv.onmousedown=function(e){<br>     alert（e）;<br>}</p><p>JS缺德定律：事件对象有兼容问题；<br>所以我们先做好兼容再去使用事件对象：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">e=e || window.event;alert (e.buttons)观察.buttons的返回值；</code></pre><h4 id="鼠标事件及方法；"><a href="#鼠标事件及方法；" class="headerlink" title="鼠标事件及方法；"></a>鼠标事件及方法；</h4><p>e.buttons<br>返回鼠标点击按键（1左键，2右键，4中键滚轮）</p><p>e.offsetX / offsetY<br>获取事件触发最近的盒子（事件源）的坐标</p><p>e.clientX / clientY<br>获取可视区的坐标（根据浏览器的定位）</p><p>e.screenX / screenY<br>获取整个屏幕的坐标</p><p>e.pageX / e.pageY<br>获取文档的坐标（包含滚动条）</p><h4 id="键盘事件：keydown、keyup、keypress"><a href="#键盘事件：keydown、keyup、keypress" class="headerlink" title="键盘事件：keydown、keyup、keypress"></a>键盘事件：keydown、keyup、keypress</h4><p>document.onkeydown = function(e){<br>     console.log(e.keyCode)<br>}<br>键盘上每一个键都有一个唯一的编码，用来识别当前用户正在操作的是键盘上哪一个键</p><p>有兼容问题<br>e.keyCode || e.which</p><p>特殊键码：是否按下alt  ctrl  和 shift<br>e.altKey</p><p>e.ctrlKey</p><p>e.shiftKey</p><p>返回值是布尔值；</p><p>可以用来判断组合键</p><p>if（e.keyCode==13&amp;&amp;e.altKey）{<br>     alert(‘同时按下了enter和alt’)；<br>}</p><h4 id="默认行为（浏览器）"><a href="#默认行为（浏览器）" class="headerlink" title="默认行为（浏览器）"></a>默认行为（浏览器）</h4><p>有一些html元素默认的行为，比如说a标签，点击后有跳转动作；form表单中的submit类型的input有一个默认提交跳转事件；reset类型的input有重置表单行为。</p><p>但是，有些时候我们是不需要默认事件的，所以就需要阻止默认事件</p><p>return false；</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">if(e.preventDefault) &#123;   e.preventDefault();&#125;else &#123;    window.event.returnValue = false;        //return false;&#125;</code></pre><p>1、右键菜单（上下文菜单）  oncontextmenu<br>2、表单提交事件 onsubmit</p><h3 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h3><p>子元素的事件被触发时，父级也会被触发（冒泡）<br>一个完整事件流包含  捕获阶段 —-&gt; 目标阶段  —-&gt;冒泡阶段</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 鼠标/键盘事件 </tag>
+            
+            <tag> 阻止默认 </tag>
+            
+            <tag> 事件流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS的node节点</title>
       <link href="/posts/e785.html"/>
       <url>/posts/e785.html</url>
@@ -22,9 +51,9 @@
             
             <tag> node节点 </tag>
             
-            <tag> 文档碎片DocumentFragment </tag>
-            
             <tag> DOM尺寸 </tag>
+            
+            <tag> 文档碎片 </tag>
             
         </tags>
       
