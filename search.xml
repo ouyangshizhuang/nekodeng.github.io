@@ -66,6 +66,35 @@
     
     
     <entry>
+      <title>JS的MATH和Date对象</title>
+      <link href="/posts/6.html"/>
+      <url>/posts/6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h2><p>对象的类型是Object。<br>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…<br>javaScript中万事万物皆对象<br>想要有对象怎么办？</p><h2 id="创建对象：（创建两种方式-字面量和new运算符）"><a href="#创建对象：（创建两种方式-字面量和new运算符）" class="headerlink" title="创建对象：（创建两种方式:字面量和new运算符）"></a>创建对象：（创建两种方式:字面量和new运算符）</h2><h3 id="1-New一个对象出来；"><a href="#1-New一个对象出来；" class="headerlink" title="1.New一个对象出来；"></a>1.New一个对象出来；</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();//找到对象了  >>>  第一个想到的就是属性；//给对象添加一个属性；obj.bianmei='哇真的变漂亮了' ;obj.say=function()&#123;    alert(this.bianmei);&#125;obj.say();delete obj.jian; //删除对象的属性</code></pre><p>obj的属性可以是一个函数，这个时候也叫方法；<br>obj函数内的指针this，指向obj对象本身；</p><h2 id="javaScript内置对象-十个"><a href="#javaScript内置对象-十个" class="headerlink" title="javaScript内置对象(十个)"></a>javaScript内置对象(十个)</h2><p>1.Object对象        是所有JavaScript对象的超类(基类)<br>2.Array对象          数组对象—定义数组属性和方法<br>3.Boolean对象     布尔对象—布尔值相关<br>4.Date对象           日期对象—日期时间相关<br>5.Error对象           错误对象—处理程序错误<br>6.Function对象     函数对象—定义函数属性和方法<br>7.Math对象            数学对象—各种数学运算工具(不是构造函数)<br>8.Number对象       数字对象—定义数字属性和方法<br>9.RegExp对象        正则表达式对象—定义文本匹配与筛选规则<br>10.String对象        字符串对象—定义字符串属性和方法</p><h2 id="Date内置对象"><a href="#Date内置对象" class="headerlink" title="Date内置对象"></a>Date内置对象</h2><p>日期对象创建<br>时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总毫秒数（时间戳）<br>  var date = new Date();//当前时间的日期对象<br>  var data = new Date(2012,6,10);//2012年7月10号的日期对象</p><h3 id="get系列API"><a href="#get系列API" class="headerlink" title="get系列API"></a>get系列API</h3><p>getFullYear()<br>返回年<br>getMonth()<br>返回月份0—11<br>getDate()<br>返回某一天<br>getDay()<br>返回星期0-6<br>getHours()<br>返回小时<br>getMinutes()<br>返回分钟<br>getSeconds()<br>返回秒<br>getTime()<br>返回1970年1月1日午夜到指定日期（字符串）的毫秒数</p><h3 id="set系列API"><a href="#set系列API" class="headerlink" title="set系列API"></a>set系列API</h3><p>setFullYear()<br>设置年份<br>setMonth()<br>设置月<br>setDate()<br>设置天<br>setHours()<br>设置小时<br>setMinutes()<br>设置分钟<br>setSeconds()<br>设置秒<br>setTime()<br>使用毫秒的形式设置时间对象</p><h2 id="★注意"><a href="#★注意" class="headerlink" title="★注意:"></a>★注意:</h2><p>1、setDay( 这个真没有!!!!,星期是通过设定日期自动计算的 )<br>2、set系列API可以设置比当前范围更精细的时间<br>比如：setFullYear（2012，3，5）  设置日期为2018年4月5号<br>setHours（13，30，0）  设置时间为13:30:00</p><h3 id="getMonth："><a href="#getMonth：" class="headerlink" title="getMonth："></a>getMonth：</h3><p>可选,介于 0 ~ 11 之间：如果不填，取系统当月<br>-1 为去年的最后一个月<br>12 为明年的第一个月<br>13 为明年的第二个月</p><h3 id="getDay"><a href="#getDay" class="headerlink" title="getDay()"></a>getDay()</h3><p>返回星期 0-6</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象 </tag>
+            
+            <tag> math </tag>
+            
+            <tag> date </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS函数</title>
       <link href="/posts/3.html"/>
       <url>/posts/3.html</url>
