@@ -372,12 +372,12 @@
                                 <span class="chip bg-color">鼠标/键盘事件</span>
                             </a>
                         
-                            <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4/">
-                                <span class="chip bg-color">阻止默认</span>
-                            </a>
-                        
                             <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
                                 <span class="chip bg-color">事件流</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6/">
+                                <span class="chip bg-color">阻止默认浏览器事件</span>
                             </a>
                         
                     </div>
@@ -410,7 +410,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    735
+                    740
                 </div>
                 
 
@@ -436,14 +436,21 @@
 <p>事件触发三要素：通过谁触发？ 通过什么触发？触发后要做什么？</p>
 <p>事件的写法：</p>
 <p>w3c标准：事件写在行内，但是因为结构和行为要分离，所以我们一般情况下用JavaScript的方法来绑定事件，只有再极少数情况下，才将事件写在行内，事件的绑定方法：</p>
-<p>浏览器中的节点(对象).on+事件句柄 = function( ){</p>
-<pre><code> 要干什么？（放在浏览器中，不执行，当事件发生的时候再执行。）
-</code></pre><p>}</p>
-<p>oDiv.onclick=function(){<br>     alert（1）<br>}</p>
-<p>事件总结：事件是给浏览器定义一个预处理函数，当事件触发的时候，执行函数，这就是事件。</p>
+<pre><code> 浏览器中的节点(对象).on+事件句柄 = function( )&#123;
+
+      干什么？（放在浏览器中，不执行，当事件发生的时候再执行。）
+
+ &#125;
+
+ oDiv.onclick=function()&#123;     
+      alert（1）
+ &#125;
+</code></pre><p>事件总结：事件是给浏览器定义一个预处理函数，当事件触发的时候，执行函数，这就是事件。</p>
 <p>当事件被触发的时候奥特曼会得到一个信息（事件对象），包含了跟事件相关的一些属性和方法的封装（如：事件发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态等），只有事件在触发的时候才会得到。</p>
-<p>oDiv.onmousedown=function(e){<br>     alert（e）;<br>}</p>
-<p>JS缺德定律：事件对象有兼容问题；<br>所以我们先做好兼容再去使用事件对象：</p>
+<pre><code> oDiv.onmousedown=function(e)&#123;
+      alert（e）;
+ &#125;
+</code></pre><p>JS缺德定律：事件对象有兼容问题；<br>所以我们先做好兼容再去使用事件对象：</p>
 <pre class=" language-lang-javascript"><code class="language-lang-javascript">e=e || window.event;
 
 alert (e.buttons)观察.buttons的返回值；
@@ -540,12 +547,12 @@ alert (e.buttons)观察.buttons的返回值；
                                     <span class="chip bg-color">鼠标/键盘事件</span>
                                 </a>
                             
-                                <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4/">
-                                    <span class="chip bg-color">阻止默认</span>
-                                </a>
-                            
                                 <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
                                     <span class="chip bg-color">事件流</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6/">
+                                    <span class="chip bg-color">阻止默认浏览器事件</span>
                                 </a>
                             
                         </div>
@@ -713,33 +720,32 @@ alert (e.buttons)观察.buttons的返回值；
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/a1a1.html">
+                <a href="/posts/e04e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JS事件2">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JS事件流">
                         
-                        <span class="card-title">JS事件2</span>
+                        <span class="card-title">JS事件流</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            事件的原理事件的原理和hover类似。可以做到:hover做不到的事，:hover只能操作当前的元素，但是事件绑定之后可以选择任何元素。
-事件触发三要素：通过谁触发？ 通过什么触发？触发后要做什么？
-事件的写法：
-w3c标准：事件写在行内，
+                            事件冒泡Netscape认为，石头先扔进河里，再从河里确定了一个扔石头的点，从外往内逐渐精确的过程（捕获）
+w3c认为，石头扔进去先到达准确的那个点，涟漪从内往外扩散（冒泡）
+事件流：事件执行的顺序
+子元素的事件被触发时，父级也会被触发（冒
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -752,20 +758,27 @@ w3c标准：事件写在行内，
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%BC%A0%E6%A0%87-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">
-                        <span class="chip bg-color">鼠标/键盘事件</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4/">
-                        <span class="chip bg-color">阻止默认</span>
-                    </a>
-                    
                     <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
                         <span class="chip bg-color">事件流</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%86%92%E6%B3%A1/">
+                        <span class="chip bg-color">冒泡</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8D%95%E8%8E%B7/">
+                        <span class="chip bg-color">捕获</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9B%91%E5%90%AC/">
+                        <span class="chip bg-color">监听</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/">
+                        <span class="chip bg-color">委托/代理</span>
                     </a>
                     
                 </div>
@@ -1062,7 +1075,7 @@ w3c标准：事件写在行内，
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.2k</span>&nbsp;字
+                class="white-color">8.7k</span>&nbsp;字
             
             
             

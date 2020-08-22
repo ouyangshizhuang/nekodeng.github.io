@@ -6,7 +6,7 @@
   <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.github.io/"/>
-  <updated>2020-08-22T08:43:33.316Z</updated>
+  <updated>2020-08-22T08:56:35.824Z</updated>
   <id>https://nekodeng.github.io/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS事件流</title>
+    <link href="https://nekodeng.github.io/posts/e04e.html"/>
+    <id>https://nekodeng.github.io/posts/e04e.html</id>
+    <published>2020-08-22T08:51:26.152Z</published>
+    <updated>2020-08-22T08:56:35.824Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;事件冒泡&quot;&gt;&lt;a href=&quot;#事件冒泡&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="事件流" scheme="https://nekodeng.github.io/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/"/>
+    
+    <category term="冒泡" scheme="https://nekodeng.github.io/tags/%E5%86%92%E6%B3%A1/"/>
+    
+    <category term="捕获" scheme="https://nekodeng.github.io/tags/%E6%8D%95%E8%8E%B7/"/>
+    
+    <category term="监听" scheme="https://nekodeng.github.io/tags/%E7%9B%91%E5%90%AC/"/>
+    
+    <category term="委托/代理" scheme="https://nekodeng.github.io/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS事件2</title>
     <link href="https://nekodeng.github.io/posts/a1a1.html"/>
     <id>https://nekodeng.github.io/posts/a1a1.html</id>
     <published>2020-08-22T08:35:57.457Z</published>
-    <updated>2020-08-22T08:43:33.316Z</updated>
+    <updated>2020-08-22T08:47:16.578Z</updated>
     
     
       
@@ -39,9 +72,9 @@
     
     <category term="鼠标/键盘事件" scheme="https://nekodeng.github.io/tags/%E9%BC%A0%E6%A0%87-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/"/>
     
-    <category term="阻止默认" scheme="https://nekodeng.github.io/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4/"/>
-    
     <category term="事件流" scheme="https://nekodeng.github.io/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/"/>
+    
+    <category term="阻止默认浏览器事件" scheme="https://nekodeng.github.io/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6/"/>
     
   </entry>
   

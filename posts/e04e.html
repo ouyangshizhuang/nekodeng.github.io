@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS循环结构, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS事件流, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS循环结构 | itsNekoDeng</title>
+    <title>JS事件流 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS循环结构</h1>
+                    <h1 class="description center-align post-title">JS事件流</h1>
                 </div>
             </div>
         </div>
@@ -368,20 +368,24 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/break%E5%92%8Ccontinue/">
-                                <span class="chip bg-color">break和continue</span>
+                            <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
+                                <span class="chip bg-color">事件流</span>
                             </a>
                         
-                            <a href="/tags/while/">
-                                <span class="chip bg-color">while</span>
+                            <a href="/tags/%E5%86%92%E6%B3%A1/">
+                                <span class="chip bg-color">冒泡</span>
                             </a>
                         
-                            <a href="/tags/do-while/">
-                                <span class="chip bg-color">do...while</span>
+                            <a href="/tags/%E6%8D%95%E8%8E%B7/">
+                                <span class="chip bg-color">捕获</span>
                             </a>
                         
-                            <a href="/tags/for/">
-                                <span class="chip bg-color">for</span>
+                            <a href="/tags/%E7%9B%91%E5%90%AC/">
+                                <span class="chip bg-color">监听</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/">
+                                <span class="chip bg-color">委托/代理</span>
                             </a>
                         
                     </div>
@@ -405,7 +409,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-17
+                    2020-08-22
                 </div>
                 
 
@@ -414,7 +418,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    457
+                    432
                 </div>
                 
 
@@ -436,31 +440,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">while(条件)&#123;
-    //条件成立就会反复执行这里的代码
+                <h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><p>Netscape认为，石头先扔进河里，再从河里确定了一个扔石头的点，从外往内逐渐精确的过程（捕获）</p>
+<p>w3c认为，石头扔进去先到达准确的那个点，涟漪从内往外扩散（冒泡）</p>
+<p>事件流：事件执行的顺序</p>
+<p>子元素的事件被触发时，父级也会被触发（冒泡）</p>
+<p>一个完整事件包含  捕获阶段 —-&gt; 目标阶段  —-&gt;冒泡阶段</p>
+<p>冒泡是可以阻止的</p>
+<pre><code> e.stopPropagation( );
+ e.cancelBubble=true;//兼容IE
+</code></pre><h3 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h3><p>DOM0级事件处理，是一种赋值方式，是被所有浏览器所支持的，简单易懂容易操作；</p>
+<p>DOM2级事件处理是所有DOM节点中的方法，可以重复绑定，但是浏览器兼容存在问题；</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//DOM0级
+oDiv.onclick = function()&#123; .... &#125;    
+
+//DOM2级
+if(window.attachEvent)&#123;
+    oDiv.attachEvent("onclick", function()&#123; ... &#125;);  // IE只有冒泡阶段,所以没有第三个参数，而且需要加on；
+&#125;else&#123;
+    oDiv.addEventListener( "click", function()&#123; ... &#125;,false);  // false指冒泡阶段
 &#125;
-var count = 0;
-while(count < 10)&#123;
-    count++;
-    document.write("Hello world");
-&#125;
+
+//移除事件监听，第二个参数为必须，移除的事件处理函数
+oDiv.removeEventListener( "click",fn）
+oDiv.detachEvent("onclick",fn)
 </code></pre>
-<p>注意死循环： 没有终止条件的循环即为死循环，在代码中应尽量避免死循环</p>
-<h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">do&#123;
-    //先执行一遍代码
-    //while条件成立再继续反复执行
-&#125;while(条件)
+<h3 id="事件委托（事件代理）委派"><a href="#事件委托（事件代理）委派" class="headerlink" title="事件委托（事件代理）委派"></a>事件委托（事件代理）委派</h3><p>什么是事件委托：全班同学都要做《五年高考三年模拟》，每个同学自己去书店买？不用，委托老师帮你们买，同学们只管认真做题就好啦，好开心。</p>
+<p>事件委托就是利用事件冒泡，只指定一个事件处理程序，就可以处理某一类型的所有事件<br>使用场景主要用于事件源不确定的情况，可以把事件委托给父级</p>
+<p>判断事件源：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">e.target || e.srcElement
 </code></pre>
-<h3 id="while和do…while循环的区别"><a href="#while和do…while循环的区别" class="headerlink" title="while和do…while循环的区别"></a>while和do…while循环的区别</h3><p>do…while循环至少会执行一遍，不管条件是否成立，但是while循环如果初始条件不成立一遍也不会执行。</p>
-<h3 id="break和continue关键字"><a href="#break和continue关键字" class="headerlink" title="break和continue关键字"></a>break和continue关键字</h3><p>break：跳出循环体，整个循环结束<br>continue：结束本次循环进入下一次循环体</p>
-<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">for (var i = 0; i < 10; i++) &#123;
-    console.log(i);
-&#125;
-</code></pre>
-<p>如下图所示：注意for循环时的执行顺序,并且：for循环1，2，4步是可选的</p>
-<!-- ![for的循环执行顺序](JS循环结构/for.png) 引入的图片 -->
-<h3 id="三种循环的联系和区别"><a href="#三种循环的联系和区别" class="headerlink" title="三种循环的联系和区别"></a>三种循环的联系和区别</h3><p>1、都是会反复执行的代码块<br>2、大部分情况下可以互相替换<br>3、do…while至少执行一次，while和for有可能0次，while不太能确定执行次数，for可以</p>
-<h3 id="练习（while和for两种方式）"><a href="#练习（while和for两种方式）" class="headerlink" title="练习（while和for两种方式）"></a>练习（while和for两种方式）</h3><p>1.打印100以内所有偶数的和<br>2.求出1-1/2+1/3-1/4…..1/100的和<br>3.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出<br>4.打印九九乘法表<br>5.求1+2!+3!+…+20!的值<br>6.有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，按每一个格子是前一个格子的二倍（第四个格子放8个）计算，问棋盘上放的所有芝麻的重量是多少？<br>7.打印100–200之间所有能被3或者7整除的数<br>8.计算100的阶乘</p>
 
             </div>
             <hr/>
@@ -486,7 +494,7 @@ while(count < 10)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.github.io/posts/1.html">https://nekodeng.github.io/posts/1.html</a>
+                    <a href="https://nekodeng.github.io/posts/e04e.html">https://nekodeng.github.io/posts/e04e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -524,20 +532,24 @@ while(count < 10)&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/break%E5%92%8Ccontinue/">
-                                    <span class="chip bg-color">break和continue</span>
+                                <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
+                                    <span class="chip bg-color">事件流</span>
                                 </a>
                             
-                                <a href="/tags/while/">
-                                    <span class="chip bg-color">while</span>
+                                <a href="/tags/%E5%86%92%E6%B3%A1/">
+                                    <span class="chip bg-color">冒泡</span>
                                 </a>
                             
-                                <a href="/tags/do-while/">
-                                    <span class="chip bg-color">do...while</span>
+                                <a href="/tags/%E6%8D%95%E8%8E%B7/">
+                                    <span class="chip bg-color">捕获</span>
                                 </a>
                             
-                                <a href="/tags/for/">
-                                    <span class="chip bg-color">for</span>
+                                <a href="/tags/%E7%9B%91%E5%90%AC/">
+                                    <span class="chip bg-color">监听</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/">
+                                    <span class="chip bg-color">委托/代理</span>
                                 </a>
                             
                         </div>
@@ -705,31 +717,102 @@ while(count < 10)&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/2.html">
+                <a href="/posts/e04e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS程序执行">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JS事件流">
                         
-                        <span class="card-title">JS程序执行</span>
+                        <span class="card-title">JS事件流</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             顺序结构：按照由上到下的顺序一行一行地执行的程序结构 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构） 循环结构：需要重复执行同一操作的程序结构称为循环结构。
-if 判断逻辑语句if(true)&#123;
-    /
+                            事件冒泡Netscape认为，石头先扔进河里，再从河里确定了一个扔石头的点，从外往内逐渐精确的过程（捕获）
+w3c认为，石头扔进去先到达准确的那个点，涟漪从内往外扩散（冒泡）
+事件流：事件执行的顺序
+子元素的事件被触发时，父级也会被触发（冒
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
+                        <span class="chip bg-color">事件流</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%86%92%E6%B3%A1/">
+                        <span class="chip bg-color">冒泡</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8D%95%E8%8E%B7/">
+                        <span class="chip bg-color">捕获</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9B%91%E5%90%AC/">
+                        <span class="chip bg-color">监听</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/">
+                        <span class="chip bg-color">委托/代理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/a1a1.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JS事件2">
+                        
+                        <span class="card-title">JS事件2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            事件的原理事件的原理和hover类似。可以做到:hover做不到的事，:hover只能操作当前的元素，但是事件绑定之后可以选择任何元素。
+事件触发三要素：通过谁触发？ 通过什么触发？触发后要做什么？
+事件的写法：
+w3c标准：事件写在行内，
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -745,75 +828,16 @@ if 判断逻辑语句if(true)&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/%E9%BC%A0%E6%A0%87-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">
+                        <span class="chip bg-color">鼠标/键盘事件</span>
                     </a>
                     
-                    <a href="/tags/if-else/">
-                        <span class="chip bg-color">if/else</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
+                        <span class="chip bg-color">事件流</span>
                     </a>
                     
-                    <a href="/tags/switch-case/">
-                        <span class="chip bg-color">switch/case</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                        <span class="chip bg-color">显/隐式转换</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/8e47.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="博客文章模板">
-                        
-                        <span class="card-title">博客文章模板</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            二级标题三级标题正文随意发挥。。。。。
-//这里是js代码
-
-二级标题三级标题正文随意发挥。。。。。
-//这里是js代码
-
-
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            NekoDeng
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                        <span class="chip bg-color">标签</span>
+                    <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6/">
+                        <span class="chip bg-color">阻止默认浏览器事件</span>
                     </a>
                     
                 </div>
