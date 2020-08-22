@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS函数, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS正则表达式, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS函数 | itsNekoDeng</title>
+    <title>JS正则表达式 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS函数</h1>
+                    <h1 class="description center-align post-title">JS正则表达式</h1>
                 </div>
             </div>
         </div>
@@ -368,16 +368,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
-                            </a>
-                        
-                            <a href="/tags/function/">
-                                <span class="chip bg-color">function</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%87%BD%E6%95%B0/">
-                                <span class="chip bg-color">函数</span>
+                            <a href="/tags/JS%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                                <span class="chip bg-color">JS正则表达式</span>
                             </a>
                         
                     </div>
@@ -401,7 +393,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-19
+                    2020-08-22
                 </div>
                 
 
@@ -410,14 +402,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -432,45 +424,123 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"><a href="#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一" class="headerlink" title="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"></a>函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一</h2><p>把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（函数名）<br>我们在需要的时候可以调用一个封装好的函数，函数内的一些代码就会被执行，功能就会被实现</p>
-<h3 id="系统函数："><a href="#系统函数：" class="headerlink" title="系统函数："></a>系统函数：</h3><p>parseInt()   alert()  prompt()  eval()</p>
-<h3 id="函数的声明和使用"><a href="#函数的声明和使用" class="headerlink" title="函数的声明和使用"></a>函数的声明和使用</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">//通过function关键字声明一个函数，跟上函数名，一堆小括号，一堆花括号，花括号里面放代码块
-//提升到顶部
-function test()&#123;
-    //可重复执行的代码块
-&#125;  
-test();
+                <h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p>（英语：Regular Expression，在代码中常简写为regex、regexp或RE）<br>语法<br>/正则表达式主体/修饰符(可选)</p>
+<h4 id="正则的第一种写法"><a href="#正则的第一种写法" class="headerlink" title="正则的第一种写法"></a>正则的第一种写法</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg=new RegExp('a');
+var str='abcdefg';
+alert(reg.test(str));   //返回bool值，代表是否匹配成功
+</code></pre>
+<h4 id="正则表达式的第二种写法"><a href="#正则表达式的第二种写法" class="headerlink" title="正则表达式的第二种写法"></a>正则表达式的第二种写法</h4><p>perl风格 古老的语言</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var re = /a/
+var str='abcdefg';
+re.test(str);
+</code></pre>
+<h3 id="中括号：匹配其中的某一个字符"><a href="#中括号：匹配其中的某一个字符" class="headerlink" title="[ ] 中括号：匹配其中的某一个字符"></a>[ ] 中括号：匹配其中的某一个字符</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = prompt();
+var reg = /[abcde]/;//匹配是否有abcde中的字符
+console.log(reg.test(str));
+</code></pre>
+<p>[ a-z ] 匹配所有小写字母<br>[0-9] == \d 匹配任意一个数字( )</p>
+<p>小括号：分组：小括号里面的内容作为整体进行匹配<br>小括号用于分组，竖线作为间隔代表“或者”的含义<br>/(ab) | (cd)/ 匹配’ab’ 或者 ‘cd’<br>/(a|b)cd/ 匹配 ‘acd’ 或者 ‘bcd’<br>注意：小括号、竖线不要放在 [ ] 内（无意义）</p>
+<p>| : 或，跟js中的（||）一样<br>^：排除（除了） 类似js中的（！）<br>^ (不在中括号里)匹配字符串开头<br>$ 匹配结尾</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg = /^[a-z]$/;//小写字母 开头并且小写字母结尾,中间不能有字符(完整匹配)
+/^$/这样的正则代表完整匹配
+</code></pre>
+<h3 id="转义字符：元字符"><a href="#转义字符：元字符" class="headerlink" title="转义字符：元字符"></a>转义字符：元字符</h3><p>\d —— [0-9] 数字<br>\w ——-[a-z0-9_A-Z] 数字，字母，下划线<br>\s —- 空白字符</p>
+<p>\D ——-<sup><a href="#fn_0-9" id="reffn_0-9">0-9</a></sup> 非数字<br>\W ——-<sup><a href="#fn_a-z0-9_" id="reffn_a-z0-9_">a-z0-9_</a></sup> 非数字，字母，下划线<br>\ S ——-非空白字符</p>
+<p>. ——-全部字符<br>b ——-匹配单词边界<br>\B ——-匹配 非 单词边界<br>\0(数字0) ——-匹配 NUL 字符<br>\n ——-匹配 换行符<br>\f ——-匹配 换页符<br>\r ——-匹配 回车符<br>\t ——-匹配 制表符<br>\v ——-匹配 垂直制表符<br>\u4e00 - \u9fa5 验证中文</p>
+<h3 id="量词：（单位名称）"><a href="#量词：（单位名称）" class="headerlink" title="量词：（单位名称）"></a>量词：（单位名称）</h3><p>{n} —-匹配n次</p>
+<p>{n,m} —-最少n次，最多m次；</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">QQ号验证  /^[1-9]\d&#123;4,10&#125;$/
+</code></pre>
+<p>{n,} —-最少n次，最多不限</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">+  == &#123;1,&#125;最少为一个
+</code></pre>
+<p>? {0,1} 可有可无，最多一个</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">*  &#123;0,&#125; 可以有也可以没有，个数不限
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">/(ab|cd)&#123;2&#125;/ 匹配字符串"ab" 或者 "cd" 的2次，或者abcd 结果为:abab cdcd abcd cdab
+</code></pre>
+<h3 id="匹配大小写不一样的字母怎么办？"><a href="#匹配大小写不一样的字母怎么办？" class="headerlink" title="匹配大小写不一样的字母怎么办？"></a>匹配大小写不一样的字母怎么办？</h3><p>var re=new RegExp(‘a’,’i’)<br>正则对象中有一个参数，可以传入对应的值，i 代表让正则不区分大小写；<br>i：忽略大小写<br>var re= /a/i</p>
+<p>g：全局查找<br>reg = /\d+/ g<br>g: 代表全局所有 （global）</p>
+<p>m： 多行查找（必须与g一起实用,并且,当使用^和$模式时才会起作用）</p>
+<h3 id="正则对象的方法："><a href="#正则对象的方法：" class="headerlink" title="正则对象的方法："></a>正则对象的方法：</h3><h4 id="1-test方法"><a href="#1-test方法" class="headerlink" title="1.test方法"></a>1.test方法</h4><p>该方法用来测试某个字符串是否与正则匹配，匹配就返回true，否则返回false</p>
+<h4 id="2-compile方法"><a href="#2-compile方法" class="headerlink" title="2.compile方法"></a>2.compile方法</h4><p>该方法的作用是能够对正则表达式进行编译，被编译过的正则在使用的时候效率会更高，适合于对一个正则多次调用的情况下，如果对一个正则只使用一两次，那么该方法没有特别显著的效应</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg=/[abc]/gi;
+console.log(reg.test('a'));
+reg=/[cde]/gi;
+console.log(reg.test('a'));
+reg.compile(reg);
+console.log(reg.test('a'));
+</code></pre>
+<h4 id="3-exec方法"><a href="#3-exec方法" class="headerlink" title="3.exec方法"></a>3.exec方法</h4><p>返回的是一个数组，数组元素为匹配的子字符串</p>
+<h3 id="支持正则的字符串方法"><a href="#支持正则的字符串方法" class="headerlink" title="支持正则的字符串方法"></a>支持正则的字符串方法</h3><h4 id="search"><a href="#search" class="headerlink" title="search"></a>search</h4><p>查找第一次匹配的子字符串的位置，如果找到就返回一个number类型的index值，否则返回-1</p>
+<h4 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h4><p>该方法用来将字符串中的某些子串替换为需要的内容，接受两个参数，第一个参数可以为正则或者子字符串，表示匹配需要被替换的内容，第二个参数为被替换的新的子字符串</p>
+<h4 id="split"><a href="#split" class="headerlink" title="split"></a>split</h4><p>将一个字符串拆分成一个数组，它接受一个正则或者子字符（串）作为参数，返回一个数组</p>
+<h4 id="match"><a href="#match" class="headerlink" title="match"></a>match</h4><p>接受一个正则作为参数，用来匹配一个字符串，返回一个数组</p>
+<p>例子：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"><script>
+    var reg = new RegExp("b");//写法1
+    var str = prompt();
+    var reg = /b/;// 写法2  匹配是否存在b
+    var reg = /[abcde]/;//匹配是否有abcde中的字符
+    var reg = /[a-z]/;//匹配所有小写字母
+    var reg = /(ab)|(cd)/;//ab  或 cd
+    var reg = /(a|b)cd/;//acd  或bcd
+    var reg = /[^a-z]/;//不能有小写字母
+    var reg = /^[a-z]/;//小写字母开头
+    var reg = /^[a-z]$/;//小写字母 开头并且小写字母结尾,中间不能有字符(完整匹配)
+    var reg = /\d/;//匹配0-9的数字[0-9];
+    var reg = /./;//匹配所有字符
+    var reg = /\./;//转义字符z
+    var reg = /\d&#123;6&#125;/;//6个数字（超过也为true）
+    var reg = /a\d&#123;6,8&#125;a/;//六到8个数字,前后做好限定,否则会自动过滤掉多余的数字
+    var reg = /^[1-9]\d&#123;4,10&#125;$/;//5-11位,完整匹配
+    var reg = /\w/;//-[a-z0-9_A-Z]     数字，字母，下划线
+    var reg = /\s/;//空格
+    var reg = /\D/;//不为数字
+    var reg = /^\d+.&#123;3,&#125;$/;// 必须以数字开头,数量一个以上,紧接着任意字符至少三个,并以之结尾
+    var reg = /^\d?$/;//以数字开头 一个数字或者没有  &#123;0,1&#125; 可有可无，最多一个
+    var reg = /^\d*$/;//&#123;0,&#125; 可以有也可以没有，个数不限
+    var reg = /zhangsan/i;//i：忽略大小写
+    var reg = /\d+/g;//g: 代表全局所有  （global）
+    console.log(reg.test(str));
+  </script>
+</code></pre>
+<p>案例:密码强度</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"><input type="text" id="pwd"/>
+        <button>登录</button>
+        <script>
+            var input = document.querySelector("#pwd");
+            var numReg = /\d+/;
+            //var letterReg = /^[a-zA-Z]$/;
+            var letterReg = /[a-z]+/i;
+            var charReg = /[^0-9a-z]+/i;
+            //存储三个正则的验证结果
 
-//表达式定义法
-//不会提升
-var test1 = function()&#123;
-    //可重复执行的代码块
-&#125;
-for (var i = 0; i < 10; i++) &#123;
-    test1();
-&#125;
+            document.querySelector("button").onclick = function()&#123;
+                var arr = [];
+                var pwd = input.value;
+
+                arr.push(numReg.test(pwd));
+                arr.push(letterReg.test(pwd));
+                arr.push(charReg.test(pwd));
+                console.log(arr);
+                var arr1 = arr.filter(function(item)&#123;
+                    return item;
+                &#125;)
+
+                if(arr1.length === 1) alert("弱");
+                else if(arr1.length === 2) alert("中");
+                if(arr1.length === 3) alert("强");
+
+            &#125;
+        </script>
 </code></pre>
-<h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>2.实参个数大于形参，多余实参自动舍弃<br>3.形参个数大于形参，多余形参默认为undefined<br>4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;
-    console.log(arguments);
-    console.log(arguments.length);
-&#125;        
-test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
-</code></pre>
-<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>作用范围为整个程序的执行范围<br>在函数体外部定义的变量就是全局变量<br>在函数体内部不使用var定义的也是全局变量</p>
-<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>作用范围是某个函数体内部<br>在函数体内部通过var关键字定义的变量或者形参，都是局部变量<br>当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</p>
-<h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</p>
-<h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p>
-<h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p>
-<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p>
-<h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p>
-<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p>
-<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p>
-<ol>
-<li>子问题须与原始问题为同样的事，且更为简单；</li>
-<li>不能无限制地调用本身，须有个出口，化简为非递归状况处理。<br>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</li>
-</ol>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>
+<h3 id="附：扩展正则案例"><a href="#附：扩展正则案例" class="headerlink" title="附：扩展正则案例"></a>附：扩展正则案例</h3><p>只能用数字开头，长度在6—18位之间 /^\d.{5,17}$/</p>
+<p>以字母开头，数字结尾，中间任意一个字符 /^[a-z].\d$/i</p>
+<p>密码不能少于6位的字符 /^.{6,}$/</p>
+<p>以a开头 b字符至少出现2个，至多出现6个(b连续出现) /^a.*b{2,6}/</p>
+<p>变量的命名正则表达式(不能用数字开头 由字母、数字、下划线 、][\w/</p>
+<p>开头为0的2或者三位数字加上 - 开头为非零的八位数字结尾是1到4位的分机号<br>/^0\d{2,3}-[1-9]\d{7}-\d{1,4}$/</p>
 
             </div>
             <hr/>
@@ -496,7 +566,7 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.github.io/posts/3.html">https://nekodeng.github.io/posts/3.html</a>
+                    <a href="https://nekodeng.github.io/posts/e88.html">https://nekodeng.github.io/posts/e88.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,16 +604,8 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
-                                </a>
-                            
-                                <a href="/tags/function/">
-                                    <span class="chip bg-color">function</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%87%BD%E6%95%B0/">
-                                    <span class="chip bg-color">函数</span>
+                                <a href="/tags/JS%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                                    <span class="chip bg-color">JS正则表达式</span>
                                 </a>
                             
                         </div>
@@ -711,30 +773,32 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/6.html">
+                <a href="/posts/e88.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS的MATH和Date对象">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS正则表达式">
                         
-                        <span class="card-title">JS的MATH和Date对象</span>
+                        <span class="card-title">JS正则表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是对象？对象的类型是Object。JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…javaScript中万事万物皆对象想要有对象怎么办？
-创建对象：（创建两种方式:字面量和new运算符）1.New一个对象出来；va
+                            正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）语法/正则表达式主体/修饰符(可选)
+正则的第一种写法var reg=new RegExp('a');
+var str='abcdefg
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -747,19 +811,12 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AF%B9%E8%B1%A1/">
-                        <span class="chip bg-color">对象</span>
-                    </a>
-                    
-                    <a href="/tags/math/">
-                        <span class="chip bg-color">math</span>
-                    </a>
-                    
-                    <a href="/tags/date/">
-                        <span class="chip bg-color">date</span>
+                    <a href="/tags/JS%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span class="chip bg-color">JS正则表达式</span>
                     </a>
                     
                 </div>
@@ -773,24 +830,25 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/b140.html">
+                <a href="/posts/b0e2.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS的BOM对象">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JS冒泡选择快速排序">
                         
-                        <span class="card-title">JS的BOM对象</span>
+                        <span class="card-title">JS冒泡选择快速排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            BOM（Browser Object Model  浏览器对象模型）window是全局浏览器内置顶级对象表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）Window 对象表示一个浏览器窗口或一个框架
+                            JS冒泡排序（必须掌握思想和必须会代码默写）（面试最常考）原理：依次比较相邻的两个值，如果后面的比前面的小，则将小的元素排到前面。依照这个规则进行多次并且递减的迭代，直到顺序正确。
+var arr=[8,94,15,88,55,76,21,
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
                             </span>
                         <span class="publish-author">
                             
@@ -807,16 +865,20 @@ test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/BOM/">
-                        <span class="chip bg-color">BOM</span>
+                    <a href="/tags/JS%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">JS排序</span>
                     </a>
                     
-                    <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
-                        <span class="chip bg-color">定时器</span>
+                    <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">冒泡排序</span>
                     </a>
                     
-                    <a href="/tags/window/">
-                        <span class="chip bg-color">window</span>
+                    <a href="/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">选择排序</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">快速排序</span>
                     </a>
                     
                 </div>
