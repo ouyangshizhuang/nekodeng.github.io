@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS的MATH和Date对象, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS的BOM对象, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS的MATH和Date对象 | itsNekoDeng</title>
+    <title>JS的BOM对象 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -251,7 +251,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS的MATH和Date对象</h1>
+                    <h1 class="description center-align post-title">JS的BOM对象</h1>
                 </div>
             </div>
         </div>
@@ -368,16 +368,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AF%B9%E8%B1%A1/">
-                                <span class="chip bg-color">对象</span>
+                            <a href="/tags/BOM/">
+                                <span class="chip bg-color">BOM</span>
                             </a>
                         
-                            <a href="/tags/math/">
-                                <span class="chip bg-color">math</span>
+                            <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
+                                <span class="chip bg-color">定时器</span>
                             </a>
                         
-                            <a href="/tags/date/">
-                                <span class="chip bg-color">date</span>
+                            <a href="/tags/window/">
+                                <span class="chip bg-color">window</span>
                             </a>
                         
                     </div>
@@ -401,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-20
+                    2020-08-19
                 </div>
                 
 
@@ -410,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    645
+                    727
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -432,26 +432,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h2><p>对象的类型是Object。<br>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…<br>javaScript中万事万物皆对象<br>想要有对象怎么办？</p>
-<h2 id="创建对象：（创建两种方式-字面量和new运算符）"><a href="#创建对象：（创建两种方式-字面量和new运算符）" class="headerlink" title="创建对象：（创建两种方式:字面量和new运算符）"></a>创建对象：（创建两种方式:字面量和new运算符）</h2><h3 id="1-New一个对象出来；"><a href="#1-New一个对象出来；" class="headerlink" title="1.New一个对象出来；"></a>1.New一个对象出来；</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();
-//找到对象了  >>>  第一个想到的就是属性；
-//给对象添加一个属性；
-obj.bianmei='哇真的变漂亮了' ;
-obj.say=function()&#123;
-    alert(this.bianmei);
-&#125;
-obj.say();
-delete obj.jian; //删除对象的属性
+                <h2 id="BOM（Browser-Object-Model-浏览器对象模型）"><a href="#BOM（Browser-Object-Model-浏览器对象模型）" class="headerlink" title="BOM（Browser Object Model  浏览器对象模型）"></a>BOM（Browser Object Model  浏览器对象模型）</h2><h3 id="window是全局浏览器内置顶级对象"><a href="#window是全局浏览器内置顶级对象" class="headerlink" title="window是全局浏览器内置顶级对象"></a>window是全局浏览器内置顶级对象</h3><p>表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）<br>Window 对象表示一个浏览器窗口或一个框架。<br>在客户端 JavaScript 中，Window 对象是全局对象，所有的表达式都在当前的环境中计算。<br>也就是说，要引用当前窗口根本不需要特殊的语法，可以把那个窗口的属性作为全局变量来使用。<br>例如，可以只写 document，而不必写 window.document。<br>同样，可以把当前窗口对象的方法当作函数来使用，如只写 alert()，而不必写 Window.alert()。<br>除了上面列出的属性和方法，Window 对象还实现了核心 JavaScript 所定义的所有全局属性和方法。</p>
+<h3 id="1、全局变量默认是挂在window下的"><a href="#1、全局变量默认是挂在window下的" class="headerlink" title="1、全局变量默认是挂在window下的"></a>1、全局变量默认是挂在window下的</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var  a = 123;
+alert(window.a)//123
 </code></pre>
-<p>obj的属性可以是一个函数，这个时候也叫方法；<br>obj函数内的指针this，指向obj对象本身；</p>
-<h2 id="javaScript内置对象-十个"><a href="#javaScript内置对象-十个" class="headerlink" title="javaScript内置对象(十个)"></a>javaScript内置对象(十个)</h2><p>1.Object对象        是所有JavaScript对象的超类(基类)<br>2.Array对象          数组对象—定义数组属性和方法<br>3.Boolean对象     布尔对象—布尔值相关<br>4.Date对象           日期对象—日期时间相关<br>5.Error对象           错误对象—处理程序错误<br>6.Function对象     函数对象—定义函数属性和方法<br>7.Math对象            数学对象—各种数学运算工具(不是构造函数)<br>8.Number对象       数字对象—定义数字属性和方法<br>9.RegExp对象        正则表达式对象—定义文本匹配与筛选规则<br>10.String对象        字符串对象—定义字符串属性和方法</p>
-<h2 id="Date内置对象"><a href="#Date内置对象" class="headerlink" title="Date内置对象"></a>Date内置对象</h2><p>日期对象创建<br>时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总毫秒数（时间戳）<br>  var date = new Date();//当前时间的日期对象<br>  var data = new Date(2012,6,10);//2012年7月10号的日期对象</p>
-<h3 id="get系列API"><a href="#get系列API" class="headerlink" title="get系列API"></a>get系列API</h3><p>getFullYear()<br>返回年<br>getMonth()<br>返回月份0—11<br>getDate()<br>返回某一天<br>getDay()<br>返回星期0-6<br>getHours()<br>返回小时<br>getMinutes()<br>返回分钟<br>getSeconds()<br>返回秒<br>getTime()<br>返回1970年1月1日午夜到指定日期（字符串）的毫秒数</p>
-<h3 id="set系列API"><a href="#set系列API" class="headerlink" title="set系列API"></a>set系列API</h3><p>setFullYear()<br>设置年份<br>setMonth()<br>设置月<br>setDate()<br>设置天<br>setHours()<br>设置小时<br>setMinutes()<br>设置分钟<br>setSeconds()<br>设置秒<br>setTime()<br>使用毫秒的形式设置时间对象</p>
-<h2 id="★注意"><a href="#★注意" class="headerlink" title="★注意:"></a>★注意:</h2><p>1、setDay( 这个真没有!!!!,星期是通过设定日期自动计算的 )<br>2、set系列API可以设置比当前范围更精细的时间<br>比如：setFullYear（2012，3，5）  设置日期为2018年4月5号<br>setHours（13，30，0）  设置时间为13:30:00</p>
-<h3 id="getMonth："><a href="#getMonth：" class="headerlink" title="getMonth："></a>getMonth：</h3><p>可选,介于 0 ~ 11 之间：如果不填，取系统当月<br>-1 为去年的最后一个月<br>12 为明年的第一个月<br>13 为明年的第二个月</p>
-<h3 id="getDay"><a href="#getDay" class="headerlink" title="getDay()"></a>getDay()</h3><p>返回星期 0-6</p>
-
+<h3 id="2、window下的子对象"><a href="#2、window下的子对象" class="headerlink" title="2、window下的子对象"></a>2、window下的子对象</h3><h4 id="（1）location"><a href="#（1）location" class="headerlink" title="（1）location"></a>（1）location</h4><p>window.location.href          当前页面的 URL，可以获取，可以修改（页面跳转）<br>window.location.hostname      web 主机的域名<br>window.location.pathname      当前页面的路径和文件名<br>window.location.port          web 主机的端口 （80 或 443）<br>window.location.protocol      所使用的 web 协议（http:// 或 https://）<br>window.location.search        请求参数（？后面的内容）</p>
+<p>window.location.reload();<br>刷新页面，一般情况下给reload()传递一个true，让他刷新，并不使用缓存。缓存的东西一般为js文件，css文件等。<br>用这个方法可以让自己不能动的页面动起来了。刷新当前页面。</p>
+<h4 id="（2）window-navigator"><a href="#（2）window-navigator" class="headerlink" title="（2）window.navigator"></a>（2）window.navigator</h4><p>navigator.appName      返回获取当前浏览器的名称。<br>navigator.appVersion    返回 获取当前浏览器的版本号。<br>navigator.platform        返回 当前计算机的操作系统。<br>以上属性已经在逐渐被抛弃了。一个新的属性将替代这些属性。</p>
+<p>navigator.userAgent   返回浏览器信息（可用此属性判断当前浏览器）</p>
+<h5 id="判断当前浏览器类型的代码："><a href="#判断当前浏览器类型的代码：" class="headerlink" title="判断当前浏览器类型的代码："></a>判断当前浏览器类型的代码：</h5><pre class=" language-lang-javascript"><code class="language-lang-javascript">function isBrowser() &#123;
+    var userAgent = navigator.userAgent;
+    //微信内置浏览器
+    if(userAgent.match(/MicroMessenger/i) == 'MicroMessenger') &#123;
+        return "MicroMessenger";
+    &#125;
+    //QQ内置浏览器
+    else if(userAgent.match(/QQ/i) == 'QQ') &#123;
+        return "QQ";
+    &#125;
+    //Chrome
+    else if(userAgent.match(/Chrome/i) == 'Chrome') &#123;
+        return "Chrome";
+    &#125;
+    //Opera
+    else if(userAgent.match(/Opera/i) == 'Opera') &#123;
+        return "Opera";
+    &#125;
+    //Firefox
+    else if(userAgent.match(/Firefox/i) == 'Firefox') &#123;
+        return "Firefox";
+    &#125;
+    //Safari
+    else if(userAgent.match(/Safari/i) == 'Safari') &#123;
+        return "Safari";
+    &#125;
+    //IE
+    else if(!!window.ActiveXObject || "ActiveXObject" in window) &#123;
+        return "IE";
+    &#125;
+    else &#123;
+        return "未定义:"+userAgent;
+    &#125;
+&#125;
+</code></pre>
+<h4 id="（3）history"><a href="#（3）history" class="headerlink" title="（3）history"></a>（3）history</h4><p>history.go(1)    参数可写任意整数，正数前进，负数后退<br>history.back()   后退<br>history.forward() 前进</p>
+<h4 id="（4）screen-屏幕"><a href="#（4）screen-屏幕" class="headerlink" title="（4）screen: 屏幕"></a>（4）screen: 屏幕</h4><p>window.screen.width 返回当前屏幕宽度(分辨率值)<br>window.screen.height 返回当前屏幕高度(分辨率值)</p>
+<h4 id="（5）window下的弹框方法"><a href="#（5）window下的弹框方法" class="headerlink" title="（5）window下的弹框方法"></a>（5）window下的弹框方法</h4><p>alert()   prompt()  confirm()</p>
+<h4 id="（6）定时器"><a href="#（6）定时器" class="headerlink" title="（6）定时器"></a>（6）定时器</h4><p>超时定时器        间隔定时器<br>setTimeout       setInterval<br>clearTimeout     clearInterval</p>
+<h4 id="（7）window-onload"><a href="#（7）window-onload" class="headerlink" title="（7）window.onload"></a>（7）window.onload</h4><h4 id="（8）window-onscroll"><a href="#（8）window-onscroll" class="headerlink" title="（8）window.onscroll"></a>（8）window.onscroll</h4><p>var scrolltop=document.documentElement.scrollTop||document.body.scrollTop; //兼容</p>
+<h4 id="（9）window-window-onresize"><a href="#（9）window-window-onresize" class="headerlink" title="（9）window.window.onresize"></a>（9）window.window.onresize</h4>
             </div>
             <hr/>
 
@@ -476,7 +505,7 @@ delete obj.jian; //删除对象的属性
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.github.io/posts/6.html">https://nekodeng.github.io/posts/6.html</a>
+                    <a href="https://nekodeng.github.io/posts/b140.html">https://nekodeng.github.io/posts/b140.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -514,16 +543,16 @@ delete obj.jian; //删除对象的属性
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AF%B9%E8%B1%A1/">
-                                    <span class="chip bg-color">对象</span>
+                                <a href="/tags/BOM/">
+                                    <span class="chip bg-color">BOM</span>
                                 </a>
                             
-                                <a href="/tags/math/">
-                                    <span class="chip bg-color">math</span>
+                                <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
+                                    <span class="chip bg-color">定时器</span>
                                 </a>
                             
-                                <a href="/tags/date/">
-                                    <span class="chip bg-color">date</span>
+                                <a href="/tags/window/">
+                                    <span class="chip bg-color">window</span>
                                 </a>
                             
                         </div>
@@ -695,69 +724,6 @@ delete obj.jian; //删除对象的属性
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/4.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS事件">
-                        
-                        <span class="card-title">JS事件</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            JS运行和编译语法分析查找基本语法有没有错误
-预解析执行之前进行预解析var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。
-变量生命周期全局变量的生命
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
-                        <span class="chip bg-color">变量生命周期</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%8B%E4%BB%B6/">
-                        <span class="chip bg-color">事件</span>
-                    </a>
-                    
-                    <a href="/tags/this/">
-                        <span class="chip bg-color">this</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/">
-                        <span class="chip bg-color">运行编译</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/posts/3.html">
                     <div class="card-image">
                         
@@ -774,9 +740,9 @@ delete obj.jian; //删除对象的属性
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -802,6 +768,69 @@ delete obj.jian; //删除对象的属性
                     
                     <a href="/tags/%E5%87%BD%E6%95%B0/">
                         <span class="chip bg-color">函数</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/2.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS程序执行">
+                        
+                        <span class="card-title">JS程序执行</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                             顺序结构：按照由上到下的顺序一行一行地执行的程序结构 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构） 循环结构：需要重复执行同一操作的程序结构称为循环结构。
+if 判断逻辑语句if(true)&#123;
+    /
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                    <a href="/tags/if-else/">
+                        <span class="chip bg-color">if/else</span>
+                    </a>
+                    
+                    <a href="/tags/switch-case/">
+                        <span class="chip bg-color">switch/case</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+                        <span class="chip bg-color">显/隐式转换</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS的BOM对象, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS的node节点, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS的BOM对象 | itsNekoDeng</title>
+    <title>JS的node节点 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS的BOM对象</h1>
+                    <h1 class="description center-align post-title">JS的node节点</h1>
                 </div>
             </div>
         </div>
@@ -368,16 +368,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/BOM/">
-                                <span class="chip bg-color">BOM</span>
+                            <a href="/tags/node%E8%8A%82%E7%82%B9/">
+                                <span class="chip bg-color">node节点</span>
                             </a>
                         
-                            <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
-                                <span class="chip bg-color">定时器</span>
+                            <a href="/tags/%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87DocumentFragment/">
+                                <span class="chip bg-color">文档碎片DocumentFragment</span>
                             </a>
                         
-                            <a href="/tags/window/">
-                                <span class="chip bg-color">window</span>
+                            <a href="/tags/DOM%E5%B0%BA%E5%AF%B8/">
+                                <span class="chip bg-color">DOM尺寸</span>
                             </a>
                         
                     </div>
@@ -401,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-19
+                    2020-08-22
                 </div>
                 
 
@@ -410,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    727
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -432,55 +432,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="BOM（Browser-Object-Model-浏览器对象模型）"><a href="#BOM（Browser-Object-Model-浏览器对象模型）" class="headerlink" title="BOM（Browser Object Model  浏览器对象模型）"></a>BOM（Browser Object Model  浏览器对象模型）</h2><h3 id="window是全局浏览器内置顶级对象"><a href="#window是全局浏览器内置顶级对象" class="headerlink" title="window是全局浏览器内置顶级对象"></a>window是全局浏览器内置顶级对象</h3><p>表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）<br>Window 对象表示一个浏览器窗口或一个框架。<br>在客户端 JavaScript 中，Window 对象是全局对象，所有的表达式都在当前的环境中计算。<br>也就是说，要引用当前窗口根本不需要特殊的语法，可以把那个窗口的属性作为全局变量来使用。<br>例如，可以只写 document，而不必写 window.document。<br>同样，可以把当前窗口对象的方法当作函数来使用，如只写 alert()，而不必写 Window.alert()。<br>除了上面列出的属性和方法，Window 对象还实现了核心 JavaScript 所定义的所有全局属性和方法。</p>
-<h3 id="1、全局变量默认是挂在window下的"><a href="#1、全局变量默认是挂在window下的" class="headerlink" title="1、全局变量默认是挂在window下的"></a>1、全局变量默认是挂在window下的</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var  a = 123;
-alert(window.a)//123
+                <h3 id="node节点（更详细的获取（设置）页面中所有的内容）"><a href="#node节点（更详细的获取（设置）页面中所有的内容）" class="headerlink" title="node节点（更详细的获取（设置）页面中所有的内容）"></a>node节点（更详细的获取（设置）页面中所有的内容）</h3><p>根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：<br>元素是节点的别称，节点包含元素当然节点还有好多细化的种类；<br>根节点：root&gt;&gt;&gt;&gt;HTML没有父节点；<br>节点操作：（通过父子系关系）<br>childNodes     获取当前元素的所有子节点；<br>nodeType       节点种类，返回值是数字；<br>nodeValue      获取（文字）节点的文本内容；<br>nodeName     返回node节点名称（#text，注释， 标签….）；<br>一个可以找出元素节点的方法；</p>
+<h3 id="常见的节点类型："><a href="#常见的节点类型：" class="headerlink" title="常见的节点类型："></a>常见的节点类型：</h3><p>nodeType值：1 代表元素（DIV、BODY、LI、SPAN……. ）<br>nodeType值：2 属性代表属性节点 （class，src，href）<br>nodeType值：3 文本节点（text节点）<br>nodeType值：8 代表注释节点<br>nodeType值：9 代表document节点；</p>
+<h3 id="innerHTML和nodeValue-当innerHTML和nodeValue分别作为左值的时候"><a href="#innerHTML和nodeValue-当innerHTML和nodeValue分别作为左值的时候" class="headerlink" title="innerHTML和nodeValue;(当innerHTML和nodeValue分别作为左值的时候)"></a>innerHTML和nodeValue;(当innerHTML和nodeValue分别作为左值的时候)</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">box.innerHTML = '<strong>abc</strong>';
+box.childNodes[0].nodeValue = '<strong>abc</strong>';
+
+innerHTML会将标签解析；
+nodeValue不会进行解析，会将标签名转译成字符串，直接输出；
+
+outerHTML/innerText (非W3C)
 </code></pre>
-<h3 id="2、window下的子对象"><a href="#2、window下的子对象" class="headerlink" title="2、window下的子对象"></a>2、window下的子对象</h3><h4 id="（1）location"><a href="#（1）location" class="headerlink" title="（1）location"></a>（1）location</h4><p>window.location.href          当前页面的 URL，可以获取，可以修改（页面跳转）<br>window.location.hostname      web 主机的域名<br>window.location.pathname      当前页面的路径和文件名<br>window.location.port          web 主机的端口 （80 或 443）<br>window.location.protocol      所使用的 web 协议（http:// 或 https://）<br>window.location.search        请求参数（？后面的内容）</p>
-<p>window.location.reload();<br>刷新页面，一般情况下给reload()传递一个true，让他刷新，并不使用缓存。缓存的东西一般为js文件，css文件等。<br>用这个方法可以让自己不能动的页面动起来了。刷新当前页面。</p>
-<h4 id="（2）window-navigator"><a href="#（2）window-navigator" class="headerlink" title="（2）window.navigator"></a>（2）window.navigator</h4><p>navigator.appName      返回获取当前浏览器的名称。<br>navigator.appVersion    返回 获取当前浏览器的版本号。<br>navigator.platform        返回 当前计算机的操作系统。<br>以上属性已经在逐渐被抛弃了。一个新的属性将替代这些属性。</p>
-<p>navigator.userAgent   返回浏览器信息（可用此属性判断当前浏览器）</p>
-<h5 id="判断当前浏览器类型的代码："><a href="#判断当前浏览器类型的代码：" class="headerlink" title="判断当前浏览器类型的代码："></a>判断当前浏览器类型的代码：</h5><pre class=" language-lang-javascript"><code class="language-lang-javascript">function isBrowser() &#123;
-    var userAgent = navigator.userAgent;
-    //微信内置浏览器
-    if(userAgent.match(/MicroMessenger/i) == 'MicroMessenger') &#123;
-        return "MicroMessenger";
-    &#125;
-    //QQ内置浏览器
-    else if(userAgent.match(/QQ/i) == 'QQ') &#123;
-        return "QQ";
-    &#125;
-    //Chrome
-    else if(userAgent.match(/Chrome/i) == 'Chrome') &#123;
-        return "Chrome";
-    &#125;
-    //Opera
-    else if(userAgent.match(/Opera/i) == 'Opera') &#123;
-        return "Opera";
-    &#125;
-    //Firefox
-    else if(userAgent.match(/Firefox/i) == 'Firefox') &#123;
-        return "Firefox";
-    &#125;
-    //Safari
-    else if(userAgent.match(/Safari/i) == 'Safari') &#123;
-        return "Safari";
-    &#125;
-    //IE
-    else if(!!window.ActiveXObject || "ActiveXObject" in window) &#123;
-        return "IE";
-    &#125;
-    else &#123;
-        return "未定义:"+userAgent;
-    &#125;
+<h3 id="attributes属性"><a href="#attributes属性" class="headerlink" title="attributes属性"></a>attributes属性</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var oBox = document.getElementById('box');
+    console.log(oBox.attributes)                                      //  获取所有，该节点的属性信息；
+
+    console.log(oBox.attributes.length);                          //返回属性节点个数
+    console.log(oBox.attributes[0]);                                 //返回第一个属性节点
+    console.log(oBox.attributes[0].nodeType);                //2，属性
+    console.log(oBox.attributes[0].nodeValue);               //属性值
+    console.log(oBox.attributes['id']);                              //返回属性为 id 的节点
+
+    console.log(oBox.attributes.getNamedItem('id'));     // 获取 id 的节点；
+</code></pre>
+<p>attributes属性 一般只用作获取，设置使用setAttribute()</p>
+<h3 id="父（parent）、子（child）和同胞（sibling）"><a href="#父（parent）、子（child）和同胞（sibling）" class="headerlink" title="父（parent）、子（child）和同胞（sibling）"></a>父（parent）、子（child）和同胞（sibling）</h3><p>描述这些关系。父节点拥有子节点。同级的子节点被称为同胞（兄弟或姐妹）。<br>    childNodes 获取当前元素节点的所有子节点</p>
+<pre><code>firstChild 获取当前元素节点的第一个子节点
+
+lastChild 获取当前元素节点的最后一个子节点
+
+previousSibling 获取当前节点的前一个同级节点
+
+nextSibling 获取当前节点的后一个同级节点
+****以上五中方法都包含空白文本节点
+
+
+firstElementChild   获取当前元素节点的第一个元素子节点
+
+lastElementChild  获取当前元素节点的最后一个元素子节点
+
+ownerDocument 获取该节点的文档根节点，相当于document
+
+parentNode 获取当前节点的父元素
+</code></pre><h3 id="创建文档碎片createDocumentFragment"><a href="#创建文档碎片createDocumentFragment" class="headerlink" title="创建文档碎片createDocumentFragment();"></a>创建文档碎片createDocumentFragment();</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var cache = document.createDocumentFragment();
+for( var i = 0 ; i < 1000; i ++ )&#123;
+    var opt = document.createElement("input");
+    opt.type="button";
+    opt.value = "删除";
+    cache.appendChild(opt);
 &#125;
+document.body.appendChild(cache);
 </code></pre>
-<h4 id="（3）history"><a href="#（3）history" class="headerlink" title="（3）history"></a>（3）history</h4><p>history.go(1)    参数可写任意整数，正数前进，负数后退<br>history.back()   后退<br>history.forward() 前进</p>
-<h4 id="（4）screen-屏幕"><a href="#（4）screen-屏幕" class="headerlink" title="（4）screen: 屏幕"></a>（4）screen: 屏幕</h4><p>window.screen.width 返回当前屏幕宽度(分辨率值)<br>window.screen.height 返回当前屏幕高度(分辨率值)</p>
-<h4 id="（5）window下的弹框方法"><a href="#（5）window下的弹框方法" class="headerlink" title="（5）window下的弹框方法"></a>（5）window下的弹框方法</h4><p>alert()   prompt()  confirm()</p>
-<h4 id="（6）定时器"><a href="#（6）定时器" class="headerlink" title="（6）定时器"></a>（6）定时器</h4><p>超时定时器        间隔定时器<br>setTimeout       setInterval<br>clearTimeout     clearInterval</p>
-<h4 id="（7）window-onload"><a href="#（7）window-onload" class="headerlink" title="（7）window.onload"></a>（7）window.onload</h4><h4 id="（8）window-onscroll"><a href="#（8）window-onscroll" class="headerlink" title="（8）window.onscroll"></a>（8）window.onscroll</h4><p>var scrolltop=document.documentElement.scrollTop||document.body.scrollTop; //兼容</p>
-<h4 id="（9）window-window-onresize"><a href="#（9）window-window-onresize" class="headerlink" title="（9）window.window.onresize"></a>（9）window.window.onresize</h4>
+<h3 id="DOM尺寸和位置"><a href="#DOM尺寸和位置" class="headerlink" title="DOM尺寸和位置"></a>DOM尺寸和位置</h3><h4 id="DOM尺寸"><a href="#DOM尺寸" class="headerlink" title="DOM尺寸"></a>DOM尺寸</h4><p>box.style.width<br>box.style.height<br>只能获取到内联style属性的CSS样式中的宽和高，如果有，获取;如果没有，则返回空</p>
+<p>getStyle(box,”width”)<br>getStyle(box,”width”)<br>//如下getStyle方法的封装<br>通过计算获取元素的大小，无关你是否是行内、内联或者链接，它经过计算后得到的结果返回出来。如果本身设置大小，它会返回元素的大小，如果本身没有设置，非IE浏览器会返回默认的大小，IE浏览器返回auto。</p>
+<p>box.clientWidth<br>box.clientHeight<br>返回了元素大小，但没有单位，默认单位是px，如果设置了其他的单位，比如100em之类，返回出来的结果还会转换为px像素（不含边框）</p>
+<p>box.scrollWidth<br>box.scrollHeight<br>获取滚动内容的元素大小（当元素出现滚动条时，此属性指全部滚动内容的宽高）<br>返回了元素大小，默认单位是px。如果没有设置任何CSS的宽和高度，它会得到计算后的宽度和高度</p>
+<p>box.offsetWidth<br>box.offsetHeight<br>返回了元素大小，默认单位是px。如果没有设置任何CSS的宽和高度，他会得到计算后的宽度和高度<br>包含盒模型中除margin以外的宽高（包含边框）<br>最稳定，使用最频繁<br>以上这三对方法都是只读的<br>  获取非行内样式（兼容问题）</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function getStyle(obj,attr)&#123;    //获取非行间样式，obj是对象，attr是值
+      if(obj.currentStyle)&#123;   //针对ie获取非行间样式
+            return obj.currentStyle[attr];
+      &#125;else&#123;
+            return getComputedStyle(obj,false)[attr];   //针对非ie
+      &#125;;
+&#125;;
+</code></pre>
+<h4 id="位置坐标"><a href="#位置坐标" class="headerlink" title="位置坐标"></a>位置坐标</h4><p>box.clientLeft<br>box.clientTop<br>获取左边框和上边框的宽度<br>box.offsetLeft<br>box.offsetTop<br>获取元素当前相对于offsetParent父元素的位置<br>box.scrollTop<br>box.scrollLeft<br>获取滚动内容上方的位置(就是隐藏的内容的高度)<br>获取滚动内容左方的位置</p>
+<p>offsetParent      这个属性的返回值是它根据谁定位的，如果它的所有父元素都没有定位，那么返回body</p>
+
             </div>
             <hr/>
 
@@ -505,7 +521,7 @@ alert(window.a)//123
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.github.io/posts/7.html">https://nekodeng.github.io/posts/7.html</a>
+                    <a href="https://nekodeng.github.io/posts/e785.html">https://nekodeng.github.io/posts/e785.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,16 +559,16 @@ alert(window.a)//123
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/BOM/">
-                                    <span class="chip bg-color">BOM</span>
+                                <a href="/tags/node%E8%8A%82%E7%82%B9/">
+                                    <span class="chip bg-color">node节点</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
-                                    <span class="chip bg-color">定时器</span>
+                                <a href="/tags/%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87DocumentFragment/">
+                                    <span class="chip bg-color">文档碎片DocumentFragment</span>
                                 </a>
                             
-                                <a href="/tags/window/">
-                                    <span class="chip bg-color">window</span>
+                                <a href="/tags/DOM%E5%B0%BA%E5%AF%B8/">
+                                    <span class="chip bg-color">DOM尺寸</span>
                                 </a>
                             
                         </div>
@@ -720,29 +736,30 @@ alert(window.a)//123
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/3.html">
+                <a href="/posts/e785.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS函数">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JS的node节点">
                         
-                        <span class="card-title">JS函数</span>
+                        <span class="card-title">JS的node节点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（
+                            node节点（更详细的获取（设置）页面中所有的内容）根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：元素是节点的别称，节点包含元素当然节点还有好多细化的种类；根节点：root&gt;&gt;&gt;&gt;HT
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -755,19 +772,20 @@ alert(window.a)//123
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/node%E8%8A%82%E7%82%B9/">
+                        <span class="chip bg-color">node节点</span>
                     </a>
                     
-                    <a href="/tags/function/">
-                        <span class="chip bg-color">function</span>
+                    <a href="/tags/%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87DocumentFragment/">
+                        <span class="chip bg-color">文档碎片DocumentFragment</span>
                     </a>
                     
-                    <a href="/tags/%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">函数</span>
+                    <a href="/tags/DOM%E5%B0%BA%E5%AF%B8/">
+                        <span class="chip bg-color">DOM尺寸</span>
                     </a>
                     
                 </div>
@@ -781,26 +799,24 @@ alert(window.a)//123
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/2.html">
+                <a href="/posts/116b.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS程序执行">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="JS的DOM对象">
                         
-                        <span class="card-title">JS程序执行</span>
+                        <span class="card-title">JS的DOM对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             顺序结构：按照由上到下的顺序一行一行地执行的程序结构 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构） 循环结构：需要重复执行同一操作的程序结构称为循环结构。
-if 判断逻辑语句if(true)&#123;
-    /
+                            DOM（Document Object Model 文档对象模型）DOM定义了表示和修改文档所需的对象、行为和属性，以及这些对象之间的关系。当你想要改变网页行为的时候 你该怎么办呢？你不会用脚来踹网页或者用头来顶网页吧？这时候怎么办呢 ？而
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
                             </span>
                         <span class="publish-author">
                             
@@ -817,20 +833,16 @@ if 判断逻辑语句if(true)&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/DOM/">
+                        <span class="chip bg-color">DOM</span>
                     </a>
                     
-                    <a href="/tags/if-else/">
-                        <span class="chip bg-color">if/else</span>
+                    <a href="/tags/DOM%E8%8A%82%E7%82%B9/">
+                        <span class="chip bg-color">DOM节点</span>
                     </a>
                     
-                    <a href="/tags/switch-case/">
-                        <span class="chip bg-color">switch/case</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                        <span class="chip bg-color">显/隐式转换</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9CDOM/">
+                        <span class="chip bg-color">操作DOM</span>
                     </a>
                     
                 </div>
@@ -1070,7 +1082,7 @@ if 判断逻辑语句if(true)&#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.4k</span>&nbsp;字
+                class="white-color">7.5k</span>&nbsp;字
             
             
             
