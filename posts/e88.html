@@ -477,8 +477,7 @@ console.log(reg.test('a'));
 <h4 id="split"><a href="#split" class="headerlink" title="split"></a>split</h4><p>将一个字符串拆分成一个数组，它接受一个正则或者子字符（串）作为参数，返回一个数组</p>
 <h4 id="match"><a href="#match" class="headerlink" title="match"></a>match</h4><p>接受一个正则作为参数，用来匹配一个字符串，返回一个数组</p>
 <p>例子：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript"><script>
-    var reg = new RegExp("b");//写法1
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">    var reg = new RegExp("b");//写法1
     var str = prompt();
     var reg = /b/;// 写法2  匹配是否存在b
     var reg = /[abcde]/;//匹配是否有abcde中的字符
@@ -503,12 +502,12 @@ console.log(reg.test('a'));
     var reg = /zhangsan/i;//i：忽略大小写
     var reg = /\d+/g;//g: 代表全局所有  （global）
     console.log(reg.test(str));
-  </script>
 </code></pre>
-<p>案例:密码强度</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript"><input type="text" id="pwd"/>
-        <button>登录</button>
-        <script>
+<h3 id="案例-密码强度"><a href="#案例-密码强度" class="headerlink" title="案例:密码强度"></a>案例:密码强度</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">            // html代码如下
+            // input type="text" id="pwd"     input标签
+            // button 登录 button             button标签
+
+            //js代码如下
             var input = document.querySelector("#pwd");
             var numReg = /\d+/;
             //var letterReg = /^[a-zA-Z]$/;
@@ -533,7 +532,6 @@ console.log(reg.test('a'));
                 if(arr1.length === 3) alert("强");
 
             &#125;
-        </script>
 </code></pre>
 <h3 id="附：扩展正则案例"><a href="#附：扩展正则案例" class="headerlink" title="附：扩展正则案例"></a>附：扩展正则案例</h3><p>只能用数字开头，长度在6—18位之间 /^\d.{5,17}$/</p>
 <p>以字母开头，数字结尾，中间任意一个字符 /^[a-z].\d$/i</p>
@@ -1118,7 +1116,7 @@ var arr=[8,94,15,88,55,76,21,
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11k</span>&nbsp;字
+                class="white-color">11.1k</span>&nbsp;字
             
             
             
