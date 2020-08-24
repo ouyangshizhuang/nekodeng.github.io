@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>itsNekoDeng</title>
+  
+  
+  <link href="https://nekodeng.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://nekodeng.github.io/"/>
+  <updated>2020-08-24T03:01:20.958Z</updated>
+  <id>https://nekodeng.github.io/</id>
+  
+  <author>
+    <name>NekoDeng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试啊啊啊啊啊啊</title>
+    <link href="https://nekodeng.github.io/posts/451.html"/>
+    <id>https://nekodeng.github.io/posts/451.html</id>
+    <published>2020-08-24T03:00:27.273Z</published>
+    <updated>2020-08-24T03:01:20.958Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="标签" scheme="https://nekodeng.github.io/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS正则表达式</title>
+    <link href="https://nekodeng.github.io/posts/e88.html"/>
+    <id>https://nekodeng.github.io/posts/e88.html</id>
+    <published>2020-08-22T14:36:46.676Z</published>
+    <updated>2020-08-22T15:29:22.525Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h3&gt;&lt;p&gt;（英语：Regular</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS正则表达式" scheme="https://nekodeng.github.io/tags/JS%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS冒泡选择快速排序</title>
+    <link href="https://nekodeng.github.io/posts/b0e2.html"/>
+    <id>https://nekodeng.github.io/posts/b0e2.html</id>
+    <published>2020-08-22T11:29:26.417Z</published>
+    <updated>2020-08-24T02:59:09.041Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JS冒泡排序（必须掌握思想和必须会代码默写）（面试最常考）&quot;&gt;&lt;a href=&quot;#JS冒泡排序（必须掌握思想和必须会代码默写）（面试最常考）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS排序" scheme="https://nekodeng.github.io/tags/JS%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="冒泡排序" scheme="https://nekodeng.github.io/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="选择排序" scheme="https://nekodeng.github.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="快速排序" scheme="https://nekodeng.github.io/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS事件流</title>
+    <link href="https://nekodeng.github.io/posts/e04e.html"/>
+    <id>https://nekodeng.github.io/posts/e04e.html</id>
+    <published>2020-08-22T08:51:26.152Z</published>
+    <updated>2020-08-22T08:56:39.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;事件冒泡&quot;&gt;&lt;a href=&quot;#事件冒泡&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="事件流" scheme="https://nekodeng.github.io/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/"/>
+    
+    <category term="冒泡" scheme="https://nekodeng.github.io/tags/%E5%86%92%E6%B3%A1/"/>
+    
+    <category term="捕获" scheme="https://nekodeng.github.io/tags/%E6%8D%95%E8%8E%B7/"/>
+    
+    <category term="监听" scheme="https://nekodeng.github.io/tags/%E7%9B%91%E5%90%AC/"/>
+    
+    <category term="委托/代理" scheme="https://nekodeng.github.io/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS事件2</title>
+    <link href="https://nekodeng.github.io/posts/a1a1.html"/>
+    <id>https://nekodeng.github.io/posts/a1a1.html</id>
+    <published>2020-08-22T08:35:57.457Z</published>
+    <updated>2020-08-22T08:47:16.578Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;事件的原理&quot;&gt;&lt;a href=&quot;#事件的原理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="鼠标/键盘事件" scheme="https://nekodeng.github.io/tags/%E9%BC%A0%E6%A0%87-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/"/>
+    
+    <category term="阻止默认浏览器事件" scheme="https://nekodeng.github.io/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6/"/>
+    
+    <category term="事件流" scheme="https://nekodeng.github.io/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS的node节点</title>
+    <link href="https://nekodeng.github.io/posts/e785.html"/>
+    <id>https://nekodeng.github.io/posts/e785.html</id>
+    <published>2020-08-22T08:13:18.734Z</published>
+    <updated>2020-08-22T08:29:38.626Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;node节点（更详细的获取（设置）页面中所有的内容）&quot;&gt;&lt;a href=&quot;#node节点（更详细的获取（设置）页面中所有的内容）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="node节点" scheme="https://nekodeng.github.io/tags/node%E8%8A%82%E7%82%B9/"/>
+    
+    <category term="文档碎片" scheme="https://nekodeng.github.io/tags/%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/"/>
+    
+    <category term="DOM尺寸" scheme="https://nekodeng.github.io/tags/DOM%E5%B0%BA%E5%AF%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS的DOM对象</title>
+    <link href="https://nekodeng.github.io/posts/116b.html"/>
+    <id>https://nekodeng.github.io/posts/116b.html</id>
+    <published>2020-08-22T07:53:26.222Z</published>
+    <updated>2020-08-22T08:06:25.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;DOM（Document-Object-Model-文档对象模型）&quot;&gt;&lt;a href=&quot;#DOM（Document-Object-Model-文档对象模型）&quot; class=&quot;headerlink&quot; title=&quot;DOM（Document Object Model</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="DOM" scheme="https://nekodeng.github.io/tags/DOM/"/>
+    
+    <category term="DOM节点" scheme="https://nekodeng.github.io/tags/DOM%E8%8A%82%E7%82%B9/"/>
+    
+    <category term="操作DOM" scheme="https://nekodeng.github.io/tags/%E6%93%8D%E4%BD%9CDOM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS对象</title>
+    <link href="https://nekodeng.github.io/posts/5.html"/>
+    <id>https://nekodeng.github.io/posts/5.html</id>
+    <published>2020-08-20T13:56:49.881Z</published>
+    <updated>2020-08-20T14:18:57.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;类——定义属性和方法&lt;br&gt;类的具体实现，继承了类所定义的属性和方法（是一种数据类型）&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="对象/类" scheme="https://nekodeng.github.io/tags/%E5%AF%B9%E8%B1%A1-%E7%B1%BB/"/>
+    
+    <category term="稀疏数组" scheme="https://nekodeng.github.io/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="for/in" scheme="https://nekodeng.github.io/tags/for-in/"/>
+    
+    <category term="for/of" scheme="https://nekodeng.github.io/tags/for-of/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS事件</title>
+    <link href="https://nekodeng.github.io/posts/4.html"/>
+    <id>https://nekodeng.github.io/posts/4.html</id>
+    <published>2020-08-20T13:48:10.998Z</published>
+    <updated>2020-08-20T13:47:28.515Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JS运行和编译&quot;&gt;&lt;a href=&quot;#JS运行和编译&quot; class=&quot;headerlink&quot; title=&quot;JS运行和编译&quot;&gt;&lt;/a&gt;JS运行和编译&lt;/h2&gt;&lt;h3 id=&quot;语法分析&quot;&gt;&lt;a href=&quot;#语法分析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="事件" scheme="https://nekodeng.github.io/tags/%E4%BA%8B%E4%BB%B6/"/>
+    
+    <category term="this" scheme="https://nekodeng.github.io/tags/this/"/>
+    
+    <category term="变量生命周期" scheme="https://nekodeng.github.io/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+    <category term="运行编译" scheme="https://nekodeng.github.io/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS的MATH和Date对象</title>
+    <link href="https://nekodeng.github.io/posts/6.html"/>
+    <id>https://nekodeng.github.io/posts/6.html</id>
+    <published>2020-08-20T06:52:51.398Z</published>
+    <updated>2020-08-22T07:33:25.552Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;什么是对象？&quot;&gt;&lt;a href=&quot;#什么是对象？&quot; class=&quot;headerlink&quot; title=&quot;什么是对象？&quot;&gt;&lt;/a&gt;什么是对象？&lt;/h2&gt;&lt;p&gt;对象的类型是Object。&lt;br&gt;JavaScript</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="math" scheme="https://nekodeng.github.io/tags/math/"/>
+    
+    <category term="date" scheme="https://nekodeng.github.io/tags/date/"/>
+    
+    <category term="对象" scheme="https://nekodeng.github.io/tags/%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS函数</title>
+    <link href="https://nekodeng.github.io/posts/3.html"/>
+    <id>https://nekodeng.github.io/posts/3.html</id>
+    <published>2020-08-19T10:48:32.386Z</published>
+    <updated>2020-08-20T07:11:47.928Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一&quot;&gt;&lt;a href=&quot;#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="function" scheme="https://nekodeng.github.io/tags/function/"/>
+    
+    <category term="函数" scheme="https://nekodeng.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS的BOM对象</title>
+    <link href="https://nekodeng.github.io/posts/b140.html"/>
+    <id>https://nekodeng.github.io/posts/b140.html</id>
+    <published>2020-08-19T10:45:41.136Z</published>
+    <updated>2020-08-22T08:06:34.634Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;BOM（Browser-Object-Model-浏览器对象模型）&quot;&gt;&lt;a href=&quot;#BOM（Browser-Object-Model-浏览器对象模型）&quot; class=&quot;headerlink&quot; title=&quot;BOM（Browser Object Model </summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="BOM" scheme="https://nekodeng.github.io/tags/BOM/"/>
+    
+    <category term="定时器" scheme="https://nekodeng.github.io/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+    
+    <category term="window" scheme="https://nekodeng.github.io/tags/window/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS程序执行</title>
+    <link href="https://nekodeng.github.io/posts/2.html"/>
+    <id>https://nekodeng.github.io/posts/2.html</id>
+    <published>2020-08-18T15:07:50.018Z</published>
+    <updated>2020-08-19T10:42:16.442Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 顺序结构：按照由上到下的顺序一行一行地执行的程序结构&lt;br&gt; 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）&lt;br&gt; 循环结构：需要重复执行同一操作的程序结构称为循环结构。&lt;/p&gt;
+&lt;h3 id=&quot;if-判断逻辑语句&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="if/else" scheme="https://nekodeng.github.io/tags/if-else/"/>
+    
+    <category term="switch/case" scheme="https://nekodeng.github.io/tags/switch-case/"/>
+    
+    <category term="显/隐式转换" scheme="https://nekodeng.github.io/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS循环结构</title>
+    <link href="https://nekodeng.github.io/posts/1.html"/>
+    <id>https://nekodeng.github.io/posts/1.html</id>
+    <published>2020-08-17T14:08:55.524Z</published>
+    <updated>2020-08-20T07:08:19.238Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;while循环&quot;&gt;&lt;a href=&quot;#while循环&quot; class=&quot;headerlink&quot; title=&quot;while循环&quot;&gt;&lt;/a&gt;while循环&lt;/h3&gt;&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.github.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="while" scheme="https://nekodeng.github.io/tags/while/"/>
+    
+    <category term="do...while" scheme="https://nekodeng.github.io/tags/do-while/"/>
+    
+    <category term="break和continue" scheme="https://nekodeng.github.io/tags/break%E5%92%8Ccontinue/"/>
+    
+    <category term="for" scheme="https://nekodeng.github.io/tags/for/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客文章模板</title>
+    <link href="https://nekodeng.github.io/posts/8e47.html"/>
+    <id>https://nekodeng.github.io/posts/8e47.html</id>
+    <published>2020-08-17T07:32:19.015Z</published>
+    <updated>2020-08-20T07:09:01.182Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JS" scheme="https://nekodeng.github.io/tags/JS/"/>
+    
+    <category term="标签" scheme="https://nekodeng.github.io/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+</feed>
