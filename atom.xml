@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-08-24T03:01:20.958Z</updated>
+  <updated>2020-09-01T11:49:11.228Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,27 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试啊啊啊啊啊啊</title>
-    <link href="https://nekodeng.gitee.io/posts/451.html"/>
-    <id>https://nekodeng.gitee.io/posts/451.html</id>
+    <title>JS-ES5</title>
+    <link href="https://nekodeng.gitee.io/posts/386e.html"/>
+    <id>https://nekodeng.gitee.io/posts/386e.html</id>
     <published>2020-08-24T03:00:27.273Z</published>
-    <updated>2020-08-24T03:01:20.958Z</updated>
+    <updated>2020-09-01T11:49:11.228Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;ES5严格模式（strict-mode）&quot;&gt;&lt;a href=&quot;#ES5严格模式（strict-mode）&quot; class=&quot;headerlink&quot; title=&quot;ES5严格模式（strict mode）&quot;&gt;&lt;/a&gt;ES5严格模式（strict</summary>
         
       
     
     
     
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
-    <category term="JS" scheme="https://nekodeng.gitee.io/tags/JS/"/>
     
-    <category term="标签" scheme="https://nekodeng.gitee.io/tags/%E6%A0%87%E7%AD%BE/"/>
+    <category term="this" scheme="https://nekodeng.gitee.io/tags/this/"/>
+    
+    <category term="ES5" scheme="https://nekodeng.gitee.io/tags/ES5/"/>
+    
+    <category term="严格模式" scheme="https://nekodeng.gitee.io/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="arguments" scheme="https://nekodeng.gitee.io/tags/arguments/"/>
     
   </entry>
   

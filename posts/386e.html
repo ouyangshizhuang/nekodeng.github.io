@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="测试啊啊啊啊啊啊, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS-ES5, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>测试啊啊啊啊啊啊 | itsNekoDeng</title>
+    <title>JS-ES5 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">测试啊啊啊啊啊啊</h1>
+                    <h1 class="description center-align post-title">JS-ES5</h1>
                 </div>
             </div>
         </div>
@@ -368,18 +368,35 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
+                            <a href="/tags/this/">
+                                <span class="chip bg-color">this</span>
                             </a>
                         
-                            <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                                <span class="chip bg-color">标签</span>
+                            <a href="/tags/ES5/">
+                                <span class="chip bg-color">ES5</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">严格模式</span>
+                            </a>
+                        
+                            <a href="/tags/arguments/">
+                                <span class="chip bg-color">arguments</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                JS基础
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -397,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    40
+                    923
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -419,11 +436,128 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码
+                <h2 id="ES5严格模式（strict-mode）"><a href="#ES5严格模式（strict-mode）" class="headerlink" title="ES5严格模式（strict mode）"></a>ES5严格模式（strict mode）</h2><p>顾名思义，这种模式使得Javascript在更严格的条件下运行。<br>-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;<br>-消除代码运行的一些不安全之处，保证代码运行的安全；<br>-提高编译器效率，增加运行速度；<br>-为未来新版本的Javascript做好铺垫。</p>
+<h3 id="进入严格模式-“use-strict”"><a href="#进入严格模式-“use-strict”" class="headerlink" title="进入严格模式 “use strict”"></a>进入严格模式 “use strict”</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict"
+console.log("已经进入严格模式");
 </code></pre>
-<h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题-1"><a href="#三级标题-1" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码
+<h3 id="严格模式行为变更："><a href="#严格模式行为变更：" class="headerlink" title="严格模式行为变更："></a>严格模式行为变更：</h3><p>1.全局变量声明时 必须加var</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict"
+a = 10;//报错 因为 a没有被var 声明
+//Uncaught ReferenceError: a is not defined; 引用错误： a 没有被声明
+</code></pre>
+<p>2.this 无法指向全局对象</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict"
+// console.log("已经进入严格模式");
+function a()&#123;
+  this.b = 10; //报错 ， 因为this指向了window对象;
+  //Uncaught TypeError: Cannot set property 'b' of undefined; 
+  //类型错误 ： 不能给undefined设置属性b；
+&#125;
+window.a()；
+</code></pre>
+<p>3.函数内重名属性</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict";
+function a(b,b,c)&#123; //报错
+// Uncaught SyntaxError: Duplicate parameter name not allowed in this context;语法错误：在此上下文中不允许重复的参数名称
+&#125;
+</code></pre>
+<p>4.arguments对象;</p>
+<p>4.1 arguments对象不允许被动态改变;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function fn1(a) &#123;
+        a = 2;
+        return [a, arguments[0]];
+    &#125;
+    console.log(fn1(1)); // 正常模式为[2,2]
+    function fn2(a) &#123;
+        "use strict";
+        a = 2;
+        return [a, arguments[0]];
+    &#125;
+    console.log(fn2(1)); // 严格模式为[2,1]
+</code></pre>
+<p> 4.2 arguments对象不允许被自调用;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict";
+        var f = function() &#123; return arguments.callee; &#125;;
+        f(); // 报错
+
+        //Uncaught TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+        //类型错误：“caller ”，“arguments.callee ”，不能在严格模式中使用;
+
+        //caller返回调用当前函数的函数的引用  （正在执行的函数的属性）
+       // callee返回正在执行的函数本身的引用 （arguments的属性）
+</code></pre>
+<p>5.新增保留字； implements, interface, let, package, private, protected, public, static, yield。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict";
+function package(protected) &#123; // 语法错误
+    var implements; // 语法错误
+&#125;
+package();
+</code></pre>
+<h2 id="ES5新增常见方法"><a href="#ES5新增常见方法" class="headerlink" title="ES5新增常见方法"></a>ES5新增常见方法</h2><p>数组：<br>2个索引方法：indexOf() 和 lastIndexOf()；<br>5个迭代方法：forEach()、map()、filter()、some()、every()；<br>2个归并方法：reduce()、reduceRight()；</p>
+<h3 id="reduce去重："><a href="#reduce去重：" class="headerlink" title="reduce去重："></a>reduce去重：</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [12,12,32,43,5,5,34,43,4,6,4];
+        var arr1 = arr.reduce(function(prev,next)&#123;
+            if(!prev.includes(next))&#123;
+                prev.push(next);
+            &#125;
+            return prev;
+        &#125;,[])
+        console.log(arr1);//[12, 32, 43, 5, 34, 4, 6]
+</code></pre>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串:"></a>字符串:</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">trim();// 去掉字符串前后空格
+
+trimLeft()
+
+trimRIght()
+
+var reg = /(^\s*)|(\s*$)/g
+
+str.replace(reg,"");
+</code></pre>
+<p>JSON.parse(str); //json序列化，将符合json格式的字符串转换为json</p>
+<p>JSON.stringify(); //json转换为字符串</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">        var data = [
+            &#123;"name":"zhangsan","age":20&#125;,
+            &#123;"name":"zhangsan","age":20&#125;,
+        ]
+        var str = JSON.stringify(data);//json转换为字符串
+        console.log(str);//[&#123;"name":"zhangsan","age":20&#125;,&#123;"name":"zhangsan","age":20&#125;]//json序列化，将符合json格式的字符串转换为json
+        var date1 = JSON.parse('[&#123;"name":"zhangsan","age":20&#125;,&#123;"name":"zhangsan","age":20&#125;]');
+        console.log(date1);
+</code></pre>
+<p>Date.now(); //日期对象得到当前日期的毫秒数</p>
+<p>Object.defineProperties(obj, props); //给obj设置属性</p>
+<p>Object.keys(obj); //获取obj的所有属性名称，返回数组</p>
+<p>Object.values(obj); // 获取obj的所有属性值，返回数组</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();
+Object.defineProperty(obj, 'name', &#123;
+configurable: false, // 表示能否通过delete删除此属性
+writable: true, // 能否修改属性的值
+enumerable: true, // 表示该属性是否可枚举，即是否通过for-in循环或Object.keys()返回属性
+value: '张三'
+&#125;)
+console.log(obj.name)//张三
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();
+Object.defineProperties(obj, &#123; 
+    name: &#123;
+        value: '张三',
+        configurable: false,
+        writable: true,
+        enumerable: true
+    &#125;, 
+    age: &#123;
+        value: 18,
+        configurable: true
+    &#125;
+&#125;)
+console.log(obj.name, obj.age) // 张三, 18
+</code></pre>
+<p>Object.assign 对象合并,相同属性后面的生效</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = &#123;"name":"lisi"&#125;;
+var obj1 = &#123;"age":20,"name":"zhangsi"&#125;;
+var obj2 = Object.assign(obj,obj1);//对象合并,相同属性后面的生效.覆盖前面的相同属性
+console.log(obj2);
 </code></pre>
 
             </div>
@@ -450,7 +584,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.gitee.io/posts/451.html">https://nekodeng.gitee.io/posts/451.html</a>
+                    <a href="https://nekodeng.gitee.io/posts/386e.html">https://nekodeng.gitee.io/posts/386e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -488,12 +622,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
+                                <a href="/tags/this/">
+                                    <span class="chip bg-color">this</span>
                                 </a>
                             
-                                <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                                    <span class="chip bg-color">标签</span>
+                                <a href="/tags/ES5/">
+                                    <span class="chip bg-color">ES5</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">严格模式</span>
+                                </a>
+                            
+                                <a href="/tags/arguments/">
+                                    <span class="chip bg-color">arguments</span>
                                 </a>
                             
                         </div>
@@ -666,25 +808,19 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/posts/451.html">
+                <a href="/posts/386e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="测试啊啊啊啊啊啊">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS-ES5">
                         
-                        <span class="card-title">测试啊啊啊啊啊啊</span>
+                        <span class="card-title">JS-ES5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            二级标题三级标题正文随意发挥。。。。。
-//这里是js代码
-
-二级标题三级标题正文随意发挥。。。。。
-//这里是js代码
-
-
+                            ES5严格模式（strict mode）顾名思义，这种模式使得Javascript在更严格的条件下运行。-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;-消除代码运行的一些不安全之处，保证代码运行的安全；-提高编译
                         
                     </div>
                     <div class="publish-info">
@@ -693,8 +829,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            NekoDeng
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -703,12 +843,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%87%E7%AD%BE/">
-                        <span class="chip bg-color">标签</span>
+                    <a href="/tags/ES5/">
+                        <span class="chip bg-color">ES5</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">严格模式</span>
+                    </a>
+                    
+                    <a href="/tags/arguments/">
+                        <span class="chip bg-color">arguments</span>
                     </a>
                     
                 </div>
@@ -999,7 +1147,7 @@ var str='abcdefg
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.1k</span>&nbsp;字
+                class="white-color">12k</span>&nbsp;字
             
             
             
