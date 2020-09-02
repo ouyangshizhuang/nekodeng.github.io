@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS的node节点, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS-ES6, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS的node节点 | itsNekoDeng</title>
+    <title>JS-ES6 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS的node节点</h1>
+                    <h1 class="description center-align post-title">JS-ES6</h1>
                 </div>
             </div>
         </div>
@@ -368,16 +368,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/node%E8%8A%82%E7%82%B9/">
-                                <span class="chip bg-color">node节点</span>
+                            <a href="/tags/ES6/">
+                                <span class="chip bg-color">ES6</span>
                             </a>
                         
-                            <a href="/tags/%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/">
-                                <span class="chip bg-color">文档碎片</span>
+                            <a href="/tags/let-const/">
+                                <span class="chip bg-color">let/const</span>
                             </a>
                         
-                            <a href="/tags/DOM%E5%B0%BA%E5%AF%B8/">
-                                <span class="chip bg-color">DOM尺寸</span>
+                            <a href="/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
+                                <span class="chip bg-color">箭头函数</span>
                             </a>
                         
                     </div>
@@ -401,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-22
+                    2020-09-02
                 </div>
                 
 
@@ -410,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -432,70 +432,305 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="node节点（更详细的获取（设置）页面中所有的内容）"><a href="#node节点（更详细的获取（设置）页面中所有的内容）" class="headerlink" title="node节点（更详细的获取（设置）页面中所有的内容）"></a>node节点（更详细的获取（设置）页面中所有的内容）</h3><p>根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：<br>元素是节点的别称，节点包含元素当然节点还有好多细化的种类；<br>根节点：root&gt;&gt;&gt;&gt;HTML没有父节点；<br>节点操作：（通过父子系关系）<br>childNodes     获取当前元素的所有子节点；<br>nodeType       节点种类，返回值是数字；<br>nodeValue      获取（文字）节点的文本内容；<br>nodeName     返回node节点名称（#text，注释， 标签….）；<br>一个可以找出元素节点的方法；</p>
-<h3 id="常见的节点类型："><a href="#常见的节点类型：" class="headerlink" title="常见的节点类型："></a>常见的节点类型：</h3><p>nodeType值：1 代表元素（DIV、BODY、LI、SPAN……. ）<br>nodeType值：2 属性代表属性节点 （class，src，href）<br>nodeType值：3 文本节点（text节点）<br>nodeType值：8 代表注释节点<br>nodeType值：9 代表document节点；</p>
-<h3 id="innerHTML和nodeValue-当innerHTML和nodeValue分别作为左值的时候"><a href="#innerHTML和nodeValue-当innerHTML和nodeValue分别作为左值的时候" class="headerlink" title="innerHTML和nodeValue;(当innerHTML和nodeValue分别作为左值的时候)"></a>innerHTML和nodeValue;(当innerHTML和nodeValue分别作为左值的时候)</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">box.innerHTML = '<strong>abc</strong>';
-box.childNodes[0].nodeValue = '<strong>abc</strong>';
-
-innerHTML会将标签解析；
-nodeValue不会进行解析，会将标签名转译成字符串，直接输出；
-
-outerHTML/innerText (非W3C)
+                <h2 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h2><h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>块级作用域：一种普遍存在于各个语言中的作用域范围；</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">    &#123;
+      var a = 10;
+      let b = 20;
+     &#125;
+     console.log(a)//10
+     console.log(b)// b is not defined
 </code></pre>
-<h3 id="attributes属性"><a href="#attributes属性" class="headerlink" title="attributes属性"></a>attributes属性</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var oBox = document.getElementById('box');
-    console.log(oBox.attributes)                                      //  获取所有，该节点的属性信息；
-
-    console.log(oBox.attributes.length);                          //返回属性节点个数
-    console.log(oBox.attributes[0]);                                 //返回第一个属性节点
-    console.log(oBox.attributes[0].nodeType);                //2，属性
-    console.log(oBox.attributes[0].nodeValue);               //属性值
-    console.log(oBox.attributes['id']);                              //返回属性为 id 的节点
-
-    console.log(oBox.attributes.getNamedItem('id'));     // 获取 id 的节点；
+<p>在一个大括号中用let声明的变量在外部不可访问了，每个大括号都是独立的作用域</p>
+<p>有了let声明我们在函数外部就无法访问到 i ，i作为下标只存在于for循环中， 所以，这个时候每个i都是独立的；我们在点击的时候可以轻易的获取当前元素的下标，而不用做很多繁琐的处理了</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"><ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var aLi = document.querySelectorAll("li");
+        for(let i = 0;i<aLi.length;i++)&#123;
+            aLi[i].onclick = function()&#123;
+                alert(i);
+            &#125;
+            console.log(i);//0  1  2  3
+        &#125;
+    </script>
 </code></pre>
-<p>attributes属性 一般只用作获取，设置使用setAttribute()</p>
-<h3 id="父（parent）、子（child）和同胞（sibling）"><a href="#父（parent）、子（child）和同胞（sibling）" class="headerlink" title="父（parent）、子（child）和同胞（sibling）"></a>父（parent）、子（child）和同胞（sibling）</h3><p>描述这些关系。父节点拥有子节点。同级的子节点被称为同胞（兄弟或姐妹）。<br>    childNodes 获取当前元素节点的所有子节点</p>
-<pre><code>firstChild 获取当前元素节点的第一个子节点
-
-lastChild 获取当前元素节点的最后一个子节点
-
-previousSibling 获取当前节点的前一个同级节点
-
-nextSibling 获取当前节点的后一个同级节点
-****以上五中方法都包含空白文本节点
-
-
-firstElementChild   获取当前元素节点的第一个元素子节点
-
-lastElementChild  获取当前元素节点的最后一个元素子节点
-
-ownerDocument 获取该节点的文档根节点，相当于document
-
-parentNode 获取当前节点的父元素
-</code></pre><h3 id="创建文档碎片createDocumentFragment"><a href="#创建文档碎片createDocumentFragment" class="headerlink" title="创建文档碎片createDocumentFragment();"></a>创建文档碎片createDocumentFragment();</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var cache = document.createDocumentFragment();
-for( var i = 0 ; i < 1000; i ++ )&#123;
-    var opt = document.createElement("input");
-    opt.type="button";
-    opt.value = "删除";
-    cache.appendChild(opt);
+<p>JS中var声明一个变量是存在声明提升的，这是JS中的一个缺陷所在， 但是现在的let不存在声明提升</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"><script>
+        // console.log(a);//undefined
+        // console.log(b);//b is not defined
+        // var a = 10;
+        // let b = 20;
+        let a = 20;
+        function foo()&#123;
+            console.log(a);
+            let a = 10;
+        &#125;
+        foo();//a is not defined
+        //报错,暂时性死区
+        //js预编译的时候发现有一个局部的a,所以就不会再去寻找全局的a
+        //但是在执行的时候他发现局部的a在后面let声明的,所以报错
+    </script>
+</code></pre>
+<p>ES6规定在某个区块中， 一旦用let或const声明一个变量，那么这个区块就变成块级作用域，用let 或者const声明的变量即为该区块绑定， 该变量不受任何变量影响。 在该变量使用let声明前不可以用。在语法上，我们叫这种情况为：暂时性死区 (temporal dead zone，简称 TDZ)</p>
+<h3 id="const常量"><a href="#const常量" class="headerlink" title="const常量"></a>const常量</h3><p>声明常量:</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">const a = 20;//常量:不能被修改的量
+a = 30;    
+//Uncaught TypeError:Assignment to constant variable.(未捕获的类型错误:赋值给常量变量)
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">console.log(Math.PI);//3.141592653589793
+        Math.PI = 4;
+        console.log(Math.PI);//3.141592653589793
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">const arr = [2,3,4,5];
+        //arr = [3,4,4,6];
+        //不能修改数组或对象的引用,但是可以通过API取修改内部结构
+        arr.push(6,7);
+        console.log(arr);//[2, 3, 4, 5, 6, 7]
+</code></pre>
+<h2 id="扩展运算符-…"><a href="#扩展运算符-…" class="headerlink" title="扩展运算符 …"></a>扩展运算符 …</h2><p>三个点号，功能是把数组或类数组对象展开成一系列用逗号隔开的值</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [1,2,3,4,5];
+        console.log(arr);//Array(5)
+        console.log(...arr);//1 2 3 4 5   console.log 不会显示逗号，中间其实是有逗号的
+        function add(arr)&#123;
+            arr.pop();
+            console.log(arr);
+        &#125;
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> var foo = function(a, b, c) &#123;
+console.log(a);
+console.log(b);
+console.log(c);
 &#125;
-document.body.appendChild(cache);
+var arr = [1, 2, 3];
+//传统写法
+foo(arr[0], arr[1], arr[2]);
+//使用扩展运算符
+foo(...arr);
+//1
+//2
+//3
 </code></pre>
-<h3 id="DOM尺寸和位置"><a href="#DOM尺寸和位置" class="headerlink" title="DOM尺寸和位置"></a>DOM尺寸和位置</h3><h4 id="DOM尺寸"><a href="#DOM尺寸" class="headerlink" title="DOM尺寸"></a>DOM尺寸</h4><p>box.style.width<br>box.style.height<br>只能获取到内联style属性的CSS样式中的宽和高，如果有，获取;如果没有，则返回空</p>
-<p>getStyle(box,”width”)<br>getStyle(box,”width”)<br>//如下getStyle方法的封装<br>通过计算获取元素的大小，无关你是否是行内、内联或者链接，它经过计算后得到的结果返回出来。如果本身设置大小，它会返回元素的大小，如果本身没有设置，非IE浏览器会返回默认的大小，IE浏览器返回auto。</p>
-<p>box.clientWidth<br>box.clientHeight<br>返回了元素大小，但没有单位，默认单位是px，如果设置了其他的单位，比如100em之类，返回出来的结果还会转换为px像素（不含边框）</p>
-<p>box.scrollWidth<br>box.scrollHeight<br>获取滚动内容的元素大小（当元素出现滚动条时，此属性指全部滚动内容的宽高）<br>返回了元素大小，默认单位是px。如果没有设置任何CSS的宽和高度，它会得到计算后的宽度和高度</p>
-<p>box.offsetWidth<br>box.offsetHeight<br>返回了元素大小，默认单位是px。如果没有设置任何CSS的宽和高度，他会得到计算后的宽度和高度<br>包含盒模型中除margin以外的宽高（包含边框）<br>最稳定，使用最频繁<br>以上这三对方法都是只读的<br>  获取非行内样式（兼容问题）</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function getStyle(obj,attr)&#123;    //获取非行间样式，obj是对象，attr是值
-      if(obj.currentStyle)&#123;   //针对ie获取非行间样式
-            return obj.currentStyle[attr];
-      &#125;else&#123;
-            return getComputedStyle(obj,false)[attr];   //针对非ie
-      &#125;;
-&#125;;
+<h2 id="rest运算符"><a href="#rest运算符" class="headerlink" title="rest运算符"></a>rest运算符</h2><p>rest运算符也是三个点号，不过其功能与扩展运算符恰好相反，把逗号隔开的值序列组合成一个数组</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> //主要用于不定参数，所以ES6开始可以不再使用arguments对象
+var bar = function(a, ...args) &#123;
+    console.log(a);
+    console.log(args);
+&#125;
+bar(1, 2, 3, 4);
+//1
+//[ 2, 3, 4 ]
 </code></pre>
-<h4 id="位置坐标"><a href="#位置坐标" class="headerlink" title="位置坐标"></a>位置坐标</h4><p>box.clientLeft<br>box.clientTop<br>获取左边框和上边框的宽度<br>box.offsetLeft<br>box.offsetTop<br>获取元素当前相对于offsetParent父元素的位置<br>box.scrollTop<br>box.scrollLeft<br>获取滚动内容上方的位置(就是隐藏的内容的高度)<br>获取滚动内容左方的位置</p>
-<p>offsetParent      这个属性的返回值是它根据谁定位的，如果它的所有父元素都没有定位，那么返回body</p>
+<h2 id="字符串扩展-了解"><a href="#字符串扩展-了解" class="headerlink" title="字符串扩展(了解)"></a>字符串扩展(了解)</h2><p>1.字符串的 Unicode 表示; 规则为\u + 四位十六进制;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> 例如: console.log("\u0061");
+</code></pre>
+<p>打印结果是 a；</p>
+<p>这种新的字符表示方式只能表示 \u 0000 ~ \u ffff 之间的数字。 如果超出范围必须用双字节表示;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">  console.log("\uD842\uDFB6");
+</code></pre>
+<p>打印结果是 𠮶<br>如果不按照规则熟悉书写 例如 console.log(“\uD842\uDFB69”)<br>这个9是多余字符； 那么则认为这段字符是 \uD842\uDFB6 + 9 所以打印结果是 𠮶9；</p>
+<p>如果想要一次性表示超出范围的字符那么我们可以使用{}来表示；<br>例如:<br>console.log(“\u20BB9”); 这个的打印结果是 拆分开来的 ₻9<br>console.log(“\u{20BB9}”); 这个打印的结果是一个完整的字符</p>
+<p>ES6支持多种格式的字符表示;</p>
+<h2 id="字符串模板扩展："><a href="#字符串模板扩展：" class="headerlink" title="字符串模板扩展："></a>字符串模板扩展：</h2><p>ES6中存在一种新的字符串， 这种字符串是 以 (波浪线上的那个字符 &gt; 反引号)括起来表示的；</p>
+<p>通常我们想要拼接一个带有标签的字符串， 是用这样的方式:</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">      bianliang + " <strong>这是一个文字" + obj.name + "</strong> " + bianliang
+</code></pre>
+<p>但是有了ES6字符串一切都变得非常简单了;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">      `  $&#123;bianliang&#125; <strong>这是一个文字$&#123;obj.name&#125;</strong>$&#123;bianliang&#125; `
+</code></pre>
+<p>用 ${ } 扩住变量让拼接变得非常容易;<br>非常简单的换行；</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">      `In JavaScript \n is a line-feed.`     
+      console.log(`string text line 1
+      string text line 2`);
+</code></pre>
+<p>当我们想要在字符串中使用 `反引号的时候我们需要进行转义；</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">      `\`Yo\` World!`    //"`Yo` World!"
+</code></pre>
+<p>模板还可以调用函数；</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">      function fn() &#123;
+      return "Hello World";
+&#125;
+      `foo $&#123;fn()&#125; bar`
+</code></pre>
+<h2 id="字符串的新增方法"><a href="#字符串的新增方法" class="headerlink" title="字符串的新增方法:"></a>字符串的新增方法:</h2><h3 id="repeat-重复功能"><a href="#repeat-重复功能" class="headerlink" title="repeat()重复功能"></a>repeat()重复功能</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> 'x'.repeat(3)  //xxx；
+  重复字符串;
+</code></pre>
+<h3 id="includes-startsWith-endsWith"><a href="#includes-startsWith-endsWith" class="headerlink" title="includes() startsWith() endsWith();"></a>includes() startsWith() endsWith();</h3><p>判定字符串中是否存在某个字符串;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var s = 'Hello world!';
+
+s.startsWith('Hello') // true   以参数开头
+
+s.endsWith('!') // true            以参数结尾
+
+s.includes('o') // true             包括参数;
+</code></pre>
+<p>第二种方法接受第二个参数，第二个参数表示从第几位开始;</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">  var s = 'Hello world!';
+
+  s.startsWith('world', 6) // true
+
+  s.endsWith('Hello', 5) // true
+
+  s.includes('Hello', 6) // false
+</code></pre>
+<h2 id="for-of"><a href="#for-of" class="headerlink" title="for of"></a>for of</h2><p>一种新的遍历方式;<br>for of 可以用于遍历字符串：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">      var s = "abc";
+      for(let  b of s)&#123;
+           console.log(b) // "a"  "b"  "c"
+       &#125;
+</code></pre>
+<h2 id="gt-箭头函数"><a href="#gt-箭头函数" class="headerlink" title="=&gt;箭头函数"></a>=&gt;箭头函数</h2><pre class=" language-lang-javascript"><code class="language-lang-javascript">var test = function(x)&#123;
+    return x+2;
+&#125;
+</code></pre>
+<p>使用箭头函数： var test = x =&gt;x+2;<br>var 函数名 = 参数 =&gt; 运算规则;</p>
+<p>如果箭头函数只有一个形参,那么可以省略小括号</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">    var foo = str => &#123;
+    console.log(str);
+            &#125;
+</code></pre>
+<p>如果函数体只有一句话,那么可以省略大括号</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">    var foo = str => console.log(str);
+</code></pre>
+<p>如果只有一句话,并且这句话就是return,可以省略return关键字</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var foo = str => str+"abc";
+console.log(foo("fooo"));
+</code></pre>
+<p>箭头函数会自动绑定this(箭头函数没有自己的this)</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//<button>按钮</button>
+document.querySelector("button").onclick = function()&#123;
+                setTimeout(() => &#123;
+                    console.log(this);
+                &#125;,1000);
+            &#125;
+</code></pre>
+<h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><p>第一： 箭头函数是不能new的，它的设计初衷就跟构造函数不太一样<br>第二： 箭头函数如果要返回一个JSON对象，必须用小括号包起来 var test = ()=&gt;({id:3, val=20})</p>
+<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* var arr = [2,43,5, 30];
+            //var a = arr[0];
+            var [a,b,c,d=0] = arr;
+            console.log(a,b,c,d); */1 2 3 4
+var obj = &#123;name:"lisi", age:80, gender: "female"&#125;;
+            var &#123;age, name, gender="male"&#125; = obj;
+            console.log(age, name, gender); 
+
+var json = [
+    &#123;name:"lisi", age:80, gender: "female"&#125;,
+    &#123;name:"liwu", age:70, gender: "male"&#125;,
+    &#123;name:"liliu", age:60, gender: "female"&#125;
+        ]
+
+var [&#123;age&#125;,&#123;name&#125;,&#123;gender&#125;] = json;
+    //var &#123;name&#125; = b;
+    console.log(name);
+</code></pre>
+<h2 id="Symbol类型-第六种基本数据类型Symbol"><a href="#Symbol类型-第六种基本数据类型Symbol" class="headerlink" title="Symbol类型 第六种基本数据类型Symbol"></a>Symbol类型 第六种基本数据类型Symbol</h2><p>Symbol函数会生成一个唯一的值可以理解为Symbol类型跟字符串是接近的 但每次生成唯一的值，也就是每次都不相等，至于它等于多少，并不重要 这对于一些字典变量，比较有用</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var s1 = Symbol();
+var s2 = Symbol();
+var s3 = Symbol("abc");
+var s4 = Symbol("abc");
+
+s1不等于s2
+s3不等于s4
+</code></pre>
+<h3 id="利用Symbol类型的案例：点击div变色"><a href="#利用Symbol类型的案例：点击div变色" class="headerlink" title="利用Symbol类型的案例：点击div变色"></a>利用Symbol类型的案例：点击div变色</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj =&#123;
+                red: Symbol(),
+                blue: Symbol(),
+                green: Symbol(),
+                yellow: Symbol()
+            &#125;
+            var color = obj.red;
+            //适用于只需要关心状态(属于哪个状态)
+            //但是不用知道内部结构(不关心值为多少)
+            document.querySelector("div").onclick = function()&#123;
+                if(color === obj.red)&#123;
+                    this.style.background = "blue";
+                    color = obj.blue;
+                &#125;else if(color === obj.blue)&#123;
+                    this.style.background = "green";
+                    color = obj.green;
+                &#125;else if(color === obj.green)&#123;
+                    this.style.background = "yellow";
+                    color = obj.yellow;
+                &#125;else if(color === obj.yellow)&#123;
+                    this.style.background = "red";
+                    color = obj.red;
+                &#125;
+            &#125;
+</code></pre>
+<h2 id="Set和Map结构"><a href="#Set和Map结构" class="headerlink" title="Set和Map结构"></a>Set和Map结构</h2><h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>Set集合是默认去重复的，但前提是两个添加的元素严格相等 所以5和”5”不相等，两个new出来的字符串不相等</p>
+<p>Set集合，本质上就是对数组的一种包装 例如：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> let imgs = new Set();
+imgs.add(1）;
+imgs.add(1）;
+imgs.add(5）;
+imgs.add("5"）;
+imgs.add(new String("abc")）;
+imgs.add(new String("abc")）;
+// 打印的结果： 1  5  '5'  'abc'  'abc'
+</code></pre>
+<p>下面展示了一种极为精巧的数组去重的方法</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var newarr = [...new Set(array)];
+</code></pre>
+<h4 id="set集合遍历"><a href="#set集合遍历" class="headerlink" title="set集合遍历:"></a>set集合遍历:</h4><p>1.根据KEY遍历</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> var imgs = new Set(['a','b','c']); 
+ //根据KEY遍历
+for(let item of imgs.keys())&#123;
+    console.log(item);
+&#125; //a //b //c
+</code></pre>
+<p>2.根据VALUE遍历</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> //根据VALUE遍历
+for(let item of imgs.values())&#123;
+    console.log(item);
+&#125; //a //b //c
+</code></pre>
+<p>3.根据KEY-VALUE遍历</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">for(let item of imgs.entries())&#123;
+    console.log(item);
+ &#125; //['a','a'] //['b','b'] //['c','c']
+</code></pre>
+<p>4.普通for…of循环</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> //普通for...of循环(for...of跟for-in的区别很明显，就是直接取值，而不再取下标了)
+for(let item of imgs)&#123;  
+  console.log(item);
+&#125; //a //b //c
+</code></pre>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>Map集合,即映射</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> let map = new Map();
+map.set("S230", "张三");
+map.set("S231", "李四");
+map.set("S232", "王五");
+map.get("s232"); // 获取某一个元素   王五
+for(let [key,value] of map)
+&#123;console.log(key,value);&#125;
+ //循环遍历，配合解构赋值
+</code></pre>
+<h2 id="class的写法-语法糖-了解"><a href="#class的写法-语法糖-了解" class="headerlink" title="class的写法 语法糖(了解)"></a>class的写法 语法糖(了解)</h2><p>Class保留字终于成了关键字<br>以前编写一个构造函数（类）</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function Pad(color)&#123;
+    this.color = color;
+&#125;
+</code></pre>
+<p>现在的写法跟Java更接近了</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">class Iphone&#123;
+    constructor(color, size)&#123;
+            this.color = color;
+            this.size = size;    
+     &#125;    
+playgame()&#123;
+           //.............    
+&#125;    
+toString()&#123;
+          return `这台手机的颜色是$&#123;this.color&#125; 屏幕大小是$&#123;this.size&#125;`;
+    &#125;
+&#125;
+</code></pre>
+<p>我们定义了一个类，名字叫Iphone 通过类生成一个实例： var iphone = new Iphone(“白色”, 5);</p>
+<p>其中constructor被称之为构造方法，在我们new 一个对象的时候，自动被调用</p>
+<p>不过本质上，JS依然使用了原型来实现，也就是说，这不过是一个新的写法而已 跟以前的构造函数没有区别。</p>
+<p>要注意的是，使用了class来定义类，必须先定义再使用</p>
 
             </div>
             <hr/>
@@ -521,7 +756,7 @@ document.body.appendChild(cache);
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.gitee.io/posts/e785.html">https://nekodeng.gitee.io/posts/e785.html</a>
+                    <a href="https://nekodeng.gitee.io/posts/392e.html">https://nekodeng.gitee.io/posts/392e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -559,16 +794,16 @@ document.body.appendChild(cache);
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/node%E8%8A%82%E7%82%B9/">
-                                    <span class="chip bg-color">node节点</span>
+                                <a href="/tags/ES6/">
+                                    <span class="chip bg-color">ES6</span>
                                 </a>
                             
-                                <a href="/tags/%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87/">
-                                    <span class="chip bg-color">文档碎片</span>
+                                <a href="/tags/let-const/">
+                                    <span class="chip bg-color">let/const</span>
                                 </a>
                             
-                                <a href="/tags/DOM%E5%B0%BA%E5%AF%B8/">
-                                    <span class="chip bg-color">DOM尺寸</span>
+                                <a href="/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
+                                    <span class="chip bg-color">箭头函数</span>
                                 </a>
                             
                         </div>
@@ -736,32 +971,35 @@ document.body.appendChild(cache);
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/a1a1.html">
+                <a href="/posts/392e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JS事件2">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JS-ES6">
                         
-                        <span class="card-title">JS事件2</span>
+                        <span class="card-title">JS-ES6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            事件的原理事件的原理和hover类似。可以做到:hover做不到的事，:hover只能操作当前的元素，但是事件绑定之后可以选择任何元素。
-事件触发三要素：通过谁触发？ 通过什么触发？触发后要做什么？
-事件的写法：
-w3c标准：事件写在行内，
+                            let和constlet块级作用域：一种普遍存在于各个语言中的作用域范围；
+    &#123;
+      var a = 10;
+      let b = 20;
+     &#125;
+     console.log(a)//10
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -774,19 +1012,20 @@ w3c标准：事件写在行内，
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%BC%A0%E6%A0%87-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">
-                        <span class="chip bg-color">鼠标/键盘事件</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
-                    <a href="/tags/%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6/">
-                        <span class="chip bg-color">阻止默认浏览器事件</span>
+                    <a href="/tags/let-const/">
+                        <span class="chip bg-color">let/const</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
-                        <span class="chip bg-color">事件流</span>
+                    <a href="/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">箭头函数</span>
                     </a>
                     
                 </div>
@@ -800,24 +1039,24 @@ w3c标准：事件写在行内，
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/116b.html">
+                <a href="/posts/386e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="JS的DOM对象">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS-ES5">
                         
-                        <span class="card-title">JS的DOM对象</span>
+                        <span class="card-title">JS-ES5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DOM（Document Object Model 文档对象模型）DOM定义了表示和修改文档所需的对象、行为和属性，以及这些对象之间的关系。当你想要改变网页行为的时候 你该怎么办呢？你不会用脚来踹网页或者用头来顶网页吧？这时候怎么办呢 ？而
+                            ES5严格模式（strict mode）顾名思义，这种模式使得Javascript在更严格的条件下运行。-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;-消除代码运行的一些不安全之处，保证代码运行的安全；-提高编译
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-24
                             </span>
                         <span class="publish-author">
                             
@@ -834,16 +1073,20 @@ w3c标准：事件写在行内，
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DOM/">
-                        <span class="chip bg-color">DOM</span>
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
                     </a>
                     
-                    <a href="/tags/DOM%E8%8A%82%E7%82%B9/">
-                        <span class="chip bg-color">DOM节点</span>
+                    <a href="/tags/ES5/">
+                        <span class="chip bg-color">ES5</span>
                     </a>
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9CDOM/">
-                        <span class="chip bg-color">操作DOM</span>
+                    <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">严格模式</span>
+                    </a>
+                    
+                    <a href="/tags/arguments/">
+                        <span class="chip bg-color">arguments</span>
                     </a>
                     
                 </div>
