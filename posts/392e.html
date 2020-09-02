@@ -380,6 +380,22 @@
                                 <span class="chip bg-color">箭头函数</span>
                             </a>
                         
+                            <a href="/tags/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%C2%B7%C2%B7%C2%B7/">
+                                <span class="chip bg-color">扩展运算符···</span>
+                            </a>
+                        
+                            <a href="/tags/symbol%E7%B1%BB%E5%9E%8B/">
+                                <span class="chip bg-color">symbol类型</span>
+                            </a>
+                        
+                            <a href="/tags/set-map/">
+                                <span class="chip bg-color">set/map</span>
+                            </a>
+                        
+                            <a href="/tags/class%E8%AF%AD%E6%B3%95%E7%B3%96/">
+                                <span class="chip bg-color">class语法糖</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -410,14 +426,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    10 分
                 </div>
                 
 
@@ -442,25 +458,15 @@
 </code></pre>
 <p>在一个大括号中用let声明的变量在外部不可访问了，每个大括号都是独立的作用域</p>
 <p>有了let声明我们在函数外部就无法访问到 i ，i作为下标只存在于for循环中， 所以，这个时候每个i都是独立的；我们在点击的时候可以轻易的获取当前元素的下标，而不用做很多繁琐的处理了</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript"><ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <script>
-        var aLi = document.querySelectorAll("li");
-        for(let i = 0;i<aLi.length;i++)&#123;
-            aLi[i].onclick = function()&#123;
-                alert(i);
-            &#125;
-            console.log(i);//0  1  2  3
-        &#125;
-    </script>
-</code></pre>
-<p>JS中var声明一个变量是存在声明提升的，这是JS中的一个缺陷所在， 但是现在的let不存在声明提升</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript"><script>
-        // console.log(a);//undefined
+<pre><code>var aLi = document.querySelectorAll(&quot;li&quot;);
+for(let i = 0;i&lt;aLi.length;i++)&amp;#123;
+  aLi[i].onclick = function()&amp;#123;
+    alert(i);
+  &amp;#125;
+  console.log(i);//0  1  2  3
+&amp;#125;
+</code></pre><p>JS中var声明一个变量是存在声明提升的，这是JS中的一个缺陷所在， 但是现在的let不存在声明提升</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">        // console.log(a);//undefined
         // console.log(b);//b is not defined
         // var a = 10;
         // let b = 20;
@@ -473,7 +479,6 @@
         //报错,暂时性死区
         //js预编译的时候发现有一个局部的a,所以就不会再去寻找全局的a
         //但是在执行的时候他发现局部的a在后面let声明的,所以报错
-    </script>
 </code></pre>
 <p>ES6规定在某个区块中， 一旦用let或const声明一个变量，那么这个区块就变成块级作用域，用let 或者const声明的变量即为该区块绑定， 该变量不受任何变量影响。 在该变量使用let声明前不可以用。在语法上，我们叫这种情况为：暂时性死区 (temporal dead zone，简称 TDZ)</p>
 <h3 id="const常量"><a href="#const常量" class="headerlink" title="const常量"></a>const常量</h3><p>声明常量:</p>
@@ -525,7 +530,7 @@ bar(1, 2, 3, 4);
 //[ 2, 3, 4 ]
 </code></pre>
 <h2 id="字符串扩展-了解"><a href="#字符串扩展-了解" class="headerlink" title="字符串扩展(了解)"></a>字符串扩展(了解)</h2><p>1.字符串的 Unicode 表示; 规则为\u + 四位十六进制;</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript"> 例如: console.log("\u0061");
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> //例如: console.log("\u0061");
 </code></pre>
 <p>打印结果是 a；</p>
 <p>这种新的字符表示方式只能表示 \u 0000 ~ \u ffff 之间的数字。 如果超出范围必须用双字节表示;</p>
@@ -600,19 +605,14 @@ s.includes('o') // true             包括参数;
 console.log(foo("fooo"));
 </code></pre>
 <p>箭头函数会自动绑定this(箭头函数没有自己的this)</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//<button>按钮</button>
-document.querySelector("button").onclick = function()&#123;
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">document.querySelector("button").onclick = function()&#123;
                 setTimeout(() => &#123;
                     console.log(this);
                 &#125;,1000);
             &#125;
 </code></pre>
 <h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><p>第一： 箭头函数是不能new的，它的设计初衷就跟构造函数不太一样<br>第二： 箭头函数如果要返回一个JSON对象，必须用小括号包起来 var test = ()=&gt;({id:3, val=20})</p>
-<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* var arr = [2,43,5, 30];
-            //var a = arr[0];
-            var [a,b,c,d=0] = arr;
-            console.log(a,b,c,d); */1 2 3 4
-var obj = &#123;name:"lisi", age:80, gender: "female"&#125;;
+<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = &#123;name:"lisi", age:80, gender: "female"&#125;;
             var &#123;age, name, gender="male"&#125; = obj;
             console.log(age, name, gender); 
 
@@ -804,6 +804,22 @@ toString()&#123;
                             
                                 <a href="/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
                                     <span class="chip bg-color">箭头函数</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%C2%B7%C2%B7%C2%B7/">
+                                    <span class="chip bg-color">扩展运算符···</span>
+                                </a>
+                            
+                                <a href="/tags/symbol%E7%B1%BB%E5%9E%8B/">
+                                    <span class="chip bg-color">symbol类型</span>
+                                </a>
+                            
+                                <a href="/tags/set-map/">
+                                    <span class="chip bg-color">set/map</span>
+                                </a>
+                            
+                                <a href="/tags/class%E8%AF%AD%E6%B3%95%E7%B3%96/">
+                                    <span class="chip bg-color">class语法糖</span>
                                 </a>
                             
                         </div>
@@ -1026,6 +1042,22 @@ toString()&#123;
                     
                     <a href="/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
                         <span class="chip bg-color">箭头函数</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%C2%B7%C2%B7%C2%B7/">
+                        <span class="chip bg-color">扩展运算符···</span>
+                    </a>
+                    
+                    <a href="/tags/symbol%E7%B1%BB%E5%9E%8B/">
+                        <span class="chip bg-color">symbol类型</span>
+                    </a>
+                    
+                    <a href="/tags/set-map/">
+                        <span class="chip bg-color">set/map</span>
+                    </a>
+                    
+                    <a href="/tags/class%E8%AF%AD%E6%B3%95%E7%B3%96/">
+                        <span class="chip bg-color">class语法糖</span>
                     </a>
                     
                 </div>
@@ -1326,7 +1358,7 @@ toString()&#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.2k</span>&nbsp;字
+                class="white-color">14.3k</span>&nbsp;字
             
             
             
