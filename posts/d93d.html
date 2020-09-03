@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS-ES5, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS中的事件绑定、事件监听、事件委托, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS-ES5 | itsNekoDeng</title>
+    <title>JS中的事件绑定、事件监听、事件委托 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS-ES5</h1>
+                    <h1 class="description center-align post-title">JS中的事件绑定、事件监听、事件委托</h1>
                 </div>
             </div>
         </div>
@@ -368,20 +368,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/this/">
-                                <span class="chip bg-color">this</span>
+                            <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/">
+                                <span class="chip bg-color">事件绑定</span>
                             </a>
                         
-                            <a href="/tags/ES5/">
-                                <span class="chip bg-color">ES5</span>
+                            <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
+                                <span class="chip bg-color">事件监听</span>
                             </a>
                         
-                            <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">严格模式</span>
-                            </a>
-                        
-                            <a href="/tags/arguments/">
-                                <span class="chip bg-color">arguments</span>
+                            <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+                                <span class="chip bg-color">事件委托</span>
                             </a>
                         
                     </div>
@@ -405,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-24
+                    2020-09-03
                 </div>
                 
 
@@ -414,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    923
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    8 分
                 </div>
                 
 
@@ -436,129 +432,227 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="ES5严格模式（strict-mode）"><a href="#ES5严格模式（strict-mode）" class="headerlink" title="ES5严格模式（strict mode）"></a>ES5严格模式（strict mode）</h2><p>顾名思义，这种模式使得Javascript在更严格的条件下运行。<br>-消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;<br>-消除代码运行的一些不安全之处，保证代码运行的安全；<br>-提高编译器效率，增加运行速度；<br>-为未来新版本的Javascript做好铺垫。</p>
-<h3 id="进入严格模式-“use-strict”"><a href="#进入严格模式-“use-strict”" class="headerlink" title="进入严格模式 “use strict”"></a>进入严格模式 “use strict”</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict"
-console.log("已经进入严格模式");
-</code></pre>
-<h3 id="严格模式行为变更："><a href="#严格模式行为变更：" class="headerlink" title="严格模式行为变更："></a>严格模式行为变更：</h3><p>1.全局变量声明时 必须加var</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict"
-a = 10;//报错 因为 a没有被var 声明
-//Uncaught ReferenceError: a is not defined; 引用错误： a 没有被声明
-</code></pre>
-<p>2.this 无法指向全局对象</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict"
-// console.log("已经进入严格模式");
-function a()&#123;
-  this.b = 10; //报错 ， 因为this指向了window对象;
-  //Uncaught TypeError: Cannot set property 'b' of undefined; 
-  //类型错误 ： 不能给undefined设置属性b；
-&#125;
-window.a()；
-</code></pre>
-<p>3.函数内重名属性</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict";
-function a(b,b,c)&#123; //报错
-// Uncaught SyntaxError: Duplicate parameter name not allowed in this context;语法错误：在此上下文中不允许重复的参数名称
-&#125;
-</code></pre>
-<p>4.arguments对象;</p>
-<p>4.1 arguments对象不允许被动态改变;</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function fn1(a) &#123;
-        a = 2;
-        return [a, arguments[0]];
-    &#125;
-    console.log(fn1(1)); // 正常模式为[2,2]
-    function fn2(a) &#123;
-        "use strict";
-        a = 2;
-        return [a, arguments[0]];
-    &#125;
-    console.log(fn2(1)); // 严格模式为[2,1]
-</code></pre>
-<p> 4.2 arguments对象不允许被自调用;</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict";
-        var f = function() &#123; return arguments.callee; &#125;;
-        f(); // 报错
+                <h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>要想让 JavaScript 对用户的操作作出响应，首先要对 DOM 元素绑定事件处理函数。所谓事件处理函数，就是处理用户操作的函数，不同的操作对应不同的名称。</p>
+<p>在JavaScript中，有三种常用的绑定事件的方法：</p>
+<p>1.在DOM元素中直接绑定；<br>2.在JavaScript代码中绑定；<br>3.绑定事件监听函数。</p>
+<h3 id="在DOM中直接绑定事件"><a href="#在DOM中直接绑定事件" class="headerlink" title="在DOM中直接绑定事件"></a>在DOM中直接绑定事件</h3><p>我们可以在DOM元素上绑定onclick、onmouseover、onmouseout、onmousedown、onmouseup、ondblclick、onkeydown、onkeypress、onkeyup等。好多不一一列出了。如果想知道更多事件类型请查看， DOM事件 。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; onclick=&quot;hello()&quot;&gt;
+&lt;script&gt;
+function hello()&amp;#123;
+ alert(&quot;hello world!&quot;);
+&amp;#125;
+&lt;/script&gt;
+</code></pre><h3 id="在JavaScript代码中绑定事件"><a href="#在JavaScript代码中绑定事件" class="headerlink" title="在JavaScript代码中绑定事件"></a>在JavaScript代码中绑定事件</h3><p>在JavaScript代码中（即 script 标签内）绑定事件可以使JavaScript代码与HTML标签分离，文档结构清晰，便于管理和开发。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn&quot;&gt;
+&lt;script&gt;
+document.getElementById(&quot;btn&quot;).onclick = function()&amp;#123;
+ alert(&quot;hello world!&quot;);
+&amp;#125;
+&lt;/script&gt;
+</code></pre><h3 id="使用事件监听绑定事件"><a href="#使用事件监听绑定事件" class="headerlink" title="使用事件监听绑定事件"></a>使用事件监听绑定事件</h3><p>绑定事件的另一种方法是用 addEventListener() 或 attachEvent() 来绑定事件监听函数。下面详细介绍，事件监听。</p>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><p>关于事件监听，W3C规范中定义了3个事件阶段，依次是捕获阶段、目标阶段、冒泡阶段。</p>
+<p>起初Netscape制定了JavaScript的一套事件驱动机制（即事件捕获）。随即IE也推出了自己的一套事件驱动机制（即事件冒泡）。最后W3C规范了两种事件机制，分为捕获阶段、目标阶段、冒泡阶段。IE8以前IE一直坚持自己的事件机制（前端人员一直头痛的兼容性问题），IE9以后IE也支持了W3C规范。</p>
+<h3 id="W3C规范"><a href="#W3C规范" class="headerlink" title="W3C规范"></a>W3C规范</h3><p>语法：</p>
+<p>element.addEventListener(event, function, useCapture)</p>
+<p>event : （必需）事件名，支持所有 DOM事件 。</p>
+<p>function：（必需）指定要事件触发时执行的函数。</p>
+<p>useCapture：（可选）指定事件是否在捕获或冒泡阶段执行。true，捕获。false，冒泡。默认false。</p>
+<p>注：IE8以下不支持。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn1&quot;&gt;
 
-        //Uncaught TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+&lt;script&gt;
+document.getElementById(&quot;btn1&quot;).addEventListener(&quot;click&quot;,hello);
+function hello()&amp;#123;
+ alert(&quot;hello world!&quot;);
+&amp;#125;
+&lt;/script&gt;
+</code></pre><h3 id="IE标准"><a href="#IE标准" class="headerlink" title="IE标准"></a>IE标准</h3><p>语法：</p>
+<p>element.attachEvent(event, function)</p>
+<p>event：（必需）事件类型。需加“on“，例如：onclick。</p>
+<p>function：（必需）指定要事件触发时执行的函数。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn2&quot;&gt;
 
-        //类型错误：“caller ”，“arguments.callee ”，不能在严格模式中使用;
+&lt;script&gt;
+document.getElementById(&quot;btn2&quot;).attachEvent(&quot;onclick&quot;,hello);
+function hello()&amp;#123;
+ alert(&quot;hello world!&quot;);
+&amp;#125;
+&lt;/script&gt;
+</code></pre><h3 id="事件监听的优点"><a href="#事件监听的优点" class="headerlink" title="事件监听的优点"></a>事件监听的优点</h3><p>1、可以绑定多个事件。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn3&quot;&gt;
 
-        //caller返回调用当前函数的函数的引用  （正在执行的函数的属性）
-       // callee返回正在执行的函数本身的引用 （arguments的属性）
-</code></pre>
-<p>5.新增保留字； implements, interface, let, package, private, protected, public, static, yield。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">"use strict";
-function package(protected) &#123; // 语法错误
-    var implements; // 语法错误
-&#125;
-package();
-</code></pre>
-<h2 id="ES5新增常见方法"><a href="#ES5新增常见方法" class="headerlink" title="ES5新增常见方法"></a>ES5新增常见方法</h2><p>数组：<br>2个索引方法：indexOf() 和 lastIndexOf()；<br>5个迭代方法：forEach()、map()、filter()、some()、every()；<br>2个归并方法：reduce()、reduceRight()；</p>
-<h3 id="reduce去重："><a href="#reduce去重：" class="headerlink" title="reduce去重："></a>reduce去重：</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [12,12,32,43,5,5,34,43,4,6,4];
-        var arr1 = arr.reduce(function(prev,next)&#123;
-            if(!prev.includes(next))&#123;
-                prev.push(next);
-            &#125;
-            return prev;
-        &#125;,[])
-        console.log(arr1);//[12, 32, 43, 5, 34, 4, 6]
-</code></pre>
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串:"></a>字符串:</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">trim();// 去掉字符串前后空格
+&lt;script&gt;
+var btn3 = document.getElementById(&quot;btn3&quot;);
+btn3.onclick = function()&amp;#123;
+ alert(&quot;hello 1&quot;); //不执行
+&amp;#125;
+btn3.onclick = function()&amp;#123;
+ alert(&quot;hello 2&quot;); //执行
+&amp;#125;
+&lt;/script&gt;
+常规的事件绑定只执行最后绑定的事件。
+</code></pre><pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn4&quot;&gt;
 
-trimLeft()
+&lt;script&gt;
+var btn4 = document.getElementById(&quot;btn4&quot;);
+btn4.addEventListener(&quot;click&quot;,hello1);
+btn4.addEventListener(&quot;click&quot;,hello2);
 
-trimRIght()
+function hello1()&amp;#123;
+ alert(&quot;hello 1&quot;);
+&amp;#125;
+function hello2()&amp;#123;
+ alert(&quot;hello 2&quot;);
+&amp;#125;
+&lt;/script&gt;
 
-var reg = /(^\s*)|(\s*$)/g
+两个事件都执行了。
+</code></pre><p>2、可以解除相应的绑定</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn5&quot;&gt;
 
-str.replace(reg,"");
-</code></pre>
-<p>JSON.parse(str); //json序列化，将符合json格式的字符串转换为json</p>
-<p>JSON.stringify(); //json转换为字符串</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">        var data = [
-            &#123;"name":"zhangsan","age":20&#125;,
-            &#123;"name":"zhangsan","age":20&#125;,
-        ]
-        var str = JSON.stringify(data);//json转换为字符串
-        console.log(str);//[&#123;"name":"zhangsan","age":20&#125;,&#123;"name":"zhangsan","age":20&#125;]//json序列化，将符合json格式的字符串转换为json
-        var date1 = JSON.parse('[&#123;"name":"zhangsan","age":20&#125;,&#123;"name":"zhangsan","age":20&#125;]');
-        console.log(date1);
-</code></pre>
-<p>Date.now(); //日期对象得到当前日期的毫秒数</p>
-<p>Object.defineProperties(obj, props); //给obj设置属性</p>
-<p>Object.keys(obj); //获取obj的所有属性名称，返回数组</p>
-<p>Object.values(obj); // 获取obj的所有属性值，返回数组</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();
-Object.defineProperty(obj, 'name', &#123;
-configurable: false, // 表示能否通过delete删除此属性
-writable: true, // 能否修改属性的值
-enumerable: true, // 表示该属性是否可枚举，即是否通过for-in循环或Object.keys()返回属性
-value: '张三'
-&#125;)
-console.log(obj.name)//张三
-</code></pre>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();
-Object.defineProperties(obj, &#123; 
-    name: &#123;
-        value: '张三',
-        configurable: false,
-        writable: true,
-        enumerable: true
-    &#125;, 
-    age: &#123;
-        value: 18,
-        configurable: true
-    &#125;
-&#125;)
-console.log(obj.name, obj.age) // 张三, 18
-</code></pre>
-<p>Object.assign 对象合并,相同属性后面的生效</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = &#123;"name":"lisi"&#125;;
-var obj1 = &#123;"age":20,"name":"zhangsi"&#125;;
-var obj2 = Object.assign(obj,obj1);//对象合并,相同属性后面的生效.覆盖前面的相同属性
-console.log(obj2);
-</code></pre>
+&lt;script&gt;
+var btn5 = document.getElementById(&quot;btn5&quot;);
+btn5.addEventListener(&quot;click&quot;,hello1);//执行了
+btn5.addEventListener(&quot;click&quot;,hello2);//不执行
+btn5.removeEventListener(&quot;click&quot;,hello2);
+
+function hello1()&amp;#123;
+    alert(&quot;hello 1&quot;);
+&amp;#125;
+function hello2()&amp;#123;
+    alert(&quot;hello 2&quot;);
+&amp;#125;
+&lt;/script&gt;
+</code></pre><h3 id="封装事件监听"><a href="#封装事件监听" class="headerlink" title="封装事件监听"></a>封装事件监听</h3><pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn5&quot;&gt;
+
+//绑定监听事件
+function addEventHandler(target,type,fn)&amp;#123;
+    if(target.addEventListener)&amp;#123;
+        target.addEventListener(type,fn);
+    &amp;#125;else&amp;#123;
+        target.attachEvent(&quot;on&quot;+type,fn);
+    &amp;#125;
+&amp;#125;
+
+//移除监听事件
+function removeEventHandler(target,type,fn)&amp;#123;
+    if(target.removeEventListener)&amp;#123;
+        target.removeEventListener(type,fn);
+    &amp;#125;else&amp;#123;
+        target.detachEvent(&quot;on&quot;+type,fn);
+    &amp;#125;
+&amp;#125;
+
+//测试
+var btn5 = document.getElementById(&quot;btn5&quot;);
+addEventHandler(btn5,&quot;click&quot;,hello1);//添加事件hello1
+addEventHandler(btn5,&quot;click&quot;,hello2);//添加事件hello2
+removeEventHandler(btn5,&quot;click&quot;,hello1);//移除事件hello1
+</code></pre><h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p>事件委托就是利用冒泡的原理，把事件加到父元素或祖先元素上，触发执行效果。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn6&quot;&gt;
+
+var btn6 = document.getElementById(&quot;btn6&quot;);
+document.onclick = function(event)&amp;#123;
+    event = event || window.event;
+    var target = event.target || event.srcElement;
+    if(target == btn6)&amp;#123;
+        alert(btn5.value);
+    &amp;#125;
+&amp;#125;
+</code></pre><p>上面只是个例子，代码尽可能的简化了。在实际的代码中 我们可能用到jQuery的live()、delegate()、bind()、on()等。</p>
+<h3 id="事件委托优点"><a href="#事件委托优点" class="headerlink" title="事件委托优点"></a>事件委托优点</h3><p>1、提高JavaScript性能。事件委托可以显著的提高事件的处理速度，减少内存的占用。</p>
+<h4 id="传统写法"><a href="#传统写法" class="headerlink" title="传统写法"></a>传统写法</h4><pre><code>&lt;ul id=&quot;list&quot;&gt;
+  &lt;li id=&quot;item1&quot; &gt;item1&lt;/li&gt;
+  &lt;li id=&quot;item2&quot; &gt;item2&lt;/li&gt;
+  &lt;li id=&quot;item3&quot; &gt;item3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+var item1 = document.getElementById(&quot;item1&quot;);
+var item2 = document.getElementById(&quot;item2&quot;);
+var item3 = document.getElementById(&quot;item3&quot;);
+
+item1.onclick = function()&amp;#123;
+ alert(&quot;hello item1&quot;);
+&amp;#125;
+item2.onclick = function()&amp;#123;
+ alert(&quot;hello item2&quot;);
+&amp;#125;
+item3.onclick = function()&amp;#123;
+ alert(&quot;hello item3&quot;);
+&amp;#125;
+&lt;/script&gt;
+</code></pre><h4 id="事件委托-1"><a href="#事件委托-1" class="headerlink" title="事件委托"></a>事件委托</h4><pre><code>&lt;ul id=&quot;list&quot;&gt;
+  &lt;li id=&quot;item1&quot; &gt;item1&lt;/li&gt;
+  &lt;li id=&quot;item2&quot; &gt;item2&lt;/li&gt;
+  &lt;li id=&quot;item3&quot; &gt;item3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+var item1 = document.getElementById(&quot;item1&quot;);
+var item2 = document.getElementById(&quot;item2&quot;);
+var item3 = document.getElementById(&quot;item3&quot;);
+
+document.addEventListener(&quot;click&quot;,function(event)&amp;#123;
+ var target = event.target;
+ if(target == item1)&amp;#123;
+ alert(&quot;hello item1&quot;);
+ &amp;#125;else if(target == item2)&amp;#123;
+ alert(&quot;hello item2&quot;);
+ &amp;#125;else if(target == item3)&amp;#123;
+ alert(&quot;hello item3&quot;);
+ &amp;#125;
+&amp;#125;)
+&lt;/script&gt;
+</code></pre><p>2、动态的添加DOM元素，不需要因为元素的改动而修改事件绑定。</p>
+<h4 id="传统写法-1"><a href="#传统写法-1" class="headerlink" title="传统写法"></a>传统写法</h4><pre><code>&lt;ul id=&quot;list&quot;&gt;
+  &lt;li id=&quot;item1&quot; &gt;item1&lt;/li&gt;
+  &lt;li id=&quot;item2&quot; &gt;item2&lt;/li&gt;
+  &lt;li id=&quot;item3&quot; &gt;item3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+var list = document.getElementById(&quot;list&quot;);
+
+var item = list.getElementsByTagName(&quot;li&quot;);
+for(var i=0;i&lt;item.length;i++)&amp;#123;
+ (function(i)&amp;#123;
+ item[i].onclick = function()&amp;#123;
+ alert(item[i].innerHTML);
+ &amp;#125;
+ &amp;#125;)(i)
+&amp;#125;
+
+var node=document.createElement(&quot;li&quot;);
+var textnode=document.createTextNode(&quot;item4&quot;);
+node.appendChild(textnode);
+list.appendChild(node);
+
+&lt;/script&gt;
+</code></pre><p>点击item1到item3都有事件响应，但是点击item4时，没有事件响应。说明传统的事件绑定无法对动态添加的元素而动态的添加事件。</p>
+<h4 id="事件委托-2"><a href="#事件委托-2" class="headerlink" title="事件委托"></a>事件委托</h4><pre><code>&lt;ul id=&quot;list&quot;&gt;
+  &lt;li id=&quot;item1&quot; &gt;item1&lt;/li&gt;
+  &lt;li id=&quot;item2&quot; &gt;item2&lt;/li&gt;
+  &lt;li id=&quot;item3&quot; &gt;item3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+var list = document.getElementById(&quot;list&quot;);
+
+document.addEventListener(&quot;click&quot;,function(event)&amp;#123;
+ var target = event.target;
+ if(target.nodeName == &quot;LI&quot;)&amp;#123;
+ alert(target.innerHTML);
+ &amp;#125;
+&amp;#125;)
+
+var node=document.createElement(&quot;li&quot;);
+var textnode=document.createTextNode(&quot;item4&quot;);
+node.appendChild(textnode);
+list.appendChild(node);
+
+&lt;/script&gt;
+</code></pre><p>当点击item4时，item4有事件响应。说明事件委托可以为新添加的DOM元素动态的添加事件。</p>
 
             </div>
             <hr/>
@@ -584,7 +678,7 @@ console.log(obj2);
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.gitee.io/posts/386e.html">https://nekodeng.gitee.io/posts/386e.html</a>
+                    <a href="https://nekodeng.gitee.io/posts/d93d.html">https://nekodeng.gitee.io/posts/d93d.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -622,20 +716,16 @@ console.log(obj2);
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/this/">
-                                    <span class="chip bg-color">this</span>
+                                <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/">
+                                    <span class="chip bg-color">事件绑定</span>
                                 </a>
                             
-                                <a href="/tags/ES5/">
-                                    <span class="chip bg-color">ES5</span>
+                                <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
+                                    <span class="chip bg-color">事件监听</span>
                                 </a>
                             
-                                <a href="/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">严格模式</span>
-                                </a>
-                            
-                                <a href="/tags/arguments/">
-                                    <span class="chip bg-color">arguments</span>
+                                <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+                                    <span class="chip bg-color">事件委托</span>
                                 </a>
                             
                         </div>
@@ -803,34 +893,32 @@ console.log(obj2);
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/392e.html">
+                <a href="/posts/d93d.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="JS-ES6">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JS中的事件绑定、事件监听、事件委托">
                         
-                        <span class="card-title">JS-ES6</span>
+                        <span class="card-title">JS中的事件绑定、事件监听、事件委托</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            let和constlet块级作用域：一种普遍存在于各个语言中的作用域范围；
-    &#123;
-      var a = 10;
-      let b = 20;
-     &#125;
-     console.log(a)//10
+                            事件绑定要想让 JavaScript 对用户的操作作出响应，首先要对 DOM 元素绑定事件处理函数。所谓事件处理函数，就是处理用户操作的函数，不同的操作对应不同的名称。
+在JavaScript中，有三种常用的绑定事件的方法：
+1.在DOM元
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -843,35 +931,20 @@ console.log(obj2);
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ES6/">
-                        <span class="chip bg-color">ES6</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/">
+                        <span class="chip bg-color">事件绑定</span>
                     </a>
                     
-                    <a href="/tags/let-const/">
-                        <span class="chip bg-color">let/const</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
+                        <span class="chip bg-color">事件监听</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">箭头函数</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%C2%B7%C2%B7%C2%B7/">
-                        <span class="chip bg-color">扩展运算符···</span>
-                    </a>
-                    
-                    <a href="/tags/symbol%E7%B1%BB%E5%9E%8B/">
-                        <span class="chip bg-color">symbol类型</span>
-                    </a>
-                    
-                    <a href="/tags/set-map/">
-                        <span class="chip bg-color">set/map</span>
-                    </a>
-                    
-                    <a href="/tags/class%E8%AF%AD%E6%B3%95%E7%B3%96/">
-                        <span class="chip bg-color">class语法糖</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+                        <span class="chip bg-color">事件委托</span>
                     </a>
                     
                 </div>
@@ -885,26 +958,25 @@ console.log(obj2);
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/e88.html">
+                <a href="/posts/21a9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS正则表达式">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JS-面向对象（构造函数、原型）">
                         
-                        <span class="card-title">JS正则表达式</span>
+                        <span class="card-title">JS-面向对象（构造函数、原型）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）语法/正则表达式主体/修饰符(可选)
-正则的第一种写法var reg=new RegExp('a');
-var str='abcdefg
+                            什么是面向对象？对象是类的实例，类是对象的抽象对象的本质：属性和方法的集合学过的对象Array、String、Math、Date …….
+创建对象的方式：1、字面量 var obj = {}2、通过new运算符 var obj = new 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
                             </span>
                         <span class="publish-author">
                             
@@ -921,8 +993,32 @@ var str='abcdefg
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                        <span class="chip bg-color">JS正则表达式</span>
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">面向对象</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">构造函数</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E5%9E%8B/">
+                        <span class="chip bg-color">原型</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B0%81%E8%A3%85/">
+                        <span class="chip bg-color">封装</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BB%A7%E6%89%BF/">
+                        <span class="chip bg-color">继承</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E6%80%81/">
+                        <span class="chip bg-color">多态</span>
                     </a>
                     
                 </div>
