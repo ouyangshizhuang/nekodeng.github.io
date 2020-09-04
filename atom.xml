@@ -181,7 +181,7 @@
     <link href="https://nekodeng.gitee.io/posts/21a9.html"/>
     <id>https://nekodeng.gitee.io/posts/21a9.html</id>
     <published>2020-09-03T13:24:10.246Z</published>
-    <updated>2020-09-03T14:00:43.932Z</updated>
+    <updated>2020-09-04T14:20:02.103Z</updated>
     
     
       
@@ -210,6 +210,8 @@
     <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
     
     <category term="多态" scheme="https://nekodeng.gitee.io/tags/%E5%A4%9A%E6%80%81/"/>
+    
+    <category term="call/apply/bind方法" scheme="https://nekodeng.gitee.io/tags/call-apply-bind%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
