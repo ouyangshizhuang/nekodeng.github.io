@@ -368,10 +368,6 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/this/">
-                                <span class="chip bg-color">this</span>
-                            </a>
-                        
                             <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
                                 <span class="chip bg-color">面向对象</span>
                             </a>
@@ -394,10 +390,6 @@
                         
                             <a href="/tags/%E5%A4%9A%E6%80%81/">
                                 <span class="chip bg-color">多态</span>
-                            </a>
-                        
-                            <a href="/tags/call-apply-bind%E6%96%B9%E6%B3%95/">
-                                <span class="chip bg-color">call/apply/bind方法</span>
                             </a>
                         
                     </div>
@@ -430,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    5 分
                 </div>
                 
 
@@ -583,104 +575,6 @@ console.log(Object.prototype.isPrototypeOf(stu)) // true
 <h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>子对象可以使用父对象的一些属性和方法</p>
 <h3 id="多态：又分为重载-和-重写"><a href="#多态：又分为重载-和-重写" class="headerlink" title="多态：又分为重载 和 重写"></a>多态：又分为重载 和 重写</h3><p>重载就是根据不同的参数类型，参数个数实现不同的功能</p>
 <p>重写就是父类的方法不好用，我自己重新定义一个方法名相同的不同方法（方法名相同但方法体不同）</p>
-<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>this是js的关键字<br>他是根据执行上下文（执行环境）动态指向当前调用的对象；<br>谁调用，就指谁</p>
-<p>一、全局作用域下：this始终指向window对象</p>
-<p>二、函数作用域下：函数被谁调用，this就指向谁</p>
-<p>三、对象中的函数作用域下：this指向该方法所属的对象</p>
-<p>四、在构造函数中：this始终指向新对象</p>
-<p>五、自执行函数中：this指向window</p>
-<p>六、箭头函数中：this是在定义是绑定到了父级对象上，不是在执行过程中绑定的</p>
-<p>注意：匿名函数的this就指向window，没有其他结果</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 1,全局this指window
-console.log(this); // window
-function foo() &#123;
-    console.dir(this);
-&#125;
-
-// 2，全局函数的this也指window
-foo(); // window
-
-// 3,事件处理函数this指事件触发对象
-document.body.onclick = foo; // body
-
-// 4,对象方法里的this 指对象本身
-var obj =  &#123;foo&#125;; // &#123;foo: foo&#125;
-obj.foo(); // obj
-
-// 4.1, 谁调用就指谁
-var obj1 = &#123;&#125;;
-obj1.foo = obj.foo;
-
-obj1.foo(); // obj1
-var obj2 = &#123;&#125;;
-
-//5,匿名函数的this指window
-(obj2.foo = obj1.foo)();  // window
-
-(obj2.foo)();
-
-function () &#123;
-    // this window
-    obj2.foo(); // obj2
-           &#125;
-</code></pre>
-<h3 id="js改变this指向的3中方法-call-apply-bind"><a href="#js改变this指向的3中方法-call-apply-bind" class="headerlink" title="js改变this指向的3中方法: call apply bind"></a>js改变this指向的3中方法: call apply bind</h3><h4 id="call-thisObj-参数1，参数2-…"><a href="#call-thisObj-参数1，参数2-…" class="headerlink" title="call(thisObj, 参数1，参数2 …)"></a>call(thisObj, 参数1，参数2 …)</h4><p>方法可以指定this 的指向（即函数执行时所在的的作用域），然后再指定的作用域中，执行函数</p>
-<p>方法的参数，应该是对象obj,如果参数为空或null,undefind,则默认传参全局对象</p>
-<p>第一个参数是this指向的对象，第二个及后面的是函数回调所需的入参</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var person = &#123;
-    name: 'zhangsan',
-    age: 20
-&#125;
-
-function say(x, y)&#123;
-    console.log(this.name)
-    console.log(this.age)
-    console.log(x, y)
-&#125;
-
-say.call(person, 1, 2) 
-// zhangsan
-// 20
-// 1 2
-</code></pre>
-<h4 id="apply-thisObj-参数1，参数2-…"><a href="#apply-thisObj-参数1，参数2-…" class="headerlink" title="apply(thisObj, [参数1，参数2 …])"></a>apply(thisObj, [参数1，参数2 …])</h4><p>第一个参数也是this所要指向的那个对象，如果设为null或undefined，则等同于指定全局对象。</p>
-<p>第二个参数则是一个数组，该数组的所有成员依次作为参数，传入原函数。在apply方法中，必须以数组形式添加。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var person = &#123;
-    name: 'zhangsan',
-    age: 20
-&#125;
-
-function say(x, y)&#123;
-    console.log(this.name)
-    console.log(this.age)
-    console.log(x, y)
-&#125;
-
-say.apply(person, [1, 2])
-// zhangsan
-// 20
-// 1 2
-</code></pre>
-<h4 id="bind-thisObj-参数1，参数2-…"><a href="#bind-thisObj-参数1，参数2-…" class="headerlink" title="bind(thisObj, 参数1，参数2 …)"></a>bind(thisObj, 参数1，参数2 …)</h4><p>bind 用于将函数体内的this绑定到某个对象，然后返回一个新函数</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var person = &#123;
-    name: 'zhangsan',
-    age: 20
-&#125;
-
-function say(x, y)&#123;
-    console.log(this.name)
-    console.log(this.age)
-    console.log(x, y)
-&#125;
-
-say.bind(person, 1, 2)();
-// zhangsan
-// 20
-// 1 2
-</code></pre>
-<h4 id="三种方法的比较"><a href="#三种方法的比较" class="headerlink" title="三种方法的比较"></a>三种方法的比较</h4><p>1.call 、 apply 、bind 均能改变this 指向</p>
-<p>2.bind 每次执行产生一个新函数，call、apply 不会</p>
-<p>3.call ,bind 接收多个参数绑定到函数并且参数单一传入，apply 接收方式为数组</p>
 
             </div>
             <hr/>
@@ -744,10 +638,6 @@ say.bind(person, 1, 2)();
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/this/">
-                                    <span class="chip bg-color">this</span>
-                                </a>
-                            
                                 <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
                                     <span class="chip bg-color">面向对象</span>
                                 </a>
@@ -770,10 +660,6 @@ say.bind(person, 1, 2)();
                             
                                 <a href="/tags/%E5%A4%9A%E6%80%81/">
                                     <span class="chip bg-color">多态</span>
-                                </a>
-                            
-                                <a href="/tags/call-apply-bind%E6%96%B9%E6%B3%95/">
-                                    <span class="chip bg-color">call/apply/bind方法</span>
                                 </a>
                             
                         </div>

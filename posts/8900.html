@@ -979,34 +979,32 @@ console.log(arr2);
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/8900.html">
+                <a href="/posts/38be.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS基础-数组">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JS-this">
                         
-                        <span class="card-title">JS基础-数组</span>
+                        <span class="card-title">JS-this</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Array 对象Array 对象用于在变量中存储多个值:
-var cars = ["Saab", "Volvo", "BMW"];
-
-第一个数组元素的索引值为 0，第二个索引值为 1，以此类推。
-数组数组：一组数据（一个变量来承载）数组对象
+                            thisthis是js的关键字他是根据执行上下文（执行环境）动态指向当前调用的对象；谁调用，就指谁
+一、全局作用域下：this始终指向window对象
+二、函数作用域下：函数被谁调用，this就指向谁
+三、对象中的函数作用域下：this指向
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1019,16 +1017,15 @@ var cars = ["Saab", "Volvo", "BMW"];
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">稀疏数组</span>
+                    <a href="/tags/this/">
+                        <span class="chip bg-color">this</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/call-apply-bind%E6%96%B9%E6%B3%95/">
+                        <span class="chip bg-color">call/apply/bind方法</span>
                     </a>
                     
                 </div>
