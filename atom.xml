@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-04T03:58:26.551Z</updated>
+  <updated>2020-09-04T07:57:41.334Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS基础-数组</title>
+    <link href="https://nekodeng.gitee.io/posts/8900.html"/>
+    <id>https://nekodeng.gitee.io/posts/8900.html</id>
+    <published>2020-09-04T04:31:26.542Z</published>
+    <updated>2020-09-04T07:57:41.334Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Array 对象&lt;br&gt;Array 对象用于在变量中存储多个值:&lt;/p&gt;
+&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code class=&quot;language-lang-javascript&quot;&gt;var cars = [&quot;Saab&quot;,</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="稀疏数组" scheme="https://nekodeng.gitee.io/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="数组" scheme="https://nekodeng.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS基础-string内置对象</title>
+    <link href="https://nekodeng.gitee.io/posts/444.html"/>
+    <id>https://nekodeng.gitee.io/posts/444.html</id>
+    <published>2020-09-04T03:59:28.003Z</published>
+    <updated>2020-09-04T04:20:23.897Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;String 对象用于处理文本（字符串）。&lt;br&gt;String 对象创建方法： new String()。&lt;br&gt;语法：&lt;/p&gt;
+&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="string对象方法" scheme="https://nekodeng.gitee.io/tags/string%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS基础-json</title>
     <link href="https://nekodeng.gitee.io/posts/9615.html"/>
     <id>https://nekodeng.gitee.io/posts/9615.html</id>
     <published>2020-09-04T03:56:08.606Z</published>
-    <updated>2020-09-04T03:58:26.551Z</updated>
+    <updated>2020-09-04T03:58:46.145Z</updated>
     
     
       
@@ -410,15 +462,14 @@
     <link href="https://nekodeng.gitee.io/posts/5.html"/>
     <id>https://nekodeng.gitee.io/posts/5.html</id>
     <published>2020-08-20T13:56:49.881Z</published>
-    <updated>2020-08-20T14:18:57.369Z</updated>
+    <updated>2020-09-04T08:05:06.140Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;类——定义属性和方法&lt;br&gt;类的具体实现，继承了类所定义的属性和方法（是一种数据类型）&lt;/p&gt;
-&lt;h3</summary>
+    <summary type="html">&lt;h2 id=&quot;对象&quot;&gt;&lt;a href=&quot;#对象&quot; class=&quot;headerlink&quot; title=&quot;对象&quot;&gt;&lt;/a&gt;对象&lt;/h2&gt;&lt;h3 id=&quot;类是对象的抽象，对象是类的实例。&quot;&gt;&lt;a href=&quot;#类是对象的抽象，对象是类的实例。&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -427,13 +478,11 @@
     <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="对象/类" scheme="https://nekodeng.gitee.io/tags/%E5%AF%B9%E8%B1%A1-%E7%B1%BB/"/>
+    <category term="对象" scheme="https://nekodeng.gitee.io/tags/%E5%AF%B9%E8%B1%A1/"/>
     
-    <category term="稀疏数组" scheme="https://nekodeng.gitee.io/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/"/>
+    <category term="类" scheme="https://nekodeng.gitee.io/tags/%E7%B1%BB/"/>
     
-    <category term="for/in" scheme="https://nekodeng.gitee.io/tags/for-in/"/>
-    
-    <category term="for/of" scheme="https://nekodeng.gitee.io/tags/for-of/"/>
+    <category term="内置对象" scheme="https://nekodeng.gitee.io/tags/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
@@ -552,69 +601,6 @@
     <category term="定时器" scheme="https://nekodeng.gitee.io/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
     
     <category term="window" scheme="https://nekodeng.gitee.io/tags/window/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS程序执行</title>
-    <link href="https://nekodeng.gitee.io/posts/2.html"/>
-    <id>https://nekodeng.gitee.io/posts/2.html</id>
-    <published>2020-08-18T15:07:50.018Z</published>
-    <updated>2020-08-19T10:42:16.442Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 顺序结构：按照由上到下的顺序一行一行地执行的程序结构&lt;br&gt; 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）&lt;br&gt; 循环结构：需要重复执行同一操作的程序结构称为循环结构。&lt;/p&gt;
-&lt;h3 id=&quot;if-判断逻辑语句&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JS" scheme="https://nekodeng.gitee.io/tags/JS/"/>
-    
-    <category term="if/else" scheme="https://nekodeng.gitee.io/tags/if-else/"/>
-    
-    <category term="switch/case" scheme="https://nekodeng.gitee.io/tags/switch-case/"/>
-    
-    <category term="显/隐式转换" scheme="https://nekodeng.gitee.io/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS循环结构</title>
-    <link href="https://nekodeng.gitee.io/posts/1.html"/>
-    <id>https://nekodeng.gitee.io/posts/1.html</id>
-    <published>2020-08-17T14:08:55.524Z</published>
-    <updated>2020-08-20T07:08:19.238Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;while循环&quot;&gt;&lt;a href=&quot;#while循环&quot; class=&quot;headerlink&quot; title=&quot;while循环&quot;&gt;&lt;/a&gt;while循环&lt;/h3&gt;&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="while" scheme="https://nekodeng.gitee.io/tags/while/"/>
-    
-    <category term="do...while" scheme="https://nekodeng.gitee.io/tags/do-while/"/>
-    
-    <category term="break和continue" scheme="https://nekodeng.gitee.io/tags/break%E5%92%8Ccontinue/"/>
-    
-    <category term="for" scheme="https://nekodeng.gitee.io/tags/for/"/>
     
   </entry>
   
