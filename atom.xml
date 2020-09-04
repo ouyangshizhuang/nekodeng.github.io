@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-04T01:50:31.964Z</updated>
+  <updated>2020-09-04T03:37:02.848Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS-设计模式</title>
+    <link href="https://nekodeng.gitee.io/posts/eb27.html"/>
+    <id>https://nekodeng.gitee.io/posts/eb27.html</id>
+    <published>2020-09-04T03:31:01.564Z</published>
+    <updated>2020-09-04T03:37:02.848Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;设计模式：代码经验的总结&lt;br&gt;设计模式都是面向对象的&lt;/p&gt;
+&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="工厂模式" scheme="https://nekodeng.gitee.io/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="代理模式（proxy）" scheme="https://nekodeng.gitee.io/tags/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88proxy%EF%BC%89/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS中的事件绑定、事件监听、事件委托</title>
     <link href="https://nekodeng.gitee.io/posts/d93d.html"/>
     <id>https://nekodeng.gitee.io/posts/d93d.html</id>
     <published>2020-09-03T14:01:27.362Z</published>
-    <updated>2020-09-04T01:50:31.964Z</updated>
+    <updated>2020-09-04T01:58:13.455Z</updated>
     
     
       

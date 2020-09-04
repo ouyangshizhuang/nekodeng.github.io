@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS的BOM对象, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="JS-设计模式, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS的BOM对象 | itsNekoDeng</title>
+    <title>JS-设计模式 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS的BOM对象</h1>
+                    <h1 class="description center-align post-title">JS-设计模式</h1>
                 </div>
             </div>
         </div>
@@ -368,16 +368,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/BOM/">
-                                <span class="chip bg-color">BOM</span>
+                            <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">工厂模式</span>
                             </a>
                         
-                            <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
-                                <span class="chip bg-color">定时器</span>
-                            </a>
-                        
-                            <a href="/tags/window/">
-                                <span class="chip bg-color">window</span>
+                            <a href="/tags/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88proxy%EF%BC%89/">
+                                <span class="chip bg-color">代理模式（proxy）</span>
                             </a>
                         
                     </div>
@@ -401,7 +397,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-19
+                    2020-09-04
                 </div>
                 
 
@@ -410,14 +406,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    727
+                    545
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -432,55 +428,69 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="BOM（Browser-Object-Model-浏览器对象模型）"><a href="#BOM（Browser-Object-Model-浏览器对象模型）" class="headerlink" title="BOM（Browser Object Model  浏览器对象模型）"></a>BOM（Browser Object Model  浏览器对象模型）</h2><h3 id="window是全局浏览器内置顶级对象"><a href="#window是全局浏览器内置顶级对象" class="headerlink" title="window是全局浏览器内置顶级对象"></a>window是全局浏览器内置顶级对象</h3><p>表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）<br>Window 对象表示一个浏览器窗口或一个框架。<br>在客户端 JavaScript 中，Window 对象是全局对象，所有的表达式都在当前的环境中计算。<br>也就是说，要引用当前窗口根本不需要特殊的语法，可以把那个窗口的属性作为全局变量来使用。<br>例如，可以只写 document，而不必写 window.document。<br>同样，可以把当前窗口对象的方法当作函数来使用，如只写 alert()，而不必写 Window.alert()。<br>除了上面列出的属性和方法，Window 对象还实现了核心 JavaScript 所定义的所有全局属性和方法。</p>
-<h3 id="1、全局变量默认是挂在window下的"><a href="#1、全局变量默认是挂在window下的" class="headerlink" title="1、全局变量默认是挂在window下的"></a>1、全局变量默认是挂在window下的</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var  a = 123;
-alert(window.a)//123
+                <p>设计模式：代码经验的总结<br>设计模式都是面向对象的</p>
+<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><p>工厂函数就是做一个对象创建的封装，并将创建的对象return出去</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function newObj(name,age)&#123;
+    var o = new Object();
+    o.name = name;
+    o.age = age;
+    return o;
+&#125;
+var obj = newObj();
 </code></pre>
-<h3 id="2、window下的子对象"><a href="#2、window下的子对象" class="headerlink" title="2、window下的子对象"></a>2、window下的子对象</h3><h4 id="（1）location"><a href="#（1）location" class="headerlink" title="（1）location"></a>（1）location</h4><p>window.location.href          当前页面的 URL，可以获取，可以修改（页面跳转）<br>window.location.hostname      web 主机的域名<br>window.location.pathname      当前页面的路径和文件名<br>window.location.port          web 主机的端口 （80 或 443）<br>window.location.protocol      所使用的 web 协议（http:// 或 https://）<br>window.location.search        请求参数（？后面的内容）</p>
-<p>window.location.reload();<br>刷新页面，一般情况下给reload()传递一个true，让他刷新，并不使用缓存。缓存的东西一般为js文件，css文件等。<br>用这个方法可以让自己不能动的页面动起来了。刷新当前页面。</p>
-<h4 id="（2）window-navigator"><a href="#（2）window-navigator" class="headerlink" title="（2）window.navigator"></a>（2）window.navigator</h4><p>navigator.appName      返回获取当前浏览器的名称。<br>navigator.appVersion    返回 获取当前浏览器的版本号。<br>navigator.platform        返回 当前计算机的操作系统。<br>以上属性已经在逐渐被抛弃了。一个新的属性将替代这些属性。</p>
-<p>navigator.userAgent   返回浏览器信息（可用此属性判断当前浏览器）</p>
-<h5 id="判断当前浏览器类型的代码："><a href="#判断当前浏览器类型的代码：" class="headerlink" title="判断当前浏览器类型的代码："></a>判断当前浏览器类型的代码：</h5><pre class=" language-lang-javascript"><code class="language-lang-javascript">function isBrowser() &#123;
-    var userAgent = navigator.userAgent;
-    //微信内置浏览器
-    if(userAgent.match(/MicroMessenger/i) == 'MicroMessenger') &#123;
-        return "MicroMessenger";
+<h3 id="单例模式：只允许存在一个实例的模式"><a href="#单例模式：只允许存在一个实例的模式" class="headerlink" title="单例模式：只允许存在一个实例的模式"></a>单例模式：只允许存在一个实例的模式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var Instance = (function()&#123;
+    var obj;
+    return function()&#123;
+        if(obj === undefined) obj = new Date();
+        return obj;
     &#125;
-    //QQ内置浏览器
-    else if(userAgent.match(/QQ/i) == 'QQ') &#123;
-        return "QQ";
+&#125;)();
+var ibs = Instance();
+</code></pre>
+<h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>又称发布订阅者模式，经典案例：事件监听，一个元素同时监听多个同类型事件，元素对象即为发布者，每一个事件处理函数即为订阅者。</p>
+<h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p>策略模式的定义是：定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换，从而避免很多if语句，曾经学过最简单的策略模式雏形就是使用数组的方式解决传入数字得到对应星期几问题的算法。</p>
+<p>比如公司的年终奖是根据员工的工资和绩效来考核的，绩效为A的人，年终奖为工资的4倍，绩效为B的人，年终奖为工资的3倍，绩效为C的人，年终奖为工资的2倍</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> var obj = &#123;
+    "A": function(salary) &#123;
+        return salary * 4;
+    &#125;,
+    "B" : function(salary) &#123;
+        return salary * 3;
+    &#125;,
+    "C" : function(salary) &#123;
+        return salary * 2;
     &#125;
-    //Chrome
-    else if(userAgent.match(/Chrome/i) == 'Chrome') &#123;
-        return "Chrome";
-    &#125;
-    //Opera
-    else if(userAgent.match(/Opera/i) == 'Opera') &#123;
-        return "Opera";
-    &#125;
-    //Firefox
-    else if(userAgent.match(/Firefox/i) == 'Firefox') &#123;
-        return "Firefox";
-    &#125;
-    //Safari
-    else if(userAgent.match(/Safari/i) == 'Safari') &#123;
-        return "Safari";
-    &#125;
-    //IE
-    else if(!!window.ActiveXObject || "ActiveXObject" in window) &#123;
-        return "IE";
-    &#125;
-    else &#123;
-        return "未定义:"+userAgent;
+&#125;;
+var calculateBouns =function(level,salary) &#123;
+    return obj[level](salary);
+&#125;;
+console.log(calculateBouns('A',10000)); // 40000
+</code></pre>
+<h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>代理模式（Proxy），为其他对象提供一种代理以控制对这个对象的访问，为了不暴露执行对象的部分代码</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> //三个对象
+//用户委托快捷方式打开exe
+//为了不暴露执行对象的部分代码
+//男孩委托快递小哥给女孩送礼物
+var girl = function(name)&#123;
+    this.name = name;
+&#125;
+//隐藏复杂，不愿意修改的的方法
+var boy = function(girl)&#123;
+    this.girl = girl;
+    this.send = function(gift)&#123;
+        alert("你好："+this.girl.name+",给你一个"+gift);
     &#125;
 &#125;
+var proxyBro = function(girl)&#123;
+    this.send = function(gift)&#123;
+        new boy(girl).send(gift);
+    &#125;
+&#125;
+var pro = new proxyBro(new girl("Lisa"));
+pro.send("么么哒");
+pro.send("玫瑰花");
 </code></pre>
-<h4 id="（3）history"><a href="#（3）history" class="headerlink" title="（3）history"></a>（3）history</h4><p>history.go(1)    参数可写任意整数，正数前进，负数后退<br>history.back()   后退<br>history.forward() 前进</p>
-<h4 id="（4）screen-屏幕"><a href="#（4）screen-屏幕" class="headerlink" title="（4）screen: 屏幕"></a>（4）screen: 屏幕</h4><p>window.screen.width 返回当前屏幕宽度(分辨率值)<br>window.screen.height 返回当前屏幕高度(分辨率值)</p>
-<h4 id="（5）window下的弹框方法"><a href="#（5）window下的弹框方法" class="headerlink" title="（5）window下的弹框方法"></a>（5）window下的弹框方法</h4><p>alert()   prompt()  confirm()</p>
-<h4 id="（6）定时器"><a href="#（6）定时器" class="headerlink" title="（6）定时器"></a>（6）定时器</h4><p>超时定时器        间隔定时器<br>setTimeout       setInterval<br>clearTimeout     clearInterval</p>
-<h4 id="（7）window-onload"><a href="#（7）window-onload" class="headerlink" title="（7）window.onload"></a>（7）window.onload</h4><h4 id="（8）window-onscroll"><a href="#（8）window-onscroll" class="headerlink" title="（8）window.onscroll"></a>（8）window.onscroll</h4><p>var scrolltop=document.documentElement.scrollTop||document.body.scrollTop; //兼容</p>
-<h4 id="（9）window-window-onresize"><a href="#（9）window-window-onresize" class="headerlink" title="（9）window.window.onresize"></a>（9）window.window.onresize</h4>
+
             </div>
             <hr/>
 
@@ -505,7 +515,7 @@ alert(window.a)//123
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.gitee.io/posts/b140.html">https://nekodeng.gitee.io/posts/b140.html</a>
+                    <a href="https://nekodeng.gitee.io/posts/eb27.html">https://nekodeng.gitee.io/posts/eb27.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,16 +553,12 @@ alert(window.a)//123
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/BOM/">
-                                    <span class="chip bg-color">BOM</span>
+                                <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">工厂模式</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
-                                    <span class="chip bg-color">定时器</span>
-                                </a>
-                            
-                                <a href="/tags/window/">
-                                    <span class="chip bg-color">window</span>
+                                <a href="/tags/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88proxy%EF%BC%89/">
+                                    <span class="chip bg-color">代理模式（proxy）</span>
                                 </a>
                             
                         </div>
@@ -720,29 +726,34 @@ alert(window.a)//123
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/3.html">
+                <a href="/posts/eb27.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS函数">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS-设计模式">
                         
-                        <span class="card-title">JS函数</span>
+                        <span class="card-title">JS-设计模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（
+                            设计模式：代码经验的总结设计模式都是面向对象的
+工厂模式工厂函数就是做一个对象创建的封装，并将创建的对象return出去
+function newObj(name,age)&#123;
+    var o = new Object();
+ 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -755,19 +766,16 @@ alert(window.a)//123
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">工厂模式</span>
                     </a>
                     
-                    <a href="/tags/function/">
-                        <span class="chip bg-color">function</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%87%BD%E6%95%B0/">
-                        <span class="chip bg-color">函数</span>
+                    <a href="/tags/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88proxy%EF%BC%89/">
+                        <span class="chip bg-color">代理模式（proxy）</span>
                     </a>
                     
                 </div>
@@ -781,26 +789,26 @@ alert(window.a)//123
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/2.html">
+                <a href="/posts/d93d.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS程序执行">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JS中的事件绑定、事件监听、事件委托">
                         
-                        <span class="card-title">JS程序执行</span>
+                        <span class="card-title">JS中的事件绑定、事件监听、事件委托</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             顺序结构：按照由上到下的顺序一行一行地执行的程序结构 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构） 循环结构：需要重复执行同一操作的程序结构称为循环结构。
-if 判断逻辑语句if(true)&#123;
-    /
+                            事件绑定要想让 JavaScript 对用户的操作作出响应，首先要对 DOM 元素绑定事件处理函数。所谓事件处理函数，就是处理用户操作的函数，不同的操作对应不同的名称。
+在JavaScript中，有三种常用的绑定事件的方法：
+1.在DOM元
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
                             </span>
                         <span class="publish-author">
                             
@@ -817,20 +825,16 @@ if 判断逻辑语句if(true)&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/">
+                        <span class="chip bg-color">事件绑定</span>
                     </a>
                     
-                    <a href="/tags/if-else/">
-                        <span class="chip bg-color">if/else</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/">
+                        <span class="chip bg-color">事件监听</span>
                     </a>
                     
-                    <a href="/tags/switch-case/">
-                        <span class="chip bg-color">switch/case</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                        <span class="chip bg-color">显/隐式转换</span>
+                    <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+                        <span class="chip bg-color">事件委托</span>
                     </a>
                     
                 </div>
