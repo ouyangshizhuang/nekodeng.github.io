@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>JS基础-json</title>
+      <link href="/posts/9615.html"/>
+      <url>/posts/9615.html</url>
+      
+        <content type="html"><![CDATA[<p>json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。</p><p>1、对象：对象在js中表示为“{}”括起来的内容，数据结构为 {key：value,key：value,…}的键值对的结构，在面向对象的语言中，key为对象的属性，value为对应的属性值，所以很容易理解，取值方法为 对象.key 获取属性值，这个属性值的类型可以是 数字、字符串、数组、对象几种。</p><p>2、数组：数组在js中是中括号“[]”括起来的内容，数据结构为 [“java”,”javascript”,”vb”,…]，取值方式和所有语言中一样，使用索引获取，字段值的类型可以是 数字、字符串、数组、对象几种。</p><p>举例：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var students = ["小明","小红"];var ages = [18,17];var stuJson = [    &#123;        "name":"xiaoming",        "age":18,        "likes":["抽烟","喝酒","烫头"]    &#125;,    &#123;        name:"xiaohong",        age:17    &#125;,    &#123;        name:"xiaogang",        age:70    &#125;];</code></pre><p>根据json打印表格：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//发送了一个请求,服务器返回jsonvar list = [    &#123;        "name":"显示器",        "price": 800    &#125;,    &#123;        "name":"鼠标",        "price": 9.9    &#125;,    &#123;        "name":"键盘",        "price": 666    &#125;];var table = "<table>";for(var i = 0; i < list.length; i++)&#123;    table += "<tr>";    //遍历list[i](对象)    for(var key in list[i])&#123;        table += "<td>"+ list[i][key] +"</td>";    &#125;    table += "</tr>";&#125;table += "</table>";document.write(table);</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> json </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-cookie</title>
+      <link href="/posts/61a8.html"/>
+      <url>/posts/61a8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="cookie-会话跟踪技术"><a href="#cookie-会话跟踪技术" class="headerlink" title="cookie 会话跟踪技术"></a>cookie 会话跟踪技术</h2><p>一个网站从打开到浏览（包括这个网站的其他子页面）到最后关闭浏览器整个过程叫一个“会话”。</p><h3 id="cookie的存取"><a href="#cookie的存取" class="headerlink" title="cookie的存取"></a>cookie的存取</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">document.cookie = "username=zhangsan";console.log(document.cookie);</code></pre><p>注意：cookie是http/https协议下的技术，不支持本地file文件对cookie操作</p><h3 id="cookie的时效：-expires"><a href="#cookie的时效：-expires" class="headerlink" title="cookie的时效： expires"></a>cookie的时效： expires</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var d = new Date();d.setxxx(); //将d设置到过期的日期document.cookie = "username=zhangsan;expires="+d;</code></pre><h3 id="cookie的特点"><a href="#cookie的特点" class="headerlink" title="cookie的特点"></a>cookie的特点</h3><p>1.只能使用文本<br>2 单条存储有大小限制 4KB<br>3 数量限制(一般浏览器，限制大概在50条左右)<br>4 读取有域名限制 不可跨域读取，只能由来自 写入cookie的 同一域名 的网页可进行读取。<br>5 时效限制 每个cookie都有时效，最短的有效期是，会话级别：就是当浏览器关闭，那么cookie立即销毁</p><h3 id="封装一个存取cookie的函数"><a href="#封装一个存取cookie的函数" class="headerlink" title="封装一个存取cookie的函数"></a>封装一个存取cookie的函数</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* cookie的操作（存取） * @param key   string  存取的key值 * @param [value] string  如果传入value，那么就是存cookie，不传就是取cookie * @paran [option] object  &#123;expires, path&#125; * @return  string 取cookie的时候返回的当前cookie的值 */cookie : function (key, value, option) &#123;  if(value === undefined)&#123;    // 取cookie    var cookie = document.cookie;    var arr = cookie.split("; ");    var obj = &#123;&#125;;    arr.forEach(function(ele)&#123;        var subarr = ele.split("=");        obj[subarr[0]] = decodeURIComponent(subarr[1]);    &#125;)    // 判断    return obj[key] ? obj[key] : "";    /* if(obj[key])&#123;        return obj[key];    &#125;else &#123;        return "";    &#125; */  &#125;else&#123;    //存cookie    var str = key+"="+encodeURIComponent(value);    if(option)&#123;        // path        if(option.path)&#123;            str += ";path="+option.path;        &#125;        if(option.expires) &#123;            var date = new Date();            // 把过期日期设置为option.expires天之后            date.setDate(date.getDate() + option.expires);            str += ";expires=" + date;        &#125;    &#125;    document.cookie = str;  &#125;&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cookie </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS-设计模式</title>
       <link href="/posts/eb27.html"/>
       <url>/posts/eb27.html</url>
