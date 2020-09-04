@@ -437,11 +437,9 @@
 <p>1.在DOM元素中直接绑定；<br>2.在JavaScript代码中绑定；<br>3.绑定事件监听函数。</p>
 <h3 id="在DOM中直接绑定事件"><a href="#在DOM中直接绑定事件" class="headerlink" title="在DOM中直接绑定事件"></a>在DOM中直接绑定事件</h3><p>我们可以在DOM元素上绑定onclick、onmouseover、onmouseout、onmousedown、onmouseup、ondblclick、onkeydown、onkeypress、onkeyup等。好多不一一列出了。如果想知道更多事件类型请查看， DOM事件 。</p>
 <pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; onclick=&quot;hello()&quot;&gt;
-&lt;script&gt;
-function hello()&amp;#123;
+</code></pre><pre><code>function hello()&amp;#123;
  alert(&quot;hello world!&quot;);
 &amp;#125;
-&lt;/script&gt;
 </code></pre><h3 id="在JavaScript代码中绑定事件"><a href="#在JavaScript代码中绑定事件" class="headerlink" title="在JavaScript代码中绑定事件"></a>在JavaScript代码中绑定事件</h3><p>在JavaScript代码中（即 script 标签内）绑定事件可以使JavaScript代码与HTML标签分离，文档结构清晰，便于管理和开发。</p>
 <pre><code>&lt;input type=&quot;button&quot; value=&quot;click me&quot; id=&quot;btn&quot;&gt;
 &lt;script&gt;
