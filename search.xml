@@ -4,11 +4,103 @@
   
     
     <entry>
+      <title>gulp</title>
+      <link href="/posts/4a22.html"/>
+      <url>/posts/4a22.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>gulp是基于Nodejs的自动任务运行器<br>能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤</p><h3 id="使用流程："><a href="#使用流程：" class="headerlink" title="使用流程："></a>使用流程：</h3><p>安装nodejs -&gt; 全局安装gulp -&gt; 项目安装gulp以及gulp插件 -&gt; 配置gulpfile.js -&gt; 运行任务</p><h3 id="1-安装-nodejs"><a href="#1-安装-nodejs" class="headerlink" title="1.安装 nodejs"></a>1.安装 nodejs</h3><p>node -v<br>npm -v<br>npm install <package-name> -g （—save-dev）<br>-g 全局安装<br>—save 局部安装并保存到package.json配置中<br>-dev 存在package.json的devDependencies配置项里，意思是生产环境依赖的模块</package-name></p><p>npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a><br>可以使用 cnpm 替代 npm 来安装资源</p><h3 id="2-全局安装-gulp"><a href="#2-全局安装-gulp" class="headerlink" title="2.全局安装 gulp"></a>2.全局安装 gulp</h3><p>npm install gulp@3 -g<br>或：<br>cnpm install gulp@3 -g</p><p>测试：gulp -v</p><h3 id="3-在项目目录下生成-package-json-文件："><a href="#3-在项目目录下生成-package-json-文件：" class="headerlink" title="3.在项目目录下生成 package.json 文件："></a>3.在项目目录下生成 package.json 文件：</h3><p>npm init<br>或<br>cnpm init</p><h3 id="4-在项目目录中本地安装-gulp："><a href="#4-在项目目录中本地安装-gulp：" class="headerlink" title="4.在项目目录中本地安装 gulp："></a>4.在项目目录中本地安装 gulp：</h3><p>npm install gulp —save-dev<br>本地安装成功后，会生成 node_modules 文件夹</p><h3 id="5-在项目目录中本地安装-gulp-插件https-www-npmjs-com"><a href="#5-在项目目录中本地安装-gulp-插件https-www-npmjs-com" class="headerlink" title="5.在项目目录中本地安装 gulp 插件https://www.npmjs.com"></a>5.在项目目录中本地安装 gulp 插件<a href="https://www.npmjs.com">https://www.npmjs.com</a></h3><p>（1）压缩CSS：gulp-minify-css<br>npm install gulp-minify-css —save-dev</p><p>（2）压缩JS：gulp-uglify<br>npm install —save-dev gulp-uglify</p><p>（3）压缩Html：gulp-htmlmin<br>npm install —save-dev gulp-htmlmin</p><p>（4）将ES6转换为ES5：gulp-babel<br>npm install —save-dev gulp-babel @babel/core @babel/preset-env</p><h4 id="文件合并"><a href="#文件合并" class="headerlink" title="文件合并"></a>文件合并</h4><p>npm install —save-dev gulp-concat</p><h4 id="gulpfile-js中修改js任务"><a href="#gulpfile-js中修改js任务" class="headerlink" title="gulpfile.js中修改js任务"></a>gulpfile.js中修改js任务</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">var concat = require("gulp-concat");gulp.task("js", function()&#123;    gulp.src("src/js/**/*.js") .pipe(babel(&#123;   presets: ['@babel/env'] &#125;))    .pipe(concat('all.js'))    .pipe(uglify())    .pipe(gulp.dest("dist/js"))    .pipe(connect.reload());&#125;);</code></pre><h4 id="服务器：gulp-connect"><a href="#服务器：gulp-connect" class="headerlink" title="服务器：gulp-connect"></a>服务器：gulp-connect</h4><p>npm install —save-dev gulp-connect</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var connect = require('gulp-connect');gulp.task('server', function() &#123;    connect.server(&#123;        livereload: true,        port: 2333    &#125;);&#125;);</code></pre><h4 id="处理图片"><a href="#处理图片" class="headerlink" title="处理图片"></a>处理图片</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">gulp.task("img", function()&#123;    gulp.src('src/images/**/*')    .pipe(gulp.dest('dist/images'))&#125;)gulp.task("default", ["sass", "html", "minijs", "connect", "watch", "img"]);</code></pre><h4 id="sass转css-gulp-sass"><a href="#sass转css-gulp-sass" class="headerlink" title="sass转css gulp-sass"></a>sass转css gulp-sass</h4><p>npm install —save-dev gulp-sass</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var sass = require('gulp-sass');gulp.task('sass', function()&#123;    gulp.src('src/css/*.scss')    .pipe(sass())    .pipe(gulp.dest('dist/css'))&#125;);</code></pre><h4 id="watch：监听文件的的变化执行对应的任务"><a href="#watch：监听文件的的变化执行对应的任务" class="headerlink" title="watch：监听文件的的变化执行对应的任务"></a>watch：监听文件的的变化执行对应的任务</h4><p>给每一个任务加上pipe(connect.reload())</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">gulp.task('watch',function()&#123;    gulp.watch('./src/css/*.scss',['sass']);    gulp.watch('./src/*.html',['html']);    gulp.watch('./src/css/*.css',['css']);    gulp.watch('./src/js/*.js',['js']);&#125;)gulp.task("default", ["sass", "html", "js", "connect", "watch"]);</code></pre><h4 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">const gulp = require('gulp');const minifyCss = require('gulp-minify-css');const uglify = require('gulp-uglify');const babel = require('gulp-babel');const htmlmin = require('gulp-htmlmin');gulp.task('default', function() &#123;    // 将你的默认的任务代码放在这    console.log('gulp启动成功');&#125;);gulp.task("hello", function()&#123;    console.log("hello gulp");&#125;);gulp.task("html", function()&#123;    gulp.src("src/index.html")      .pipe(htmlmin(&#123;        removeComments: true,//清除HTML注释        collapseWhitespace: true,//压缩HTML        collapseBooleanAttributes: true,//省略布尔属性的值 input标签的 checked="true"        removeEmptyAttributes: true,//删除所有空格作属性值 input 标签        removeScriptTypeAttributes: true,//删除script标签的type="textjavascript"        removeStyleLinkTypeAttributes: true,//删除style标签和link标签的type="text/css"        minifyJS: true,//压缩页面JS        minifyCSS: true//压缩页面CSS       &#125;)    )    .pipe(gulp.dest("dist"))&#125;);gulp.task("css", function()&#123;  gulp.src("src/css/*.css")      .pipe(minifyCss())      .pipe(gulp.dest("dist/css"));&#125;);gulp.task("js", function()&#123;  gulp.src("src/js/*.js")  .pipe(uglify())  .pipe(gulp.dest("dist/js"));&#125;);</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> gulp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git</title>
+      <link href="/posts/629e.html"/>
+      <url>/posts/629e.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h3><p>Git是目前世界上最先进的分布式版本控制系统。</p><h3 id="SVN与Git的最主要的区别"><a href="#SVN与Git的最主要的区别" class="headerlink" title="SVN与Git的最主要的区别?"></a>SVN与Git的最主要的区别?</h3><p>SVN的存储需要依赖一个服务器，而git所有的东西是放在线上的。节约成本，省时省力</p><h3 id="Git命令："><a href="#Git命令：" class="headerlink" title="Git命令："></a>Git命令：</h3><p>命令 1 . git config —global user.name “你的git名称”</p><p>命令2. git config —global user.email “你的git验证邮箱”</p><p>命令 1 . cd D: 进入 相应的磁盘</p><p>命令 2 . mkdir ‘你自己定义的文件夹名’</p><p>命令 3 . cd ‘你自己定义的文件夹名’</p><p>命令 4. pwd 显示（你自己定义的文件夹名）的路径</p><p>git init 初始化<br>git add ‘文件名’<br>git commit -m ‘我提交时候的备注（相当于注释）’<br>git status 查看commit状态<br>git remote add origin https: // github.com/你的账号/你的项目名称<br>git push -u origin master 将本地的库推送到master<br>git push origin —all push本地所有分支代码<br>分支 （就是推送到服务器上）<br>git pull 拉取远程版本库代码<br>git clone 将服务器端的数据克隆过来</p><p>git log （ 修改日志）</p><p>git reset —hard HEAD^ 退回到上个版本 如果需要退回好多版本就在后面加上 ^ 例： git reset —hard HEAD^^退回两个版本。</p><p>git reflog 查看操作记录</p><p>rm b.txt 这个是删除b文件的命令</p><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>分支( branches ) 是指在开发主线中分离出来，做进一步开发而不影响到原来主线。</p><p>git init 命令运行时默认创建一个分支，并命名为 master</p><p>git branch<br>— 查看所有分支</p><p>git branch <branch-name><br>— 创建分支</branch-name></p><p>git checkout <branch-name><br>— 切换分支</branch-name></p><p>git merge <branch-name><br>— 合并分支</branch-name></p><p>git branch -d <branch-name><br>— 删除分支</branch-name></p><p>如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 提示出错信息：fatal: remote origin already exists.</p><p>解决办法如下：</p><p>1、先输入$ git remote rm origin</p><p>2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！</p><p>3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section ‘remote.origin’. 我们需要修改gitconfig文件的内容</p><p>4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc</p><p>5、找到一个名为gitconfig的文件，打开它把里面的[remote “origin”]那一行删掉就好了！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Chrome调试</title>
+      <link href="/posts/232b.html"/>
+      <url>/posts/232b.html</url>
+      
+        <content type="html"><![CDATA[<p>1.console.table();<br>将数组打开展示。<br><a href="https://upload-images.jianshu.io/upload_images/15859737-983e87e05d7f58e2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp">https://upload-images.jianshu.io/upload_images/15859737-983e87e05d7f58e2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp</a></p><p>2.console.time(),代码运行时间,console.timeEnd()放在结尾<br><a href="https://upload-images.jianshu.io/upload_images/15859737-c23cc3f8f407a921.png?imageMogr2/auto-orient/strip|imageView2/2/w/237/format/webp">https://upload-images.jianshu.io/upload_images/15859737-c23cc3f8f407a921.png?imageMogr2/auto-orient/strip|imageView2/2/w/237/format/webp</a></p><p>3.monitorEvents（）；事件执行顺序。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Chrome调试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-模块化</title>
+      <link href="/posts/46fc.html"/>
+      <url>/posts/46fc.html</url>
+      
+        <content type="html"><![CDATA[<p>函数封装 —-&gt; 对象 —-&gt; 立即执行函数 —-&gt; 模块化规范</p><p>是一种项目的构架模式， 这种构架模式让JS代码重用性变得非常高，让项目构架的一些复杂问题全部得以解决。 例如，多个script标签不会再出现了，我们只要用一个script标签进行引入就可以了。</p><p>模块化那有两个规范，AMD规范和CMD规范，当然还有针对于nodejs后台的commonJS规范;</p><h3 id="1-首先对于依赖："><a href="#1-首先对于依赖：" class="headerlink" title="1. 首先对于依赖："></a>1. 首先对于依赖：</h3><p>AMD提前执行(不管什么时候用， 先加载过来) //特点 : 前期消耗网络资源大， 但是后期运行效率高.</p><p>CMD需求执行(有用我再去加载) //特点:整个自选消耗曲线比较平缓。</p><h3 id="2-CMD-推崇依赖就近，AMD-推崇依赖前置。"><a href="#2-CMD-推崇依赖就近，AMD-推崇依赖前置。" class="headerlink" title="2. CMD 推崇依赖就近，AMD 推崇依赖前置。"></a>2. CMD 推崇依赖就近，AMD 推崇依赖前置。</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> // CMDdefine(function(require, exports, module) &#123;var a = require('./a')a.doSomething()// 此处略去 100 行var b = require('./b') // 依赖可以就近书写b.doSomething()// ...&#125;)</code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript"> // AMD 默认推荐的是define(['./a', './b'], function(a, b) &#123; // 依赖必须一开始就写好a.doSomething()// 此处略去 100 行b.doSomething()...&#125;)</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 模块化规范 </tag>
+            
+            <tag> AMD/CMD </tag>
+            
+            <tag> 依赖 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>jQuery</title>
       <link href="/posts/971b.html"/>
       <url>/posts/971b.html</url>
       
-        <content type="html"><![CDATA[<h2 id="jQuery-语法"><a href="#jQuery-语法" class="headerlink" title="jQuery 语法"></a>jQuery 语法</h2><p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。<br>基础语法： $(selector).action()</p><h3 id="美元符号定义-jQuery"><a href="#美元符号定义-jQuery" class="headerlink" title="美元符号定义 jQuery"></a>美元符号定义 jQuery</h3><p>选择符（selector）”查询”和”查找” HTML 元素<br>jQuery 的 action() 执行对元素的操作<br>jQuery 中所有选择器都以美元符号开头：$()</p><h3 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h3><p>$(document).ready(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});</p><p>简洁写法（与以上写法效果相同）:<br>$(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});<br>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作</p><pre class=" language-lang-html"><code class="language-lang-html"><body>    <div>123</div>    <div class="div1">456</div>    <div id="div2">789</div>    <p class="p1">qeq</p>    <p>xxx</p>    <ul>        <li>1</li>        <li>2</li>        <li>3</li>    </ul>    <script>        var div = $("div");        console.log(div);           // console.log(jQuery);        console.log($("div").eq(1));//选择第一个div        console.log($("div:eq(2)"));//选择第二个div        //:eq     匹配一个给定索引值的元素,单个元素        console.log($("div").html());//div的内容        console.log($("*"));//查找所有的元素        console.log($(this));//选取当前的HTML元素        console.log($("p.p1"));//选择class="p1"的p标签        console.log($("p:first"));//选择第一个p标签        console.log($("ul li:first"));//选择ul下的第一个li        $("p:first").dblclick(function()&#123;            alert("双击！");        &#125;)        console.log($("div")[0]);//转换为原生js        console.log($("div").get(0));转换为原生js        $("div").eq(1).html("我QQ(#`O′)").addClass("box1").css("color","red");        var div2 = document.querySelector("#div2");        console.log($("div2"));//转换为jQuery        console.log($("ul").children(".two"));//ul下class="two"的li        console.log($("ul").find(".two"));//ul下的class="two"的所有元素    </script></code></pre><p>1.jQuery选择器<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp</a></p><p>2.jQuery事件<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="jQuery-语法"><a href="#jQuery-语法" class="headerlink" title="jQuery 语法"></a>jQuery 语法</h2><p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。<br>基础语法： $(selector).action()</p><h3 id="美元符号定义-jQuery"><a href="#美元符号定义-jQuery" class="headerlink" title="美元符号定义 jQuery"></a>美元符号定义 jQuery</h3><p>选择符（selector）”查询”和”查找” HTML 元素<br>jQuery 的 action() 执行对元素的操作<br>jQuery 中所有选择器都以美元符号开头：$()</p><h3 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h3><p>$(document).ready(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});</p><p>简洁写法（与以上写法效果相同）:<br>$(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});<br>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作</p><pre><code>    &lt;div&gt;123&lt;/div&gt;    &lt;div class=&quot;div1&quot;&gt;456&lt;/div&gt;    &lt;div id=&quot;div2&quot;&gt;789&lt;/div&gt;    &lt;p class=&quot;p1&quot;&gt;qeq&lt;/p&gt;    &lt;p&gt;xxx&lt;/p&gt;    &lt;ul&gt;        &lt;li&gt;1&lt;/li&gt;        &lt;li&gt;2&lt;/li&gt;        &lt;li&gt;3&lt;/li&gt;    &lt;/ul&gt;    &lt;script&gt;        var div = $(&quot;div&quot;);        console.log(div);           // console.log(jQuery);        console.log($(&quot;div&quot;).eq(1));//选择第一个div        console.log($(&quot;div:eq(2)&quot;));//选择第二个div        //:eq     匹配一个给定索引值的元素,单个元素        console.log($(&quot;div&quot;).html());//div的内容        console.log($(&quot;*&quot;));//查找所有的元素        console.log($(this));//选取当前的HTML元素        console.log($(&quot;p.p1&quot;));//选择class=&quot;p1&quot;的p标签        console.log($(&quot;p:first&quot;));//选择第一个p标签        console.log($(&quot;ul li:first&quot;));//选择ul下的第一个li        $(&quot;p:first&quot;).dblclick(function()&#123;            alert(&quot;双击！&quot;);        &#125;)        console.log($(&quot;div&quot;)[0]);//转换为原生js        console.log($(&quot;div&quot;).get(0));转换为原生js        $(&quot;div&quot;).eq(1).html(&quot;我QQ(#`O′)&quot;).addClass(&quot;box1&quot;).css(&quot;color&quot;,&quot;red&quot;);        var div2 = document.querySelector(&quot;#div2&quot;);        console.log($(&quot;div2&quot;));//转换为jQuery        console.log($(&quot;ul&quot;).children(&quot;.two&quot;));//ul下class=&quot;two&quot;的li        console.log($(&quot;ul&quot;).find(&quot;.two&quot;));//ul下的class=&quot;two&quot;的所有元素    &lt;/script&gt;</code></pre><p>1.jQuery选择器<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp</a></p><p>2.jQuery事件<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp</a></p>]]></content>
       
       
       <categories>
@@ -752,7 +844,7 @@
       <link href="/posts/8e47.html"/>
       <url>/posts/8e47.html</url>
       
-        <content type="html"><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//这里是js代码</code></pre><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题-1"><a href="#三级标题-1" class="headerlink" title="三级标题"></a>三级标题</h3><p>正文随意发挥。。。。。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Student(name)&#123;  //使用构造函数方式  this.name = name;   this.speak = function()&#123;     alert(this.name);   &#125; &#125; //通过new来实例化对象let stu = new Student("xiaohong");</code></pre>]]></content>
+        <content type="html"><![CDATA[<pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre>]]></content>
       
       
       
