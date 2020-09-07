@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-04T14:31:21.513Z</updated>
+  <updated>2020-09-07T05:27:40.277Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS-ajax</title>
+    <link href="https://nekodeng.gitee.io/posts/f35d.html"/>
+    <id>https://nekodeng.gitee.io/posts/f35d.html</id>
+    <published>2020-09-07T05:16:42.255Z</published>
+    <updated>2020-09-07T05:27:40.277Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code class=&quot;language-lang-javascript&quot;&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="ajax" scheme="https://nekodeng.gitee.io/tags/ajax/"/>
+    
+    <category term="cors" scheme="https://nekodeng.gitee.io/tags/cors/"/>
+    
+    <category term="jsonp" scheme="https://nekodeng.gitee.io/tags/jsonp/"/>
+    
+    <category term="promise" scheme="https://nekodeng.gitee.io/tags/promise/"/>
+    
+  </entry>
   
   <entry>
     <title>JS-this</title>
@@ -568,35 +602,6 @@
     <category term="date" scheme="https://nekodeng.gitee.io/tags/date/"/>
     
     <category term="对象" scheme="https://nekodeng.gitee.io/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS函数</title>
-    <link href="https://nekodeng.gitee.io/posts/3.html"/>
-    <id>https://nekodeng.gitee.io/posts/3.html</id>
-    <published>2020-08-19T10:48:32.386Z</published>
-    <updated>2020-08-20T07:11:47.928Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一&quot;&gt;&lt;a href=&quot;#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JS" scheme="https://nekodeng.gitee.io/tags/JS/"/>
-    
-    <category term="function" scheme="https://nekodeng.gitee.io/tags/function/"/>
-    
-    <category term="函数" scheme="https://nekodeng.gitee.io/tags/%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
