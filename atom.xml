@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-07T06:39:24.298Z</updated>
+  <updated>2020-09-07T07:13:57.938Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://nekodeng.gitee.io/posts/4a22.html"/>
     <id>https://nekodeng.gitee.io/posts/4a22.html</id>
     <published>2020-09-07T06:18:30.212Z</published>
-    <updated>2020-09-07T06:39:24.298Z</updated>
+    <updated>2020-09-07T07:13:57.938Z</updated>
     
     
       
@@ -33,6 +33,8 @@
       
     
     
+    
+    <category term="gulp" scheme="https://nekodeng.gitee.io/categories/gulp/"/>
     
     
     <category term="gulp" scheme="https://nekodeng.gitee.io/tags/gulp/"/>
