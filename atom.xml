@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-07T07:44:14.633Z</updated>
+  <updated>2020-09-07T07:54:17.104Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>express应用程序生成器</title>
+    <link href="https://nekodeng.gitee.io/posts/8b11.html"/>
+    <id>https://nekodeng.gitee.io/posts/8b11.html</id>
+    <published>2020-09-07T07:51:51.430Z</published>
+    <updated>2020-09-07T07:54:17.104Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;express-应用程序生成器&quot;&gt;&lt;a href=&quot;#express-应用程序生成器&quot; class=&quot;headerlink&quot; title=&quot;express 应用程序生成器&quot;&gt;&lt;/a&gt;express 应用程序生成器&lt;/h3&gt;&lt;p&gt;安装：$ npm install</summary>
+        
+      
+    
+    
+    
+    
+    <category term="express应用程序生成器" scheme="https://nekodeng.gitee.io/tags/express%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E6%88%90%E5%99%A8/"/>
+    
+    <category term="NodeJS" scheme="https://nekodeng.gitee.io/tags/NodeJS/"/>
+    
+  </entry>
   
   <entry>
     <title>NodeJS基本介绍</title>
@@ -50,16 +75,14 @@
     <link href="https://nekodeng.gitee.io/posts/e8e5.html"/>
     <id>https://nekodeng.gitee.io/posts/e8e5.html</id>
     <published>2020-09-07T07:28:15.280Z</published>
-    <updated>2020-09-07T07:41:32.591Z</updated>
+    <updated>2020-09-07T07:49:18.969Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;ls:查看当前目录有哪些文件,加上-a显示所有文件(夹)&lt;br&gt;ll:同ls,只是显示方式不一样&lt;br&gt;clear: 清屏&lt;/p&gt;
-&lt;p&gt;pwd: print work directory, 打印工作目录的路径&lt;/p&gt;
-&lt;p&gt;cd 目录: 进入某个目录,</summary>
+    <summary type="html">&lt;h3 id=&quot;一些命令行：&quot;&gt;&lt;a href=&quot;#一些命令行：&quot; class=&quot;headerlink&quot; title=&quot;一些命令行：&quot;&gt;&lt;/a&gt;一些命令行：&lt;/h3&gt;&lt;p&gt;ls:   查看当前目录有哪些文件,加上-a显示所有文件(夹)&lt;br&gt;ll:  </summary>
         
       
     
@@ -544,37 +567,6 @@
     <category term="set/map" scheme="https://nekodeng.gitee.io/tags/set-map/"/>
     
     <category term="class语法糖" scheme="https://nekodeng.gitee.io/tags/class%E8%AF%AD%E6%B3%95%E7%B3%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-ES5</title>
-    <link href="https://nekodeng.gitee.io/posts/386e.html"/>
-    <id>https://nekodeng.gitee.io/posts/386e.html</id>
-    <published>2020-08-24T03:00:27.273Z</published>
-    <updated>2020-09-01T11:50:05.546Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ES5严格模式（strict-mode）&quot;&gt;&lt;a href=&quot;#ES5严格模式（strict-mode）&quot; class=&quot;headerlink&quot; title=&quot;ES5严格模式（strict mode）&quot;&gt;&lt;/a&gt;ES5严格模式（strict</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="this" scheme="https://nekodeng.gitee.io/tags/this/"/>
-    
-    <category term="ES5" scheme="https://nekodeng.gitee.io/tags/ES5/"/>
-    
-    <category term="严格模式" scheme="https://nekodeng.gitee.io/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="arguments" scheme="https://nekodeng.gitee.io/tags/arguments/"/>
     
   </entry>
   

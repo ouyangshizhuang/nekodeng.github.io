@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>express应用程序生成器</title>
+      <link href="/posts/8b11.html"/>
+      <url>/posts/8b11.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="express-应用程序生成器"><a href="#express-应用程序生成器" class="headerlink" title="express 应用程序生成器"></a>express 应用程序生成器</h3><p>安装：$ npm install express-generator -g</p><p>npm list -g —depth=0 查看全局安装的插件</p><p>npx 临时使用的命令，临时安装插件时使用，用完之后删除</p><p>npx express-generator backend -e 添加对 ejs 模板引擎的支持,会生成以下文件：<br><a href="https://upload-images.jianshu.io/upload_images/15859737-a6e8e7a41460b756.png?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp">https://upload-images.jianshu.io/upload_images/15859737-a6e8e7a41460b756.png?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp</a></p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//创建HTTP错误请求var createError = require('http-errors');//expressvar express = require('express');//原生模块pathvar path = require('path');//express的cookie处理的中间键(middleware)var cookieParser = require('cookie-parser');//日志中间键var logger = require('morgan');//引用首页的路由var indexRouter = require('./routes/index');//引用users的路由var usersRouter = require('./routes/users');var app = express();// view engine setup 设置view渲染引擎为ejsapp.set('views', path.join(__dirname, 'views'));app.set('view engine', 'ejs');//app.use是express实例上的方法，表示应用中间键app.use(logger('dev'));app.use(express.json());app.use(express.urlencoded(&#123; extended: false &#125;));app.use(cookieParser());app.use(express.static(path.join(__dirname, 'public')));//把路由也当初中间键来挂载app.use('/', indexRouter);app.use('/users', usersRouter);// catch 404 and forward to error handlerapp.use(function(req, res, next) &#123;  next(createError(404));&#125;);// error handlerapp.use(function(err, req, res, next) &#123;  // set locals, only providing error in development  res.locals.message = err.message;  res.locals.error = req.app.get('env') === 'development' ? err : &#123;&#125;;  // render the error page  res.status(err.status || 500);  res.render('error');&#125;);module.exports = app;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> express应用程序生成器 </tag>
+            
+            <tag> NodeJS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NodeJS基本介绍</title>
       <link href="/posts/fc59.html"/>
       <url>/posts/fc59.html</url>
@@ -37,7 +58,7 @@
       <link href="/posts/e8e5.html"/>
       <url>/posts/e8e5.html</url>
       
-        <content type="html"><![CDATA[<p>ls:查看当前目录有哪些文件,加上-a显示所有文件(夹)<br>ll:同ls,只是显示方式不一样<br>clear: 清屏</p><p>pwd: print work directory, 打印工作目录的路径</p><p>cd 目录: 进入某个目录, 如果不跟用户名，直接进行用户的根目录</p><p>mkdir 目录名：创建一个目录</p><p>touch 文件名：创建一个文件</p><p>rm -rf 文件或者目录名： 删除一个文件或者一个目录</p><p>npm init: 初始一个项目， 加-y参数可以不用提示直接创建package.json</p><p>在package.json 里可以添加任意的执行脚本。</p><p>如果node项目要监听代码的修改，可以使用 nodemon</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// http是node原生模块，不需要安装可以直接引入const http = require('http')​// 使用http.createServer的方法创建一个serverconst app = http.createServer((req, res) => &#123;res.end('hello 1901!')&#125;)// 让server运行起来吧！！！app.listen(3000, () => &#123;console.log('server is running on http://localhost:3000')&#125;)</code></pre><p>一般在项目中，不会使用原生的方式来写应用。推荐有一些nodejs的框架</p><p>express</p><p>koa</p><h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><p>首先要安装npm i express -S</p><p>创建一个基本的express应用</p><p>// 从express包里引入express方法, 这个不是原生的模块，所以需要先安装npm i express -S<br>const express = require(‘express’)<br>​<br>// 创建一个express实例<br>const app = express()<br>​<br>// 定义一个路由，这个路由是通过get方法访问，当访问的时候，服务器发送一个响应给客户端<br>app.get(‘/‘, (req, res) =&gt; {<br>res.send(‘hello express’)<br>})<br>​<br>// 要让app运行起来，需要监听<br>app.listen(3000, () =&gt; {<br>console.log(‘server is running on <a href="http://localhost:3000">http://localhost:3000</a>‘)<br>})</p><p>就可以通过<a href="http://localhost:3000访问，你将看到页面上有hello">http://localhost:3000访问，你将看到页面上有hello</a> express</p><p>npm list -g —depth=0 查看全局安装</p><p>npx 临时使用的命令</p><p>__dirname 当前文件所在的目录<br>peocess.cwd() 命令开始执行时的目录</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="一些命令行："><a href="#一些命令行：" class="headerlink" title="一些命令行："></a>一些命令行：</h3><p>ls:   查看当前目录有哪些文件,加上-a显示所有文件(夹)<br>ll:   同ls,只是显示方式不一样<br>clear:    清屏</p><p>pwd:  print work directory, 打印工作目录的路径</p><p>cd  目录: 进入某个目录, 如果不跟用户名，直接进行用户的根目录</p><p>mkdir   目录名：创建一个目录</p><p>touch   文件名：创建一个文件</p><p>rm -rf  文件或者目录名： 删除一个文件或者一个目录</p><p>npm init:   初始一个项目， 加-y参数可以不用提示直接创建package.json</p><p>在package.json  里可以添加任意的执行脚本。</p><p>如果node项目要监听代码的修改，可以使用 nodemon</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// http是node原生模块，不需要安装可以直接引入const http = require('http')​// 使用http.createServer的方法创建一个serverconst app = http.createServer((req, res) => &#123;res.end('hello 1901!')&#125;)// 让server运行起来吧！！！app.listen(3000, () => &#123;console.log('server is running on http://localhost:3000')&#125;)</code></pre><p>一般在项目中，不会使用原生的方式来写应用。推荐有一些nodejs的框架</p><p>express</p><p>koa</p><h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><p>首先要安装npm i express -S</p><p>创建一个基本的express应用</p><p>// 从express包里引入express方法, 这个不是原生的模块，所以需要先安装npm i express -S<br>const express = require(‘express’)<br>​<br>// 创建一个express实例<br>const app = express()<br>​<br>// 定义一个路由，这个路由是通过get方法访问，当访问的时候，服务器发送一个响应给客户端<br>app.get(‘/‘, (req, res) =&gt; {<br>res.send(‘hello express’)<br>})<br>​<br>// 要让app运行起来，需要监听<br>app.listen(3000, () =&gt; {<br>console.log(‘server is running on <a href="http://localhost:3000">http://localhost:3000</a>‘)<br>})</p><p>就可以通过<a href="http://localhost:3000访问，你将看到页面上有hello">http://localhost:3000访问，你将看到页面上有hello</a> express</p><p>npm list -g —depth=0 查看全局安装</p><p>npx 临时使用的命令</p><p>__dirname 当前文件所在的目录<br>peocess.cwd() 命令开始执行时的目录</p>]]></content>
       
       
       <categories>
