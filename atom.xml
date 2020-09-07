@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-07T07:13:57.938Z</updated>
+  <updated>2020-09-07T07:44:14.633Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NodeJS基本介绍</title>
+    <link href="https://nekodeng.gitee.io/posts/fc59.html"/>
+    <id>https://nekodeng.gitee.io/posts/fc59.html</id>
+    <published>2020-09-07T07:38:13.825Z</published>
+    <updated>2020-09-07T07:44:14.633Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、NodeJS基本介绍&quot;&gt;&lt;a href=&quot;#一、NodeJS基本介绍&quot; class=&quot;headerlink&quot; title=&quot;一、NodeJS基本介绍&quot;&gt;&lt;/a&gt;一、NodeJS基本介绍&lt;/h3&gt;&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="NodeJS" scheme="https://nekodeng.gitee.io/categories/NodeJS/"/>
+    
+    
+    <category term="file模块" scheme="https://nekodeng.gitee.io/tags/file%E6%A8%A1%E5%9D%97/"/>
+    
+    <category term="http模块" scheme="https://nekodeng.gitee.io/tags/http%E6%A8%A1%E5%9D%97/"/>
+    
+    <category term="NodeJS基本介绍" scheme="https://nekodeng.gitee.io/tags/NodeJS%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeJS使用流程</title>
+    <link href="https://nekodeng.gitee.io/posts/e8e5.html"/>
+    <id>https://nekodeng.gitee.io/posts/e8e5.html</id>
+    <published>2020-09-07T07:28:15.280Z</published>
+    <updated>2020-09-07T07:41:32.591Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;ls:查看当前目录有哪些文件,加上-a显示所有文件(夹)&lt;br&gt;ll:同ls,只是显示方式不一样&lt;br&gt;clear: 清屏&lt;/p&gt;
+&lt;p&gt;pwd: print work directory, 打印工作目录的路径&lt;/p&gt;
+&lt;p&gt;cd 目录: 进入某个目录,</summary>
+        
+      
+    
+    
+    
+    <category term="NodeJS" scheme="https://nekodeng.gitee.io/categories/NodeJS/"/>
+    
+    
+    <category term="express" scheme="https://nekodeng.gitee.io/tags/express/"/>
+    
+    <category term="NodeJS使用流程" scheme="https://nekodeng.gitee.io/tags/NodeJS%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git使用流程</title>
+    <link href="https://nekodeng.gitee.io/posts/4604.html"/>
+    <id>https://nekodeng.gitee.io/posts/4604.html</id>
+    <published>2020-09-07T07:23:06.200Z</published>
+    <updated>2020-09-07T07:28:08.797Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git&quot;&gt;&lt;/a&gt;git&lt;/h2&gt;&lt;p&gt;分布式的版本管理系统&lt;/p&gt;
+&lt;p&gt;git</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://nekodeng.gitee.io/categories/Git/"/>
+    
+    
+    <category term="Git使用流程" scheme="https://nekodeng.gitee.io/tags/Git%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
+    
+    <category term="Git公钥配置" scheme="https://nekodeng.gitee.io/tags/Git%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>gulp</title>
@@ -489,95 +575,6 @@
     <category term="严格模式" scheme="https://nekodeng.gitee.io/tags/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
     
     <category term="arguments" scheme="https://nekodeng.gitee.io/tags/arguments/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS正则表达式</title>
-    <link href="https://nekodeng.gitee.io/posts/e88.html"/>
-    <id>https://nekodeng.gitee.io/posts/e88.html</id>
-    <published>2020-08-22T14:36:46.676Z</published>
-    <updated>2020-08-22T15:29:22.525Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h3&gt;&lt;p&gt;（英语：Regular</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JS正则表达式" scheme="https://nekodeng.gitee.io/tags/JS%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS冒泡选择快速排序</title>
-    <link href="https://nekodeng.gitee.io/posts/b0e2.html"/>
-    <id>https://nekodeng.gitee.io/posts/b0e2.html</id>
-    <published>2020-08-22T11:29:26.417Z</published>
-    <updated>2020-08-24T02:59:09.041Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;JS冒泡排序（必须掌握思想和必须会代码默写）（面试最常考）&quot;&gt;&lt;a href=&quot;#JS冒泡排序（必须掌握思想和必须会代码默写）（面试最常考）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JS排序" scheme="https://nekodeng.gitee.io/tags/JS%E6%8E%92%E5%BA%8F/"/>
-    
-    <category term="冒泡排序" scheme="https://nekodeng.gitee.io/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
-    
-    <category term="选择排序" scheme="https://nekodeng.gitee.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"/>
-    
-    <category term="快速排序" scheme="https://nekodeng.gitee.io/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS事件流</title>
-    <link href="https://nekodeng.gitee.io/posts/e04e.html"/>
-    <id>https://nekodeng.gitee.io/posts/e04e.html</id>
-    <published>2020-08-22T08:51:26.152Z</published>
-    <updated>2020-08-22T08:56:39.688Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;事件冒泡&quot;&gt;&lt;a href=&quot;#事件冒泡&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="事件流" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E6%B5%81/"/>
-    
-    <category term="冒泡" scheme="https://nekodeng.gitee.io/tags/%E5%86%92%E6%B3%A1/"/>
-    
-    <category term="捕获" scheme="https://nekodeng.gitee.io/tags/%E6%8D%95%E8%8E%B7/"/>
-    
-    <category term="监听" scheme="https://nekodeng.gitee.io/tags/%E7%9B%91%E5%90%AC/"/>
-    
-    <category term="委托/代理" scheme="https://nekodeng.gitee.io/tags/%E5%A7%94%E6%89%98-%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   

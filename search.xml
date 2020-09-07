@@ -4,6 +4,89 @@
   
     
     <entry>
+      <title>NodeJS基本介绍</title>
+      <link href="/posts/fc59.html"/>
+      <url>/posts/fc59.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、NodeJS基本介绍"><a href="#一、NodeJS基本介绍" class="headerlink" title="一、NodeJS基本介绍"></a>一、NodeJS基本介绍</h3><p> 1、NodeJS是为了开发高性能的服务器而诞生的一种技术</p><p> 2、是运行在服务端的 JavaScript，基于V8（谷歌浏览器的版本）进行运行 </p><p> 3、使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效</p><h3 id="二、前端学习node的意义"><a href="#二、前端学习node的意义" class="headerlink" title="二、前端学习node的意义"></a>二、前端学习node的意义</h3><p> 1、 开发沟通：开发时更容易理解后端实现，降低交流成本<br> 2、 后端开发：想写些自己感兴趣的项目时，可以自己独立完成，即使没有后端支持，且成本特别低。<br> 3、 中间层开发：为了进一步的前后端分离，提高性能，使用nodejs做中间层是一个非常好的实践（由于nodejs具有异步io的特点）</p><h3 id="三、使用node的方式"><a href="#三、使用node的方式" class="headerlink" title="三、使用node的方式"></a>三、使用node的方式</h3><p> 1、 在node交互模式下运行（类似于命令窗口），这种方式类似于浏览器控制台，一般是用于运行单独的代码段。<br> 2、 单独创建一个node文件，其实就是一个不包含bom与dom的js文件，然后使用node 文件名.js来运行，当然你也可以不给js后缀，这种方式一般是用于运行一个独 立的nodejs文件</p><h3 id="四、前端要掌握的nodejs核心内容"><a href="#四、前端要掌握的nodejs核心内容" class="headerlink" title="四、前端要掌握的nodejs核心内容"></a>四、前端要掌握的nodejs核心内容</h3><p> 1、file模块 +  http模块</p><p> 2、File+http模块 构建静态的webserver</p><p> 3、使用nodejs的web框架express构建主流的ApiServer</p><h3 id="五、file模块"><a href="#五、file模块" class="headerlink" title="五、file模块"></a>五、file模块</h3><p>1、创建文件夹—fs.mkdir(path[, options], callback)　</p><p>　　path - 要创建的文件夹路径</p><p>　　options 参数可以是：</p><p>　　　　recursive - 是否以递归的方式创建目录，默认为 false。</p><p>　　　　mode - 设置目录权限，默认为 0777。</p><p>　　callback - 文件夹创建完成后的回调函数，创建成功是没有参数的，如果创建失败会有个错误对象作为参数</p><p>2、读取文件夹—fs.readdir(path, callback)</p><p>3、 删除空文件夹—fs.rmdir(path, callback)</p><p>4、写入(创建)文件—-fs.writeFile(filename,data,callback)</p><p>　　filename:写入文件名</p><p>　　data:写入文件的数据(String|Buffer)</p><p>　　callback(err):错误信息参数</p><p>5、读取文件内容—fs.readFile(filename,callback)</p><p>6、向文件中追加内容—fs.appendFile(filename,data,callback)</p><p>7、删除文件—fs.unlink(path,callback)</p><h3 id="六、HTTP模块构建流程"><a href="#六、HTTP模块构建流程" class="headerlink" title="六、HTTP模块构建流程"></a>六、HTTP模块构建流程</h3><p> 1、导入http模块      var http = require(‘http’)<br> 2、使用http模块创建一个服务器  http.creatServer(fn).listen(端口号)<br> 3、给服务器添加请求处理函数fn—&gt;绑定端口 </p><p>可以参考：Node.js到底是做什么的？这是我看到最好的解释了。<a href="https://www.cnblogs.com/suhaihong/p/6598308.html">https://www.cnblogs.com/suhaihong/p/6598308.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> NodeJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> file模块 </tag>
+            
+            <tag> http模块 </tag>
+            
+            <tag> NodeJS基本介绍 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NodeJS使用流程</title>
+      <link href="/posts/e8e5.html"/>
+      <url>/posts/e8e5.html</url>
+      
+        <content type="html"><![CDATA[<p>ls:查看当前目录有哪些文件,加上-a显示所有文件(夹)<br>ll:同ls,只是显示方式不一样<br>clear: 清屏</p><p>pwd: print work directory, 打印工作目录的路径</p><p>cd 目录: 进入某个目录, 如果不跟用户名，直接进行用户的根目录</p><p>mkdir 目录名：创建一个目录</p><p>touch 文件名：创建一个文件</p><p>rm -rf 文件或者目录名： 删除一个文件或者一个目录</p><p>npm init: 初始一个项目， 加-y参数可以不用提示直接创建package.json</p><p>在package.json 里可以添加任意的执行脚本。</p><p>如果node项目要监听代码的修改，可以使用 nodemon</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// http是node原生模块，不需要安装可以直接引入const http = require('http')​// 使用http.createServer的方法创建一个serverconst app = http.createServer((req, res) => &#123;res.end('hello 1901!')&#125;)// 让server运行起来吧！！！app.listen(3000, () => &#123;console.log('server is running on http://localhost:3000')&#125;)</code></pre><p>一般在项目中，不会使用原生的方式来写应用。推荐有一些nodejs的框架</p><p>express</p><p>koa</p><h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><p>首先要安装npm i express -S</p><p>创建一个基本的express应用</p><p>// 从express包里引入express方法, 这个不是原生的模块，所以需要先安装npm i express -S<br>const express = require(‘express’)<br>​<br>// 创建一个express实例<br>const app = express()<br>​<br>// 定义一个路由，这个路由是通过get方法访问，当访问的时候，服务器发送一个响应给客户端<br>app.get(‘/‘, (req, res) =&gt; {<br>res.send(‘hello express’)<br>})<br>​<br>// 要让app运行起来，需要监听<br>app.listen(3000, () =&gt; {<br>console.log(‘server is running on <a href="http://localhost:3000">http://localhost:3000</a>‘)<br>})</p><p>就可以通过<a href="http://localhost:3000访问，你将看到页面上有hello">http://localhost:3000访问，你将看到页面上有hello</a> express</p><p>npm list -g —depth=0 查看全局安装</p><p>npx 临时使用的命令</p><p>__dirname 当前文件所在的目录<br>peocess.cwd() 命令开始执行时的目录</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> NodeJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> express </tag>
+            
+            <tag> NodeJS使用流程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git使用流程</title>
+      <link href="/posts/4604.html"/>
+      <url>/posts/4604.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>分布式的版本管理系统</p><p>git init可以把当前目录初始化为一个git仓库，当初始化完成之后，在目录下就有一个叫.git的隐藏目录，这个目录咱们一般不会去多操作它，这个目录一旦删除，那就相当于当前目录就是一个普通的目录，而不再是一个git仓库。</p><p>初次运行git的时候可能需要配置全局的用户名和邮箱：</p><pre class=" language-lang-bash"><code class="language-lang-bash">$ git config --global user.name "John Doe"$ git config --global user.email johndoe@example.com</code></pre><p>只要全局配置了之后，在你的用户根目录下，就有一个.gitconfig的文件，直接修改这个文件和命令行修改，结果一样。</p><p>git的语义化commit</p><h3 id="公钥配置"><a href="#公钥配置" class="headerlink" title="公钥配置"></a>公钥配置</h3><p>在任意位置打开gitbash，输入$ ssh-keygen ，只需要通过这个命令回答问题的方式，就可以生成密钥对,会新增一个.ssh文件夹。 读法： ssh-key gen =&gt; generator<br>“密钥对” 保存位置 =&gt;用户目录/.ssh/</p><p>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/Leo/.ssh/id_rsa): 这里一定是写带路径的名字/Users/Leo/.ssh/id_rsa_coding<br>在ssh目录下就会出现这样的<br>id_rsa_coding id_rsa_coding.pub 公钥，用于放在coding上的</p><p>可以添加公钥到git平台</p><p>新建一个 (这里没有点)config(这里没有扩展名) 文件， 这个文件关联服务器和密钥对，要配置多个平台就在这个文件里继续新增一条配置，不用新建config文件。</p><p>Host git.dev.tencent.com（这里的地址是你的git地址）<br>User Leo （这里的名字随便写）<br>PreferredAuthentications publickey （注意一个字母都不能少，而且区分大小写）<br>IdentityFile ~/.ssh/id_rsa_coding (这个就是你要使用哪一个密钥对, windows上也是全路径)</p><h3 id="git基本流程"><a href="#git基本流程" class="headerlink" title="git基本流程"></a>git基本流程</h3><p>git init: 初始化一个git仓库，如果做错了，显示隐藏文件，删除.git目录<br>git status: 查看状态<br>git add 文件名: 添加某个文件<br>git add .(-A): 添加所有修改<br>git checkout 文件名 在add之前回退<br>git reset —hard 在add之后回退<br>git commit -m ‘写你的消息’<br>git log 查看提交历史 按字母 q（uit）退出<br>git reset —hard 版本号 在commit之后回退到指定的版本<br>git diff(erence) 可以查看没add的不同<br>git remote add origin (git@git.dev.tencent.com:leochow/renzaoge.git 仓库地址)<br>git clone: 克隆远程仓库到本地<br>git branch 查看本地分支<br>git branch -r 查看远程分支<br>git branch -D 分支名 删除某个分支<br>git checkout 分支名： 切换到已有的分支<br>git checkout -b 分支名: 新建一个分支，并且切换到该分支<br>git push origin 远程分支名: 如果远程已经存在同名分支，则会有冲突或者合并，如果没有，就会创建一个远程分支，并且和当前分支是关联的</p><h3 id="pull-request-pr-新建-合并请求步骤"><a href="#pull-request-pr-新建-合并请求步骤" class="headerlink" title="pull request(pr), 新建 合并请求步骤"></a>pull request(pr), 新建 合并请求步骤</h3><h4 id="rebase-流程"><a href="#rebase-流程" class="headerlink" title="rebase 流程"></a>rebase 流程</h4><p>pre-1: 在基准分支（dev）上接取最新的代码 git pull origin dev<br>pre-2: 切换到自己的分支上 git checkout Leo/home</p><p>git rebase dev<br>解决冲突<br>git add -A<br>git rebase —continue<br>重复2，3，4<br>至到reabase完成<br>有可能本地自己的分支和远程分支还有冲突，这时候需要git pull …… 之后，解决冲突再push</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git使用流程 </tag>
+            
+            <tag> Git公钥配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gulp</title>
       <link href="/posts/4a22.html"/>
       <url>/posts/4a22.html</url>
