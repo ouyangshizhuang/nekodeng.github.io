@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-07T07:54:17.104Z</updated>
+  <updated>2020-09-07T08:32:38.575Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS-SCSS代码规范</title>
+    <link href="https://nekodeng.gitee.io/posts/e77.html"/>
+    <id>https://nekodeng.gitee.io/posts/e77.html</id>
+    <published>2020-09-07T08:10:58.551Z</published>
+    <updated>2020-09-07T08:32:38.575Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-注释规范&quot;&gt;&lt;a href=&quot;#1-注释规范&quot; class=&quot;headerlink&quot; title=&quot;1 注释规范&quot;&gt;&lt;/a&gt;1 注释规范&lt;/h2&gt;&lt;h2 id=&quot;2-缩进-空格-换行规范&quot;&gt;&lt;a href=&quot;#2-缩进-空格-换行规范&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CSS-SCSS" scheme="https://nekodeng.gitee.io/categories/CSS-SCSS/"/>
+    
+    
+    <category term="CSS-SCSS代码规范" scheme="https://nekodeng.gitee.io/tags/CSS-SCSS%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>express应用程序生成器</title>
     <link href="https://nekodeng.gitee.io/posts/8b11.html"/>
     <id>https://nekodeng.gitee.io/posts/8b11.html</id>
     <published>2020-09-07T07:51:51.430Z</published>
-    <updated>2020-09-07T07:54:17.104Z</updated>
+    <updated>2020-09-07T07:56:50.252Z</updated>
     
     
       
@@ -33,6 +58,8 @@
       
     
     
+    
+    <category term="NodeJS" scheme="https://nekodeng.gitee.io/categories/NodeJS/"/>
     
     
     <category term="express应用程序生成器" scheme="https://nekodeng.gitee.io/tags/express%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E6%88%90%E5%99%A8/"/>
@@ -130,7 +157,7 @@
     <link href="https://nekodeng.gitee.io/posts/4a22.html"/>
     <id>https://nekodeng.gitee.io/posts/4a22.html</id>
     <published>2020-09-07T06:18:30.212Z</published>
-    <updated>2020-09-07T07:13:57.938Z</updated>
+    <updated>2020-09-07T08:33:18.900Z</updated>
     
     
       
@@ -143,7 +170,7 @@
     
     
     
-    <category term="gulp" scheme="https://nekodeng.gitee.io/categories/gulp/"/>
+    <category term="NodeJS" scheme="https://nekodeng.gitee.io/categories/NodeJS/"/>
     
     
     <category term="gulp" scheme="https://nekodeng.gitee.io/tags/gulp/"/>
@@ -206,7 +233,7 @@
     <link href="https://nekodeng.gitee.io/posts/46fc.html"/>
     <id>https://nekodeng.gitee.io/posts/46fc.html</id>
     <published>2020-09-07T06:00:17.953Z</published>
-    <updated>2020-09-07T06:18:15.234Z</updated>
+    <updated>2020-09-07T07:58:44.510Z</updated>
     
     
       
@@ -219,6 +246,8 @@
       
     
     
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
     
     <category term="模块化规范" scheme="https://nekodeng.gitee.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83/"/>
@@ -259,7 +288,7 @@
     <link href="https://nekodeng.gitee.io/posts/4920.html"/>
     <id>https://nekodeng.gitee.io/posts/4920.html</id>
     <published>2020-09-07T05:33:36.939Z</published>
-    <updated>2020-09-07T05:41:11.807Z</updated>
+    <updated>2020-09-07T07:59:56.862Z</updated>
     
     
       
@@ -272,6 +301,8 @@
       
     
     
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
     
     <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
@@ -371,7 +402,7 @@
     <link href="https://nekodeng.gitee.io/posts/444.html"/>
     <id>https://nekodeng.gitee.io/posts/444.html</id>
     <published>2020-09-04T03:59:28.003Z</published>
-    <updated>2020-09-04T04:20:23.897Z</updated>
+    <updated>2020-09-07T07:59:23.827Z</updated>
     
     
       
@@ -384,6 +415,8 @@
       
     
     
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
     
     <category term="string对象方法" scheme="https://nekodeng.gitee.io/tags/string%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
@@ -530,43 +563,6 @@
     <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
     
     <category term="多态" scheme="https://nekodeng.gitee.io/tags/%E5%A4%9A%E6%80%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-ES6</title>
-    <link href="https://nekodeng.gitee.io/posts/392e.html"/>
-    <id>https://nekodeng.gitee.io/posts/392e.html</id>
-    <published>2020-09-02T02:20:49.726Z</published>
-    <updated>2020-09-02T03:22:12.050Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;let和const&quot;&gt;&lt;a href=&quot;#let和const&quot; class=&quot;headerlink&quot; title=&quot;let和const&quot;&gt;&lt;/a&gt;let和const&lt;/h2&gt;&lt;h3 id=&quot;let&quot;&gt;&lt;a href=&quot;#let&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="ES6" scheme="https://nekodeng.gitee.io/tags/ES6/"/>
-    
-    <category term="let/const" scheme="https://nekodeng.gitee.io/tags/let-const/"/>
-    
-    <category term="箭头函数" scheme="https://nekodeng.gitee.io/tags/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"/>
-    
-    <category term="扩展运算符···" scheme="https://nekodeng.gitee.io/tags/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%C2%B7%C2%B7%C2%B7/"/>
-    
-    <category term="symbol类型" scheme="https://nekodeng.gitee.io/tags/symbol%E7%B1%BB%E5%9E%8B/"/>
-    
-    <category term="set/map" scheme="https://nekodeng.gitee.io/tags/set-map/"/>
-    
-    <category term="class语法糖" scheme="https://nekodeng.gitee.io/tags/class%E8%AF%AD%E6%B3%95%E7%B3%96/"/>
     
   </entry>
   

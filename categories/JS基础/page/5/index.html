@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="分类: JS基础, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>itsNekoDeng</title>
+    <title>分类: JS基础 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,7 +242,6 @@
 
 </header>
 
-    
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -285,88 +284,96 @@
     </div>
 </div>
 
-
 <main class="content">
 
     
 
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" title="JS基础: 27">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F9EBEA;">JS基础
+                        <span class="tag-length">27</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/jQuery/" title="jQuery: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">jQuery
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Git/" title="Git: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">Git
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/NodeJS/" title="NodeJS: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">NodeJS
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/CSS-SCSS/" title="CSS-SCSS: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">CSS-SCSS
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/971b.html">
-                        <div class="card-image">
+                    <a href="/posts/b140.html">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="jQuery">
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS的BOM对象">
                             
-                            <span class="card-title">jQuery</span>
+                            <span class="card-title">JS的BOM对象</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                jQuery 语法jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。基础语法： $(selector).action()
-美元符号定义 jQuery选择符（selector）”查询”和”查找” HTML 元素jQue
+                                BOM（Browser Object Model  浏览器对象模型）window是全局浏览器内置顶级对象表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）Window 对象表示一个浏览器窗口或一个框架
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/jQuery/" class="post-category">
-                                    jQuery
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/jQuery/">
-                            <span class="chip bg-color">jQuery</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/4920.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS-闭包和继承">
-                            
-                            <span class="card-title">JS-闭包和继承</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象函数在调用的时候会创建一个执行环境对象（活动对象）
-闭包（closure）闭包可以在全局函数里面操作另一个作用域的局部变量, 既能重复使用，又不会污染全局闭包有三步：
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
                             </span>
                             <span class="publish-author">
                                 
@@ -384,12 +391,16 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E7%BB%A7%E6%89%BF/">
-                            <span class="chip bg-color">继承</span>
+                        <a href="/tags/BOM/">
+                            <span class="chip bg-color">BOM</span>
                         </a>
                         
-                        <a href="/tags/%E9%97%AD%E5%8C%85/">
-                            <span class="chip bg-color">闭包</span>
+                        <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
+                            <span class="chip bg-color">定时器</span>
+                        </a>
+                        
+                        <a href="/tags/window/">
+                            <span class="chip bg-color">window</span>
                         </a>
                         
                     </div>
@@ -397,27 +408,28 @@
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/f35d.html">
-                        <div class="card-image">
+                    <a href="/posts/2.html">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS-ajax">
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS程序执行">
                             
-                            <span class="card-title">JS-ajax</span>
+                            <span class="card-title">JS程序执行</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Ajax（ Asynchronous Javascript And XML）Ajax 优势:1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；2.用户体验极佳（不刷新页面即可获取可更新的数据）；3.提升 Web 程序的
+                                 顺序结构：按照由上到下的顺序一行一行地执行的程序结构 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构） 循环结构：需要重复执行同一操作的程序结构称为循环结构。
+if 判断逻辑语句if(true)&#123;
+    /
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
                             </span>
                             <span class="publish-author">
                                 
@@ -435,20 +447,20 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/ajax/">
-                            <span class="chip bg-color">ajax</span>
+                        <a href="/tags/JS/">
+                            <span class="chip bg-color">JS</span>
                         </a>
                         
-                        <a href="/tags/cors/">
-                            <span class="chip bg-color">cors</span>
+                        <a href="/tags/if-else/">
+                            <span class="chip bg-color">if/else</span>
                         </a>
                         
-                        <a href="/tags/jsonp/">
-                            <span class="chip bg-color">jsonp</span>
+                        <a href="/tags/switch-case/">
+                            <span class="chip bg-color">switch/case</span>
                         </a>
                         
-                        <a href="/tags/promise/">
-                            <span class="chip bg-color">promise</span>
+                        <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+                            <span class="chip bg-color">显/隐式转换</span>
                         </a>
                         
                     </div>
@@ -456,30 +468,32 @@
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/38be.html">
-                        <div class="card-image">
+                    <a href="/posts/1.html">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JS-this">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JS循环结构">
                             
-                            <span class="card-title">JS-this</span>
+                            <span class="card-title">JS循环结构</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                thisthis是js的关键字他是根据执行上下文（执行环境）动态指向当前调用的对象；谁调用，就指谁
-一、全局作用域下：this始终指向window对象
-二、函数作用域下：函数被谁调用，this就指向谁
-三、对象中的函数作用域下：this指向
+                                while循环while(条件)&#123;
+    //条件成立就会反复执行这里的代码
+&#125;
+var count = 0;
+while(count < 10)&#123;
+    count++;
+    document.wri
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
                             </span>
                             <span class="publish-author">
                                 
@@ -497,271 +511,20 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/this/">
-                            <span class="chip bg-color">this</span>
+                        <a href="/tags/while/">
+                            <span class="chip bg-color">while</span>
                         </a>
                         
-                        <a href="/tags/call-apply-bind%E6%96%B9%E6%B3%95/">
-                            <span class="chip bg-color">call/apply/bind方法</span>
+                        <a href="/tags/do-while/">
+                            <span class="chip bg-color">do...while</span>
                         </a>
                         
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/8900.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS基础-数组">
-                            
-                            <span class="card-title">JS基础-数组</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Array 对象Array 对象用于在变量中存储多个值:
-var cars = ["Saab", "Volvo", "BMW"];
-
-第一个数组元素的索引值为 0，第二个索引值为 1，以此类推。
-数组数组：一组数据（一个变量来承载）数组对象
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
-                            <span class="chip bg-color">稀疏数组</span>
+                        <a href="/tags/break%E5%92%8Ccontinue/">
+                            <span class="chip bg-color">break和continue</span>
                         </a>
                         
-                        <a href="/tags/%E6%95%B0%E7%BB%84/">
-                            <span class="chip bg-color">数组</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/444.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS基础-string内置对象">
-                            
-                            <span class="card-title">JS基础-string内置对象</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                String 对象用于处理文本（字符串）。String 对象创建方法： new String()。语法：
-var txt = new String("string");
-//或者更简单方式：
-var txt = "string";
-
-str
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/string%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/">
-                            <span class="chip bg-color">string对象方法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/9615.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS基础-json">
-                            
-                            <span class="card-title">JS基础-json</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。
-1、对象：对象在js中表示为“{}”括起来的内容，数据结构为 {key：value,key：value,…}
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/json/">
-                            <span class="chip bg-color">json</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/61a8.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="JS-cookie">
-                            
-                            <span class="card-title">JS-cookie</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                cookie 会话跟踪技术一个网站从打开到浏览（包括这个网站的其他子页面）到最后关闭浏览器整个过程叫一个“会话”。
-cookie的存取document.cookie = "username=zhangsan";
-console.log(do
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/cookie/">
-                            <span class="chip bg-color">cookie</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/eb27.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JS-设计模式">
-                            
-                            <span class="card-title">JS-设计模式</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                设计模式：代码经验的总结设计模式都是面向对象的
-工厂模式工厂函数就是做一个对象创建的封装，并将创建的对象return出去
-function newObj(name,age)&#123;
-    var o = new Object();
- 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                            <span class="chip bg-color">工厂模式</span>
-                        </a>
-                        
-                        <a href="/tags/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88proxy%EF%BC%89/">
-                            <span class="chip bg-color">代理模式（proxy）</span>
+                        <a href="/tags/for/">
+                            <span class="chip bg-color">for</span>
                         </a>
                         
                     </div>
@@ -771,7 +534,6 @@ function newObj(name,age)&#123;
             
         </div>
     </article>
-
 </main>
 
 
@@ -779,19 +541,18 @@ function newObj(name,age)&#123;
     <div class="row">
         <div class="col s6 m4 l4">
             
-            <a href="/"
+            <a href="/categories/JS%E5%9F%BA%E7%A1%80/page/4/"
                class="left btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-left"></i>
             </a>
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 4</div>
+            <div class="center-align b-text-gray">5 / 5</div>
         </div>
         <div class="col s6 m4 l4">
             
-            <a href="/page/3/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
+            <a class="right btn-floating btn-large disabled">
                 <i class="fas fa-angle-right"></i>
             </a>
             
