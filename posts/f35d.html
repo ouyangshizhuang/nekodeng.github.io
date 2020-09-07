@@ -436,10 +436,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-lang-javascript"><code class="language-lang-javascript">
-
-</code></pre>
-<h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；**</p>
+                <h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；**</p>
 <h3 id="Ajax-的不足"><a href="#Ajax-的不足" class="headerlink" title="Ajax 的不足:"></a>Ajax 的不足:</h3><p>1.不同版本的浏览器度 XMLHttpRequest 对象支持度不足(比如 IE5 之前)；<br>2.前进、后退的功能被破坏（因为 Ajax 永远在当前页，不会记录前后页面）；<br>3.搜索引擎的支持度不够（因为搜索引擎爬虫还不能理解 JS 引起变化数据的内容）；</p>
 <p>json是一种数据格式，由对象，数组互相嵌套组成，属性名必须加双引号，数据传输格式</p>
 <h3 id="ajax-readyState"><a href="#ajax-readyState" class="headerlink" title="ajax.readyState:"></a>ajax.readyState:</h3><p>0 － （未初始化）还没有调用send()方法<br>1 － （载入）已调用send()方法，正在发送请求<br>2 － （载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 － （交互）正在解析响应内容<br>4 － （完成）响应内容解析完成，可以在客户端调用了</p>
@@ -853,63 +850,48 @@ ajaxJsonp : function(url, cb, query) &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/f35d.html">
+                <a href="/posts/4920.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS-ajax">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS-闭包和继承">
                         
-                        <span class="card-title">JS-ajax</span>
+                        <span class="card-title">JS-闭包和继承</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象函数在调用的时候会创建一个执行环境对象（活动对象）
+闭包（closure）闭包可以在全局函数里面操作另一个作用域的局部变量, 既能重复使用，又不会污染全局闭包有三步：
 
-
-Ajax（ Asynchronous Javascript And XML）Ajax 优势:1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；2.用户体验极佳（不刷新页面即可获取可更新的数据）；3.提升 Web 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            NekoDeng
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ajax/">
-                        <span class="chip bg-color">ajax</span>
+                    <a href="/tags/%E7%BB%A7%E6%89%BF/">
+                        <span class="chip bg-color">继承</span>
                     </a>
                     
-                    <a href="/tags/cors/">
-                        <span class="chip bg-color">cors</span>
-                    </a>
-                    
-                    <a href="/tags/jsonp/">
-                        <span class="chip bg-color">jsonp</span>
-                    </a>
-                    
-                    <a href="/tags/promise/">
-                        <span class="chip bg-color">promise</span>
+                    <a href="/tags/%E9%97%AD%E5%8C%85/">
+                        <span class="chip bg-color">闭包</span>
                     </a>
                     
                 </div>
@@ -1205,7 +1187,7 @@ Ajax（ Asynchronous Javascript And XML）Ajax 优势:1.不需要插件支持（
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">24k</span>&nbsp;字
+                class="white-color">25.5k</span>&nbsp;字
             
             
             

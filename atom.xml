@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-07T05:27:40.277Z</updated>
+  <updated>2020-09-07T05:56:29.039Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,21 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>jQuery</title>
+    <link href="https://nekodeng.gitee.io/posts/971b.html"/>
+    <id>https://nekodeng.gitee.io/posts/971b.html</id>
+    <published>2020-09-07T05:48:59.639Z</published>
+    <updated>2020-09-07T05:56:29.039Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;jQuery-语法&quot;&gt;&lt;a href=&quot;#jQuery-语法&quot; class=&quot;headerlink&quot; title=&quot;jQuery 语法&quot;&gt;&lt;/a&gt;jQuery 语法&lt;/h2&gt;&lt;p&gt;jQuery 语法是通过选取 HTML</summary>
+        
+      
+    
+    
+    
+    <category term="jQuery" scheme="https://nekodeng.gitee.io/categories/jQuery/"/>
+    
+    
+    <category term="jQuery" scheme="https://nekodeng.gitee.io/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS-闭包和继承</title>
+    <link href="https://nekodeng.gitee.io/posts/4920.html"/>
+    <id>https://nekodeng.gitee.io/posts/4920.html</id>
+    <published>2020-09-07T05:33:36.939Z</published>
+    <updated>2020-09-07T05:41:11.807Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象&lt;br&gt;函数在调用的时候会创建一个执行环境对象（活动对象）&lt;/p&gt;
+&lt;h2 id=&quot;闭包（closure）&quot;&gt;&lt;a href=&quot;#闭包（closure）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+    <category term="闭包" scheme="https://nekodeng.gitee.io/tags/%E9%97%AD%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JS-ajax</title>
     <link href="https://nekodeng.gitee.io/posts/f35d.html"/>
     <id>https://nekodeng.gitee.io/posts/f35d.html</id>
     <published>2020-09-07T05:16:42.255Z</published>
-    <updated>2020-09-07T05:27:40.277Z</updated>
+    <updated>2020-09-07T05:31:29.350Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code class=&quot;language-lang-javascript&quot;&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h2 id=&quot;Ajax（-Asynchronous-Javascript-And-XML）&quot;&gt;&lt;a href=&quot;#Ajax（-Asynchronous-Javascript-And-XML）&quot; class=&quot;headerlink&quot; title=&quot;Ajax（</summary>
         
       
     
@@ -542,66 +590,6 @@
     <category term="类" scheme="https://nekodeng.gitee.io/tags/%E7%B1%BB/"/>
     
     <category term="内置对象" scheme="https://nekodeng.gitee.io/tags/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS事件</title>
-    <link href="https://nekodeng.gitee.io/posts/4.html"/>
-    <id>https://nekodeng.gitee.io/posts/4.html</id>
-    <published>2020-08-20T13:48:10.998Z</published>
-    <updated>2020-08-20T13:47:28.515Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;JS运行和编译&quot;&gt;&lt;a href=&quot;#JS运行和编译&quot; class=&quot;headerlink&quot; title=&quot;JS运行和编译&quot;&gt;&lt;/a&gt;JS运行和编译&lt;/h2&gt;&lt;h3 id=&quot;语法分析&quot;&gt;&lt;a href=&quot;#语法分析&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="事件" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6/"/>
-    
-    <category term="this" scheme="https://nekodeng.gitee.io/tags/this/"/>
-    
-    <category term="变量生命周期" scheme="https://nekodeng.gitee.io/tags/%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    
-    <category term="运行编译" scheme="https://nekodeng.gitee.io/tags/%E8%BF%90%E8%A1%8C%E7%BC%96%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS的MATH和Date对象</title>
-    <link href="https://nekodeng.gitee.io/posts/6.html"/>
-    <id>https://nekodeng.gitee.io/posts/6.html</id>
-    <published>2020-08-20T06:52:51.398Z</published>
-    <updated>2020-08-22T07:33:25.552Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什么是对象？&quot;&gt;&lt;a href=&quot;#什么是对象？&quot; class=&quot;headerlink&quot; title=&quot;什么是对象？&quot;&gt;&lt;/a&gt;什么是对象？&lt;/h2&gt;&lt;p&gt;对象的类型是Object。&lt;br&gt;JavaScript</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="math" scheme="https://nekodeng.gitee.io/tags/math/"/>
-    
-    <category term="date" scheme="https://nekodeng.gitee.io/tags/date/"/>
-    
-    <category term="对象" scheme="https://nekodeng.gitee.io/tags/%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
