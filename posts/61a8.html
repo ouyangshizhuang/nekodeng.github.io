@@ -372,6 +372,10 @@
                                 <span class="chip bg-color">cookie</span>
                             </a>
                         
+                            <a href="/tags/%E5%B0%81%E8%A3%85%E5%AD%98%E5%8F%96cookie%E7%9A%84%E5%87%BD%E6%95%B0/">
+                                <span class="chip bg-color">封装存取cookie的函数</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -402,14 +406,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    401
+                    953
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -424,47 +428,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="cookie-会话跟踪技术"><a href="#cookie-会话跟踪技术" class="headerlink" title="cookie 会话跟踪技术"></a>cookie 会话跟踪技术</h2><p>一个网站从打开到浏览（包括这个网站的其他子页面）到最后关闭浏览器整个过程叫一个“会话”。</p>
-<h3 id="cookie的存取"><a href="#cookie的存取" class="headerlink" title="cookie的存取"></a>cookie的存取</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">document.cookie = "username=zhangsan";
-console.log(document.cookie);
+                <h2 id="cookie-会话跟踪技术"><a href="#cookie-会话跟踪技术" class="headerlink" title="cookie 会话跟踪技术"></a>cookie 会话跟踪技术</h2><p>一个网站从打开到浏览（包括这个网站的其他子页面）到最后关闭浏览器整个过程叫一个“会话”。<br>在一次会话从开始到结束的整个过程，全程跟踪记录客户端的状态（例如：是否登录、购物车信息、是否已下载、是否 已点赞、视频播放进度等等）。  </p>
+<p>多次请求页面，数据共享</p>
+<h3 id="cookie的存取"><a href="#cookie的存取" class="headerlink" title="cookie的存取"></a>cookie的存取</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">document.cookie = "username=zhangsan"; //存 cookie
+console.log(document.cookie); // 取 cookie
 </code></pre>
-<p>注意：cookie是http/https协议下的技术，不支持本地file文件对cookie操作</p>
+<h3 id="cookie的修改与删除"><a href="#cookie的修改与删除" class="headerlink" title="cookie的修改与删除"></a>cookie的修改与删除</h3><p>修改：再次写一个同名cookie，即可覆盖修改了<br>删除：将expires值比如取为-1，时效写为以前的日期</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 存cookie 
+function setCookie() &#123; 
+    tools.cookie("user", "张三", &#123;path: "/"&#125;);
+&#125;
+
+// 取cookie
+function getCookie () &#123;
+    var user = tools.cookie("user");
+    console.log(user);
+&#125;
+
+// 删除cookie
+function deleteCookie () &#123;
+    // 把cookie的过期时间设置为以前的日期
+    tools.cookie("user", "", &#123;expires: -1, path: "/"&#125;);
+&#125;
+</code></pre>
+<h3 id="而使用cookie技术的目的就是：解决HTTP无状态的问题"><a href="#而使用cookie技术的目的就是：解决HTTP无状态的问题" class="headerlink" title="而使用cookie技术的目的就是：解决HTTP无状态的问题"></a>而使用cookie技术的目的就是：解决HTTP无状态的问题</h3><p>注意：cookie是http/https协议下的技术，不支持本地file文件对cookie操作（但是貌似火狐浏览器是个例外）<br>HTTP（无状态的协议）,基于TCP协议的一种高级协议, 用于客户端和服务器直接的通信</p>
 <h3 id="cookie的时效：-expires"><a href="#cookie的时效：-expires" class="headerlink" title="cookie的时效： expires"></a>cookie的时效： expires</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var d = new Date();
-d.setxxx(); //将d设置到过期的日期
+d.setDate(d.getDate() + 2); //例如设置到过期的日期为2天后
 document.cookie = "username=zhangsan;expires="+d;
 </code></pre>
-<h3 id="cookie的特点"><a href="#cookie的特点" class="headerlink" title="cookie的特点"></a>cookie的特点</h3><p>1.只能使用文本<br>2 单条存储有大小限制 4KB<br>3 数量限制(一般浏览器，限制大概在50条左右)<br>4 读取有域名限制 不可跨域读取，只能由来自 写入cookie的 同一域名 的网页可进行读取。<br>5 时效限制 每个cookie都有时效，最短的有效期是，会话级别：就是当浏览器关闭，那么cookie立即销毁</p>
-<h3 id="封装一个存取cookie的函数"><a href="#封装一个存取cookie的函数" class="headerlink" title="封装一个存取cookie的函数"></a>封装一个存取cookie的函数</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* cookie的操作（存取）
+<h3 id="cookie的路径：path"><a href="#cookie的路径：path" class="headerlink" title="cookie的路径：path"></a>cookie的路径：path</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">document.cookie = "name=zhangsan;path=/"; //将存的cookie设置存储在/根路径下，确保该网站下的每个页面都可以取这个cookie
+&#125;
+</code></pre>
+<h3 id="cookie的特点"><a href="#cookie的特点" class="headerlink" title="cookie的特点"></a>cookie的特点</h3><p>1.只能使用文本，不能中文，不能存对象<br>2 单条存储有大小限制 4KB<br>3 数量限制(一般浏览器，限制大概在50条左右)<br>4 读取有域名限制 不可跨域读取，只能由来自 写入cookie的 同一域名 的网页可进行读取。<br>5 时效限制 每个cookie都有时效，最短的有效期是，会话级别：就是当浏览器关闭，那么cookie立即销毁</p>
+<h3 id="encodeURIComponent和decodeURIComponent方法"><a href="#encodeURIComponent和decodeURIComponent方法" class="headerlink" title="encodeURIComponent和decodeURIComponent方法"></a>encodeURIComponent和decodeURIComponent方法</h3><p>因为cookie的特点不能使用中文，所以存的时候若有中文要重新编码</p>
+<ol>
+<li><p>encodeURIComponent用于编码,可将中文转化为其他字符，例如encodeURIComponent(‘张三’)，结果为”%E5%BC%A0%E4%B8%89”</p>
+</li>
+<li><p>decodeURIComponent反之用于解码</p>
+</li>
+</ol>
+<p>“%E5%BC%A0%E4%B8%89”</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var username = "张三";
+username = encodeURIComponent(username);
+document.cookie = "username="+username;
+console.log(document.cookie);
+</code></pre>
+<h3 id="若非要存取一个对象类型的cookie"><a href="#若非要存取一个对象类型的cookie" class="headerlink" title="若非要存取一个对象类型的cookie"></a>若非要存取一个对象类型的cookie</h3><p>前面说了，cookie的特点为只能存取文本，若非要存取一个对象类型的cookie，则要进行转换</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = &#123;
+    "name":"zhangsan",
+    "age": 18
+&#125;;
+// 存cookie
+tools.cookie("cart", JSON.stringify(obj), &#123;"path": "/", "expires": 5&#125;);
+
+// 取cookie
+var obj2 = JSON.parse(tools.cookie("cart"));
+console.log(obj2);
+</code></pre>
+<h3 id="封装一个存取cookie的函数（记忆，面试可能会问到）"><a href="#封装一个存取cookie的函数（记忆，面试可能会问到）" class="headerlink" title="封装一个存取cookie的函数（记忆，面试可能会问到）"></a>封装一个存取cookie的函数（记忆，面试可能会问到）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var tools = &#123;
+/* cookie的操作（存取）
  * @param key   string  存取的key值
- * @param [value] string  如果传入value，那么就是存cookie，不传就是取cookie
+ * @param [value] string  如果传入value，那么就是 存cookie; 不传就是 取cookie; 就可以根据是否有value值来判断是存 或者 取 cookie，然后进行相应的操作
  * @paran [option] object  &#123;expires, path&#125;
  * @return  string 取cookie的时候返回的当前cookie的值
  */
 cookie : function (key, value, option) &#123;
   if(value === undefined)&#123;
-    // 取cookie
+    // 1.取cookie
     var cookie = document.cookie;
-    var arr = cookie.split("; ");
+    var arr = cookie.split("; "); // 因为cookie格式为key和value中间以=连接
     var obj = &#123;&#125;;
     arr.forEach(function(ele)&#123;
         var subarr = ele.split("=");
         obj[subarr[0]] = decodeURIComponent(subarr[1]);
     &#125;)
-    // 判断
+    // 判断obj对象里面有没有这个key
     return obj[key] ? obj[key] : "";
-    /* if(obj[key])&#123;
-        return obj[key];
-    &#125;else &#123;
-        return "";
-    &#125; */
-  &#125;else&#123;
-    //存cookie
+  &#125;
+  else&#123;
+    //2.存cookie
     var str = key+"="+encodeURIComponent(value);
     if(option)&#123;
         // path
         if(option.path)&#123;
             str += ";path="+option.path;
         &#125;
+        // expires
         if(option.expires) &#123;
             var date = new Date();
             // 把过期日期设置为option.expires天之后
@@ -475,6 +524,15 @@ cookie : function (key, value, option) &#123;
     document.cookie = str;
   &#125;
 &#125;
+&#125;
+
+// 以后就可以引用这个写好的方法
+// 例如：
+//存cookie
+// tools.cookie("name", "张三", &#123;"path": "/", "expires": 5&#125;); 
+
+//取cookie 
+// console.log(tools.cookie("name"));
 </code></pre>
 
             </div>
@@ -541,6 +599,10 @@ cookie : function (key, value, option) &#123;
                             
                                 <a href="/tags/cookie/">
                                     <span class="chip bg-color">cookie</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B0%81%E8%A3%85%E5%AD%98%E5%8F%96cookie%E7%9A%84%E5%87%BD%E6%95%B0/">
+                                    <span class="chip bg-color">封装存取cookie的函数</span>
                                 </a>
                             
                         </div>
@@ -1045,7 +1107,7 @@ function newObj(name,age)&#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

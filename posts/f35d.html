@@ -384,6 +384,14 @@
                                 <span class="chip bg-color">promise</span>
                             </a>
                         
+                            <a href="/tags/GET-POST/">
+                                <span class="chip bg-color">GET/POST</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5/">
+                                <span class="chip bg-color">同步/异步</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -414,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -436,12 +444,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；**</p>
+                <h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="注意同步和异步的区分"><a href="#注意同步和异步的区分" class="headerlink" title="注意同步和异步的区分"></a>注意同步和异步的区分</h3><ul>
+<li><ol>
+<li>同步：首先，JS 是单线程的语言，所谓“单线程”就是一根筋，对于拿到的程序，一行一行的执行，前面的执行完成，后面的傻傻的等着。若前面的代码没执行完就会造成堵塞，后面的没法执行。</li>
+</ol>
+</li>
+<li><ol>
+<li>异步： 而AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。异步代码执行的时候就不会阻塞后面的代码执行。</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>记住：同步执行代码总是优先于异步执行代码，同步代码在异步代码之前执行。<br>例如：Ajax和setTimeout和setInterval这些是异步执行的</li>
+</ul>
+<h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；</p>
 <h3 id="Ajax-的不足"><a href="#Ajax-的不足" class="headerlink" title="Ajax 的不足:"></a>Ajax 的不足:</h3><p>1.不同版本的浏览器度 XMLHttpRequest 对象支持度不足(比如 IE5 之前)；<br>2.前进、后退的功能被破坏（因为 Ajax 永远在当前页，不会记录前后页面）；<br>3.搜索引擎的支持度不够（因为搜索引擎爬虫还不能理解 JS 引起变化数据的内容）；</p>
 <p>json是一种数据格式，由对象，数组互相嵌套组成，属性名必须加双引号，数据传输格式</p>
 <h3 id="ajax-readyState"><a href="#ajax-readyState" class="headerlink" title="ajax.readyState:"></a>ajax.readyState:</h3><p>0 － （未初始化）还没有调用send()方法<br>1 － （载入）已调用send()方法，正在发送请求<br>2 － （载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 － （交互）正在解析响应内容<br>4 － （完成）响应内容解析完成，可以在客户端调用了</p>
 <h3 id="HTTP-状态码-ajax-status"><a href="#HTTP-状态码-ajax-status" class="headerlink" title="HTTP 状态码 ajax.status"></a>HTTP 状态码 ajax.status</h3><p>101——客户要求服务器根据请求转换HTTP协议版本<br>200——交易成功<br>304——客户端已经执行了GET，但文件未变化<br>306——前一版本HTTP中使用的代码，现行版本中不再使用<br>400——错误请求，如语法错误<br>404——没有发现文件、查询或UR<br>405——用户在Request-Line字段定义的方法不允许<br>500——服务器产生内部错误<br>505——服务器不支持或拒绝支请求头中指定的HTTP版本</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var ajax = new XMLHttpRequest();
+<h3 id="GET，POST方式比较"><a href="#GET，POST方式比较" class="headerlink" title="GET，POST方式比较"></a>GET，POST方式比较</h3><p>只是不同的发送和请求数据的方式<br>GET：参数有长度限制，<a target="_blank" rel="noopener" href="http://www.taobao.com?id=">http://www.taobao.com?id=</a>… , 明文传输<br>POST：参数无限制，放在请求体里, 更安全</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// get方式
+var ajax = new XMLHttpRequest();
+ajax.open("GET","url",true);
+ajax.send(null);
+ajax.onreadystatechange = function()&#123;
+if(ajax.readyState == 4 && ajax.status == 200)&#123;
+     var json = JSON.parse(ajax.responseText);
+    fn(json);
+&#125;
+
+// post方式
+var ajax = new XMLHttpRequest();
 ajax.open("POST","url",true);
 ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 ajax.send("name=zhangsan&age=18");
@@ -683,6 +716,14 @@ ajaxJsonp : function(url, cb, query) &#123;
                             
                                 <a href="/tags/promise/">
                                     <span class="chip bg-color">promise</span>
+                                </a>
+                            
+                                <a href="/tags/GET-POST/">
+                                    <span class="chip bg-color">GET/POST</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5/">
+                                    <span class="chip bg-color">同步/异步</span>
                                 </a>
                             
                         </div>
@@ -1191,7 +1232,7 @@ ajaxJsonp : function(url, cb, query) &#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             
