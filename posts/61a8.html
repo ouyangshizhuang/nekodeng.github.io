@@ -376,6 +376,14 @@
                                 <span class="chip bg-color">封装存取cookie的函数</span>
                             </a>
                         
+                            <a href="/tags/path/">
+                                <span class="chip bg-color">path</span>
+                            </a>
+                        
+                            <a href="/tags/expires/">
+                                <span class="chip bg-color">expires</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -406,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    953
+                    1k
                 </div>
                 
 
@@ -451,7 +459,10 @@ function deleteCookie () &#123;
     tools.cookie("user", "", &#123;expires: -1, path: "/"&#125;);
 &#125;
 </code></pre>
-<h3 id="而使用cookie技术的目的就是：解决HTTP无状态的问题"><a href="#而使用cookie技术的目的就是：解决HTTP无状态的问题" class="headerlink" title="而使用cookie技术的目的就是：解决HTTP无状态的问题"></a>而使用cookie技术的目的就是：解决HTTP无状态的问题</h3><p>注意：cookie是http/https协议下的技术，不支持本地file文件对cookie操作（但是貌似火狐浏览器是个例外）<br>HTTP（无状态的协议）,基于TCP协议的一种高级协议, 用于客户端和服务器直接的通信</p>
+<h3 id="而使用cookie技术的目的就是：解决HTTP无状态的问题"><a href="#而使用cookie技术的目的就是：解决HTTP无状态的问题" class="headerlink" title="而使用cookie技术的目的就是：解决HTTP无状态的问题"></a>而使用cookie技术的目的就是：解决HTTP无状态的问题</h3><ul>
+<li>注意：cookie是http/https协议下的技术，不支持本地file文件对cookie操作（但是貌似火狐浏览器是个例外）</li>
+<li>HTTP（无状态的协议）,基于TCP协议的一种高级协议, 用于客户端和服务器直接的通信</li>
+</ul>
 <h3 id="cookie的时效：-expires"><a href="#cookie的时效：-expires" class="headerlink" title="cookie的时效： expires"></a>cookie的时效： expires</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var d = new Date();
 d.setDate(d.getDate() + 2); //例如设置到过期的日期为2天后
 document.cookie = "username=zhangsan;expires="+d;
@@ -460,81 +471,76 @@ document.cookie = "username=zhangsan;expires="+d;
 &#125;
 </code></pre>
 <h3 id="cookie的特点"><a href="#cookie的特点" class="headerlink" title="cookie的特点"></a>cookie的特点</h3><p>1.只能使用文本，不能中文，不能存对象<br>2 单条存储有大小限制 4KB<br>3 数量限制(一般浏览器，限制大概在50条左右)<br>4 读取有域名限制 不可跨域读取，只能由来自 写入cookie的 同一域名 的网页可进行读取。<br>5 时效限制 每个cookie都有时效，最短的有效期是，会话级别：就是当浏览器关闭，那么cookie立即销毁</p>
-<h3 id="encodeURIComponent和decodeURIComponent方法"><a href="#encodeURIComponent和decodeURIComponent方法" class="headerlink" title="encodeURIComponent和decodeURIComponent方法"></a>encodeURIComponent和decodeURIComponent方法</h3><p>因为cookie的特点不能使用中文，所以存的时候若有中文要重新编码</p>
+<h3 id="encodeURIComponent和decodeURIComponent方法"><a href="#encodeURIComponent和decodeURIComponent方法" class="headerlink" title="encodeURIComponent和decodeURIComponent方法"></a>encodeURIComponent和decodeURIComponent方法</h3><ul>
+<li>因为cookie的特点不能使用中文，所以存的时候若有中文要重新编码</li>
+</ul>
 <ol>
 <li><p>encodeURIComponent用于编码,可将中文转化为其他字符，例如encodeURIComponent(‘张三’)，结果为”%E5%BC%A0%E4%B8%89”</p>
 </li>
-<li><p>decodeURIComponent反之用于解码</p>
+<li><p>decodeURIComponent反之用于解码<br>decodeURIComponent(“%E5%BC%A0%E4%B8%89”); // 张三</p>
 </li>
 </ol>
-<p>“%E5%BC%A0%E4%B8%89”</p>
 <pre class=" language-lang-javascript"><code class="language-lang-javascript">var username = "张三";
 username = encodeURIComponent(username);
 document.cookie = "username="+username;
 console.log(document.cookie);
 </code></pre>
-<h3 id="若非要存取一个对象类型的cookie"><a href="#若非要存取一个对象类型的cookie" class="headerlink" title="若非要存取一个对象类型的cookie"></a>若非要存取一个对象类型的cookie</h3><p>前面说了，cookie的特点为只能存取文本，若非要存取一个对象类型的cookie，则要进行转换</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = &#123;
-    "name":"zhangsan",
-    "age": 18
-&#125;;
-// 存cookie
-tools.cookie("cart", JSON.stringify(obj), &#123;"path": "/", "expires": 5&#125;);
-
-// 取cookie
-var obj2 = JSON.parse(tools.cookie("cart"));
-console.log(obj2);
-</code></pre>
-<h3 id="封装一个存取cookie的函数（记忆，面试可能会问到）"><a href="#封装一个存取cookie的函数（记忆，面试可能会问到）" class="headerlink" title="封装一个存取cookie的函数（记忆，面试可能会问到）"></a>封装一个存取cookie的函数（记忆，面试可能会问到）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var tools = &#123;
+<h3 id="若非要存取一个对象类型的cookie"><a href="#若非要存取一个对象类型的cookie" class="headerlink" title="若非要存取一个对象类型的cookie"></a>若非要存取一个对象类型的cookie</h3><ul>
+<li>前面说了，cookie的特点为只能存取文本，若非要存取一个对象类型的cookie，则要进行转换<br>```javascript<br>var obj = &#123;<br>  “name”:”zhangsan”,<br>  “age”: 18<br>&#125;;<br>// 存cookie<br>tools.cookie(“cart”, JSON.stringify(obj), &#123;”path”: “/“, “expires”: 5&#125;);</li>
+</ul>
+<p>// 取cookie<br>var obj2 = JSON.parse(tools.cookie(“cart”));<br>console.log(obj2);</p>
+<pre><code>
+### 封装一个存取cookie的函数（记忆，面试可能会问到）
+```javascript
+var tools = &amp;#123;
 /* cookie的操作（存取）
  * @param key   string  存取的key值
  * @param [value] string  如果传入value，那么就是 存cookie; 不传就是 取cookie; 就可以根据是否有value值来判断是存 或者 取 cookie，然后进行相应的操作
- * @paran [option] object  &#123;expires, path&#125;
+ * @paran [option] object  &amp;#123;expires, path&amp;#125;
  * @return  string 取cookie的时候返回的当前cookie的值
  */
-cookie : function (key, value, option) &#123;
-  if(value === undefined)&#123;
+cookie : function (key, value, option) &amp;#123;
+  if(value === undefined)&amp;#123;
     // 1.取cookie
     var cookie = document.cookie;
-    var arr = cookie.split("; "); // 因为cookie格式为key和value中间以=连接
-    var obj = &#123;&#125;;
-    arr.forEach(function(ele)&#123;
-        var subarr = ele.split("=");
+    var arr = cookie.split(&quot;; &quot;); // 因为cookie格式为key和value中间以=连接
+    var obj = &amp;#123;&amp;#125;;
+    arr.forEach(function(ele)&amp;#123;
+        var subarr = ele.split(&quot;=&quot;);
         obj[subarr[0]] = decodeURIComponent(subarr[1]);
-    &#125;)
+    &amp;#125;)
     // 判断obj对象里面有没有这个key
-    return obj[key] ? obj[key] : "";
-  &#125;
-  else&#123;
+    return obj[key] ? obj[key] : &quot;&quot;;
+  &amp;#125;
+  else&amp;#123;
     //2.存cookie
-    var str = key+"="+encodeURIComponent(value);
-    if(option)&#123;
+    var str = key+&quot;=&quot;+encodeURIComponent(value);
+    if(option)&amp;#123;
         // path
-        if(option.path)&#123;
-            str += ";path="+option.path;
-        &#125;
+        if(option.path)&amp;#123;
+            str += &quot;;path=&quot;+option.path;
+        &amp;#125;
         // expires
-        if(option.expires) &#123;
+        if(option.expires) &amp;#123;
             var date = new Date();
             // 把过期日期设置为option.expires天之后
             date.setDate(date.getDate() + option.expires);
-            str += ";expires=" + date;
-        &#125;
-    &#125;
+            str += &quot;;expires=&quot; + date;
+        &amp;#125;
+    &amp;#125;
     document.cookie = str;
-  &#125;
-&#125;
-&#125;
+  &amp;#125;
+&amp;#125;
+&amp;#125;
 
 // 以后就可以引用这个写好的方法
 // 例如：
 //存cookie
-// tools.cookie("name", "张三", &#123;"path": "/", "expires": 5&#125;); 
+// tools.cookie(&quot;name&quot;, &quot;张三&quot;, &amp;#123;&quot;path&quot;: &quot;/&quot;, &quot;expires&quot;: 5&amp;#125;); 
 
 //取cookie 
-// console.log(tools.cookie("name"));
+// console.log(tools.cookie(&quot;name&quot;));
 </code></pre>
-
             </div>
             <hr/>
 
@@ -603,6 +609,14 @@ cookie : function (key, value, option) &#123;
                             
                                 <a href="/tags/%E5%B0%81%E8%A3%85%E5%AD%98%E5%8F%96cookie%E7%9A%84%E5%87%BD%E6%95%B0/">
                                     <span class="chip bg-color">封装存取cookie的函数</span>
+                                </a>
+                            
+                                <a href="/tags/path/">
+                                    <span class="chip bg-color">path</span>
+                                </a>
+                            
+                                <a href="/tags/expires/">
+                                    <span class="chip bg-color">expires</span>
                                 </a>
                             
                         </div>

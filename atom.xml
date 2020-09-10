@@ -314,7 +314,7 @@
     <link href="https://nekodeng.gitee.io/posts/f35d.html"/>
     <id>https://nekodeng.gitee.io/posts/f35d.html</id>
     <published>2020-09-07T05:16:42.255Z</published>
-    <updated>2020-09-10T04:12:50.202Z</updated>
+    <updated>2020-09-10T04:46:34.892Z</updated>
     
     
       
@@ -456,7 +456,7 @@
     <link href="https://nekodeng.gitee.io/posts/61a8.html"/>
     <id>https://nekodeng.gitee.io/posts/61a8.html</id>
     <published>2020-09-04T03:38:46.346Z</published>
-    <updated>2020-09-10T03:52:33.627Z</updated>
+    <updated>2020-09-10T04:41:28.884Z</updated>
     
     
       
@@ -475,6 +475,10 @@
     <category term="cookie" scheme="https://nekodeng.gitee.io/tags/cookie/"/>
     
     <category term="封装存取cookie的函数" scheme="https://nekodeng.gitee.io/tags/%E5%B0%81%E8%A3%85%E5%AD%98%E5%8F%96cookie%E7%9A%84%E5%87%BD%E6%95%B0/"/>
+    
+    <category term="path" scheme="https://nekodeng.gitee.io/tags/path/"/>
+    
+    <category term="expires" scheme="https://nekodeng.gitee.io/tags/expires/"/>
     
   </entry>
   
