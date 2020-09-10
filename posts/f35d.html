@@ -422,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    10 分
                 </div>
                 
 
@@ -445,11 +445,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="注意同步和异步的区分"><a href="#注意同步和异步的区分" class="headerlink" title="注意同步和异步的区分"></a>注意同步和异步的区分</h3><ul>
-<li><p>同步： 首先，JS 是单线程的语言，所谓“单线程”就是一根筋，对于拿到的程序，一行一行的执行，前面的执行完成，后面的傻傻的等着。若前面的代码没执行完就会造成堵塞，后面的没法执行。</p>
+<li><p>同步 sync： 首先，JS 是单线程的语言，所谓“单线程”就是一根筋，对于拿到的程序，一行一行的执行，前面的执行完成，后面的傻傻的等着。若前面的代码没执行完就会造成堵塞，后面的没法执行。</p>
 </li>
-<li><p>异步： 而AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。异步代码执行的时候就不会阻塞后面的代码执行。</p>
+<li><p>异步 async： 而AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。异步代码执行的时候就不会阻塞后面的代码执行。</p>
 </li>
-<li><p>记住： 同步执行代码总是优先于异步执行代码，同步代码在异步代码之前执行。<br>例如：Ajax和setTimeout和setInterval这些是异步执行的</p>
+<li><p>记住： 同步执行代码总是优先于异步执行代码，同步代码在异步代码之前执行。</p>
+<ul>
+<li>因为碰到异步代码时，会将异步代码另行存到一个异步队列里面，然后将这个异步队列放到同步代码的最后，才执行<br>例如：Ajax和setTimeout和setInterval这些是异步执行的</li>
+</ul>
 </li>
 </ul>
 <h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；</p>
@@ -478,6 +481,89 @@ if(ajax.readyState == 4 && ajax.status == 200)&#123;
      var json = JSON.parse(ajax.responseText);
     fn(json);
 &#125;
+</code></pre>
+<h3 id="封装一个Ajax的get和post方式"><a href="#封装一个Ajax的get和post方式" class="headerlink" title="封装一个Ajax的get和post方式"></a>封装一个Ajax的get和post方式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求get
+     * @param url     string   请求的路径
+     * @param query   object   请求的参数query
+     * @param succCb  function 请求成功之后的回调
+     * @param failCb  function 请求失败的回调
+     * @param isJson  boolean  true： 解析json  false：文本请求  默认值true 
+     */
+    ajaxGet : function (url, query, succCb, failCb, isJson) &#123;
+        // 拼接url加query
+        if(query) &#123;
+            url += "?";
+            for(var key in query)&#123;
+                url += key+"="+query[key]+"&";
+            &#125;
+            // 把最后一个&删掉
+            url = url.slice(0, -1);
+        &#125;
+
+        // 1、创建对象
+        var ajax = new XMLHttpRequest();
+        // 2、建立连接
+        ajax.open("GET", url, true);
+
+        // 3、发送请求
+        ajax.send(null);
+
+        // 4、监听状态的改变
+        ajax.onreadystatechange = function()&#123;
+            if(ajax.readyState === 4)&#123;
+                if(ajax.status === 200)&#123;
+                    // 用户传了回调才执行
+                    // isJson默认值为true，要解析json
+                    if(isJson === undefined)&#123;
+                        isJson = true;
+                    &#125;
+                    var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;
+                    succCb && succCb(res);
+                &#125;else&#123;
+                    // 请求失败
+                    failCb && failCb();
+                &#125;
+
+            &#125;
+        &#125;
+
+    &#125;,
+
+
+    /* ajax请求post
+     * @param url     string   请求的路径
+     * @param query   object   请求的参数query
+     * @param succCb  function 请求成功之后的回调
+     * @param failCb  function 请求失败的回调
+     * @param isJson  boolean  true： 解析json  false：文本请求  默认值true 
+     */
+    ajaxPost: function(url, query, succCb, failCb, isJson)&#123;
+        var ajax = new XMLHttpRequest();
+
+        ajax.open("POST", url, true);
+        // 设置请求头数据传输格式
+        ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+        // 把query拼接成urlencoded
+
+        var str = "";
+        for(var key in query)&#123;
+            str += key + "=" + query[key] + "&";
+        &#125;
+        str = str.slice(0,-1);
+
+        ajax.send(str);
+
+        ajax.onreadystatechange = function () &#123;
+            if(ajax.readyState === 4) &#123;
+                if(ajax.status === 200)&#123;
+                    // 判断isJson是否传进来了
+                    isJson = isJson === undefined ? true : isJson;
+                    succCb && succCb(isJson ? JSON.parse(ajax.responseText) : ajax.responseText);
+                &#125;
+            &#125;
+        &#125;
+    &#125;
 </code></pre>
 <h3 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h3><p>浏览器安全策略，保障非同源资源之间数据访问的安全性。<br>默认不允许非同源的资源直接访问。<br>URL：<br>协议://域名:端口/路径名称?查询字符串#位置标识符<br>同源：协议、域名、端口完全一致，只要三个中有任何一个不一致，则是非同源<br>非同源资源间需要进行访问，则需要实现跨域。</p>
 <h2 id="解决资源跨域访问："><a href="#解决资源跨域访问：" class="headerlink" title="解决资源跨域访问："></a>解决资源跨域访问：</h2><h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>cross-origin resource sharing<br>服务器端：设置响应头信息：Access-Control-Allow-Origin:*<br>前端： ajax可解决GET/POST跨域需求</p>
@@ -1235,7 +1321,7 @@ if(ajax.readyState === 4)&#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.9k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             

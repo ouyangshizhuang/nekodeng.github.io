@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-07T08:32:38.575Z</updated>
+  <updated>2020-09-10T07:38:45.140Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
+    <link href="https://nekodeng.gitee.io/posts/3beb.html"/>
+    <id>https://nekodeng.gitee.io/posts/3beb.html</id>
+    <published>2020-09-10T06:38:09.016Z</published>
+    <updated>2020-09-10T07:38:45.140Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;当浏览器地址栏输入一个url网址后，敲下回车会发生什么？&quot;&gt;&lt;a href=&quot;#当浏览器地址栏输入一个url网址后，敲下回车会发生什么？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="一些面试常问问题总结" scheme="https://nekodeng.gitee.io/categories/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="浏览器地址栏输入url地址发生的事" scheme="https://nekodeng.gitee.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS-SCSS代码规范</title>
@@ -314,7 +339,7 @@
     <link href="https://nekodeng.gitee.io/posts/f35d.html"/>
     <id>https://nekodeng.gitee.io/posts/f35d.html</id>
     <published>2020-09-07T05:16:42.255Z</published>
-    <updated>2020-09-10T04:46:34.892Z</updated>
+    <updated>2020-09-10T10:32:26.475Z</updated>
     
     
       
@@ -536,41 +561,6 @@
     <category term="事件监听" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/"/>
     
     <category term="事件委托" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-面向对象（构造函数、原型）</title>
-    <link href="https://nekodeng.gitee.io/posts/21a9.html"/>
-    <id>https://nekodeng.gitee.io/posts/21a9.html</id>
-    <published>2020-09-03T13:24:10.246Z</published>
-    <updated>2020-09-04T14:30:59.878Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什么是面向对象？&quot;&gt;&lt;a href=&quot;#什么是面向对象？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="面向对象" scheme="https://nekodeng.gitee.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-    <category term="构造函数" scheme="https://nekodeng.gitee.io/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
-    
-    <category term="原型" scheme="https://nekodeng.gitee.io/tags/%E5%8E%9F%E5%9E%8B/"/>
-    
-    <category term="封装" scheme="https://nekodeng.gitee.io/tags/%E5%B0%81%E8%A3%85/"/>
-    
-    <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
-    
-    <category term="多态" scheme="https://nekodeng.gitee.io/tags/%E5%A4%9A%E6%80%81/"/>
     
   </entry>
   
