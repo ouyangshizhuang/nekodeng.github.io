@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-10T07:38:45.140Z</updated>
+  <updated>2020-09-10T14:09:32.662Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP+Mysql知识</title>
+    <link href="https://nekodeng.gitee.io/posts/cc13.html"/>
+    <id>https://nekodeng.gitee.io/posts/cc13.html</id>
+    <published>2020-09-10T13:45:18.230Z</published>
+    <updated>2020-09-10T14:09:32.662Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;PHP（HyperText-Preprocessor）&quot;&gt;&lt;a href=&quot;#PHP（HyperText-Preprocessor）&quot; class=&quot;headerlink&quot; title=&quot;PHP（HyperText</summary>
+        
+      
+    
+    
+    
+    <category term="PHP+Mysql知识" scheme="https://nekodeng.gitee.io/categories/PHP-Mysql%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="PHP" scheme="https://nekodeng.gitee.io/tags/PHP/"/>
+    
+    <category term="Mysql" scheme="https://nekodeng.gitee.io/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http知识</title>
+    <link href="https://nekodeng.gitee.io/posts/277f.html"/>
+    <id>https://nekodeng.gitee.io/posts/277f.html</id>
+    <published>2020-09-10T13:33:52.423Z</published>
+    <updated>2020-09-10T13:43:22.207Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;应用程序分类：&quot;&gt;&lt;a href=&quot;#应用程序分类：&quot; class=&quot;headerlink&quot; title=&quot;应用程序分类：&quot;&gt;&lt;/a&gt;应用程序分类：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;B/S：Browser（浏览器）/</summary>
+        
+      
+    
+    
+    
+    <category term="http知识" scheme="https://nekodeng.gitee.io/categories/http%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="http知识" scheme="https://nekodeng.gitee.io/tags/http%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="http请求" scheme="https://nekodeng.gitee.io/tags/http%E8%AF%B7%E6%B1%82/"/>
+    
+    <category term="http响应" scheme="https://nekodeng.gitee.io/tags/http%E5%93%8D%E5%BA%94/"/>
+    
+  </entry>
   
   <entry>
     <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
@@ -339,7 +396,7 @@
     <link href="https://nekodeng.gitee.io/posts/f35d.html"/>
     <id>https://nekodeng.gitee.io/posts/f35d.html</id>
     <published>2020-09-07T05:16:42.255Z</published>
-    <updated>2020-09-10T10:32:26.475Z</updated>
+    <updated>2020-09-10T13:33:08.692Z</updated>
     
     
       
@@ -504,63 +561,6 @@
     <category term="path" scheme="https://nekodeng.gitee.io/tags/path/"/>
     
     <category term="expires" scheme="https://nekodeng.gitee.io/tags/expires/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-设计模式</title>
-    <link href="https://nekodeng.gitee.io/posts/eb27.html"/>
-    <id>https://nekodeng.gitee.io/posts/eb27.html</id>
-    <published>2020-09-04T03:31:01.564Z</published>
-    <updated>2020-09-04T03:37:34.844Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;设计模式：代码经验的总结&lt;br&gt;设计模式都是面向对象的&lt;/p&gt;
-&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="工厂模式" scheme="https://nekodeng.gitee.io/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="代理模式（proxy）" scheme="https://nekodeng.gitee.io/tags/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88proxy%EF%BC%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS中的事件绑定、事件监听、事件委托</title>
-    <link href="https://nekodeng.gitee.io/posts/d93d.html"/>
-    <id>https://nekodeng.gitee.io/posts/d93d.html</id>
-    <published>2020-09-03T14:01:27.362Z</published>
-    <updated>2020-09-04T01:58:13.455Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;事件绑定&quot;&gt;&lt;a href=&quot;#事件绑定&quot; class=&quot;headerlink&quot; title=&quot;事件绑定&quot;&gt;&lt;/a&gt;事件绑定&lt;/h2&gt;&lt;p&gt;要想让 JavaScript 对用户的操作作出响应，首先要对 DOM</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="事件绑定" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/"/>
-    
-    <category term="事件监听" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/"/>
-    
-    <category term="事件委托" scheme="https://nekodeng.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
     
   </entry>
   

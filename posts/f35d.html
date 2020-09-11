@@ -422,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    8 分
                 </div>
                 
 
@@ -482,92 +482,7 @@ if(ajax.readyState == 4 && ajax.status == 200)&#123;
     fn(json);
 &#125;
 </code></pre>
-<h3 id="封装一个Ajax的get和post方式"><a href="#封装一个Ajax的get和post方式" class="headerlink" title="封装一个Ajax的get和post方式"></a>封装一个Ajax的get和post方式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求get
-     * @param url     string   请求的路径
-     * @param query   object   请求的参数query
-     * @param succCb  function 请求成功之后的回调
-     * @param failCb  function 请求失败的回调
-     * @param isJson  boolean  true： 解析json  false：文本请求  默认值true 
-     */
-    ajaxGet : function (url, query, succCb, failCb, isJson) &#123;
-        // 拼接url加query
-        if(query) &#123;
-            url += "?";
-            for(var key in query)&#123;
-                url += key+"="+query[key]+"&";
-            &#125;
-            // 把最后一个&删掉
-            url = url.slice(0, -1);
-        &#125;
-
-        // 1、创建对象
-        var ajax = new XMLHttpRequest();
-        // 2、建立连接
-        ajax.open("GET", url, true);
-
-        // 3、发送请求
-        ajax.send(null);
-
-        // 4、监听状态的改变
-        ajax.onreadystatechange = function()&#123;
-            if(ajax.readyState === 4)&#123;
-                if(ajax.status === 200)&#123;
-                    // 用户传了回调才执行
-                    // isJson默认值为true，要解析json
-                    if(isJson === undefined)&#123;
-                        isJson = true;
-                    &#125;
-                    var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;
-                    succCb && succCb(res);
-                &#125;else&#123;
-                    // 请求失败
-                    failCb && failCb();
-                &#125;
-
-            &#125;
-        &#125;
-
-    &#125;,
-
-
-    /* ajax请求post
-     * @param url     string   请求的路径
-     * @param query   object   请求的参数query
-     * @param succCb  function 请求成功之后的回调
-     * @param failCb  function 请求失败的回调
-     * @param isJson  boolean  true： 解析json  false：文本请求  默认值true 
-     */
-    ajaxPost: function(url, query, succCb, failCb, isJson)&#123;
-        var ajax = new XMLHttpRequest();
-
-        ajax.open("POST", url, true);
-        // 设置请求头数据传输格式
-        ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-
-        // 把query拼接成urlencoded
-
-        var str = "";
-        for(var key in query)&#123;
-            str += key + "=" + query[key] + "&";
-        &#125;
-        str = str.slice(0,-1);
-
-        ajax.send(str);
-
-        ajax.onreadystatechange = function () &#123;
-            if(ajax.readyState === 4) &#123;
-                if(ajax.status === 200)&#123;
-                    // 判断isJson是否传进来了
-                    isJson = isJson === undefined ? true : isJson;
-                    succCb && succCb(isJson ? JSON.parse(ajax.responseText) : ajax.responseText);
-                &#125;
-            &#125;
-        &#125;
-    &#125;
-</code></pre>
-<h3 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h3><p>浏览器安全策略，保障非同源资源之间数据访问的安全性。<br>默认不允许非同源的资源直接访问。<br>URL：<br>协议://域名:端口/路径名称?查询字符串#位置标识符<br>同源：协议、域名、端口完全一致，只要三个中有任何一个不一致，则是非同源<br>非同源资源间需要进行访问，则需要实现跨域。</p>
-<h2 id="解决资源跨域访问："><a href="#解决资源跨域访问：" class="headerlink" title="解决资源跨域访问："></a>解决资源跨域访问：</h2><h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>cross-origin resource sharing<br>服务器端：设置响应头信息：Access-Control-Allow-Origin:*<br>前端： ajax可解决GET/POST跨域需求</p>
-<h4 id="GET方式："><a href="#GET方式：" class="headerlink" title="GET方式："></a>GET方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求get
+<h3 id="封装一个Ajax的get和post方式"><a href="#封装一个Ajax的get和post方式" class="headerlink" title="封装一个Ajax的get和post方式"></a>封装一个Ajax的get和post方式</h3><h4 id="ajax的get方式："><a href="#ajax的get方式：" class="headerlink" title="ajax的get方式："></a>ajax的get方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求get
  * @param url     string   请求的路径
  * @param query   object   请求的参数query
  * @param succCb  function 请求成功之后的回调
@@ -595,25 +510,27 @@ ajaxGet : function (url, query, succCb, failCb, isJson) &#123;
 
     // 4、监听状态的改变
     ajax.onreadystatechange = function()&#123;
-      if(ajax.readyState === 4)&#123;
-        if(ajax.status === 200)&#123;
-            // 用户传了回调才执行
-            // isJson默认值为true，要解析json
-            if(isJson === undefined)&#123;
-                isJson = true;
+        if(ajax.readyState === 4)&#123;
+            if(ajax.status === 200)&#123;
+                // 用户传了回调才执行
+                // isJson默认值为true，要解析json
+                if(isJson === undefined)&#123;
+                    isJson = true;
+                &#125;
+                var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;
+                succCb && succCb(res);
+            &#125;else&#123;
+                // 请求失败
+                failCb && failCb();
             &#125;
-            var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;
-            succCb && succCb(res);
-        &#125;else&#123;
-            // 请求失败
-            failCb && failCb();
         &#125;
-
-      &#125;
-    &#125; 
+    &#125;
 &#125;
+
+// 调用该方法实例：
+//tools.ajaxGet("03-ajax.php", &#123;"name": "lisi"&#125;, function(res)&#123;console.log(res);&#125;, function() &#123;&#125;,false);
 </code></pre>
-<h4 id="POST方式"><a href="#POST方式" class="headerlink" title="POST方式:"></a>POST方式:</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求post
+<h4 id="ajax的post方式："><a href="#ajax的post方式：" class="headerlink" title="ajax的post方式："></a>ajax的post方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求post
  * @param url     string   请求的路径
  * @param query   object   请求的参数query
  * @param succCb  function 请求成功之后的回调
@@ -642,8 +559,19 @@ ajaxPost: function(url, query, succCb, failCb, isJson)&#123;
         &#125;
     &#125;
 &#125;
+
+// 调用该方法实例：
+//tools.ajaxGet("03-ajax.php", &#123;"name": "lisi"&#125;, function(res)&#123;console.log(res);&#125;, function() &#123;&#125;,false);
 </code></pre>
-<h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><p>利用script标签在引入外部JS时不受同源策略限制的特性，来实现跨域。<br>JSONP只能处理GET请求方式的跨域<br>后端：<br>由服务器端构建一个字符串：字符串中的内容是能够在 JS 中执行的函数调用的结构<br>前端：</p>
+<h3 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h3><p>浏览器安全策略，保障非同源资源之间数据访问的安全性。<br>默认不允许非同源的资源直接访问。<br>URL：<br>协议://域名:端口/路径名称?查询字符串#位置标识符<br>同源：协议、域名、端口完全一致，只要三个中有任何一个不一致，则是非同源<br>非同源资源间需要进行访问，则需要实现跨域。</p>
+<h2 id="解决资源跨域访问："><a href="#解决资源跨域访问：" class="headerlink" title="解决资源跨域访问："></a>解决资源跨域访问：</h2><h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>cross-origin resource sharing<br>服务器端：设置响应头信息：Access-Control-Allow-Origin:*<br>前端： ajax可解决GET/POST跨域需求</p>
+<h4 id="GET方式："><a href="#GET方式：" class="headerlink" title="GET方式："></a>GET方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">
+
+</code></pre>
+<h4 id="POST方式"><a href="#POST方式" class="headerlink" title="POST方式:"></a>POST方式:</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">
+
+</code></pre>
+<h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><p>利用script标签的src属性在引入外部JS时不受同源策略限制的特性，来实现跨域。<br>JSONP只能处理GET请求方式的跨域<br>后端：<br>由服务器端构建一个字符串：字符串中的内容是能够在 JS 中执行的函数调用的结构<br>前端：</p>
 <ol>
 <li>创建 script 元素</li>
 <li>设置 src 属性，传递 callback 参数指明全局回调函数的名称</li>
@@ -1316,12 +1244,12 @@ if(ajax.readyState === 4)&#123;
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
             <a href="/about" target="_blank">NekoDeng</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.7k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
+                class="white-color">36.9k</span>&nbsp;
             
             
             
@@ -1329,14 +1257,14 @@ if(ajax.readyState === 4)&#123;
             
             
             <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
+                &nbsp;<i class="far fa-eye"></i>&nbsp;Total visits: &nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;
             </span>
             
             
             <br>
             
-            <span id="sitetime">载入运行时间...</span>
+            <span id="sitetime">running time</span>
             <script>
                 function siteTime() {
                     var seconds = 1000;
@@ -1369,12 +1297,12 @@ if(ajax.readyState === 4)&#123;
                         diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span class= 'white-color'>"+diffDays+"</span>" + " d " + "<span class= 'white-color'>"+diffHours+"</span>" +
+                            " h " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " m " + "<span class= 'white-color'>"+diffSeconds+"</span>" + " s";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span class= 'white-color'>"+diffYears+"</span>" + " y " + "<span class= 'white-color'>"+diffDays+"</span>" +
+                            " d " + "<span class= 'white-color'>"+diffHours+"</span>" + " h " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " m " +"<span class= 'white-color'>"+ diffSeconds+"</span>" + " s";
                     }
                 }
                 setInterval(siteTime, 1000);

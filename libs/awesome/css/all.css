@@ -846,8 +846,7 @@ readers do not read off random characters that represent icons */
 .fa-charging-station:before {
   content: "\f5e7"; }
 
-.fa-chart-area:before {
-  content: "\f1fe"; }
+
 
 .fa-chart-bar:before {
   content: "\f080"; }
@@ -1476,8 +1475,6 @@ readers do not read off random characters that represent icons */
 .fa-external-link-square-alt:before {
   content: "\f360"; }
 
-.fa-eye:before {
-  content: "\f06e"; }
 
 .fa-eye-dropper:before {
   content: "\f1fb"; }

@@ -39,6 +39,14 @@ body {
     color: #34495e;
 }
 
+.frind-ship .title h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid #fff!important;
+} 
+.card .card-content p {
+    font-size: 0.9rem;
+}
 h1 {
     margin: 48px 0 22px -5px;
     font-size: 2.0rem;
@@ -1773,7 +1781,7 @@ footer a {
 }
 
 footer .copy-right {
-    color: #dbdbdb;
+    color: #888;
 }
 
 /*搜索层样式*/

@@ -1070,12 +1070,12 @@ w3c认为，石头扔进去先到达准确的那个点，涟漪从内往外扩�
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
             <a href="/about" target="_blank">NekoDeng</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.7k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
+                class="white-color">36.9k</span>&nbsp;
             
             
             
@@ -1083,14 +1083,14 @@ w3c认为，石头扔进去先到达准确的那个点，涟漪从内往外扩�
             
             
             <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
+                &nbsp;<i class="far fa-eye"></i>&nbsp;Total visits: &nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;
             </span>
             
             
             <br>
             
-            <span id="sitetime">载入运行时间...</span>
+            <span id="sitetime">running time</span>
             <script>
                 function siteTime() {
                     var seconds = 1000;
@@ -1123,12 +1123,12 @@ w3c认为，石头扔进去先到达准确的那个点，涟漪从内往外扩�
                         diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span class= 'white-color'>"+diffDays+"</span>" + " d " + "<span class= 'white-color'>"+diffHours+"</span>" +
+                            " h " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " m " + "<span class= 'white-color'>"+diffSeconds+"</span>" + " s";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span class= 'white-color'>"+diffYears+"</span>" + " y " + "<span class= 'white-color'>"+diffDays+"</span>" +
+                            " d " + "<span class= 'white-color'>"+diffHours+"</span>" + " h " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " m " +"<span class= 'white-color'>"+ diffSeconds+"</span>" + " s";
                     }
                 }
                 setInterval(siteTime, 1000);
