@@ -171,3 +171,11 @@ $(function () {
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
 });
+
+console.log("恭喜你喜提彩蛋！"+"<br>"+"可以称呼我nekodeng"
++"<br>"+"梦想是成为一位优秀的 Web Front-end Developer"+"<br>"
++"也喜欢逛逛B站的，这是本up主的主页地址哈: "+"https://space.bilibili.com/107492592"
++"<br>"
++"关于我的博客: "+"https://nekodeng.gitee.io/about/"
++"<br>"
++"关于我的博客: "+"https://nekodeng.github.io/about/");

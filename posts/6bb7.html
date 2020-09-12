@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS程序执行, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="使用JS获取当前页面的URL(网址信息), HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS程序执行 | itsNekoDeng</title>
+    <title>使用JS获取当前页面的URL(网址信息) | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS程序执行</h1>
+                    <h1 class="description center-align post-title">使用JS获取当前页面的URL(网址信息)</h1>
                 </div>
             </div>
         </div>
@@ -368,20 +368,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
-                            </a>
-                        
-                            <a href="/tags/if-else/">
-                                <span class="chip bg-color">if/else</span>
-                            </a>
-                        
-                            <a href="/tags/switch-case/">
-                                <span class="chip bg-color">switch/case</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                                <span class="chip bg-color">显/隐式转换</span>
+                            <a href="/tags/JS%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84URL/">
+                                <span class="chip bg-color">JS获取当前页面的URL</span>
                             </a>
                         
                     </div>
@@ -405,7 +393,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-18
+                    2020-09-11
                 </div>
                 
 
@@ -414,14 +402,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    997
+                    252
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -436,77 +424,51 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 顺序结构：按照由上到下的顺序一行一行地执行的程序结构<br> 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）<br> 循环结构：需要重复执行同一操作的程序结构称为循环结构。</p>
-<h3 id="if-判断逻辑语句"><a href="#if-判断逻辑语句" class="headerlink" title="if 判断逻辑语句"></a>if 判断逻辑语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">if(true)&#123;
-    //会执行的语句
-&#125;
-if(false)&#123;
-    //会跳过不执行的语句
-&#125;
-if(判断条件)&#123; //当if括号中结果为true时执行语句1，否则执行语句2
-    //语句1
-&#125;else&#123;
-    //语句2
-&#125;
+                <pre class=" language-lang-javascript"><code class="language-lang-javascript">var url;
 
-if(判断条件1)&#123; //当条件1结果为true时执行语句1
-    //语句1
-&#125;else if(判断条件2)&#123; //当条件1结果为false而且条件2结果为true时执行语句2
-    //语句2
-&#125;else&#123; //当条件1条件2结果都为false时执行语句3
-    //语句3
-&#125;
+url = window.location.href; /* 获取完整URL */
+alert(url); /* http://127.0.0.1:8020/Test/index.html#testname=test */
+
+url = window.location.pathname; /* 获取文件路径（文件地址） */
+alert(url); /* /Test/index.html */
+
+url = window.location.protocol; /* 获取协议 */
+alert(url); /* http */
+
+url = window.location.host; /* 获取主机地址和端口号 */
+alert(url); /* http://127.0.0.1:8020/ */
+
+url = window.location.hostname; /* 获取主机地址 */
+alert(url); /* http://127.0.0.1/ */
+
+url = window.location.port; /* 获取端口号 */
+alert(url); /* 8020 */
+
+url = window.location.hash; /* 获取锚点（“#”后面的分段） */
+alert(url); /* #test?name=test */
+
+url = window.location.search; /* 获取属性（“?”后面的分段） */
+alert(url);
+
+/* 如果需要URL中的某一部分，可以自己进行处理 */
+url = window.location.pathname;
+url = url.substring(url.lastIndexOf('/') + 1, url.length);
+alert(url); /* /index.html */
+
+/* 
+ * 如果页面使用了框架（frameset）
+ * 要获取到指定页面的URL
+ * 只要把window换成指定的页面即可
+ */
+/* 'frame'为指定页面的class名 */
+var url = window.parent.frames['frame'].location.href;
+/* 获取当前地址栏中显示的URL */
+var url = window.parent.location.href;
+/* window parent 可互换 */
+var url = parent.window.location.href;
 </code></pre>
-<p>我们都知道，if括号中只需要布尔类型值。那么在if判断中，所有的数据类型都会被隐式转换为布尔类型。<br>注意：0、-0、null、””、false、undefined 或者 NaN在if条件里结果为false</p>
-<h3 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h3><p>除了+运算符具有两层含义以外，- <em> /只有数学意义，所以当进行- </em> /运算的时候默认会将运算符两侧的数据类型隐式转换为数字类型，再进行运算。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 2, b = "2";
-if(a == b)&#123;
-    alert("a和b相等");    // 会弹  
-&#125;
-if(a === b)&#123;
-    alert("a和b相等");    // 不会弹  
-&#125;
-if(1 == true)&#123;
-    alert("数字1是true");
-&#125;
-if(a = b)&#123;
-    alert("a和b相等");
-&#125;
-//一个等号代表赋值操作，结果为等号右边的值
-</code></pre>
-<h3 id="switch-case多分支语句"><a href="#switch-case多分支语句" class="headerlink" title="switch case多分支语句"></a>switch case多分支语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">switch(语句)&#123;  //语句的结果与每一条case内容进行匹配
-    case 1:
-       alert(1);
-           break;
-        case 2:
-             alert(2);
-             break;
-        case 3:
-            alert(3);
-            break;
-        default:
-            alert(0);
-&#125;
-</code></pre>
-<p>注意switch的应用场景（有多个确定值需要判断的时候）；<br>注意case穿透，要加break语句（如果程序没有发现break语句，那么解析器会继续向下解析）;</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 1;
-switch(a)&#123; 
-    case 1:
-       alert(1);
-    case 2:
-        alert(2);
-    case 3:
-        alert(3);
-    default:
-        alert(0);
-&#125;
-//每一个alert都会被执行，而且alert会阻断程序进程
-</code></pre>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1.判断一个整数，属于哪个范围：大于0；小于0；等于0<br>2.判断一个整数是偶数还是奇数，并输出判断结果<br>3.开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适<br>4.判断一个三位数是否是水仙花数（如：153 = 1^3 + 5^3 + 3^3，那么153就是水仙花数）</p>
-<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><p>1.点击切换div颜色<br>2.输入分数，判定成绩等级<br>3.输入年份，计算某一年是否是闰年<br>4.输入月份，显示当月的天数，要求：利用case穿透简化代码<br>5.输入数字，显示星期几，如：输入0，弹出星期日，以此类推（两种方法）<br>6.设计一个猜拳游戏：<br>假设： 1代表石头 2代表剪刀 3代表 布<br>计算机每次随机出现1—3中的任意一个数（parseInt (Math.random()*3) + 1）<br>玩家也有三种状态，用玩家出的数和计算机出的数进行比对，按照游戏规则比出胜负。</p>
-<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><p>1.根据一个数字日期，判断这个日期是这一年的第几天<br>例如： 20160211，计算后结果为42<br>2.制作一个表单，包括用户名，密码，电话<br>要求：<br>1）做好看点<br>2）点击保存按钮时，使用JS判断用户的联系电话是否为纯数字，如果用户输入有错误，使用alert()弹框警告<br>3）判断用户名是否填写，如果空白，使用alert弹框警告<br>4）判断密码长度，必须大于8位，否则alert警告<br>提示：通过length属性取得字符串的长度</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "hello";
-str.length // 得到长度
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">
+
 </code></pre>
 
             </div>
@@ -533,7 +495,7 @@ str.length // 得到长度
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://nekodeng.gitee.io/posts/2.html">https://nekodeng.gitee.io/posts/2.html</a>
+                    <a href="https://nekodeng.gitee.io/posts/6bb7.html">https://nekodeng.gitee.io/posts/6bb7.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,20 +533,8 @@ str.length // 得到长度
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
-                                </a>
-                            
-                                <a href="/tags/if-else/">
-                                    <span class="chip bg-color">if/else</span>
-                                </a>
-                            
-                                <a href="/tags/switch-case/">
-                                    <span class="chip bg-color">switch/case</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
-                                    <span class="chip bg-color">显/隐式转换</span>
+                                <a href="/tags/JS%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84URL/">
+                                    <span class="chip bg-color">JS获取当前页面的URL</span>
                                 </a>
                             
                         </div>
@@ -752,91 +702,32 @@ str.length // 得到长度
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/b140.html">
+                <a href="/posts/6bb7.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS的BOM对象">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="使用JS获取当前页面的URL(网址信息)">
                         
-                        <span class="card-title">JS的BOM对象</span>
+                        <span class="card-title">使用JS获取当前页面的URL(网址信息)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            BOM（Browser Object Model  浏览器对象模型）window是全局浏览器内置顶级对象表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）Window 对象表示一个浏览器窗口或一个框架
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    JS基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/BOM/">
-                        <span class="chip bg-color">BOM</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AE%9A%E6%97%B6%E5%99%A8/">
-                        <span class="chip bg-color">定时器</span>
-                    </a>
-                    
-                    <a href="/tags/window/">
-                        <span class="chip bg-color">window</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/1.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JS循环结构">
-                        
-                        <span class="card-title">JS循环结构</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            while循环while(条件)&#123;
-    //条件成立就会反复执行这里的代码
-&#125;
-var count = 0;
-while(count < 10)&#123;
-    count++;
-    document.wri
+                            var url;
+
+url = window.location.href; /* 获取完整URL */
+alert(url); /* http://127.0.0.1:8020/Test/index.html#testname=test *
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-11
                             </span>
                         <span class="publish-author">
                             
@@ -850,23 +741,68 @@ while(count < 10)&#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/while/">
-                        <span class="chip bg-color">while</span>
+                    <a href="/tags/JS%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84URL/">
+                        <span class="chip bg-color">JS获取当前页面的URL</span>
                     </a>
                     
-                    <a href="/tags/do-while/">
-                        <span class="chip bg-color">do...while</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/cc13.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="PHP+Mysql知识">
+                        
+                        <span class="card-title">PHP+Mysql知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            PHP（HyperText Preprocessor）是一种创建动态交互性站点的强有力的服务器端脚本语言。
+
+第一句 Hello World&lt;?php
+  echo &#39;hello word&lt;br&gt;&#39;; //
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PHP-Mysql%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    PHP+Mysql知识
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/PHP/">
+                        <span class="chip bg-color">PHP</span>
                     </a>
                     
-                    <a href="/tags/break%E5%92%8Ccontinue/">
-                        <span class="chip bg-color">break和continue</span>
-                    </a>
-                    
-                    <a href="/tags/for/">
-                        <span class="chip bg-color">for</span>
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
                     </a>
                     
                 </div>

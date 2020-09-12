@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-10T14:09:32.662Z</updated>
+  <updated>2020-09-11T14:48:44.304Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用JS获取当前页面的URL(网址信息)</title>
+    <link href="https://nekodeng.gitee.io/posts/6bb7.html"/>
+    <id>https://nekodeng.gitee.io/posts/6bb7.html</id>
+    <published>2020-09-11T14:47:27.594Z</published>
+    <updated>2020-09-11T14:48:44.304Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code class=&quot;language-lang-javascript&quot;&gt;var url;
+
+url = window.location.href; /* 获取完整URL</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="JS获取当前页面的URL" scheme="https://nekodeng.gitee.io/tags/JS%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84URL/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP+Mysql知识</title>
@@ -530,37 +557,6 @@
     
     
     <category term="json" scheme="https://nekodeng.gitee.io/tags/json/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-cookie</title>
-    <link href="https://nekodeng.gitee.io/posts/61a8.html"/>
-    <id>https://nekodeng.gitee.io/posts/61a8.html</id>
-    <published>2020-09-04T03:38:46.346Z</published>
-    <updated>2020-09-10T04:41:28.884Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;cookie-会话跟踪技术&quot;&gt;&lt;a href=&quot;#cookie-会话跟踪技术&quot; class=&quot;headerlink&quot; title=&quot;cookie 会话跟踪技术&quot;&gt;&lt;/a&gt;cookie</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="cookie" scheme="https://nekodeng.gitee.io/tags/cookie/"/>
-    
-    <category term="封装存取cookie的函数" scheme="https://nekodeng.gitee.io/tags/%E5%B0%81%E8%A3%85%E5%AD%98%E5%8F%96cookie%E7%9A%84%E5%87%BD%E6%95%B0/"/>
-    
-    <category term="path" scheme="https://nekodeng.gitee.io/tags/path/"/>
-    
-    <category term="expires" scheme="https://nekodeng.gitee.io/tags/expires/"/>
     
   </entry>
   
