@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-12T03:22:44.150Z</updated>
+  <updated>2020-09-12T10:27:59.437Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello HarmonyOS</title>
+    <link href="https://nekodeng.gitee.io/posts/HarmonyOS.html"/>
+    <id>https://nekodeng.gitee.io/posts/HarmonyOS.html</id>
+    <published>2020-09-12T09:36:52.145Z</published>
+    <updated>2020-09-12T10:27:59.437Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="HarmonyOS" scheme="https://nekodeng.gitee.io/categories/HarmonyOS/"/>
+    
+    
+    <category term="HarmonyOS" scheme="https://nekodeng.gitee.io/tags/HarmonyOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用JS获取当前页面的URL(网址信息)</title>
-    <link href="https://nekodeng.gitee.io/posts/6bb7.html"/>
-    <id>https://nekodeng.gitee.io/posts/6bb7.html</id>
+    <link href="https://nekodeng.gitee.io/posts/get-url.html"/>
+    <id>https://nekodeng.gitee.io/posts/get-url.html</id>
     <published>2020-09-11T14:47:27.594Z</published>
-    <updated>2020-09-12T03:22:44.150Z</updated>
+    <updated>2020-09-12T10:22:50.865Z</updated>
     
     
       
@@ -45,10 +70,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>PHP+Mysql知识</title>
-    <link href="https://nekodeng.gitee.io/posts/cc13.html"/>
-    <id>https://nekodeng.gitee.io/posts/cc13.html</id>
+    <link href="https://nekodeng.gitee.io/posts/php-mysql.html"/>
+    <id>https://nekodeng.gitee.io/posts/php-mysql.html</id>
     <published>2020-09-10T13:45:18.230Z</published>
-    <updated>2020-09-10T14:09:32.662Z</updated>
+    <updated>2020-09-12T10:41:32.153Z</updated>
     
     
       
@@ -72,10 +97,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>http知识</title>
-    <link href="https://nekodeng.gitee.io/posts/277f.html"/>
-    <id>https://nekodeng.gitee.io/posts/277f.html</id>
+    <link href="https://nekodeng.gitee.io/posts/about-http.html"/>
+    <id>https://nekodeng.gitee.io/posts/about-http.html</id>
     <published>2020-09-10T13:33:52.423Z</published>
-    <updated>2020-09-10T13:43:22.207Z</updated>
+    <updated>2020-09-12T10:28:17.815Z</updated>
     
     
       
@@ -102,10 +127,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
-    <link href="https://nekodeng.gitee.io/posts/3beb.html"/>
-    <id>https://nekodeng.gitee.io/posts/3beb.html</id>
+    <link href="https://nekodeng.gitee.io/posts/parsing-url.html"/>
+    <id>https://nekodeng.gitee.io/posts/parsing-url.html</id>
     <published>2020-09-10T06:38:09.016Z</published>
-    <updated>2020-09-12T03:22:10.810Z</updated>
+    <updated>2020-09-12T10:24:34.983Z</updated>
     
     
       
@@ -127,10 +152,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>CSS-SCSS代码规范</title>
-    <link href="https://nekodeng.gitee.io/posts/e77.html"/>
-    <id>https://nekodeng.gitee.io/posts/e77.html</id>
+    <link href="https://nekodeng.gitee.io/posts/css-scss.html"/>
+    <id>https://nekodeng.gitee.io/posts/css-scss.html</id>
     <published>2020-09-07T08:10:58.551Z</published>
-    <updated>2020-09-07T08:32:38.575Z</updated>
+    <updated>2020-09-12T10:25:18.304Z</updated>
     
     
       
@@ -152,10 +177,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>express应用程序生成器</title>
-    <link href="https://nekodeng.gitee.io/posts/8b11.html"/>
-    <id>https://nekodeng.gitee.io/posts/8b11.html</id>
+    <link href="https://nekodeng.gitee.io/posts/express.html"/>
+    <id>https://nekodeng.gitee.io/posts/express.html</id>
     <published>2020-09-07T07:51:51.430Z</published>
-    <updated>2020-09-07T07:56:50.252Z</updated>
+    <updated>2020-09-12T10:26:48.684Z</updated>
     
     
       
@@ -179,10 +204,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>NodeJS基本介绍</title>
-    <link href="https://nekodeng.gitee.io/posts/fc59.html"/>
-    <id>https://nekodeng.gitee.io/posts/fc59.html</id>
+    <link href="https://nekodeng.gitee.io/posts/nodejs.html"/>
+    <id>https://nekodeng.gitee.io/posts/nodejs.html</id>
     <published>2020-09-07T07:38:13.825Z</published>
-    <updated>2020-09-07T07:44:14.633Z</updated>
+    <updated>2020-09-12T10:40:47.856Z</updated>
     
     
       
@@ -208,10 +233,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>NodeJS使用流程</title>
-    <link href="https://nekodeng.gitee.io/posts/e8e5.html"/>
-    <id>https://nekodeng.gitee.io/posts/e8e5.html</id>
+    <link href="https://nekodeng.gitee.io/posts/use-nodejs.html"/>
+    <id>https://nekodeng.gitee.io/posts/use-nodejs.html</id>
     <published>2020-09-07T07:28:15.280Z</published>
-    <updated>2020-09-07T07:49:18.969Z</updated>
+    <updated>2020-09-12T10:41:14.854Z</updated>
     
     
       
@@ -235,10 +260,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>Git使用流程</title>
-    <link href="https://nekodeng.gitee.io/posts/4604.html"/>
-    <id>https://nekodeng.gitee.io/posts/4604.html</id>
+    <link href="https://nekodeng.gitee.io/posts/use-git.html"/>
+    <id>https://nekodeng.gitee.io/posts/use-git.html</id>
     <published>2020-09-07T07:23:06.200Z</published>
-    <updated>2020-09-07T14:26:35.477Z</updated>
+    <updated>2020-09-12T10:27:20.323Z</updated>
     
     
       
@@ -262,10 +287,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>gulp</title>
-    <link href="https://nekodeng.gitee.io/posts/4a22.html"/>
-    <id>https://nekodeng.gitee.io/posts/4a22.html</id>
+    <link href="https://nekodeng.gitee.io/posts/gulp.html"/>
+    <id>https://nekodeng.gitee.io/posts/gulp.html</id>
     <published>2020-09-07T06:18:30.212Z</published>
-    <updated>2020-09-07T08:33:18.900Z</updated>
+    <updated>2020-09-12T10:27:29.606Z</updated>
     
     
       
@@ -287,10 +312,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>Git</title>
-    <link href="https://nekodeng.gitee.io/posts/629e.html"/>
-    <id>https://nekodeng.gitee.io/posts/629e.html</id>
+    <link href="https://nekodeng.gitee.io/posts/git.html"/>
+    <id>https://nekodeng.gitee.io/posts/git.html</id>
     <published>2020-09-07T06:15:04.641Z</published>
-    <updated>2020-09-07T14:24:12.003Z</updated>
+    <updated>2020-09-12T10:26:45.212Z</updated>
     
     
       
@@ -312,10 +337,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>Chrome调试</title>
-    <link href="https://nekodeng.gitee.io/posts/232b.html"/>
-    <id>https://nekodeng.gitee.io/posts/232b.html</id>
+    <link href="https://nekodeng.gitee.io/posts/chrome-debug.html"/>
+    <id>https://nekodeng.gitee.io/posts/chrome-debug.html</id>
     <published>2020-09-07T06:05:14.276Z</published>
-    <updated>2020-09-07T06:18:15.212Z</updated>
+    <updated>2020-09-12T10:20:38.251Z</updated>
     
     
       
@@ -337,10 +362,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>JS-模块化</title>
-    <link href="https://nekodeng.gitee.io/posts/46fc.html"/>
-    <id>https://nekodeng.gitee.io/posts/46fc.html</id>
+    <link href="https://nekodeng.gitee.io/posts/amd-cmd.html"/>
+    <id>https://nekodeng.gitee.io/posts/amd-cmd.html</id>
     <published>2020-09-07T06:00:17.953Z</published>
-    <updated>2020-09-07T07:58:44.510Z</updated>
+    <updated>2020-09-12T10:30:10.847Z</updated>
     
     
       
@@ -367,10 +392,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>jQuery</title>
-    <link href="https://nekodeng.gitee.io/posts/971b.html"/>
-    <id>https://nekodeng.gitee.io/posts/971b.html</id>
+    <link href="https://nekodeng.gitee.io/posts/jquery.html"/>
+    <id>https://nekodeng.gitee.io/posts/jquery.html</id>
     <published>2020-09-07T05:48:59.639Z</published>
-    <updated>2020-09-07T05:59:08.898Z</updated>
+    <updated>2020-09-12T10:28:34.578Z</updated>
     
     
       
@@ -392,10 +417,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>JS-闭包和继承</title>
-    <link href="https://nekodeng.gitee.io/posts/4920.html"/>
-    <id>https://nekodeng.gitee.io/posts/4920.html</id>
+    <link href="https://nekodeng.gitee.io/posts/closure-inheritance.html"/>
+    <id>https://nekodeng.gitee.io/posts/closure-inheritance.html</id>
     <published>2020-09-07T05:33:36.939Z</published>
-    <updated>2020-09-07T07:59:56.862Z</updated>
+    <updated>2020-09-12T10:29:04.346Z</updated>
     
     
       
@@ -420,10 +445,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>JS-ajax</title>
-    <link href="https://nekodeng.gitee.io/posts/f35d.html"/>
-    <id>https://nekodeng.gitee.io/posts/f35d.html</id>
+    <link href="https://nekodeng.gitee.io/posts/ajax.html"/>
+    <id>https://nekodeng.gitee.io/posts/ajax.html</id>
     <published>2020-09-07T05:16:42.255Z</published>
-    <updated>2020-09-10T13:33:08.692Z</updated>
+    <updated>2020-09-12T10:31:16.813Z</updated>
     
     
       
@@ -455,10 +480,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>JS-this</title>
-    <link href="https://nekodeng.gitee.io/posts/38be.html"/>
-    <id>https://nekodeng.gitee.io/posts/38be.html</id>
+    <link href="https://nekodeng.gitee.io/posts/js-this.html"/>
+    <id>https://nekodeng.gitee.io/posts/js-this.html</id>
     <published>2020-09-04T14:28:49.931Z</published>
-    <updated>2020-09-04T14:31:21.513Z</updated>
+    <updated>2020-09-12T10:32:02.567Z</updated>
     
     
       
@@ -482,10 +507,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>JS基础-数组</title>
-    <link href="https://nekodeng.gitee.io/posts/8900.html"/>
-    <id>https://nekodeng.gitee.io/posts/8900.html</id>
+    <link href="https://nekodeng.gitee.io/posts/js-array.html"/>
+    <id>https://nekodeng.gitee.io/posts/js-array.html</id>
     <published>2020-09-04T04:31:26.542Z</published>
-    <updated>2020-09-04T07:57:41.334Z</updated>
+    <updated>2020-09-12T10:35:03.234Z</updated>
     
     
       
@@ -510,10 +535,10 @@ url = window.location.href; /* 获取完整URL</summary>
   
   <entry>
     <title>JS基础-string内置对象</title>
-    <link href="https://nekodeng.gitee.io/posts/444.html"/>
-    <id>https://nekodeng.gitee.io/posts/444.html</id>
+    <link href="https://nekodeng.gitee.io/posts/js-string.html"/>
+    <id>https://nekodeng.gitee.io/posts/js-string.html</id>
     <published>2020-09-04T03:59:28.003Z</published>
-    <updated>2020-09-07T07:59:23.827Z</updated>
+    <updated>2020-09-12T10:35:41.392Z</updated>
     
     
       
@@ -531,32 +556,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="string对象方法" scheme="https://nekodeng.gitee.io/tags/string%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS基础-json</title>
-    <link href="https://nekodeng.gitee.io/posts/9615.html"/>
-    <id>https://nekodeng.gitee.io/posts/9615.html</id>
-    <published>2020-09-04T03:56:08.606Z</published>
-    <updated>2020-09-04T03:58:46.145Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。&lt;/p&gt;
-&lt;p&gt;1、对象：对象在js中表示为“{}”括起来的内容，数据结构为</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="json" scheme="https://nekodeng.gitee.io/tags/json/"/>
     
   </entry>
   
