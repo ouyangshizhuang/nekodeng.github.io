@@ -1115,19 +1115,17 @@
     
     
     <entry>
-      <title>博客文章模板</title>
-      <link href="/posts/8e47.html"/>
-      <url>/posts/8e47.html</url>
+      <title>README</title>
+      <link href="/posts/README.html"/>
+      <url>/posts/README.html</url>
       
-        <content type="html"><![CDATA[<pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre>]]></content>
+        <content type="html"><![CDATA[<h4 id="Hello-Everyone"><a href="#Hello-Everyone" class="headerlink" title="Hello Everyone!"></a>Hello Everyone!</h4><ul><li><p>欢迎来到我的个人博客，我将在这里和大家分享我在前端学习路上的一些知识和经历</p></li><li><p>可以称呼我 nekodeng</p></li><li><p>梦想是成为一位优秀的 Web Front-end Developer</p></li></ul><h4 id="Life-was-like-a-box-of-chocolates-you-never-know-what-you’re-gonna-get"><a href="#Life-was-like-a-box-of-chocolates-you-never-know-what-you’re-gonna-get" class="headerlink" title="Life was like a box of chocolates, you never know what you’re gonna get."></a>Life was like a box of chocolates, you never know what you’re gonna get.</h4><ul><li><p>这是电影《阿甘正传》里的句子啦</p></li><li><p>那一天我二十一岁，在我一生的黄金时代，我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。<br>可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。   王小波—《黄金时代》</p></li></ul><h4 id="https-space-bilibili-com-107492592"><a href="#https-space-bilibili-com-107492592" class="headerlink" title="https://space.bilibili.com/107492592"></a><a href="https://space.bilibili.com/107492592">https://space.bilibili.com/107492592</a></h4><ul><li><p>也喜欢逛逛B站的，这是本up主的主页地址哈</p></li><li><p>UID: 107492592</p></li></ul><h4 id="https-nekodeng-github-io"><a href="#https-nekodeng-github-io" class="headerlink" title="https://nekodeng.github.io/"></a><a href="https://nekodeng.github.io/">https://nekodeng.github.io/</a></h4><ul><li>这是部署在GitHub上的博客地址啦</li></ul><h4 id="https-nekodeng-gitee-io"><a href="#https-nekodeng-gitee-io" class="headerlink" title="https://nekodeng.gitee.io/"></a><a href="https://nekodeng.gitee.io/">https://nekodeng.gitee.io/</a></h4><ul><li>这是部署在gitee上的博客地址啦</li></ul>]]></content>
       
       
       
         <tags>
             
-            <tag> JS </tag>
-            
-            <tag> 标签 </tag>
+            <tag> README </tag>
             
         </tags>
       
