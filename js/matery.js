@@ -172,4 +172,4 @@ $(function () {
     $('.tooltipped').tooltip();
 });
 
-console.log("恭喜你喜提彩蛋！\n可以称呼我 nekodeng,\n梦想是成为一位优秀的 Web Front-end Developer,\n也喜欢逛逛B站的，这是本up主的主页地址: https://space.bilibili.com/107492592,\n\n关于我的博客: https://nekodeng.gitee.io/posts/README.html,\n关于我的博客: https://nekodeng.github.io/posts/README.html\n");
+console.log("恭喜你喜提彩蛋！\n可以称呼我 nekodeng,\n梦想是成为一位优秀的 Web Front-end Developer,\n也喜欢逛逛B站的，这是本up主的主页地址: https://space.bilibili.com/107492592,\n\n关于我的博客: https://nekodeng.gitee.io/posts/about-me.html,\n关于我的博客: https://nekodeng.github.io/posts/about-me.html\n");
