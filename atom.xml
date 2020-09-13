@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-12T15:23:14.233Z</updated>
+  <updated>2020-09-13T12:30:49.746Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh-key配置</title>
+    <link href="https://nekodeng.gitee.io/posts/ssh-key.html"/>
+    <id>https://nekodeng.gitee.io/posts/ssh-key.html</id>
+    <published>2020-09-13T10:42:30.087Z</published>
+    <updated>2020-09-13T12:30:49.746Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-检查ssh-key-是否存在&quot;&gt;&lt;a href=&quot;#1-检查ssh-key-是否存在&quot; class=&quot;headerlink&quot; title=&quot;1.检查ssh key 是否存在&quot;&gt;&lt;/a&gt;1.检查ssh key 是否存在&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ls -al</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="ssh-key" scheme="https://nekodeng.gitee.io/tags/ssh-key/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目上线流程</title>
+    <link href="https://nekodeng.gitee.io/posts/project-launch.html"/>
+    <id>https://nekodeng.gitee.io/posts/project-launch.html</id>
+    <published>2020-09-13T07:25:07.975Z</published>
+    <updated>2020-09-13T10:33:05.542Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;域名：新网 万网&lt;br&gt;服务器及域名购买(略)&lt;/p&gt;
+&lt;h2 id=&quot;安装各种环境&quot;&gt;&lt;a href=&quot;#安装各种环境&quot; class=&quot;headerlink&quot; title=&quot;安装各种环境&quot;&gt;&lt;/a&gt;安装各种环境&lt;/h2&gt;&lt;p&gt;1、任意命令行工具里输入ssh</summary>
+        
+      
+    
+    
+    
+    
+    <category term="项目上线流程" scheme="https://nekodeng.gitee.io/tags/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>关于图片加载优化</title>
@@ -240,7 +289,7 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/nodejs.html"/>
     <id>https://nekodeng.gitee.io/posts/nodejs.html</id>
     <published>2020-09-07T07:38:13.825Z</published>
-    <updated>2020-09-12T10:40:47.856Z</updated>
+    <updated>2020-09-13T07:24:30.161Z</updated>
     
     
       
@@ -373,14 +422,14 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/chrome-debug.html"/>
     <id>https://nekodeng.gitee.io/posts/chrome-debug.html</id>
     <published>2020-09-07T06:05:14.276Z</published>
-    <updated>2020-09-12T10:20:38.251Z</updated>
+    <updated>2020-09-13T10:38:13.934Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1.console.table();&lt;br&gt;将数组打开展示。&lt;br&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;1.console.table();&lt;br&gt;将数组打开展示。&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2020/09/13/BgC2neTEO7fVIrN.png&quot;</summary>
         
       
     
@@ -508,61 +557,6 @@ url = window.location.href; /* 获取完整URL</summary>
     <category term="GET/POST" scheme="https://nekodeng.gitee.io/tags/GET-POST/"/>
     
     <category term="同步/异步" scheme="https://nekodeng.gitee.io/tags/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-this</title>
-    <link href="https://nekodeng.gitee.io/posts/js-this.html"/>
-    <id>https://nekodeng.gitee.io/posts/js-this.html</id>
-    <published>2020-09-04T14:28:49.931Z</published>
-    <updated>2020-09-12T10:32:02.567Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;this&quot;&gt;&lt;a href=&quot;#this&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="this" scheme="https://nekodeng.gitee.io/tags/this/"/>
-    
-    <category term="call/apply/bind方法" scheme="https://nekodeng.gitee.io/tags/call-apply-bind%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS基础-数组</title>
-    <link href="https://nekodeng.gitee.io/posts/js-array.html"/>
-    <id>https://nekodeng.gitee.io/posts/js-array.html</id>
-    <published>2020-09-04T04:31:26.542Z</published>
-    <updated>2020-09-12T10:35:03.234Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Array 对象&lt;br&gt;Array 对象用于在变量中存储多个值:&lt;/p&gt;
-&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code class=&quot;language-lang-javascript&quot;&gt;var cars = [&quot;Saab&quot;,</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="稀疏数组" scheme="https://nekodeng.gitee.io/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="数组" scheme="https://nekodeng.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
