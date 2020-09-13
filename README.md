@@ -1,12 +1,3 @@
----
-title: README
-abbrlink: 'readme'
-tags: #标签
-  - README
-categories:  #文章分类
-mathjax: true
----
-
 #### Hello Everyone!
 - 欢迎来到我的个人博客，我将在这里和大家分享我在前端学习路上的一些知识和经历
 
