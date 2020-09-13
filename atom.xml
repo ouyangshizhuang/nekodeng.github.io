@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-12T10:44:12.167Z</updated>
+  <updated>2020-09-12T15:23:14.233Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于图片加载优化</title>
+    <link href="https://nekodeng.gitee.io/posts/img-loading.html"/>
+    <id>https://nekodeng.gitee.io/posts/img-loading.html</id>
+    <published>2020-09-12T15:12:54.822Z</published>
+    <updated>2020-09-12T15:23:14.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;图片加载优化&quot;&gt;&lt;a href=&quot;#图片加载优化&quot; class=&quot;headerlink&quot; title=&quot;图片加载优化&quot;&gt;&lt;/a&gt;图片加载优化&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;不用图片&lt;/li&gt;
+&lt;li&gt;对于移动端来说,一般图片都用 CDN</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="图片加载优化" scheme="https://nekodeng.gitee.io/tags/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E4%BC%98%E5%8C%96/"/>
+    
+    <category term="防抖/节流" scheme="https://nekodeng.gitee.io/tags/%E9%98%B2%E6%8A%96-%E8%8A%82%E6%B5%81/"/>
+    
+    <category term="懒加载/预加载" scheme="https://nekodeng.gitee.io/tags/%E6%87%92%E5%8A%A0%E8%BD%BD-%E9%A2%84%E5%8A%A0%E8%BD%BD/"/>
+    
+    <category term="CDN" scheme="https://nekodeng.gitee.io/tags/CDN/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello HarmonyOS</title>
@@ -130,7 +163,7 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/parsing-url.html"/>
     <id>https://nekodeng.gitee.io/posts/parsing-url.html</id>
     <published>2020-09-10T06:38:09.016Z</published>
-    <updated>2020-09-12T10:24:34.983Z</updated>
+    <updated>2020-09-12T15:02:22.319Z</updated>
     
     
       
@@ -420,7 +453,7 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/closure-inheritance.html"/>
     <id>https://nekodeng.gitee.io/posts/closure-inheritance.html</id>
     <published>2020-09-07T05:33:36.939Z</published>
-    <updated>2020-09-12T10:29:04.346Z</updated>
+    <updated>2020-09-13T02:13:40.643Z</updated>
     
     
       
@@ -530,32 +563,6 @@ url = window.location.href; /* 获取完整URL</summary>
     <category term="稀疏数组" scheme="https://nekodeng.gitee.io/tags/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/"/>
     
     <category term="数组" scheme="https://nekodeng.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS基础-string内置对象</title>
-    <link href="https://nekodeng.gitee.io/posts/js-string.html"/>
-    <id>https://nekodeng.gitee.io/posts/js-string.html</id>
-    <published>2020-09-04T03:59:28.003Z</published>
-    <updated>2020-09-12T10:35:41.392Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;String 对象用于处理文本（字符串）。&lt;br&gt;String 对象创建方法： new String()。&lt;br&gt;语法：&lt;/p&gt;
-&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="string对象方法" scheme="https://nekodeng.gitee.io/tags/string%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
