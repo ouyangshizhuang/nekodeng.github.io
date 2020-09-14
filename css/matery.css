@@ -1791,6 +1791,29 @@ footer .copy-right {
 .v .vwrap .vheader .vinput {
     color: #000;
 }
+img.vimg {
+    transition: all 1s   /* 旋转时间为 1s */
+}
+
+img.vimg:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+.v[data-class=v] .vwrap .vheader .vinput {
+    font-size: 1em;
+}
+#veditor {
+	background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: rgba(255, 255, 255, 0);
+	resize: vertical
+}
+
 
 
 /*搜索层样式*/
