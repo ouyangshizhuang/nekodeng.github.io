@@ -1784,6 +1784,15 @@ footer .copy-right {
     color: #888;
 }
 
+.frind-ship .title img {
+    object-fit: contain;
+}
+
+.v .vwrap .vheader .vinput {
+    color: #000;
+}
+
+
 /*搜索层样式*/
 #searchIcon {
     font-size: 1.2rem;
