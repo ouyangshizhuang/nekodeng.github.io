@@ -1215,9 +1215,51 @@ thead {
 .chip-container .tag-title {
     margin-bottom: 10px;
     color: #3C4858;
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
+.friends-container .tag-title {
+    font-size: 1.4rem!important;
+}
+.v[data-class=v] .vcards .vcard .vh .vmeta .vat {
+    color: #6073d2!important;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.comment_headling {
+    font-size: 17px!important;
+    font-weight: 400!important;
+}
+
+.v[data-class=v] .vcount {
+    font-weight: 400!important;
+    background-color: #e2e1e1;
+    font-size: 1.12em!important;
+    border-radius: 4px;
+}
+.v[data-class=v] .vbtn {
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+.v[data-class=v] .vwrap {
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+.v[data-class=v] .vcards {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+
+
 
 .chip-container .tag-chips {
     margin: 1rem auto 0.5rem;
@@ -1805,14 +1847,7 @@ img.vimg:hover {
 .v[data-class=v] .vwrap .vheader .vinput {
     font-size: 1em;
 }
-#veditor {
-	background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right;
-	background-color: rgba(255, 255, 255, 0);
-	resize: vertical
-}
+
 
 
 

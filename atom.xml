@@ -237,7 +237,7 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/css-scss.html"/>
     <id>https://nekodeng.gitee.io/posts/css-scss.html</id>
     <published>2020-09-07T08:10:58.551Z</published>
-    <updated>2020-09-12T10:25:18.304Z</updated>
+    <updated>2020-09-15T14:26:29.821Z</updated>
     
     
       
@@ -418,27 +418,15 @@ url = window.location.href; /* 获取完整URL</summary>
   </entry>
   
   <entry>
-    <title>Chrome调试</title>
-    <link href="https://nekodeng.gitee.io/posts/chrome-debug.html"/>
-    <id>https://nekodeng.gitee.io/posts/chrome-debug.html</id>
+    <title></title>
+    <link href="https://nekodeng.gitee.io/posts/0.html"/>
+    <id>https://nekodeng.gitee.io/posts/0.html</id>
     <published>2020-09-07T06:05:14.276Z</published>
-    <updated>2020-09-13T10:38:13.934Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.console.table();&lt;br&gt;将数组打开展示。&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2020/09/13/BgC2neTEO7fVIrN.png&quot;</summary>
-        
-      
+    <updated>2020-09-15T14:26:28.081Z</updated>
     
     
     
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
-    
-    <category term="Chrome调试" scheme="https://nekodeng.gitee.io/tags/Chrome%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   
