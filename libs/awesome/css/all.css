@@ -588,8 +588,7 @@ readers do not read off random characters that represent icons */
 .fa-bong:before {
   content: "\f55c"; }
 
-.fa-book:before {
-  content: "\f02d"; }
+
 
 .fa-book-dead:before {
   content: "\f6b7"; }
@@ -2196,8 +2195,6 @@ readers do not read off random characters that represent icons */
 .fa-igloo:before {
   content: "\f7ae"; }
 
-.fa-image:before {
-  content: "\f03e"; }
 
 .fa-images:before {
   content: "\f302"; }
@@ -4314,8 +4311,6 @@ readers do not read off random characters that represent icons */
 .fa-wpressr:before {
   content: "\f3e4"; }
 
-.fa-wrench:before {
-  content: "\f0ad"; }
 
 .fa-x-ray:before {
   content: "\f497"; }
