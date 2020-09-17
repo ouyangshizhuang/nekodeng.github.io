@@ -2036,20 +2036,31 @@ img.vimg:hover {
     background: white;
 }
 
+
+
+
 /*二级菜单*/
 .nav-menu li .sub-nav {
     position: absolute;
-    top: 66px;
+    top: 75px;
     list-style: none;
-    margin-left: -20px;
+    margin-left: -29px;
+    color: #fff;
+    background-color: #fff;
     display: none;
 }
+nav ul li a[href="/friends"] span:hover, nav ul li a[href="/collection"] span:hover {
+    border-bottom: 1px solid #000!important;
+}
+
+
+
 
 .nav-menu li .sub-nav li {
     text-align: center;
     clear: left;
     width: 140px;
-    height: 35px;
+    height: 40px;
     line-height: 35px;
     position: relative;
 }

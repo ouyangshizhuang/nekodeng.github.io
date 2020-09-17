@@ -22,7 +22,12 @@ nav ul li{-webkit-transition:background-color .3s;transition:background-color .3
 nav ul li a span {
     transition: all .5s cubic-bezier(0.2, 0.0, 0.2, 1)!important;
     padding-bottom: 9px!important;
-    /* border-bottom: 0px solid #fff; */
+}
+nav ul li:hover a[href=""] span {
+    border: none!important;
+}
+nav ul li a[href="/friends"] span:hover, nav ul li a[href="/collection"] span:hover {
+    border-bottom: 1px solid #000!important;
 }
 
 /* .ac {
