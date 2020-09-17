@@ -395,13 +395,25 @@
     
     
     <entry>
-      <title></title>
-      <link href="/posts/0.html"/>
-      <url>/posts/0.html</url>
+      <title>chrome调试</title>
+      <link href="/posts/chrome-debug.html"/>
+      <url>/posts/chrome-debug.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="1-console-table"><a href="#1-console-table" class="headerlink" title="1.console.table();"></a>1.console.table();</h3><p>将数组打开展示。<br><img src="https://i.loli.net/2020/09/13/BgC2neTEO7fVIrN.png" alt="1.PNG"></p><h3 id="2-console-time"><a href="#2-console-time" class="headerlink" title="2.console.time()"></a>2.console.time()</h3><p>代码运行时间,console.timeEnd()放在结尾<br><img src="https://i.loli.net/2020/09/13/hoYGDM2Jive1ysW.png" alt="2.PNG"></p><h3 id="3-monitorEvents（）"><a href="#3-monitorEvents（）" class="headerlink" title="3.monitorEvents（）;"></a>3.monitorEvents（）;</h3><p>事件执行顺序。</p>]]></content>
       
       
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> chrome调试 </tag>
+            
+        </tags>
       
     </entry>
     

@@ -13,7 +13,7 @@ https://nekodeng.gitee.io/posts/use-nodejs.html
 https://nekodeng.gitee.io/posts/use-git.html
 https://nekodeng.gitee.io/posts/gulp.html
 https://nekodeng.gitee.io/posts/git.html
-https://nekodeng.gitee.io/posts/0.html
+https://nekodeng.gitee.io/posts/chrome-debug.html
 https://nekodeng.gitee.io/posts/amd-cmd.html
 https://nekodeng.gitee.io/posts/jquery.html
 https://nekodeng.gitee.io/posts/closure-inheritance.html

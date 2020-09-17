@@ -2036,7 +2036,16 @@ img.vimg:hover {
     background: white;
 }
 
-
+/* 响应式 */
+#maina li span div p img {
+    max-width: 100%;
+}
+#maina li span div p {
+    margin-right: 10px;
+}
+#switchUser {
+    margin-left: 12px;
+}
 
 
 /*二级菜单*/
