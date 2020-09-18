@@ -1,4 +1,4 @@
-https://nekodeng.gitee.io/posts/harmonyos.html
+https://nekodeng.gitee.io/posts/harmony-os.html
 https://nekodeng.gitee.io/posts/vscode-setting-sync.html
 https://nekodeng.gitee.io/posts/harmonyos.html
 https://nekodeng.gitee.io/posts/ssh-key.html
