@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> harmonyos </tag>
+            <tag> Harmonyos </tag>
             
         </tags>
       
@@ -46,31 +46,6 @@
         <tags>
             
             <tag> vscode使用 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello HarmonyOS</title>
-      <link href="/posts/harmonyos.html"/>
-      <url>/posts/harmonyos.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><p>基于微内核的全场景分布式操作系统。<br>HarmonyOS是一款“面向未来”、面向全场景（移动办公、运动健康、社交通信、媒体娱乐等）的分布式操作系统。在传统的单设备系统能力的基础上，HarmonyOS提出了基于同一套系统能力、适配多种终端形态的分布式理念，能够支持多种终端设备。</p><h3 id="框架层"><a href="#框架层" class="headerlink" title="框架层"></a>框架层</h3><p>框架层为HarmonyOS的应用程序提供了Java/C/C++/JS等多语言的用户程序框架和Ability框架，以及各种软硬件服务对外开放的多语言框架API；同时为采用HarmonyOS的设备提供了C/C++/JS等多语言的框架API，不同设备支持的API与系统的组件化裁剪程度相关。</p><ul><li>开发工具 Huawei DevEco Studio<br>DevEco Studio 应该是基于IDEA社区版二次开发。<ul><li>代码仓库<br><a href="https://gitee.com/openharmony/docs/tree/master/readme">https://gitee.com/openharmony/docs/tree/master/readme</a></li><li>快速入门<br><a href="https://gitee.com/openharmony/docs/tree/master/readme">https://gitee.com/openharmony/docs/tree/master/readme</a></li><li>源码下载<br><a href="http://tools.harmonyos.com/mirrors/os/1.0/code-1.0.tar.gz">http://tools.harmonyos.com/mirrors/os/1.0/code-1.0.tar.gz</a><h2 id="2-环境搭建"><a href="#2-环境搭建" class="headerlink" title="2.环境搭建"></a>2.环境搭建</h2></li></ul></li><li>IDE下载<br><a href="https://developer.harmonyos.com/cn/develop/deveco-studio#download">https://developer.harmonyos.com/cn/develop/deveco-studio#download</a></li><li><p>开发文档<br><a href="https://developer.harmonyos.com/cn/docs/documentation/doc-guides/hello_world-0000001054516888">https://developer.harmonyos.com/cn/docs/documentation/doc-guides/hello_world-0000001054516888</a></p></li><li><p>配置npm镜像</p><pre><code>npm config set registry https://registry.npm.taobao.org --globalnpm config set disturl https://npm.taobao.org/dist --globalnpm info express</code></pre><p>运行开发者工具 -&gt; 创建工程<br>目前只有TV Wearable和Lite Wearable的Deivce支持…<br>gradle构建无需配置镜像<br>模拟器下载需要开发者中心认证</p></li></ul><h2 id="3-最后，期待OS界大佬进行进一步分析"><a href="#3-最后，期待OS界大佬进行进一步分析" class="headerlink" title="3.最后，期待OS界大佬进行进一步分析"></a>3.最后，期待OS界大佬进行进一步分析</h2><ul><li>HarmonyOS更倾向于IOT的开发.比如TV,wear, 智能家居方向</li><li>应用层开发对android开发者极其友好</li><li>android开发者不要慌,现在又可以多换一个不锈钢铁盆了</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> HarmonyOS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> HarmonyOS </tag>
             
         </tags>
       

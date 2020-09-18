@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-18T05:08:53.115Z</updated>
+  <updated>2020-09-18T05:12:03.678Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://nekodeng.gitee.io/posts/harmony-os.html"/>
     <id>https://nekodeng.gitee.io/posts/harmony-os.html</id>
     <published>2020-09-18T03:45:44.478Z</published>
-    <updated>2020-09-18T05:08:53.115Z</updated>
+    <updated>2020-09-18T05:12:03.678Z</updated>
     
     
       
@@ -37,7 +37,7 @@
     <category term="Harmonyos" scheme="https://nekodeng.gitee.io/categories/Harmonyos/"/>
     
     
-    <category term="harmonyos" scheme="https://nekodeng.gitee.io/tags/harmonyos/"/>
+    <category term="Harmonyos" scheme="https://nekodeng.gitee.io/tags/Harmonyos/"/>
     
   </entry>
   
@@ -64,31 +64,6 @@
     
     
     <category term="vscode使用" scheme="https://nekodeng.gitee.io/tags/vscode%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello HarmonyOS</title>
-    <link href="https://nekodeng.gitee.io/posts/harmonyos.html"/>
-    <id>https://nekodeng.gitee.io/posts/harmonyos.html</id>
-    <published>2020-09-14T13:28:34.463Z</published>
-    <updated>2020-09-18T03:46:09.203Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="HarmonyOS" scheme="https://nekodeng.gitee.io/categories/HarmonyOS/"/>
-    
-    
-    <category term="HarmonyOS" scheme="https://nekodeng.gitee.io/tags/HarmonyOS/"/>
     
   </entry>
   
@@ -545,6 +520,34 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="jQuery" scheme="https://nekodeng.gitee.io/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS-闭包和继承</title>
+    <link href="https://nekodeng.gitee.io/posts/closure-inheritance.html"/>
+    <id>https://nekodeng.gitee.io/posts/closure-inheritance.html</id>
+    <published>2020-09-07T05:33:36.939Z</published>
+    <updated>2020-09-13T02:13:40.643Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象&lt;br&gt;函数在调用的时候会创建一个执行环境对象（活动对象）&lt;/p&gt;
+&lt;h2 id=&quot;闭包（closure）&quot;&gt;&lt;a href=&quot;#闭包（closure）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+    <category term="闭包" scheme="https://nekodeng.gitee.io/tags/%E9%97%AD%E5%8C%85/"/>
     
   </entry>
   
