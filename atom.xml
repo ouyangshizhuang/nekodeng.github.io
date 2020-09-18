@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-14T13:49:55.983Z</updated>
+  <updated>2020-09-18T03:36:32.338Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode setting sync配置及使用</title>
+    <link href="https://nekodeng.gitee.io/posts/vscode-setting-sync.html"/>
+    <id>https://nekodeng.gitee.io/posts/vscode-setting-sync.html</id>
+    <published>2020-09-18T03:24:21.782Z</published>
+    <updated>2020-09-18T03:36:32.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前言：vsCode最大的缺点就是每次换个电脑或者临时去个新环境,就要配置一下各种插件,所以使用vscode setting sync配置即可同步自己设置的插件等。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vscode使用" scheme="https://nekodeng.gitee.io/categories/vscode%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="vscode使用" scheme="https://nekodeng.gitee.io/tags/vscode%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello HarmonyOS</title>
@@ -522,41 +548,6 @@ url = window.location.href; /* 获取完整URL</summary>
     <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
     
     <category term="闭包" scheme="https://nekodeng.gitee.io/tags/%E9%97%AD%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-ajax</title>
-    <link href="https://nekodeng.gitee.io/posts/ajax.html"/>
-    <id>https://nekodeng.gitee.io/posts/ajax.html</id>
-    <published>2020-09-07T05:16:42.255Z</published>
-    <updated>2020-09-12T10:31:16.813Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Ajax（-Asynchronous-Javascript-And-XML）&quot;&gt;&lt;a href=&quot;#Ajax（-Asynchronous-Javascript-And-XML）&quot; class=&quot;headerlink&quot; title=&quot;Ajax（</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="ajax" scheme="https://nekodeng.gitee.io/tags/ajax/"/>
-    
-    <category term="cors" scheme="https://nekodeng.gitee.io/tags/cors/"/>
-    
-    <category term="jsonp" scheme="https://nekodeng.gitee.io/tags/jsonp/"/>
-    
-    <category term="promise" scheme="https://nekodeng.gitee.io/tags/promise/"/>
-    
-    <category term="GET/POST" scheme="https://nekodeng.gitee.io/tags/GET-POST/"/>
-    
-    <category term="同步/异步" scheme="https://nekodeng.gitee.io/tags/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5/"/>
     
   </entry>
   

@@ -1048,8 +1048,8 @@ readers do not read off random characters that represent icons */
 .fa-comment-slash:before {
   content: "\f4b3"; }
 
-/* .fa-comments:before {
-  content: "\f086"; } */
+.fa-comments:before {
+  content: "\f086"; }
 
 .fa-comments-dollar:before {
   content: "\f653"; }
@@ -2397,8 +2397,8 @@ readers do not read off random characters that represent icons */
 .fa-line:before {
   content: "\f3c0"; }
 
-.fa-link:before {
-  content: "\f0c1"; }
+/* .fa-link:before {
+  content: "\f0c1"; } */
 
 .fa-linkedin:before {
   content: "\f08c"; }

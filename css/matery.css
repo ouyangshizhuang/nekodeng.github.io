@@ -4,12 +4,18 @@
     .container {
         width: 95%;
     }
+    .comment-scroll {
+        bottom: 68px!important;
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 90%;
+    }
+    .comment-scroll {
+        bottom: 68px!important;
     }
 }
 
@@ -350,6 +356,7 @@ header .button-collapse i {
 
 header .side-nav .mobile-head {
     padding: 0 15px;
+    background-color: #000;
 }
 
 header .side-nav .mobile-head img {

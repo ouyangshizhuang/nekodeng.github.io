@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vscode setting sync配置及使用</title>
+      <link href="/posts/vscode-setting-sync.html"/>
+      <url>/posts/vscode-setting-sync.html</url>
+      
+        <content type="html"><![CDATA[<p>前言：vsCode最大的缺点就是每次换个电脑或者临时去个新环境,就要配置一下各种插件,所以使用vscode setting sync配置即可同步自己设置的插件等。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li><p>点击VSCode的插件栏搜索Settings Sync然后安装<br><img src="https://i.loli.net/2020/09/18/lIvuQwXadfD7x4c.png" alt="1.PNG"></p></li><li><p>安装完之后会弹出一个登陆界面,这里点击login with github<br><img src="https://i.loli.net/2020/09/18/BO58MZhXYLUo2lj.png" alt="2.PNG"></p></li><li><p>点击后会自动弹出一个登陆页面,登上你的github账户即可</p></li></ul><p><img src="https://i.loli.net/2020/09/18/xysehwkg8nmuIo5.png" alt="3.PNG"></p><ul><li>需要重启vscode</li></ul><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1.这里如果你是在vscode insider下面第一次使用这个软件,不用去创建什么gits Tonken,直接F1或者ctrl + shift + p搜索sync</p><ul><li>再选择 Sync: Upload / Update Settings 后会直接生成一个gits id(记得存好这个id)</li></ul><p><img src="https://i.loli.net/2020/09/18/KZleMBLtVpO8Pjz.png" alt="4.PNG"></p><p>2.在vscode任意界面按 Alt + Shift + U即可上传当前配置，并生成一个gits id.此时终端会打印上传成功的日志信息<br>3.保存好gits id，在需要导入远程配置的电脑上安装好该插件，使用组合键 Alt + Shift + D 即可下载配置。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vscode使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vscode使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello HarmonyOS</title>
       <link href="/posts/harmonyos.html"/>
       <url>/posts/harmonyos.html</url>
