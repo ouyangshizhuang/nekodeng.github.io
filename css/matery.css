@@ -277,6 +277,11 @@ mark {
     height: 69px;
 }
 
+.fa-comments:before {
+    content: "\f086";
+}
+
+
 .text-color {
     color: #0f9d58 !important;
 }
