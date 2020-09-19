@@ -4363,6 +4363,15 @@ readers do not read off random characters that represent icons */
 .fa-zhihu:before {
   content: "\f63f"; }
 
+.fa-moon-o:before {
+    content: "\f186";
+}
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+
+
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
