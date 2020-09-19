@@ -2104,6 +2104,10 @@ img.vimg:hover {
     right: 0px;
 }
 
+iframe[frameborder='no']{
+    width: 100%!important;
+}
+
 
 
 /*二级菜单*/
