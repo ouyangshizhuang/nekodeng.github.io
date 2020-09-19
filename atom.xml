@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-18T05:12:03.678Z</updated>
+  <updated>2020-09-19T11:24:34.357Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于hexo发布博客或评论的一些图片、音视频markdown语法</title>
+    <link href="https://nekodeng.gitee.io/posts/blog-markdown.html"/>
+    <id>https://nekodeng.gitee.io/posts/blog-markdown.html</id>
+    <published>2020-09-19T10:12:01.344Z</published>
+    <updated>2020-09-19T11:24:34.357Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;适用于：对于在发布博客文章和基于valine评论系统发布评论时的markdown语法编写场景&lt;/p&gt;
+&lt;h3 id=&quot;插入图片&quot;&gt;&lt;a href=&quot;#插入图片&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="markdown语法" scheme="https://nekodeng.gitee.io/categories/markdown%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="markdown语法" scheme="https://nekodeng.gitee.io/tags/markdown%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="博客插入图片和音视频" scheme="https://nekodeng.gitee.io/tags/%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%92%8C%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello HarmonyOS</title>
@@ -520,34 +548,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="jQuery" scheme="https://nekodeng.gitee.io/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-闭包和继承</title>
-    <link href="https://nekodeng.gitee.io/posts/closure-inheritance.html"/>
-    <id>https://nekodeng.gitee.io/posts/closure-inheritance.html</id>
-    <published>2020-09-07T05:33:36.939Z</published>
-    <updated>2020-09-13T02:13:40.643Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象&lt;br&gt;函数在调用的时候会创建一个执行环境对象（活动对象）&lt;/p&gt;
-&lt;h2 id=&quot;闭包（closure）&quot;&gt;&lt;a href=&quot;#闭包（closure）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="继承" scheme="https://nekodeng.gitee.io/tags/%E7%BB%A7%E6%89%BF/"/>
-    
-    <category term="闭包" scheme="https://nekodeng.gitee.io/tags/%E9%97%AD%E5%8C%85/"/>
     
   </entry>
   
