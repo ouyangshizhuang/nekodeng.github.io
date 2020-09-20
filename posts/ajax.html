@@ -51,6 +51,21 @@
 
 
 <body>
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        //  else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        // document.body.classList.add('dark');
+        // } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
+    
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -1854,65 +1869,7 @@ $(function () {
 });
 </script>
 
-    <!-- 深色模式切换按钮 -->
-<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<a onclick="switchNightMode()" class="switchmodesss">
-    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
-</a>
-<script>
-    //点击按钮后切换模式
-    function switchNightMode() {
-        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
-            function () {
-                var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") ||
-                    '0';
-                (DarkMode == '0') ? ($("body").addClass("night"), document.cookie = "DarkMode=1;path=/", $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o")) : ($("body").removeClass(
-                        "night"), document.cookie = "DarkMode=0;path=/", $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o")), setTimeout(function () {
-                    $(".Cuteen_DarkSky").fadeOut(1e3, function () {
-                        $(this).remove()
-                    })
-                }, 2e3)
-            }), 50
-        }
-        
-        //检查当前主题模式和图标是否对应
-        function checkNightMode() {
-            if ($("body").hasClass("night")) {
-                $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-                return;
-            }else{
-                $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-                return;
-            }
-            
-            //如果没有切换过，从 cookie 中获取标志位判断
-            if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-                if (new Date().getHours() >= 20 || new Date().getHours() < 6) {
-                    $("body").addClass("night");
-                    document.cookie = "DarkMode=1;path=/";
-                    console.log('夜间模式开启');
-                    $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-                } else {
-                    $("body").removeClass("night");
-                    document.cookie = "DarkMode=0;path=/";
-                    console.log('夜间模式关闭');
-                    $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-                }
-            } else {
-                var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-                if (DarkMode == '0') {
-                    $("body").removeClass("night");
-                     $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-                } else if (DarkMode == '1') {
-                    $("body").addClass("night");
-                    $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-                }
-            }
-        }
-        checkNightMode();
-    </script> -->
-
-
+    
 <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="javascript(0)">
