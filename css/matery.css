@@ -2107,6 +2107,11 @@ img.vimg:hover {
 iframe[frameborder='no']{
     width: 100%!important;
 }
+#toc-content {
+    max-height: 297px;
+}
+
+
 
 
 
@@ -2142,7 +2147,7 @@ iframe[frameborder='no']{
     color: #3f8cd9;
 }
 
-
+/* 颜色设置，需要自己手动逐个添加并适配 */
 .night #page,
 .night #colophon,
 .night #vcomments .vbtn,
@@ -2166,8 +2171,7 @@ iframe[frameborder='no']{
 .night #main-container,
 .night #page .yya,
 .night #content,
-.night #contentss,
-.night #footer {
+.night #contentss {
     background-color: #12121c;
 }
 .night strong,
@@ -2235,8 +2239,146 @@ iframe[frameborder='no']{
 }
 /* sun and noon.end */
 
+.fa-angle-double-down:before {
+    content: ""!important;
+}
 
 
+
+/* 美化ol标签 */
+ol{
+    list-style: none;  /* 隐藏原来的 1. 2. 等序号样式 */
+    counter-reset: ol-li;
+  }
+  
+  ol li:before {
+      display: block;
+      float: left;
+      width: 19px;   /* 宽度和高度需要根据自己的字体大小进行修正 */
+      height: 19px;
+      line-height: 19px;
+      margin: 4px 12px 0 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+      font-style: normal;
+      background-color: #49b1f5;
+      border-radius: 50%;
+      text-align: center;
+      content: counter(ol-li);
+      counter-increment: ol-li;
+      transition: all 1s;
+  }
+  ol li:hover::before{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}
+
+/* 美化hr换行符标签 */
+/* 美化 hr 样式 */
+hr {
+    position: relative;
+    margin: 2rem auto;
+    width: calc(100% - 4px);
+    border: 2px dashed #a4d8fa;
+    background: #fff;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+hr:before {
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    z-index: 1;
+    color: #49b1f5;
+    content: '\f0c4';
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 20px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+hr:hover::before{
+	left: 95%;
+}
+
+/* note 公共样式 */
+.note {
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: initial;
+    border-left: 3px solid #eee;
+    background-color: #f9f9f9;
+	border-radius: 3px;
+	font-size: var(--content-font-size);
+}
+
+.note:not(.no-icon):before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: larger;
+    top: 11px;
+    left: 15px;
+}
+
+.note:not(.no-icon) {
+    padding-left: 45px;
+}
+
+.note.info {
+    background-color: #eef7fa;
+	border-left-color: #428bca;
+}
+
+.note.info:not(.no-icon):before {
+    content: "\f05a";
+    color: #428bca;
+}
+
+.note.warning {
+    background-color: #fdf8ea;
+    border-left-color: #f0ad4e;
+}
+
+.note.warning:not(.no-icon):before {
+    content: "\f06a";
+    color: #f0ad4e;
+}
+
+.note.primary {
+    background-color: #f5f0fa;
+    border-left-color: #6f42c1;
+}
+
+.note.primary:not(.no-icon):before {
+    content: "\f055";
+    color: #6f42c1;
+}
+
+.note.danger {
+    background-color: #fcf1f2;
+    border-left-color: #d9534f;
+}
+
+.note.danger:not(.no-icon):before {
+    content: "\f056";
+    color: #d9534f;
+}
+
+
+  
 
 /*二级菜单*/
 .nav-menu li .sub-nav {

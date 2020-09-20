@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
+    <link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"/>
+
+
     <script src="/libs/jquery/jquery.min.js"></script>
     <script>
         (function(){
@@ -534,6 +537,55 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/posts/hexo-note.html">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="关于hexo博客的note标签美化">
+                            
+                            <span class="card-title">关于hexo博客的note标签美化</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                前言：为了美化hexo博客文章，所以加入note标签并加以美化
+
+引入FontAwesome v4.7.0 版本的 CSS 文件&lt;link type=&#39;text/css&#39; rel=&quot;stylesheet&qu
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" class="post-category">
+                                    关于hexo博客美化
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/hexo%E5%8D%9A%E5%AE%A2note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/">
+                            <span class="chip bg-color">hexo博客note标签美化</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/posts/blog-markdown.html">
                         <div class="card-image">
                             
@@ -548,8 +600,9 @@
                         <div class="summary block-with-text">
                             
                                 适用于：对于在发布博客文章和基于valine评论系统发布评论时的markdown语法编写场景
+
 插入图片
-一般情况下，可以将自己的图片上传至一个指定图床，便于调用。博主目前用的是sm.sm这个图床，免费5G空间，传输也快，支持jpg、png、
+一般情况下，可以将自己的图片上传至一个指定图床，便于调用。博主目前用的是sm.sm这个图床，免费5G空间，传输也快，支持jpg、png
                             
                         </div>
                         <div class="publish-info">
@@ -1107,60 +1160,6 @@ http协议：基于TCP/IP的’无状态’通信协议前端（浏览器客户�
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/express.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="express应用程序生成器">
-                            
-                            <span class="card-title">express应用程序生成器</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                express 应用程序生成器安装：$ npm install express-generator -g
-npm list -g —depth=0 查看全局安装的插件
-npx 临时使用的命令，临时安装插件时使用，用完之后删除
-npx exp
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/NodeJS/" class="post-category">
-                                    NodeJS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/express%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E6%88%90%E5%99%A8/">
-                            <span class="chip bg-color">express应用程序生成器</span>
-                        </a>
-                        
-                        <a href="/tags/NodeJS/">
-                            <span class="chip bg-color">NodeJS</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 
@@ -1265,7 +1264,7 @@ npx exp
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">41.1k</span>&nbsp;
+                class="white-color">41.7k</span>&nbsp;
             
             
             
@@ -1373,22 +1372,14 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="javascript(0)">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-<!-- 深色模式切换按钮 -->
+    <!-- 深色模式切换按钮 -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <a onclick="switchNightMode()" class="switchmodesss">
-    <i class="fa fa-moon-o night-mode fa-lightbulb-o" id="nightMode" aria-hidden="true"></i>
-</a>      
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
 <script>
-//点击按钮后切换模式
-function switchNightMode() {
+    //点击按钮后切换模式
+    function switchNightMode() {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
             function () {
                 var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") ||
@@ -1400,47 +1391,55 @@ function switchNightMode() {
                     })
                 }, 2e3)
             }), 50
-    }
-    
-    //检查当前主题模式和图标是否对应
-    function checkNightMode() {
-        if ($("body").hasClass("night")) {
-            $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-            return;
-        }else{
-            $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-            return;
         }
         
-        //如果没有切换过，从 cookie 中获取标志位判断
-        if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-            if (new Date().getHours() >= 20 || new Date().getHours() < 6) {
-                $("body").addClass("night");
-                document.cookie = "DarkMode=1;path=/";
-                console.log('夜间模式开启');
+        //检查当前主题模式和图标是否对应
+        function checkNightMode() {
+            if ($("body").hasClass("night")) {
                 $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-            } else {
-                $("body").removeClass("night");
-                document.cookie = "DarkMode=0;path=/";
-                console.log('夜间模式关闭');
+                return;
+            }else{
                 $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+                return;
             }
-        } else {
-            var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-            if (DarkMode == '0') {
-                $("body").removeClass("night");
-                 $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-            } else if (DarkMode == '1') {
-                $("body").addClass("night");
-                $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+            
+            //如果没有切换过，从 cookie 中获取标志位判断
+            if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
+                if (new Date().getHours() >= 20 || new Date().getHours() < 6) {
+                    $("body").addClass("night");
+                    document.cookie = "DarkMode=1;path=/";
+                    console.log('夜间模式开启');
+                    $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+                } else {
+                    $("body").removeClass("night");
+                    document.cookie = "DarkMode=0;path=/";
+                    console.log('夜间模式关闭');
+                    $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+                }
+            } else {
+                var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+                if (DarkMode == '0') {
+                    $("body").removeClass("night");
+                     $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+                } else if (DarkMode == '1') {
+                    $("body").addClass("night");
+                    $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+                }
             }
         }
-    }
-    checkNightMode();
-</script>
-<!-- <script>
-    var nightModeId="nightMode",darkMode={autoNightMode:function(){var nightModes=$(".night-mode"),day,D=(new Date).getHours(),isNightMode=hanUtils.getLocalStorage(nightModeId);if(D<=nightModeStartTime&&D>nightModeEndTime){if(!0===isNightMode)return void darkMode.changeNightMode(nightModes);darkMode.changeLightMode(nightModes)}else{if(!1===isNightMode)return void darkMode.changeLightMode(nightModes);darkMode.changeNightMode(nightModes)}"function"==typeof renderComment&&renderComment()},changeLightMode:function(nightModes){$(document.body).removeClass("night");for(var i=0;i<nightModes.length;i++){var nightMode=$(nightModes[i]);nightMode.addClass("fa-moon"),nightMode.removeClass("fa-lightbulb")}hanUtils.setLocalStorage(nightModeId,!1)},changeNightMode:function(nightModes){$(document.body).addClass("night"),$("body").css("background-image","none");for(var i=0;i<nightModes.length;i++){var nightMode=$(nightModes[i]);nightMode.addClass("fa-lightbulb"),nightMode.removeClass("fa-moon")}hanUtils.setLocalStorage(nightModeId,!0)},nightModeFuc:function(){var nightModes=$(".night-mode");if(nightModes)for(var i=0;i<nightModes.length;i++){var nightMode=$(nightModes[i]);darkMode.doFuncNightMode(nightMode)}},doFuncNightMode:function(nightMode){var nightModeBtn=$(".night-mode");$(document.body).hasClass("night")?(nightModeBtn.addClass("fa-lightbulb"),nightModeBtn.removeClass("fa-moon"),$("#modeicon").attr("xlink:href","#icon-sun"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-moon-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-lightbulb-o")):(nightModeBtn.addClass("fa-moon"),nightModeBtn.removeClass("fa-lightbulb"),$("#modeicon").attr("xlink:href","#icon-_moon"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-lightbulb-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-moon-o")),nightMode.click((function(e){nightMode.hasClass("fa-moon")?($(document.body).addClass("night"),nightModeBtn.addClass("fa-lightbulb"),nightModeBtn.removeClass("fa-moon"),$("#modeicon").attr("xlink:href","#icon-sun"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-moon-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-lightbulb-o"),hanUtils.setLocalStorage(nightModeId,!0)):nightMode.hasClass("fa-lightbulb")&&($(document.body).removeClass("night"),nightModeBtn.addClass("fa-moon"),nightModeBtn.removeClass("fa-lightbulb"),$("#modeicon").attr("xlink:href","#icon-_moon"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-lightbulb-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-moon-o"),hanUtils.setLocalStorage(nightModeId,!1)),$(document.body).removeClass("sidebar-opened"),$("body").css("background-image","none"),"function"==typeof renderComment&&renderComment()}))}};$((function(){darkMode.autoNightMode(),darkMode.nightModeFuc()}));
-</script> -->
+        checkNightMode();
+    </script> -->
+
+
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="javascript(0)">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+
 
 
     <script src="/libs/materialize/materialize.min.js"></script>

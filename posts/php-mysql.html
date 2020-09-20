@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
+    <link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"/>
+
+
     <script src="/libs/jquery/jquery.min.js"></script>
     <script>
         (function(){
@@ -331,7 +334,6 @@
 
 
 <main class="post-container content">
-
     
     <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
@@ -1686,7 +1688,6 @@ http协议：基于TCP/IP的’无状态’通信协议前端（浏览器客户�
 </script>
 
     
-
 </main>
 
 
@@ -1764,7 +1765,7 @@ http协议：基于TCP/IP的’无状态’通信协议前端（浏览器客户�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">41.1k</span>&nbsp;
+                class="white-color">41.7k</span>&nbsp;
             
             
             
@@ -1872,22 +1873,14 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="javascript(0)">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-<!-- 深色模式切换按钮 -->
+    <!-- 深色模式切换按钮 -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <a onclick="switchNightMode()" class="switchmodesss">
-    <i class="fa fa-moon-o night-mode fa-lightbulb-o" id="nightMode" aria-hidden="true"></i>
-</a>      
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
 <script>
-//点击按钮后切换模式
-function switchNightMode() {
+    //点击按钮后切换模式
+    function switchNightMode() {
         $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
             function () {
                 var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") ||
@@ -1899,47 +1892,55 @@ function switchNightMode() {
                     })
                 }, 2e3)
             }), 50
-    }
-    
-    //检查当前主题模式和图标是否对应
-    function checkNightMode() {
-        if ($("body").hasClass("night")) {
-            $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-            return;
-        }else{
-            $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-            return;
         }
         
-        //如果没有切换过，从 cookie 中获取标志位判断
-        if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-            if (new Date().getHours() >= 20 || new Date().getHours() < 6) {
-                $("body").addClass("night");
-                document.cookie = "DarkMode=1;path=/";
-                console.log('夜间模式开启');
+        //检查当前主题模式和图标是否对应
+        function checkNightMode() {
+            if ($("body").hasClass("night")) {
                 $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
-            } else {
-                $("body").removeClass("night");
-                document.cookie = "DarkMode=0;path=/";
-                console.log('夜间模式关闭');
+                return;
+            }else{
                 $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+                return;
             }
-        } else {
-            var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-            if (DarkMode == '0') {
-                $("body").removeClass("night");
-                 $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
-            } else if (DarkMode == '1') {
-                $("body").addClass("night");
-                $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+            
+            //如果没有切换过，从 cookie 中获取标志位判断
+            if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
+                if (new Date().getHours() >= 20 || new Date().getHours() < 6) {
+                    $("body").addClass("night");
+                    document.cookie = "DarkMode=1;path=/";
+                    console.log('夜间模式开启');
+                    $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+                } else {
+                    $("body").removeClass("night");
+                    document.cookie = "DarkMode=0;path=/";
+                    console.log('夜间模式关闭');
+                    $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+                }
+            } else {
+                var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+                if (DarkMode == '0') {
+                    $("body").removeClass("night");
+                     $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+                } else if (DarkMode == '1') {
+                    $("body").addClass("night");
+                    $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o");
+                }
             }
         }
-    }
-    checkNightMode();
-</script>
-<!-- <script>
-    var nightModeId="nightMode",darkMode={autoNightMode:function(){var nightModes=$(".night-mode"),day,D=(new Date).getHours(),isNightMode=hanUtils.getLocalStorage(nightModeId);if(D<=nightModeStartTime&&D>nightModeEndTime){if(!0===isNightMode)return void darkMode.changeNightMode(nightModes);darkMode.changeLightMode(nightModes)}else{if(!1===isNightMode)return void darkMode.changeLightMode(nightModes);darkMode.changeNightMode(nightModes)}"function"==typeof renderComment&&renderComment()},changeLightMode:function(nightModes){$(document.body).removeClass("night");for(var i=0;i<nightModes.length;i++){var nightMode=$(nightModes[i]);nightMode.addClass("fa-moon"),nightMode.removeClass("fa-lightbulb")}hanUtils.setLocalStorage(nightModeId,!1)},changeNightMode:function(nightModes){$(document.body).addClass("night"),$("body").css("background-image","none");for(var i=0;i<nightModes.length;i++){var nightMode=$(nightModes[i]);nightMode.addClass("fa-lightbulb"),nightMode.removeClass("fa-moon")}hanUtils.setLocalStorage(nightModeId,!0)},nightModeFuc:function(){var nightModes=$(".night-mode");if(nightModes)for(var i=0;i<nightModes.length;i++){var nightMode=$(nightModes[i]);darkMode.doFuncNightMode(nightMode)}},doFuncNightMode:function(nightMode){var nightModeBtn=$(".night-mode");$(document.body).hasClass("night")?(nightModeBtn.addClass("fa-lightbulb"),nightModeBtn.removeClass("fa-moon"),$("#modeicon").attr("xlink:href","#icon-sun"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-moon-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-lightbulb-o")):(nightModeBtn.addClass("fa-moon"),nightModeBtn.removeClass("fa-lightbulb"),$("#modeicon").attr("xlink:href","#icon-_moon"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-lightbulb-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-moon-o")),nightMode.click((function(e){nightMode.hasClass("fa-moon")?($(document.body).addClass("night"),nightModeBtn.addClass("fa-lightbulb"),nightModeBtn.removeClass("fa-moon"),$("#modeicon").attr("xlink:href","#icon-sun"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-moon-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-lightbulb-o"),hanUtils.setLocalStorage(nightModeId,!0)):nightMode.hasClass("fa-lightbulb")&&($(document.body).removeClass("night"),nightModeBtn.addClass("fa-moon"),nightModeBtn.removeClass("fa-lightbulb"),$("#modeicon").attr("xlink:href","#icon-_moon"),$(".theme-controls").find("#dark-bg").children("i").removeClass("fa-lightbulb-o"),$(".theme-controls").find("#dark-bg").children("i").addClass("fa-moon-o"),hanUtils.setLocalStorage(nightModeId,!1)),$(document.body).removeClass("sidebar-opened"),$("body").css("background-image","none"),"function"==typeof renderComment&&renderComment()}))}};$((function(){darkMode.autoNightMode(),darkMode.nightModeFuc()}));
-</script> -->
+        checkNightMode();
+    </script> -->
+
+
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="javascript(0)">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+
 
 
     <script src="/libs/materialize/materialize.min.js"></script>

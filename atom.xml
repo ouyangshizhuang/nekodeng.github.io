@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-19T11:24:34.357Z</updated>
+  <updated>2020-09-20T06:43:34.150Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,18 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于hexo博客的note标签美化</title>
+    <link href="https://nekodeng.gitee.io/posts/hexo-note.html"/>
+    <id>https://nekodeng.gitee.io/posts/hexo-note.html</id>
+    <published>2020-09-20T06:29:23.310Z</published>
+    <updated>2020-09-20T06:43:34.150Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言：为了美化hexo博客文章，所以加入note标签并加以美化&lt;/div&gt;
+
+&lt;h3 id=&quot;引入FontAwesome-v4-7-0-版本的-CSS-文件&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="关于hexo博客美化" scheme="https://nekodeng.gitee.io/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="hexo博客note标签美化" scheme="https://nekodeng.gitee.io/tags/hexo%E5%8D%9A%E5%AE%A2note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于hexo发布博客或评论的一些图片、音视频markdown语法</title>
     <link href="https://nekodeng.gitee.io/posts/blog-markdown.html"/>
     <id>https://nekodeng.gitee.io/posts/blog-markdown.html</id>
     <published>2020-09-19T10:12:01.344Z</published>
-    <updated>2020-09-19T11:24:34.357Z</updated>
+    <updated>2020-09-20T06:33:09.766Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;适用于：对于在发布博客文章和基于valine评论系统发布评论时的markdown语法编写场景&lt;/p&gt;
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;适用于：对于在发布博客文章和基于valine评论系统发布评论时的markdown语法编写场景&lt;/div&gt;
+
 &lt;h3 id=&quot;插入图片&quot;&gt;&lt;a href=&quot;#插入图片&quot; class=&quot;headerlink&quot;</summary>
         
       
@@ -523,31 +551,6 @@ url = window.location.href; /* 获取完整URL</summary>
     <category term="AMD/CMD" scheme="https://nekodeng.gitee.io/tags/AMD-CMD/"/>
     
     <category term="依赖" scheme="https://nekodeng.gitee.io/tags/%E4%BE%9D%E8%B5%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery</title>
-    <link href="https://nekodeng.gitee.io/posts/jquery.html"/>
-    <id>https://nekodeng.gitee.io/posts/jquery.html</id>
-    <published>2020-09-07T05:48:59.639Z</published>
-    <updated>2020-09-12T10:28:34.578Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;jQuery-语法&quot;&gt;&lt;a href=&quot;#jQuery-语法&quot; class=&quot;headerlink&quot; title=&quot;jQuery 语法&quot;&gt;&lt;/a&gt;jQuery 语法&lt;/h2&gt;&lt;p&gt;jQuery 语法是通过选取 HTML</summary>
-        
-      
-    
-    
-    
-    <category term="jQuery" scheme="https://nekodeng.gitee.io/categories/jQuery/"/>
-    
-    
-    <category term="jQuery" scheme="https://nekodeng.gitee.io/tags/jQuery/"/>
     
   </entry>
   
