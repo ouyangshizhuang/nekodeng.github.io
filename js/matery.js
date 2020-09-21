@@ -119,6 +119,7 @@ $(function () {
 
     $('.modal').modal();
 
+
     /*回到顶部*/
     $('#backTop').click(function () {
         $('body,html').animate({scrollTop: 0}, 400);
@@ -141,9 +142,11 @@ $(function () {
         if (position < showPosition) {
             $nav.addClass('nav-transparent');
             $backTop.slideUp(300);
+            // $('#sma').fadeOut(); //浅色暗色按钮切换模式的根据窗口位置进出动画
         } else {
             $nav.removeClass('nav-transparent');
             $backTop.slideDown(300);
+            // $('#sma').fadeIn(); //浅色暗色按钮切换模式的根据窗口位置进出动画
         }
     }
 

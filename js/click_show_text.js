@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
             "top": y - 20,
             "left": x,
             "position": "absolute",
-            "font-weight": "bold",
+            "font-weight": "400",
             "color": "linear-gradient(to bottom, green, pink)"
         });
         $("body").append($i);

@@ -21,6 +21,11 @@
         bottom: 68px!important;
     }
 }
+@media only screen and (min-width: 700px) {
+    .v[data-class=v] .vwrap .vheader .vinput {
+        width: 32.33%!important;
+    }
+}
 
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
@@ -274,10 +279,16 @@ mark {
 }
 
 .card .card-image img {
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 0 0 0;
     /* 修改文章列表图片填充样式为 cover 以覆盖整个区域而不会被缩放 */
     object-fit: cover;
+    transition: all 0.7s;
+    overflow: hidden;
 }
+article .card:hover .card-image img {
+    transform: scale(1.06);
+}
+
 
 .container .row {
     margin-bottom: 0;
@@ -855,7 +866,7 @@ article .card {
 
 article .card-image {
     background-color: #222;
-    border-radius: 8px;
+    border-radius: 8px 0 0 0;
 }
 
 article .card-image img {
@@ -1009,7 +1020,7 @@ article .article-tags .chip {
 }
 
 #artDetail .article-tag .chip {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     height: 25px;
     line-height: 24px;
@@ -1018,9 +1029,53 @@ article .article-tags .chip {
     margin-right: 5px;
     margin-bottom: 2px;
 }
+article .article-tags .chip:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, .7);
+    border: 1px solid #000 ;
+}
+body.dark article .article-tags .chip:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, .7);
+    border: 1px solid #000 ;
+}
+body.dark .v[data-class=v] .vcards {
+    border: none;
+}
+body.dark .v[data-class=v] .vwrap {
+    border: 1px solid #444;
+}
+body.dark .v[data-class=v] .vwrap .vheader .vinput {
+    border-bottom: 1px solid #444;
+}
+body.dark .v[data-class=v] .vicon {
+    fill: #807d7d;
+}
+body.dark .v[data-class=v] .vbtn {
+    border-color: #807d7d;
+}
+.v[data-class=v] .vicon+.vicon {
+    margin-left: 15px!important;
+} 
+body.dark .aplayer.aplayer-fixed .aplayer-miniswitcher {
+    background-color: #282c34;
+}
+body.dark .aplayer.aplayer-fixed .aplayer-body {
+    background-color: #14171d;
+}
+body.dark .aplayer.aplayer-fixed .aplayer-info {
+    border-top: none;
+}
+body.dark .nav-item a:hover span {
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
+}
 
+
+#artDetail .article-tag .chip:hover {
+    color: #42b983;
+}
 #artDetail .tag_share .article-tag .chip {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 400;
     height: 25px;
     line-height: 23px;
@@ -1055,6 +1110,7 @@ article .article-tags .chip {
 
 #artDetail .post-info {
     color: #525f7f;
+    padding-bottom: 22px;
 }
 
 #artDetail .post-info .post-category {
@@ -1878,8 +1934,23 @@ footer .copy-right {
 
 .frind-ship .title img {
     object-fit: contain;
+    transition: all 0.7s;
+}
+.friend-div:hover .title img {
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); 	/* Opera */
 }
 
+
+.vtag.vfriend {
+    background: #067cb7!important;
+}
+.v[data-class=v] .vwrap .vheader .vinput {
+    width: 32.33%;
+}
 .v .vwrap .vheader .vinput {
     color: #000;
 }
@@ -2090,6 +2161,11 @@ img.vimg:hover {
 }
 #maina li span div p {
     margin-right: 10px;
+    margin-bottom: 9px;
+    font-size: 19px;
+    color: #060606;
+    font-weight: 400;
+    font-family: 'Source Sans Pro',"Noto Serif SC",Helvetica,Arial,Menlo,Monaco,monospace,sans-serif;      
 }
 #switchUser {
     margin-left: 12px;
@@ -2135,8 +2211,11 @@ iframe[frameborder='no']{
 .fa-lightbulb-o, .fa-moon-o {
     color: #fff;
 }
-.fa-lightbulb-o:hover, .fa-moon-o:hover {
-    color: #039be5;
+.fa-lightbulb-o:hover{
+    color: #039be5!important;
+}
+.fa-moon-o:hover {
+    color: #039be5!important;
 }
 .fa-lightbulb-o:before {
     content: "\f0eb"!important;
@@ -2202,6 +2281,31 @@ body.dark nav ul li:hover a span {
 #operare_artitalk .shuoshuo_input_log {
     padding: 0!important;
 }
+body.dark #artitalk_main .shuoshuo_text {
+    background: url(/medias/comment_bg.png) 100% 100% no-repeat!important;
+}
+article .card {
+    transition: all 0.6s;
+    box-shadow: 0 1px 20px -6px rgba(0,0,0,)
+}
+article .card:hover {
+    transform: scale3d(1.06,1.06,1.08);
+}
+body.dark code,
+body.dark hr
+{
+    opacity: .6;
+}
+#artitalk_main p.shuoshuo_time {
+    font-size: 15px!important;
+    font-weight: 400!important;
+}
+#artitalk_main p.shuoshuo_time {
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+    margin-top: 20px!important;
+}
+
 
 
 
