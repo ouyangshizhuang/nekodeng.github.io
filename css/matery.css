@@ -7,6 +7,9 @@
     .comment-scroll {
         bottom: 68px!important;
     }
+    #sma {
+        bottom: 122px!important;
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
@@ -45,6 +48,7 @@ body {
     color: #34495e;
 }
 
+
 .frind-ship .title h1 {
     font-size: 1.2rem;
     font-weight: 400;
@@ -55,23 +59,23 @@ body {
 }
 h1 {
     margin: 48px 0 22px -5px;
-    font-size: 2.0rem;
-    font-weight: bold;
-    line-height: 2.0rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8rem;
 }
 
 h2 {
     margin: 42px 0 18px -5px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    line-height: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5rem;
 }
 
 h3 {
     margin: 38px 0 15px -4px;
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1.7rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5rem;
 }
 
 h4 {
@@ -394,7 +398,7 @@ header .side-nav .menu-list li {
 header .side-nav .menu-list a {
     height: 50px;
     line-height: 50px;
-    color: #34495e !important;
+    color: #34495e;
 }
 
 .mobile-menu-list a i {
@@ -706,6 +710,9 @@ header .go-back i {
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .index-card .card .card-content {
         padding: 20px 20px;
+    }
+    #sma {
+        bottom: 123px!important;
     }
 }
 
@@ -1326,7 +1333,7 @@ body.dark .chip-container .chip {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to bottom right, #FF9999 0%, #ff6666 100%);
 }
 
 .chip .tag-length {
@@ -2165,10 +2172,41 @@ body.dark #artDetail .article-tag .chip {
 body.dark .bg-cover {
     opacity: 0.8;
 }
+.fa-link:before {
+    content: ""!important;
+}
+body.dark nav ul li:hover a span {
+    border-bottom: 0px;
+}
+.fa-chrome:before {
+    color: #f14f05;
+}
+.fab {
+    margin-right: 0.5rem;
+}
+.fa-windows:before {
+    color: #3f8cd9;
+}
+.fa-edge:before {
+    color: #1a2bdc;
+}
+.fa-safari:before {
+    color: #26a69a;
+}
+.fa-apple:before {
+    color: black;
+}
+.vhead .vtag.vmaster {
+    background: #f75b03;
+}
+#operare_artitalk .shuoshuo_input_log {
+    padding: 0!important;
+}
+
 
 
 /* 深色模式设置 */
-/* 字体颜色变白色 */
+/* 字体颜色变灰白色 */
 body.dark span, 
 body.dark .fas,
 body.dark a,
@@ -2195,7 +2233,10 @@ body.dark h5,
 body.dark h6,
 body.dark li,
 body.dark p,
-body.dark .bg-cover .post-title
+body.dark .bg-cover .post-title,
+body.dark header .side-nav .mobile-head .logo-name,
+body.dark header .side-nav .mobile-head .logo-desc,
+body.dark header .side-nav .menu-list a
  {
     color: rgba(255, 255, 255, .6);
 }
@@ -2211,7 +2252,10 @@ body.dark .block-with-text:after
 /* 背景颜色变黑色 */
 body.dark,
 body.dark .v[data-class=v] .vcount,
-body.dark #rewardModal .modal-content
+body.dark #rewardModal .modal-content,
+body.dark .modal,
+body.dark header .side-nav,
+body.dark header .side-nav .menu-list .m-nav-show
 {
     background-color: #12121c;
 }
@@ -2243,7 +2287,7 @@ body.dark img, body.dark strong {
 }
 #sma .fa-lightbulb-o  {
     position: absolute;
-    right: 12px;
+    right: 13px;
     bottom: 8px;
     font-size: 1.5rem!important;
 }
