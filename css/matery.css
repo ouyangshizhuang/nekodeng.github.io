@@ -958,7 +958,7 @@ article .article-tags .chip {
 }
 
 .paging .page-info {
-    font-size: 1.4rem;
+    font-size: 1.05rem;
     color: #888;
     padding-top: 1rem;
 }
@@ -974,6 +974,23 @@ article .article-tags .chip {
 .paging .disabled i {
     color: #999 !important;
 }
+.fa-home:before {
+    content: ""!important;
+}
+.fa-tags:before {
+    content: ""!important;
+}
+.fa-bookmark:before {
+    content: ""!important;
+}
+.fa-archive:before {
+    content: ""!important;
+}
+.fa-user-circle:before {
+    content: ""!important;
+}
+
+
 
 /*文章详情样式*/
 #artDetail {
