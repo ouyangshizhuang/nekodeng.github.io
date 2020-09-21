@@ -989,6 +989,12 @@ article .article-tags .chip {
 .fa-user-circle:before {
     content: ""!important;
 }
+.fa-user:before {
+    content: ""!important;
+}
+.fa-copyright:before {
+    content: ""!important;
+}
 
 
 
@@ -2259,8 +2265,11 @@ body.dark .tag_share {
 body.dark #artDetail .reprint:hover {
     box-shadow: none;
 }
+#artDetail .reprint {
+    margin-bottom: 22px;
+}
 body.dark #artDetail .reprint {
-    border: 1px solid rgba(255, 255, 255, .6);
+    border: 1px solid #444;
 }
 body.dark #artDetail .article-tag .chip {
     opacity: 0.7;
