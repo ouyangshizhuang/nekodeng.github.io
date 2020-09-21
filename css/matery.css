@@ -989,13 +989,28 @@ article .article-tags .chip {
 .fa-user-circle:before {
     content: ""!important;
 }
-.fa-user:before {
+.publish-date {
+    color: #222;
+}
+body.dark .publish-date {
+    color: #fdf8ea;
+}
+.v[data-class=v] .vcards .vcard .vhead .vnick {
+    color: #da9b2c!important;
+}
+
+.fa-chain:before, .fa-link:before {
+    content: "\f0c2"!important;
+}
+/* .fa-user:before {
     content: ""!important;
 }
 .fa-copyright:before {
     content: ""!important;
 }
-
+.fa-link:before {
+    content: ""!important;
+} */
 
 
 /*文章详情样式*/
@@ -1202,7 +1217,12 @@ body.dark .nav-item a:hover span {
 
 #artDetail .reprint-info {
     word-break: break-word;
+
 }
+body.dark #artDetail .reprint-info {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 
 #artDetail .reprint:hover {
     box-shadow: 0 0 10px 0 rgba(232, 237, 250, .6), 0 4px 8px 0 rgba(232, 237, 250, .5)
@@ -2279,11 +2299,9 @@ body.dark #artDetail .article-tag .chip {
     opacity: 0.9;
 }
 body.dark .bg-cover {
-    opacity: 0.8;
+    opacity: 0.9!important;
 }
-.fa-link:before {
-    content: ""!important;
-}
+
 body.dark nav ul li:hover a span {
     border-bottom: 0px;
 }
