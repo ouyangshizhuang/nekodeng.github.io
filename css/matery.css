@@ -1014,6 +1014,10 @@ article .article-tags .chip {
     header .brand-logo .logo-span {
         display: none;
     }
+    #artDetail .reprint {
+        padding: 0px 0px!important;
+        border: none!important;
+    }
 }
 @media only screen and (min-width: 1418px) {
     #artDetail {
@@ -2272,7 +2276,7 @@ body.dark #artDetail .reprint {
     border: 1px solid #444;
 }
 body.dark #artDetail .article-tag .chip {
-    opacity: 0.7;
+    opacity: 0.9;
 }
 body.dark .bg-cover {
     opacity: 0.8;
@@ -2331,15 +2335,17 @@ body.dark hr
     padding-bottom: 10px!important;
     margin-top: 20px!important;
 }
+.fa-eye:before {
+    content: ""!important;
+}
+
 
 
 
 
 /* 深色模式设置 */
-/* 字体颜色变灰白色 */
-body.dark span, 
+/* 字体颜色变灰白色 */ 
 body.dark .fas,
-body.dark a,
 body.dark .title,
 body.dark .row .text,
 body.dark article .article-content .summary,
@@ -2363,13 +2369,18 @@ body.dark h5,
 body.dark h6,
 body.dark li,
 body.dark p,
-body.dark .bg-cover .post-title,
 body.dark header .side-nav .mobile-head .logo-name,
 body.dark header .side-nav .mobile-head .logo-desc,
 body.dark header .side-nav .menu-list a
  {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 0.6);
 }
+body.dark .bg-cover .post-title,
+body.dark a
+{
+    color: rgba(255, 255, 255, 0.75);
+}
+
 
 /* 背景颜色变灰色 */
 body.dark .card,
