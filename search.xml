@@ -163,6 +163,12 @@
         <content type="html"><![CDATA[<p>域名：新网 万网<br>服务器及域名购买(略)</p><h2 id="安装各种环境"><a href="#安装各种环境" class="headerlink" title="安装各种环境"></a>安装各种环境</h2><p>1、任意命令行工具里输入ssh root@服务器公网IP</p><p>2、输入yes，然后输入服务器开机密码。密码处于安全考虑不会显示<br><img src="https://i.loli.net/2020/09/13/MtVHkWlQyn2IPNz.png" alt="1.PNG"></p><p>3、安装git yum install git<br><img src="https://i.loli.net/2020/09/13/EVCQ71ukzbBotFN.png" alt="2.PNG"></p><p><img src="https://i.loli.net/2020/09/13/zXUS6iu9j7deW3H.png" alt="3.PNG"><br>4、安装node高版本，安好之后就有node和npm<br><code>$ curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -</code><br><code>$ yum install nodejs</code><br>5、一般在data文件夹下放数据，通过touch index.html可以创建一个文件，使用自带的vi/vim工具可以进行编辑，cat命令只查看不编辑<br>6、安装httpserver <code>npm i http-server -g</code><br>7、 <code>http-server</code> 启动服务<br>8、安装pm2 让node进程保持后台运行 <code>npm i pm2 -g</code><br><code>pm2 start http-server</code> 让服务器保持运行<br><code>pm2 list/ls</code> 查看有哪些通过pm2运行的服务<br><code>pm2 delete 需要关闭服务的id</code> 停止服务</p><h2 id="通过nginx部署服务"><a href="#通过nginx部署服务" class="headerlink" title="通过nginx部署服务"></a>通过nginx部署服务</h2><p>1、安装nginx <code>yum install nginx -y</code><br>nginx的配置文件在etc/nginx/conf.d/*.conf这个文件里面<br><img src="https://i.loli.net/2020/09/13/E6kZqo7ywhxTM1j.png" alt="4.PNG"></p><p>基本配置：进入到 /etc/nginx/conf.d 新建一个 <strong>任意名字.conf</strong> 在里面写入server的配置<br><em>pwd</em> 查看当前所在的路径<br><em>i</em> 编辑 insert<br><em>:wq</em> 保存并退出</p><pre><code>server &#123;    listen 8000; // 端口    root /var/www/yourfolder/build/; // 指向你要访问的文件夹    location / &#123;        try_files $uri $uri/ /index.html;    &#125;    location /api/ &#123;        proxy_pass http://serverip:4444;    &#125;</code></pre><p>完成后保存，并重启nginx服务：<br><code>$ nginx -t</code><br>这时执行<br><code>$ nginx -c /etc/nginx/nginx.conf</code>  只需执行一次<br><code>$ nginx -s reload</code></p><p>2、解析域名，通过域名访问之前的IP地址：<br><img src="https://i.loli.net/2020/09/13/xTw7VKXbn98l2mO.png" alt="5.PNG"></p><p>3、通过git clone 项目地址来克隆自己的项目<br>4、npm i 安装项目所需的所有依赖<br>5、npm run serve 运行服务<br>6、npm run build 部署<br>解决nginx不能npm run build的问题：</p><pre><code>$ sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024$ sudo /sbin/mkswap /var/swap.1$ sudo /sbin/swapon /var/swap.1</code></pre><p>7、在conf.d下面创建一个项目需要的配置文件，来指向项目目录下的dist文件夹下面的index文件<br>如果获取不到数据报错，需要设置nginx代理：<br><code>location /api &#123; proxy_pass 需要获取的数据来源地址;&#125;</code><br>8、遇到页面刷新报错就在conf.d里加入一个这样的location：</p><pre><code>location / &#123;  try_files $uri $uri/ /index.html;&#125;</code></pre><p>最后效果如下图：</p><p><img src="https://i.loli.net/2020/09/13/MEIBiWmRnUL7AOk.png" alt="6.PNG"></p><p>遇到nginx 403 forbidden问题解决办法<br>打开nginx.conf把用户名设置为主机名，一般是root</p><pre><code>$ vim nginx.conf      user root</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> 项目上线流程 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -195,9 +201,9 @@
             
             <tag> 防抖/节流 </tag>
             
-            <tag> 懒加载/预加载 </tag>
-            
             <tag> CDN </tag>
+            
+            <tag> 懒/预加载 </tag>
             
         </tags>
       
