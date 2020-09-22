@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-21T03:14:19.973Z</updated>
+  <updated>2020-09-22T08:25:18.948Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于给hexo博客适配全局深色模式</title>
+    <link href="https://nekodeng.gitee.io/posts/hexo-darkmode.html"/>
+    <id>https://nekodeng.gitee.io/posts/hexo-darkmode.html</id>
+    <published>2020-09-22T07:03:37.926Z</published>
+    <updated>2020-09-22T08:25:18.948Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言：目前，主流系统无论是Windows、MacOS、各大手机厂商系统都支持主题全局深色模式了，所以萌生了这个想法，将博客也是配全局深色模式。&lt;/div&gt;
+
+&lt;h3 id=&quot;首先，选择适合自己主题的方案&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="关于hexo博客" scheme="https://nekodeng.gitee.io/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="hexo博客适配全局深色模式" scheme="https://nekodeng.gitee.io/tags/hexo%E5%8D%9A%E5%AE%A2%E9%80%82%E9%85%8D%E5%85%A8%E5%B1%80%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>关于hexo博客的note标签美化</title>
@@ -521,36 +548,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="chrome调试" scheme="https://nekodeng.gitee.io/tags/chrome%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-模块化</title>
-    <link href="https://nekodeng.gitee.io/posts/amd-cmd.html"/>
-    <id>https://nekodeng.gitee.io/posts/amd-cmd.html</id>
-    <published>2020-09-07T06:00:17.953Z</published>
-    <updated>2020-09-12T10:30:10.847Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;函数封装 —-&amp;gt; 对象 —-&amp;gt; 立即执行函数 —-&amp;gt; 模块化规范&lt;/p&gt;
-&lt;p&gt;是一种项目的构架模式， 这种构架模式让JS代码重用性变得非常高，让项目构架的一些复杂问题全部得以解决。</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="模块化规范" scheme="https://nekodeng.gitee.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83/"/>
-    
-    <category term="AMD/CMD" scheme="https://nekodeng.gitee.io/tags/AMD-CMD/"/>
-    
-    <category term="依赖" scheme="https://nekodeng.gitee.io/tags/%E4%BE%9D%E8%B5%96/"/>
     
   </entry>
   

@@ -25,6 +25,9 @@
     .v[data-class=v] .vwrap .vheader .vinput {
         width: 32.33%!important;
     }
+    /* #artitalk_main p.shuoshuo_time {
+        font-size: 15px;
+    } */
 }
 
 /*大屏幕下(桌面类)的样式*/
@@ -286,7 +289,7 @@ mark {
     overflow: hidden;
 }
 article .card:hover .card-image img {
-    transform: scale(1.06);
+    transform: scaleX(1.07);
 }
 
 
@@ -1351,12 +1354,16 @@ thead {
     overflow: hidden;
     position: relative;
 }
-
+body.dark .v[data-class=v] .vcards .vcard .vh .vmeta .vat {
+    box-shadow: 0 15px 35px rgb(30 30 30 / 0.1), 0 5px 15px rgb(58 54 54 / 0.7);
+}
 
 .comment_headling {
     font-size: 17px!important;
     font-weight: 400!important;
 }
+
+
 
 .v[data-class=v] .vcount {
     font-weight: 400!important;
@@ -1379,7 +1386,9 @@ thead {
     padding: 10px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
-
+body.dark .comment_headling span {
+    color: rgba(255, 255, 255, .7);
+}
 
 
 .chip-container .tag-chips {
@@ -2345,10 +2354,6 @@ body.dark hr
     opacity: .6;
 }
 #artitalk_main p.shuoshuo_time {
-    font-size: 15px!important;
-    font-weight: 400!important;
-}
-#artitalk_main p.shuoshuo_time {
     padding-top: 10px!important;
     padding-bottom: 10px!important;
     margin-top: 20px!important;
@@ -2450,22 +2455,6 @@ body.dark img, body.dark strong {
     bottom: 8px;
     font-size: 1.5rem!important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 美化ol标签 */
