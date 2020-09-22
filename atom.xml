@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-22T08:25:18.948Z</updated>
+  <updated>2020-09-22T14:09:54.340Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>关于给hexo博客适配全局深色模式</title>
-    <link href="https://nekodeng.gitee.io/posts/hexo-darkmode.html"/>
-    <id>https://nekodeng.gitee.io/posts/hexo-darkmode.html</id>
+    <link href="https://nekodeng.gitee.io/posts/blog-night-mode.html"/>
+    <id>https://nekodeng.gitee.io/posts/blog-night-mode.html</id>
     <published>2020-09-22T07:03:37.926Z</published>
-    <updated>2020-09-22T08:25:18.948Z</updated>
+    <updated>2020-09-22T14:09:54.340Z</updated>
     
     
       
@@ -75,7 +75,7 @@
     <link href="https://nekodeng.gitee.io/posts/blog-audio-video-markdown.html"/>
     <id>https://nekodeng.gitee.io/posts/blog-audio-video-markdown.html</id>
     <published>2020-09-19T10:12:01.344Z</published>
-    <updated>2020-09-22T08:33:37.528Z</updated>
+    <updated>2020-09-22T13:31:47.154Z</updated>
     
     
       
@@ -262,6 +262,31 @@ url = window.location.href; /* 获取完整URL</summary>
   </entry>
   
   <entry>
+    <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
+    <link href="https://nekodeng.gitee.io/posts/parsing-url.html"/>
+    <id>https://nekodeng.gitee.io/posts/parsing-url.html</id>
+    <published>2020-09-10T16:34:14.000Z</published>
+    <updated>2020-09-22T13:50:23.700Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;当浏览器地址栏输入一个url网址后，敲下回车会发生什么？&quot;&gt;&lt;a href=&quot;#当浏览器地址栏输入一个url网址后，敲下回车会发生什么？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="一些面试常问问题总结" scheme="https://nekodeng.gitee.io/categories/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="浏览器地址栏输入url地址发生的事" scheme="https://nekodeng.gitee.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PHP+Mysql知识</title>
     <link href="https://nekodeng.gitee.io/posts/php-mysql.html"/>
     <id>https://nekodeng.gitee.io/posts/php-mysql.html</id>
@@ -319,27 +344,32 @@ url = window.location.href; /* 获取完整URL</summary>
   </entry>
   
   <entry>
-    <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
-    <link href="https://nekodeng.gitee.io/posts/parsing-url.html"/>
-    <id>https://nekodeng.gitee.io/posts/parsing-url.html</id>
+    <title>啊啊啊文章模板啊</title>
+    <link href="https://nekodeng.gitee.io/posts/articletemplate.html"/>
+    <id>https://nekodeng.gitee.io/posts/articletemplate.html</id>
     <published>2020-09-10T06:38:09.016Z</published>
-    <updated>2020-09-22T10:29:00.504Z</updated>
+    <updated>2020-09-22T13:54:09.753Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;当浏览器地址栏输入一个url网址后，敲下回车会发生什么？&quot;&gt;&lt;a href=&quot;#当浏览器地址栏输入一个url网址后，敲下回车会发生什么？&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言&lt;/div&gt;
+
+&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
     
     
-    <category term="一些面试常问问题总结" scheme="https://nekodeng.gitee.io/categories/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    <category term="类别" scheme="https://nekodeng.gitee.io/categories/%E7%B1%BB%E5%88%AB/"/>
     
     
-    <category term="浏览器地址栏输入url地址发生的事" scheme="https://nekodeng.gitee.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B/"/>
+    <category term="标签" scheme="https://nekodeng.gitee.io/tags/%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
@@ -525,31 +555,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="git" scheme="https://nekodeng.gitee.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>chrome调试</title>
-    <link href="https://nekodeng.gitee.io/posts/chrome-debug.html"/>
-    <id>https://nekodeng.gitee.io/posts/chrome-debug.html</id>
-    <published>2020-09-07T06:05:14.276Z</published>
-    <updated>2020-09-17T03:09:46.106Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-console-table&quot;&gt;&lt;a href=&quot;#1-console-table&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="chrome调试" scheme="https://nekodeng.gitee.io/tags/chrome%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   

@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nekodeng.gitee.io/posts/blog-night-mode.html</loc>
+    
+    <lastmod>2020-09-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/posts/articletemplate.html</loc>
+    
+    <lastmod>2020-09-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/posts/parsing-url.html</loc>
+    
+    <lastmod>2020-09-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/posts/blog-audio-video-markdown.html</loc>
+    
+    <lastmod>2020-09-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nekodeng.gitee.io/posts/get-url.html</loc>
     
     <lastmod>2020-09-22</lastmod>
@@ -51,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://nekodeng.gitee.io/posts/parsing-url.html</loc>
-    
-    <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nekodeng.gitee.io/posts/img-loading.html</loc>
     
     <lastmod>2020-09-22</lastmod>
@@ -72,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://nekodeng.gitee.io/posts/blog-audio-video-markdown.html</loc>
-    
-    <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nekodeng.gitee.io/posts/hexo-note.html</loc>
-    
-    <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nekodeng.gitee.io/posts/hexo-darkmode.html</loc>
     
     <lastmod>2020-09-22</lastmod>
     
@@ -656,6 +663,13 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/tags/%E6%98%BE-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2020-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/tags/%E6%A0%87%E7%AD%BE/</loc>
     <lastmod>2020-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1281,6 +1295,13 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2020-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/categories/%E7%B1%BB%E5%88%AB/</loc>
     <lastmod>2020-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
