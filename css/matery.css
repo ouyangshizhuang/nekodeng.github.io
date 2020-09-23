@@ -946,6 +946,9 @@ body.dark .prev-next .left-badge,
 body.dark .prev-next .right-badge {
     opacity: 0.7;
 }
+body.dark .profile .author .title {
+    color: rgba(255, 255, 255, 0.6);
+}
 
 .prev-next .left-badge {
     border-radius: 8px 0 8px 0;
@@ -1974,8 +1977,8 @@ body.dark ol li:before {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    border: 1px solid #4cbf30;
+    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
+    border: 1px solid #FF2A68;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
@@ -2319,10 +2322,6 @@ body.dark #articleContent .LinkCard {
     width: 100%;
     text-decoration: none;
 }
-
-body.dark article .card {
-    opacity: 0.8;
-}
 body.dark .note {
     opacity: 0.65;
 }
@@ -2351,9 +2350,9 @@ body.dark nav ul li:hover a span {
 .fa-chrome:before {
     color: #f14f05;
 }
-.fab {
+/* .fab {
     margin-right: 0.5rem;
-}
+} */
 .fa-windows:before {
     color: #3f8cd9;
 }
@@ -2733,13 +2732,6 @@ hr:hover::before{
     padding: 0px;
     margin: 0px;
 }
-
-
-
-
-
-
-
 /* demo */
 .poem-wrap {
     position: relative;
@@ -2769,7 +2761,7 @@ hr:hover::before{
     letter-spacing: 4px;
     color: #797979;
 }
-.poem-wrap p#poem {
+.poem-wrap p:nth-of-type(1) {
     font-size: 25px;
     text-align: center;
     margin: 0 auto;
@@ -2781,8 +2773,34 @@ hr:hover::before{
     color: #797979;
     font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
-.poem-wrap p#info {
+.poem-wrap p:nth-of-type(2) {
     font-size: 18px;
     margin: 15px auto;
 }
-
+.bozhushuo {
+    text-align: center;
+    font-size: 19px!important;
+    margin: 0 0 12px!important;
+    line-height: 1.9rem;
+    font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+}
+body.dark .notice {
+    background: 0 0;
+    border: 1px dashed #888;
+}
+.notice {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px dashed #e6e6e6;
+    color: #969696;
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    background: #fbfbfb50;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.notice-content {
+    display: initial;
+    vertical-align: middle;
+}

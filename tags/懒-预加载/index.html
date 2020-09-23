@@ -47,8 +47,8 @@
         })();
         </script>
         
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -381,6 +381,14 @@
         <div class="card-content">
             <div class="tag-title center-align">
                 <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+
+                <div class="notice">
+                    <div class="notice-content" id="poem"></div>
+                    <div class="notice-content" id="info"></div>
+                </div>
+                <script>
+                    $.get("https://v1.hitokoto.cn?c=d&c=h",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
+                </script>
             </div>
             <div class="tag-chips">
                 
