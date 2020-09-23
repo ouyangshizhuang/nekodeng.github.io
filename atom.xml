@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-22T14:09:54.340Z</updated>
+  <updated>2020-09-23T09:57:22.597Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://nekodeng.gitee.io/posts/blog-night-mode.html"/>
     <id>https://nekodeng.gitee.io/posts/blog-night-mode.html</id>
     <published>2020-09-22T07:03:37.926Z</published>
-    <updated>2020-09-22T14:09:54.340Z</updated>
+    <updated>2020-09-23T09:57:22.597Z</updated>
     
     
       
@@ -75,7 +75,7 @@
     <link href="https://nekodeng.gitee.io/posts/blog-audio-video-markdown.html"/>
     <id>https://nekodeng.gitee.io/posts/blog-audio-video-markdown.html</id>
     <published>2020-09-19T10:12:01.344Z</published>
-    <updated>2020-09-23T02:31:02.029Z</updated>
+    <updated>2020-09-23T10:03:38.457Z</updated>
     
     
       
@@ -104,7 +104,7 @@
     <link href="https://nekodeng.gitee.io/posts/harmony-os.html"/>
     <id>https://nekodeng.gitee.io/posts/harmony-os.html</id>
     <published>2020-09-18T03:45:44.478Z</published>
-    <updated>2020-09-22T11:14:35.921Z</updated>
+    <updated>2020-09-23T10:15:28.623Z</updated>
     
     
       
@@ -344,41 +344,11 @@ url = window.location.href; /* 获取完整URL</summary>
   </entry>
   
   <entry>
-    <title>啊啊啊文章模板啊</title>
-    <link href="https://nekodeng.gitee.io/posts/articletemplate.html"/>
-    <id>https://nekodeng.gitee.io/posts/articletemplate.html</id>
-    <published>2020-09-10T06:38:09.016Z</published>
-    <updated>2020-09-22T13:54:09.753Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言&lt;/div&gt;
-
-&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;项目&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="类别" scheme="https://nekodeng.gitee.io/categories/%E7%B1%BB%E5%88%AB/"/>
-    
-    
-    <category term="标签" scheme="https://nekodeng.gitee.io/tags/%E6%A0%87%E7%AD%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSS-SCSS代码规范</title>
     <link href="https://nekodeng.gitee.io/posts/css-scss.html"/>
     <id>https://nekodeng.gitee.io/posts/css-scss.html</id>
     <published>2020-09-07T08:10:58.551Z</published>
-    <updated>2020-09-15T14:26:29.821Z</updated>
+    <updated>2020-09-23T08:48:45.661Z</updated>
     
     
       
@@ -430,7 +400,7 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/nodejs.html"/>
     <id>https://nekodeng.gitee.io/posts/nodejs.html</id>
     <published>2020-09-07T07:38:13.825Z</published>
-    <updated>2020-09-13T07:24:30.161Z</updated>
+    <updated>2020-09-23T08:12:04.860Z</updated>
     
     
       
@@ -538,7 +508,7 @@ url = window.location.href; /* 获取完整URL</summary>
     <link href="https://nekodeng.gitee.io/posts/git.html"/>
     <id>https://nekodeng.gitee.io/posts/git.html</id>
     <published>2020-09-07T06:15:04.641Z</published>
-    <updated>2020-09-12T10:26:45.212Z</updated>
+    <updated>2020-09-23T08:27:38.829Z</updated>
     
     
       
@@ -555,6 +525,31 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="git" scheme="https://nekodeng.gitee.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>chrome调试</title>
+    <link href="https://nekodeng.gitee.io/posts/chrome-debug.html"/>
+    <id>https://nekodeng.gitee.io/posts/chrome-debug.html</id>
+    <published>2020-09-07T06:05:14.276Z</published>
+    <updated>2020-09-17T03:09:46.106Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-console-table&quot;&gt;&lt;a href=&quot;#1-console-table&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="chrome调试" scheme="https://nekodeng.gitee.io/tags/chrome%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   

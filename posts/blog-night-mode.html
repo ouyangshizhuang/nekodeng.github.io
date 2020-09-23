@@ -518,7 +518,7 @@
 <li>prefers-color-scheme 媒体查询</li>
 <li>给body加class<br>基于我的matery主题，我选择了第二种，主要思想就是加上一个”body.dark”来限制深色模式下的样式。</li>
 </ul>
-<h3 id="制作深色模式按钮"><a href="#制作深色模式按钮" class="headerlink" title="制作深色模式按钮"></a>制作深色模式按钮</h3><p>在主题的layout.ejs文件中找到body标签的开始标签在后面加上这些js和html代码，这里我放的位置为：/layout/layout.ejs</p>
+<h3 id="制作深色模式按钮"><a href="#制作深色模式按钮" class="headerlink" title="制作深色模式按钮"></a>制作深色模式按钮</h3><p>在主题的<code>layout.ejs</code>文件中找到body标签的开始标签在后面加上这些js和html代码，这里我放的位置为：<code>/layout/layout.ejs</code></p>
 <pre><code>&lt;script&gt;
     if (localStorage.getItem(&#39;dark&#39;) === &#39;1&#39;) &amp;#123;
     document.body.classList.add(&#39;dark&#39;);
@@ -568,7 +568,7 @@
     .fa-comments:before &#123;
         content: &quot;\f086&quot;;
     &#125;
-</code></pre><h3 id="按钮的js代码"><a href="#按钮的js代码" class="headerlink" title="按钮的js代码"></a>按钮的js代码</h3><p>放在独立的js文件里即可，这里我放在/souce/js/matery.js里面</p>
+</code></pre><h3 id="按钮的js代码"><a href="#按钮的js代码" class="headerlink" title="按钮的js代码"></a>按钮的js代码</h3><p>放在独立的js文件里即可，这里我放在<code>/souce/js/matery.js</code>里面</p>
 <pre><code>// 深色模式设置
 function switchNightMode() &amp;#123;
     var body = document.body;
@@ -584,7 +584,7 @@ function switchNightMode() &amp;#123;
       return;
     &amp;#125;
 &amp;#125;
-</code></pre><h3 id="最后，加上覆盖样式"><a href="#最后，加上覆盖样式" class="headerlink" title="最后，加上覆盖样式"></a>最后，加上覆盖样式</h3><p>原理：就是在你觉得深色模式下需要变色的css 选择器前面加上一个body.dark选择器<br>需要改变：</p>
+</code></pre><h3 id="最后，加上覆盖样式"><a href="#最后，加上覆盖样式" class="headerlink" title="最后，加上覆盖样式"></a>最后，加上覆盖样式</h3><p>原理：就是在你觉得深色模式下需要变色的css 选择器前面加上一个<code>body.dark</code>选择器<br>需要改变：</p>
 <ul>
 <li>字体颜色变灰/黑色     color: rgba(255, 255, 255, 0.75);</li>
 <li>背景颜色变灰/黑色     background-color: #282c34;</li>
@@ -1646,7 +1646,7 @@ prefers-color-sch
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">42.7k</span>&nbsp;
+                class="white-color">42.6k</span>&nbsp;
             
             
             
