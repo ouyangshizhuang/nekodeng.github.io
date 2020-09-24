@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-23T09:57:22.597Z</updated>
+  <updated>2020-09-24T03:19:30.171Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于给hexo博客增加每日一言（诗句，影视名句，网易云热评等）</title>
+    <link href="https://nekodeng.gitee.io/posts/blog-poem-comment.html"/>
+    <id>https://nekodeng.gitee.io/posts/blog-poem-comment.html</id>
+    <published>2020-09-24T02:16:05.556Z</published>
+    <updated>2020-09-24T03:19:30.171Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言：看到很多个人博客都带有每日一言功能，所以决定也弄一个，挺好看的。基于matery主题设置的，其他主题原理也一样可参考。&lt;/div&gt;
+
+&lt;h3 id=&quot;每日一言API&quot;&gt;&lt;a href=&quot;#每日一言API&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="关于hexo博客" scheme="https://nekodeng.gitee.io/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="hexo博客增加每日一言" scheme="https://nekodeng.gitee.io/tags/hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E6%AF%8F%E6%97%A5%E4%B8%80%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>关于给hexo博客适配全局深色模式</title>
@@ -525,31 +552,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="git" scheme="https://nekodeng.gitee.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>chrome调试</title>
-    <link href="https://nekodeng.gitee.io/posts/chrome-debug.html"/>
-    <id>https://nekodeng.gitee.io/posts/chrome-debug.html</id>
-    <published>2020-09-07T06:05:14.276Z</published>
-    <updated>2020-09-17T03:09:46.106Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-console-table&quot;&gt;&lt;a href=&quot;#1-console-table&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="chrome调试" scheme="https://nekodeng.gitee.io/tags/chrome%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   

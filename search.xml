@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于给hexo博客增加每日一言（诗句，影视名句，网易云热评等）</title>
+      <link href="/posts/blog-poem-comment.html"/>
+      <url>/posts/blog-poem-comment.html</url>
+      
+        <content type="html"><![CDATA[<div class="note info">前言：看到很多个人博客都带有每日一言功能，所以决定也弄一个，挺好看的。基于matery主题设置的，其他主题原理也一样可参考。</div><h3 id="每日一言API"><a href="#每日一言API" class="headerlink" title="每日一言API"></a>每日一言API</h3><ul><li>一言网（hitokoto.cn）创立于 2016 年，隶属于萌创团队，目前网站主要提供一句话服务。<br>简单来说，一言指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。 或是感动，或是开心，有或是单纯的回忆。来到这里，留下你所喜欢的那一句句话，与大家分享，这就是一言存在的目的。—节选自一言网<br>详细介绍请转步：<br><a href="https://hitokoto.cn/" class="LinkCard" target="_blank">一言网（hitokoto.cn）</a></li></ul><h3 id="封装一个获取接口"><a href="#封装一个获取接口" class="headerlink" title="封装一个获取接口"></a>封装一个获取接口</h3><p>官方的获取路径为：<code><a href="https://v1.hitokoto.cn/">https://v1.hitokoto.cn/</a></code>,可以自定义获取的参数类型。<br>例如我这里的<code>c=d&amp;c=h&amp;c=j</code>,就是获取的文学、影视、网易云的文本,若要自定义获取的类型，请参考官网请求参数部分文档。<br>也可以直接引入下面我的也可。注意：这部分js代码放在引入页面的ejs文件下,我存放的位置为<code>/layout/contact.ejs</code>,与后面的html代码放在一起也可。</p><pre><code>&lt;script&gt;    $.get(&quot;https://v1.hitokoto.cn?c=d&amp;c=h&amp;c=j&quot;,function(datastatus)&amp;#123;        if(status==&#39;success&#39;)&amp;#123;            $(&#39;#poem&#39;).html(data.hitokoto)            if(data.from_who!=null)&amp;#123;                $(&#39;#info&#39;).html(data.from_who+&quot; · &quot;+《 &quot;+data.from+&quot; 》&quot;);                &amp;#125;                else&amp;#123;                    $(&#39;#info&#39;).html(&quot; “ &quot;+data.from+&quot;” &quot;);                &amp;#125;        &amp;#125;        else&amp;#123;$(&#39;#poem&#39;).html(&quot;获取出错啦&quot;);&amp;#125;&amp;#125;);&lt;/script&gt;</code></pre><h3 id="引入html"><a href="#引入html" class="headerlink" title="引入html"></a>引入html</h3><p>同上,这部分html代码放在引入页面的ejs文件下,我存放的位置为<code>/layout/contact.ejs</code></p><pre><code>&lt;!-- 加入网易云音乐热门评论，实时更新 --&gt;&lt;div class=&quot;poem-wrap&quot;&gt;    &lt;div class=&quot;poem-border poem-left&quot;&gt;    &lt;/div&gt;    &lt;div class=&quot;poem-border poem-right&quot;&gt;    &lt;/div&gt;    &lt;h1&gt;热评&lt;/h1&gt;    &lt;p id=&quot;poem&quot;&gt;loading...&lt;/p&gt;    &lt;p id=&quot;info&quot;&gt;loading...&lt;/p&gt;&lt;/div&gt;</code></pre><h3 id="设置css样式"><a href="#设置css样式" class="headerlink" title="设置css样式"></a>设置css样式</h3><p>这部分放在一个全局css文件下即可。</p><pre><code>    /* 增加每日一言模块 */    .poem-wrap &#123;        position: relative;        width: 730px;        max-width: 80%;        border: 2px solid #797979;        border-top: 0;        text-align: center;        margin: 80px auto;    &#125;    .poem-left &#123;        left: 0;    &#125;    .poem-border &#123;        position: absolute;        height: 2px;        width: 27%;        background-color: #797979;    &#125;    .poem-right &#123;        right: 0;    &#125;    .poem-wrap h1 &#123;        position: relative;        margin-top: -20px;        display: inline-block;        letter-spacing: 4px;        color: #797979;    &#125;    .poem-wrap p:nth-of-type(1) &#123;        font-size: 25px;        text-align: center;        margin: 0 auto;    &#125;    .poem-wrap p &#123;        width: 70%;        margin: auto;        line-height: 30px;        color: #797979;        font-family: &quot;Linux Biolinum&quot;, &quot;Noto Serif SC&quot;, Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;    &#125;    .poem-wrap p:nth-of-type(2) &#123;        font-size: 18px;        margin: 15px auto;    &#125;    .bozhushuo &#123;        text-align: center;        font-size: 19px!important;        margin: 0 0 12px!important;        line-height: 1.9rem;        font-family: &quot;Linux Biolinum&quot;, &quot;Noto Serif SC&quot;, Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;    &#125;    .notice &#123;        margin: 30px auto;        padding: 20px;        border: 1px dashed #e6e6e6;        color: #969696;        position: relative;        display: inline-block;        width: 95%;        background: #fbfbfb50;        border-radius: 10px;        font-size: 16px;    &#125;    .notice-content &#123;        display: initial;        vertical-align: middle;    &#125;</code></pre><p>最后，上效果：<br><img src="https://i.loli.net/2020/09/24/baIZ2Wiq7LCPfjR.png" alt="每日一言"></p><div class="note info">本文参考了以下博客：如果你使用的是和我一样的matery主题，则可以直接复制上面代码，再做酌情修改样式即可，其他主题的也一样，逻辑都是一样的。</div><p><a href="https://bestzuo.cn/" class="LinkCard" target="_blank">Sanarous’s Blog</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 关于hexo博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo博客增加每日一言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于给hexo博客适配全局深色模式</title>
       <link href="/posts/blog-night-mode.html"/>
       <url>/posts/blog-night-mode.html</url>
@@ -1351,7 +1376,7 @@
       
       <categories>
           
-          <category> 类别 </category>
+          <category> 文章模板 </category>
           
       </categories>
       

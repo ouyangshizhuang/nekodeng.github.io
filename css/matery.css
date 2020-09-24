@@ -11,6 +11,13 @@
         bottom: 122px!important;
     }
 }
+@media only screen and (max-width: 601px) {
+    .bozhushuo {
+        font-size: 14px!important;
+        text-align: left!important;
+    }
+}
+
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
@@ -1043,6 +1050,12 @@ body.dark .publish-date {
     .bg-cover .post-title {
         font-size: 1.6rem;
     }
+    .chip .notebook-skin {
+        padding: 10px 32px 64px 5px!important;
+    }
+    .chip-container .tag-chips .wenzhs {
+        margin-bottom: 10px!important;
+    }
 }
 @media only screen and (min-width: 1418px) {
     #artDetail {
@@ -1096,6 +1109,12 @@ body.dark .v[data-class=v] .vcards {
 }
 body.dark .v[data-class=v] .vwrap {
     border: 1px solid #444;
+}
+body.dark .chip-container .chip {
+    opacity: 0.75;
+}
+body.dark .notebook-cover {
+    opacity: 1!important;
 }
 body.dark .v[data-class=v] .vwrap .vheader .vinput {
     border-bottom: 1px solid #444;
@@ -1434,11 +1453,10 @@ body.dark .comment_headling span {
     color: #34495e;
 }
 
-.chip-container .chip-active {
+/* .chip-container .chip-active {
     color: #FFF !important;
     background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
-    box-shadow: 2px 5px 10px #aaa !important;
-}
+} */
 
 .chip-container .chip {
     margin: 10px 10px;
@@ -1449,12 +1467,10 @@ body.dark .comment_headling span {
     font-weight: 400;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
+    /* box-shadow: 0 3px 5px rgba(0, 0, 0, .12); */
     z-index: 0;
 }
-body.dark .chip-container .chip {
-    opacity: 0.65;
-}
+
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
     background-color: #49b1f5;
@@ -1524,10 +1540,15 @@ body.dark #cd-timeline .month {
     opacity: 0.65;
 }
 
+body.dark .moleskine-wrapper {
+    filter: brightness(.7)!important;
+}
 #cd-timeline .month a {
     color: #fff;
 }
-
+.chip-container .tag-chips .wenzhs {
+    margin-bottom: 46px;
+}
 #cd-timeline .day {
     position: relative;
     padding: 8px 10px;
@@ -2732,7 +2753,7 @@ hr:hover::before{
     padding: 0px;
     margin: 0px;
 }
-/* demo */
+/* 增加每日一言模块 */
 .poem-wrap {
     position: relative;
     width: 730px;
@@ -2804,3 +2825,12 @@ body.dark .notice {
     display: initial;
     vertical-align: middle;
 }
+
+
+
+
+
+
+
+/* 文章分类书本样式 */
+

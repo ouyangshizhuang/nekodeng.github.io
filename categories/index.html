@@ -47,8 +47,8 @@
         })();
         </script>
         
-<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -376,6 +376,117 @@
 
     
 
+<style>
+/* 文章分类书本样式 */
+.chip-container .tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.chip-container .tag-chips a {
+    margin: 0 7px 10px;
+}
+.chip-container .chip {
+    max-width: calc(100% / 4);
+    min-width: 10em;
+    height: 200px;
+    position: relative;
+    transition: .5s linear;
+    padding: 19px 0;
+    line-height: 20px;
+    z-index: 990;
+    border-radius: 5px 15px 15px 5px;
+    transform-origin: left center 0;
+}
+.chip-container .notebook-cover::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: calc(100% + 2px);
+    top: -1px;
+    z-index: 100;
+    border-radius: 2px;
+    right: 25px;
+    transition: 2s ease;
+    /* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */
+    background: linear-gradient(to right,#1e606e 0,#2e95aa 12%,#1e606e 25%,#2e95aa 37%,#1e606e 50%,#2e95aa 62%,#1e606e 75%,#2e95aa 87%,#1e606e 100%);
+}
+
+.chip .notebook-skin {
+    height: 50px;
+    width: 100%;
+    background: #e8e8e0;
+    margin-top: 42px;
+    padding: 10px 32px 64px 10px;
+    font-size: 19px;
+    position: relative;
+    z-index: 10;
+    color: #222;
+    text-align: left;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+.chip .notebook-skin:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    left: 0;
+    bottom: 0;
+    background: #cddc39;
+}
+.notebook-cover {
+    background: #cc4b48;
+    height: 200px;
+    width: 140px;
+    position: absolute;
+    border-radius: 5px 15px 15px 5px;
+    z-index: 10;
+    transition: .5s linear;
+    transform-style: preserve-3d;
+    transform-origin: left center 0;
+}
+
+.moleskine-wrapper {
+    max-width: calc(100% / 4);
+    min-width: 10em;
+}
+.moleskine-notebook:hover .notebook-cover {
+    transform: rotateY(-50deg);
+    z-index: 99;
+    box-shadow: 20px 10px 50px rgba(0,0,0,.2);
+}
+.moleskine-notebook {
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: .5s linear;
+    border-radius: 5px 15px 15px 5px;
+    transform-origin: left center 0;
+}
+.moleskine-notebook:hover {
+    transform: rotateZ(-10deg);
+}
+.notebook-page.dotted {
+    background: linear-gradient(to bottom,#fbfae8 9px,#e4e4e4 1px);
+    background-size: 100% 10px;
+}
+.chip-container .chip:hover {
+    background: none;
+}
+.notebook-page {
+    height: 100%;
+    width: 140px;
+    position: absolute;
+    top: 10px;
+    background-color: #fbfae8;
+    z-index: 0;
+    border-radius: 5px 16px 16px 5px;
+    overflow: hidden;
+}
+</style>
+
 <div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
@@ -393,120 +504,237 @@
                 
                 
                 
-                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" title="JS基础: 30">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="wenzhs" title="JS基础: 30">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">JS基础
-                        <span class="tag-length">30</span>
-                    </span>
+                                    style="background-color: #cc4b48;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >JS基础                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/jQuery/" title="jQuery: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/jQuery/" class="wenzhs" title="jQuery: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">jQuery
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #2e95aa;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >jQuery                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/Git/" title="Git: 2">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/Git/" class="wenzhs" title="Git: 2">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">Git
-                        <span class="tag-length">2</span>
-                    </span>
+                                    style="background-color: #abc3b5;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >Git                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/NodeJS/" title="NodeJS: 4">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/NodeJS/" class="wenzhs" title="NodeJS: 4">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">NodeJS
-                        <span class="tag-length">4</span>
-                    </span>
+                                    style="background-color: #fed754;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >NodeJS                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/CSS-SCSS/" title="CSS-SCSS: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/CSS-SCSS/" class="wenzhs" title="CSS-SCSS: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">CSS-SCSS
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #9d6b97;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >CSS-SCSS                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" title="一些面试常问问题总结: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" class="wenzhs" title="一些面试常问问题总结: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">一些面试常问问题总结
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #986453;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >一些面试常问问题总结                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/http%E7%9F%A5%E8%AF%86/" title="http知识: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/http%E7%9F%A5%E8%AF%86/" class="wenzhs" title="http知识: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #82E0AA;">http知识
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #986453;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >http知识                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/PHP-Mysql%E7%9F%A5%E8%AF%86/" title="PHP+Mysql知识: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/PHP-Mysql%E7%9F%A5%E8%AF%86/" class="wenzhs" title="PHP+Mysql知识: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D7BDE2;">PHP+Mysql知识
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #fed754;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >PHP+Mysql知识                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/vscode%E4%BD%BF%E7%94%A8/" title="vscode使用: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/vscode%E4%BD%BF%E7%94%A8/" class="wenzhs" title="vscode使用: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #A3E4D7;">vscode使用
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #8dac65;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >vscode使用                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/Harmonyos/" title="Harmonyos: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/Harmonyos/" class="wenzhs" title="Harmonyos: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #85C1E9;">Harmonyos
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #8dac65;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >Harmonyos                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/" title="关于hexo博客: 3">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/" class="wenzhs" title="关于hexo博客: 4">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8C471;">关于hexo博客
-                        <span class="tag-length">3</span>
-                    </span>
+                                    style="background-color: #cc4b48;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >关于hexo博客                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/" title="项目上线流程: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/" class="wenzhs" title="项目上线流程: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9E79F;">项目上线流程
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #2e95aa;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >项目上线流程                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
-                <a href="/categories/%E7%B1%BB%E5%88%AB/" title="类别: 1">
-                    <span class="chip center-align waves-effect waves-light
+                <a href="/categories/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF/" class="wenzhs" title="文章模板: 1">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #A3E4D7;">类别
-                        <span class="tag-length">1</span>
-                    </span>
+                                    style="background-color: #fed754;">
+                                                    
+                                <div class="notebook-skin
+                                     chip-default "
+                                    >文章模板                                  
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
                 </a>
                 
                 
@@ -552,7 +780,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"JS基础","max":31},{"name":"jQuery","max":31},{"name":"Git","max":31},{"name":"NodeJS","max":31},{"name":"CSS-SCSS","max":31},{"name":"一些面试常问问题总结","max":31},{"name":"http知识","max":31},{"name":"PHP+Mysql知识","max":31},{"name":"vscode使用","max":31},{"name":"Harmonyos","max":31},{"name":"关于hexo博客","max":31},{"name":"项目上线流程","max":31},{"name":"类别","max":31}],
+            indicator: [{"name":"JS基础","max":31},{"name":"jQuery","max":31},{"name":"Git","max":31},{"name":"NodeJS","max":31},{"name":"CSS-SCSS","max":31},{"name":"一些面试常问问题总结","max":31},{"name":"http知识","max":31},{"name":"PHP+Mysql知识","max":31},{"name":"vscode使用","max":31},{"name":"Harmonyos","max":31},{"name":"关于hexo博客","max":31},{"name":"项目上线流程","max":31},{"name":"文章模板","max":31}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -563,7 +791,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [30,1,2,4,1,1,1,1,1,1,3,1,1],
+                    value : [30,1,2,4,1,1,1,1,1,1,4,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -650,7 +878,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">42.6k</span>&nbsp;
+                class="white-color">43.5k</span>&nbsp;
             
             
             
