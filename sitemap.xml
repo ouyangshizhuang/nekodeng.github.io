@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nekodeng.gitee.io/posts/hexo-note.html</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/posts/blog-poem-comment.html</loc>
+    
+    <lastmod>2020-09-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nekodeng.gitee.io/posts/blog-night-mode.html</loc>
     
     <lastmod>2020-09-24</lastmod>
@@ -17,13 +31,6 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/posts/articletemplate.html</loc>
-    
-    <lastmod>2020-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nekodeng.gitee.io/posts/blog-poem-comment.html</loc>
     
     <lastmod>2020-09-24</lastmod>
     
@@ -157,13 +164,6 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/posts/vscode-setting-sync.html</loc>
-    
-    <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nekodeng.gitee.io/posts/hexo-note.html</loc>
     
     <lastmod>2020-09-22</lastmod>
     

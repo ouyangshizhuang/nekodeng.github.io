@@ -489,7 +489,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    835
+                    825
                 </div>
                 
 
@@ -517,19 +517,19 @@
 <li>一言网（hitokoto.cn）创立于 2016 年，隶属于萌创团队，目前网站主要提供一句话服务。<br>简单来说，一言指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。 或是感动，或是开心，有或是单纯的回忆。来到这里，留下你所喜欢的那一句句话，与大家分享，这就是一言存在的目的。—节选自一言网<br>详细介绍请转步：<br><a href="https://hitokoto.cn/" class="LinkCard" target="_blank">一言网（hitokoto.cn）</a></li>
 </ul>
 <h3 id="封装一个获取接口"><a href="#封装一个获取接口" class="headerlink" title="封装一个获取接口"></a>封装一个获取接口</h3><p>官方的获取路径为：<code><a target="_blank" rel="noopener" href="https://v1.hitokoto.cn/">https://v1.hitokoto.cn/</a></code>,可以自定义获取的参数类型。<br>例如我这里的<code>c=d&amp;c=h&amp;c=j</code>,就是获取的文学、影视、网易云的文本,若要自定义获取的类型，请参考官网请求参数部分文档。<br>也可以直接引入下面我的也可。注意：这部分js代码放在引入页面的ejs文件下,我存放的位置为<code>/layout/contact.ejs</code>,与后面的html代码放在一起也可。</p>
-<pre><code>&lt;script&gt;
-    $.get(&quot;https://v1.hitokoto.cn?c=d&amp;c=h&amp;c=j&quot;,function(datastatus)&amp;#123;
-        if(status==&#39;success&#39;)&amp;#123;
-            $(&#39;#poem&#39;).html(data.hitokoto)
-            if(data.from_who!=null)&amp;#123;
-                $(&#39;#info&#39;).html(data.from_who+&quot; · &quot;+《 &quot;+data.from+&quot; 》&quot;);
-                &amp;#125;
-                else&amp;#123;
-                    $(&#39;#info&#39;).html(&quot; “ &quot;+data.from+&quot;” &quot;);
-                &amp;#125;
-        &amp;#125;
-        else&amp;#123;$(&#39;#poem&#39;).html(&quot;获取出错啦&quot;);&amp;#125;&amp;#125;);
-&lt;/script&gt;
+<pre><code>    &lt;script&gt;
+        $.get(&quot;https://v1.hitokoto.cn?c=d&amp;c=h&amp;c=j&quot;,function(datastatus)&#123;
+            if(status==&#39;success&#39;)&#123;
+                $(&#39;#poem&#39;).html(data.hitokoto)
+                if(data.from_who!=null)&#123;
+                    $(&#39;#info&#39;).html(data.from_who+&quot; · &quot;+《 &quot;+data.from+&quot; 》&quot;);
+                    &#125;
+                    else&#123;
+                        $(&#39;#info&#39;).html(&quot; “ &quot;+data.from+&quot;” &quot;);
+                    &#125;
+            &#125;
+            else&#123;$(&#39;#poem&#39;).html(&quot;获取出错啦&quot;);&#125;&#125;);
+    &lt;/script&gt;
 </code></pre><h3 id="引入html"><a href="#引入html" class="headerlink" title="引入html"></a>引入html</h3><p>同上,这部分html代码放在引入页面的ejs文件下,我存放的位置为<code>/layout/contact.ejs</code></p>
 <pre><code>&lt;!-- 加入网易云音乐热门评论，实时更新 --&gt;
 &lt;div class=&quot;poem-wrap&quot;&gt;
@@ -1605,7 +1605,7 @@ prefers-color-sch
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">44.3k</span>&nbsp;
+                class="white-color">44.2k</span>&nbsp;
             
             
             
