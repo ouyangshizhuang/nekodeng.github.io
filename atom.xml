@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-24T03:19:30.171Z</updated>
+  <updated>2020-09-24T09:46:19.410Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于给hexo文章分类页面按钮仿书本样式美化</title>
+    <link href="https://nekodeng.gitee.io/posts/blog-categories-bookstyle.html"/>
+    <id>https://nekodeng.gitee.io/posts/blog-categories-bookstyle.html</id>
+    <published>2020-09-24T08:38:43.077Z</published>
+    <updated>2020-09-24T09:46:19.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言：最近成迷于美化hexo博客样式，发现了这个超好看的样式，美化了一下，基于matery主题设置的，其他主题原理也一样可参考。&lt;/div&gt;
+
+&lt;p&gt;废话不多说，先上图：&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="关于hexo博客" scheme="https://nekodeng.gitee.io/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="hexo博客文章分类页面样式优化" scheme="https://nekodeng.gitee.io/tags/hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>关于给hexo博客增加每日一言（诗句，影视名句，网易云热评等）</title>
@@ -527,31 +554,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="gulp" scheme="https://nekodeng.gitee.io/tags/gulp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git</title>
-    <link href="https://nekodeng.gitee.io/posts/git.html"/>
-    <id>https://nekodeng.gitee.io/posts/git.html</id>
-    <published>2020-09-07T06:15:04.641Z</published>
-    <updated>2020-09-23T08:27:38.829Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;写在前面的话：史上最浅显易懂的Git教程！推荐廖雪峰的教程！&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Git" scheme="https://nekodeng.gitee.io/categories/Git/"/>
-    
-    
-    <category term="git" scheme="https://nekodeng.gitee.io/tags/git/"/>
     
   </entry>
   
