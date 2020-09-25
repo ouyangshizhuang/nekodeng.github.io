@@ -4369,6 +4369,22 @@ readers do not read off random characters that represent icons */
 .fa-lightbulb-o:before {
   content: "\f0eb";
 }
+.fa-home:before {
+  content: ""!important;
+}
+.fa-tags:before {
+  content: ""!important;
+}
+.fa-bookmark:before {
+  content: ""!important;
+}
+.fa-user-circle:before {
+  content: ""!important;
+}
+.fa-archive:before {
+  content: ""!important;
+}
+
 
 
 
@@ -4398,7 +4414,9 @@ readers do not read off random characters that represent icons */
   src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
-  font-family: 'Font Awesome 5 Brands'; }
+  font-family: 'Font Awesome 5 Brands'; 
+  margin-right: 6px;
+}
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;

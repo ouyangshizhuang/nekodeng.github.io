@@ -1094,6 +1094,10 @@ body.dark .publish-date {
     margin-right: 5px;
     margin-bottom: 2px;
 }
+.fa-android:before {
+    content: "\f17b";
+    color: #0c9850;
+}
 article .article-tags .chip:hover {
     color: #000;
     background-color: rgba(255, 255, 255, .7);
