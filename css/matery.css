@@ -1996,7 +1996,7 @@ body.dark ol li:before {
 }
 
 .other-skills .chip {
-    background-color: #fff;
+    background-color: #D7BDE2;
     border: 1px solid #eee;
 }
 
@@ -2371,6 +2371,9 @@ body.dark .bg-cover {
 
 body.dark nav ul li:hover a span {
     border-bottom: 0px;
+}
+.vsys i {
+    margin-right: 6px;
 }
 .fa-chrome:before {
     color: #f14f05;

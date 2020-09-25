@@ -4415,7 +4415,6 @@ readers do not read off random characters that represent icons */
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; 
-  margin-right: 6px;
 }
 @font-face {
   font-family: 'Font Awesome 5 Free';
