@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nekodeng.gitee.io/posts/mobile-side-layout.html</loc>
+    
+    <lastmod>2020-09-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nekodeng.gitee.io/posts/hexo-note.html</loc>
     
     <lastmod>2020-09-24</lastmod>
@@ -1242,6 +1249,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://nekodeng.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -1330,6 +1344,13 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/categories/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2020-09-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/categories/css%E7%9F%A5%E8%AF%86%E7%82%B9%E5%90%88%E9%9B%86/</loc>
     <lastmod>2020-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

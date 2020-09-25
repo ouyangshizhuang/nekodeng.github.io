@@ -1,3 +1,4 @@
+https://nekodeng.gitee.io/posts/mobile-side-layout.html
 https://nekodeng.gitee.io/posts/blog-categories-bookstyle.html
 https://nekodeng.gitee.io/posts/blog-poem-comment.html
 https://nekodeng.gitee.io/posts/blog-night-mode.html
