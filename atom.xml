@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-09-30T14:50:04.109Z</updated>
+  <updated>2020-10-01T10:28:44.226Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</title>
+    <link href="https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html"/>
+    <id>https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html</id>
+    <published>2020-10-01T08:41:18.840Z</published>
+    <updated>2020-10-01T10:28:44.226Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言: 今天在部署写好的博客文章时，出现了git报错bad signature和index file corrupt和error：spawn</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://nekodeng.gitee.io/categories/Git/"/>
+    
+    
+    <category term="git报错index file corrupt和error：spawn failed" scheme="https://nekodeng.gitee.io/tags/git%E6%8A%A5%E9%94%99index-file-corrupt%E5%92%8Cerror%EF%BC%9Aspawn-failed/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue基础</title>
@@ -529,33 +554,6 @@ url = window.location.href; /* 获取完整URL</summary>
     <category term="file模块" scheme="https://nekodeng.gitee.io/tags/file%E6%A8%A1%E5%9D%97/"/>
     
     <category term="http模块" scheme="https://nekodeng.gitee.io/tags/http%E6%A8%A1%E5%9D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NodeJS使用流程</title>
-    <link href="https://nekodeng.gitee.io/posts/use-nodejs.html"/>
-    <id>https://nekodeng.gitee.io/posts/use-nodejs.html</id>
-    <published>2020-09-07T07:28:15.280Z</published>
-    <updated>2020-09-12T10:41:14.854Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一些命令行：&quot;&gt;&lt;a href=&quot;#一些命令行：&quot; class=&quot;headerlink&quot; title=&quot;一些命令行：&quot;&gt;&lt;/a&gt;一些命令行：&lt;/h3&gt;&lt;p&gt;ls:   查看当前目录有哪些文件,加上-a显示所有文件(夹)&lt;br&gt;ll:  </summary>
-        
-      
-    
-    
-    
-    <category term="NodeJS" scheme="https://nekodeng.gitee.io/categories/NodeJS/"/>
-    
-    
-    <category term="NodeJS使用流程" scheme="https://nekodeng.gitee.io/tags/NodeJS%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
-    
-    <category term="express" scheme="https://nekodeng.gitee.io/tags/express/"/>
     
   </entry>
   

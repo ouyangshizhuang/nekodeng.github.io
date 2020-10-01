@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html</loc>
+    
+    <lastmod>2020-10-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nekodeng.gitee.io/posts/vue.html</loc>
     
     <lastmod>2020-09-30</lastmod>
@@ -1265,6 +1272,13 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/tags/CSS-SCSS%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2020-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/tags/git%E6%8A%A5%E9%94%99index-file-corrupt%E5%92%8Cerror%EF%BC%9Aspawn-failed/</loc>
     <lastmod>2020-10-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

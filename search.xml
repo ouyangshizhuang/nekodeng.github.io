@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</title>
+      <link href="/posts/git-error-index-file-corrupt.html"/>
+      <url>/posts/git-error-index-file-corrupt.html</url>
+      
+        <content type="html"><![CDATA[<div class="note info">前言: 今天在部署写好的博客文章时，出现了git报错bad signature和index file corrupt和error：spawn failed，网上找了一堆解决办法，都没行，最后利用了巧妙地方法解决了。</div><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>git报错bad signature和index file corrupt和error：spawn failed(如图所示)<br><img src="https://i.loli.net/2020/10/01/I2mdltAi9r63B5o.png" alt="git报错"></p><h3 id="一般解决办法"><a href="#一般解决办法" class="headerlink" title="一般解决办法"></a>一般解决办法</h3><ul><li>分析：可能是.git/index 这个文件损坏造成的。</li><li>方法：删除这个损坏的文件，重新生成一个。</li></ul><ol><li>进入到文件对应目录下</li><li>删除.git/index 文件： <code>rm -f .git/index</code></li><li>重建 .git/index 文件: <code>git read-tree</code> 或者直接 <code>git reset</code></li></ol><p>然后再重新执行部署命令即可。</p><h3 id="特殊解决办法"><a href="#特殊解决办法" class="headerlink" title="特殊解决办法"></a>特殊解决办法</h3><ul><li><p>问题分析：<br>本来以上 “一般解决办法” 就能有效解决问题，但是，我发现以上命令行执行后根本没效果，执行<code>rm -f .git/index</code>命令删除文件也会报错。<br>于是，我进入到我的博客目录<code>.deploy_git</code>文件下，发现里面根本不存在<code>.git/index</code>文件，啊！简直想😭，最后自己琢磨了老半天，终于解决了。</p></li><li><p>解决办法：</p></li></ul><ol><li>进入到<code>.deploy_git</code>文件下</li><li>在该文件下打开<code>git bash</code></li><li>直接执行<code>git reset</code>命令行</li><li>成功解决问题</li></ol><h3 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h3><p>这已经不是第一次git踩坑了，关于使用时偶尔就会遇到这些棘手的问题，以后会多总结这类踩坑日记，当然不可能不存在bug的，这才是我们存在的意义啊！🤭</p><div class="note info">本文参考了以下源文章：</div><p><a href="https://blog.csdn.net/HTL2018/article/details/106876940" class="LinkCard" target="_blank">hexo发生error：spawn failed错误的解决方法</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git报错index file corrupt和error：spawn failed </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue基础</title>
       <link href="/posts/vue.html"/>
       <url>/posts/vue.html</url>
