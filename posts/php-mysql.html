@@ -1436,19 +1436,21 @@ g. 关闭连接
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/parsing-url.html">
+                <a href="/posts/get-url.html">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2020/09/22/uXRigtGKH2L81Uo.png" class="responsive-img" alt="当浏览器地址栏输入url地址后，敲下回车会发生什么？">
+                        <img src="https://i.loli.net/2020/09/22/sNWSmX4KQxLRk1A.png" class="responsive-img" alt="使用JS获取当前页面的URL(网址信息)">
                         
-                        <span class="card-title">当浏览器地址栏输入url地址后，敲下回车会发生什么？</span>
+                        <span class="card-title">使用JS获取当前页面的URL(网址信息)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            当浏览器地址栏输入一个url网址后，敲下回车会发生什么？
-1.利用DNS域名解析系统进行域名解析，将域名解析成IP因为域名只是一个别名，计算机只认识IP，所以需要DNS解析一下（如果有端口号需要识别端口号，否则进入默认端口：http协议默认
+                            var url;
+
+url = window.location.href; /* 获取完整URL */
+alert(url); /* http://127.0.0.1:8020/Test/index.html#testname=test *
                         
                     </div>
                     <div class="publish-info">
@@ -1459,8 +1461,8 @@ g. 关闭连接
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" class="post-category">
-                                    一些面试常问问题总结
+                            <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
                                 </a>
                             
                             
@@ -1470,8 +1472,8 @@ g. 关闭连接
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B/">
-                        <span class="chip bg-color">浏览器地址栏输入url地址发生的事</span>
+                    <a href="/tags/JS%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84URL/">
+                        <span class="chip bg-color">JS获取当前页面的URL</span>
                     </a>
                     
                 </div>

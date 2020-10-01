@@ -362,31 +362,6 @@
     
     
     <entry>
-      <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
-      <link href="/posts/parsing-url.html"/>
-      <url>/posts/parsing-url.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="当浏览器地址栏输入一个url网址后，敲下回车会发生什么？"><a href="#当浏览器地址栏输入一个url网址后，敲下回车会发生什么？" class="headerlink" title="当浏览器地址栏输入一个url网址后，敲下回车会发生什么？"></a>当浏览器地址栏输入一个url网址后，敲下回车会发生什么？</h3><ul><li><p>1.利用DNS域名解析系统进行域名解析，将域名解析成IP<br>因为域名只是一个别名，计算机只认识IP，所以需要DNS解析一下（如果有端口号需要识别端口号，否则进入默认端口：http协议默认端口号是80，https默认端口号是443）</p></li><li><p>2.查找ip对应的主机服务器<br>如果是第一次访问该服务器，会向网络供应商（移动、联通…）请求</p></li><li><p>3.TCP的三次握手，经过三次在客户端和服务器之间传递报文，建立连接</p></li><li><p>4.发起http请求，请求入口文件，后端接收到请求相关信息，返回入口文件</p></li><li><p>5.解析入口文件，同时如果有资源请求继续发送http请求…</p></li><li><p>6.过程中如果碰到css文件，js文件，需要去加载外部文件</p><ul><li>加载css，渲染html结构</li><li>加载js</li><li>执行js的逻辑，有ajax请求，在此去服务器请求数据</li><li>通过数据刷新DOM</li></ul></li><li><p>7.文件渲染完成（TCP的四次挥手，断开连接）</p></li></ul><p><img src="https://i.loli.net/2020/09/12/4TJIu2gLXBphMP7.png" alt="访问网页过程"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 一些面试常问问题总结 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 浏览器地址栏输入url地址发生的事 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>PHP+Mysql知识</title>
       <link href="/posts/php-mysql.html"/>
       <url>/posts/php-mysql.html</url>
@@ -443,106 +418,23 @@
     
     
     <entry>
-      <title>CSS-SCSS代码规范</title>
-      <link href="/posts/css-scss.html"/>
-      <url>/posts/css-scss.html</url>
+      <title>当浏览器地址栏输入url地址后，敲下回车会发生什么？</title>
+      <link href="/posts/parsing-url.html"/>
+      <url>/posts/parsing-url.html</url>
       
-        <content type="html"><![CDATA[<h2 id="1-注释规范"><a href="#1-注释规范" class="headerlink" title="1 注释规范"></a>1 注释规范</h2><h2 id="2-缩进-空格-换行规范"><a href="#2-缩进-空格-换行规范" class="headerlink" title="2 缩进/空格/换行规范"></a>2 缩进/空格/换行规范</h2><p>(1)每个缩进使用4个空格，不允许使用 2 个空格 或 tab</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.sample &#123;    display: flex;&#125;//错误.sample &#123;  display: flex;&#125;(2)选择器 与 花括号 之间必须包含空格```css//正确.sample &#123;    display: flex;&#125;//错误.sample&#123;    display: flex;&#125;</code></pre><p>(3)每条规则之间必须包含空行</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.sample &#123;    display: flex;&#125;.sample1 &#123;    display: block;&#125;//错误.sample &#123;    display: flex;&#125;.sample1 &#123;    display: block;&#125;(4)属性名与冒号之间不允许包含空格， 冒号与属性值之间必须包含空格```css//正确display: flex;//错误display:flex;display : flex;display :flex;</code></pre><p>(5)逗号前不允许有空格，逗号后必须跟一个空格</p><pre><code>//正确font-family: Helvetica, Arial//错误font-family: Helvetica , Arialfont-family: Helvetica ,Arialfont-family: Helvetica, Arial</code></pre><p>(6)SCSS mixin的方法参数括号与 { 之间必须包含一个空格, 各参数间必须有一个空格</p><pre class=" language-lang-css"><code class="language-lang-css">//正确@mixin color-box($bg-color: $grey-light, $border-color: $grey) &#123;    background-color: $bg-color;    border: 1px solid $border-olor;&#125;//错误@mixin color-box($bg-color:$grey-light,$border-color:$grey) &#123;    background-color: $bg-color;    border: 1px solid $border-olor;&#125;</code></pre><p>(7) ‘+’ ‘~’ ‘&gt;’选择器前后必须跟一个空格</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.radio-label + .radio-box &#123;&#125;//错误.radio-label+.radio-box &#123;&#125;</code></pre><p>(8)引用mixin和多层嵌套必须有一个空行</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.sample &#123;    @include color-box;    margin: 15px;    &:hover &#123;      display: block;    &#125;&#125;//错误.sample &#123;    @include color-box;    margin: 15px;    &:hover &#123;      display: block;    &#125;&#125;</code></pre><p>(9)一组变量的定义，尽量以冒号对齐</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐$link-hover-color        : #29e;$hover-color-gray        : #ebebeb;$icon-hover-color        : #4d4d4d;$btn-hover-color         : #f0f0f0;$btn-hover-color-form    : #f9f9f9;$btn-hover-color-cancel  : #f63737;//不推荐$link-hover-color : #29e;$hover-color-gray : #ebebeb;$icon-hover-color : #4d4d4d;$btn-hover-color : #f0f0f0;$btn-hover-color-form : #f9f9f9;$btn-hover-color-cancel : #f63737;</code></pre><p>(10)多个并行选择器使用同一规则，必须换行</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.a,.b,.c &#123;    box-sizing: border-box;&#125;//错误.a, .b, .c &#123;    box-sizing: border-box;&#125;</code></pre><h2 id="3-选择器"><a href="#3-选择器" class="headerlink" title="3 选择器"></a>3 选择器</h2><p>禁止使用ID应用于样式，应该使用class</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.content &#123;    display: flex;&#125;//错误#content &#123;    display: flex;&#125;</code></pre><p>CSS选择器中避免标签名<br>选择器应该是准确和有语义的class(类)名，不推荐使用标签选择器。这样会更容易维护, 只需要修改你的标签名，而不是你的class<br>从分离的角度考虑,在表现层中不应该分配html标记/语义。</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    display: flex;    > .nav &#123;        flex: 1;    &#125;&#125;//不推荐.content &#123;    display: flex;    > nav &#123;        flex: 1    &#125;&#125;</code></pre><p>尽量精准的选择</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    display: flex;    > .nav &#123;        flex: 1;    &#125;&#125;//不推荐.content &#123;    display: flex;    .nav &#123;        flex: 1    &#125;&#125;</code></pre><p>选择器嵌套<br>正常的情况下，我们不推荐使用嵌套，如果需要使用嵌套，我们不推荐嵌套超过三层, 如果嵌套超过三层，应该考虑是不是哪里可以使用更精准更语义化的class。不推荐直接使用css的嵌套，而是使用SCSS的嵌套。</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    display: flex;    > .nav &#123;        flex: 1;        > .item &#123;            text-align: center;        &#125;    &#125;&#125;//不推荐.content .nav .item a &#123;    text-align: center;&#125;</code></pre><p>在CSS预处理器如LESS 和 SASS 里 media query 推荐直接在选择器的嵌套中使用，有助于保持媒体查询属于的上下文</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    font-size: 1.2rem;    @media screen and (min-width: 767px) &#123;        font-size: 1rem;    &#125;&#125;//不推荐.content &#123;    font-size: 1.2rem;&#125;@media screen and (min-width: 767px) &#123;    .content &#123;        font-size: 1rem;    &#125;&#125;</code></pre><p>属性选择器必须使用双引号</p><pre class=" language-lang-css"><code class="language-lang-css">//正确[class="icon-"] &#123;    font-size: 1rem;&#125;//错误[class='icon-'] &#123;    font-size: 1rem;&#125;</code></pre><h2 id="4-属性规范"><a href="#4-属性规范" class="headerlink" title="4 属性规范"></a>4 属性规范</h2><p>属性定义必须另起一行</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.selector &#123;    margin: 0;    padding: 0;&#125;// 错误.selector &#123; margin: 0; padding: 0; &#125;</code></pre><p>属性必须以分号结尾</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.selector &#123;    margin: 0;    padding: 0;&#125;// 错误.selector &#123;    margin: 0;    padding: 0&#125;</code></pre><p>属性值为0时，省略单位</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.box &#123;    padding: 0;&#125;// 错误.box &#123;    padding: 0px;&#125;</code></pre><p>使用16进制表示颜色，颜色值采用小写，#rrggbb的情况简写为#rgb，有透明度的情况使用rgba表示</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.box &#123;    background: rgba(0, 0, 255, .5);    color: #3ec;&#125;// 错误.box &#123;    background: white;    opacity: 0.5;    color: #33eecc;&#125;同一组属性尽量按照功能顺序书写，以 Formatting Model（布局方式、位置） > Box Model（尺寸） > Typographic（文本相关） > Visual（视觉效果） 的顺序书写，以提高代码的可读性Formatting Model 相关属性包括：display / position / top / right / bottom / left / float / overflow 等Box Model 相关属性包括：margin / border / padding / width / height 等Typographic 相关属性包括：font / line-height / text-align / word-wrap 等Visual 相关属性包括：background / color / transition / list-style 等```css// 推荐.sidebar &#123;    // formatting model    position: absolute;    top: 50px;    left: 0;    overflow-x: hidden;    // box model    width: 200px;    padding: 5px;    border: 1px solid #ddd;    // typographic    font-size: 14px;    line-height: 20px;    // visual    background: #f5f5f5;    color: #333;    transition: color 1s;&#125;</code></pre><p>font-family 属性</p><p>font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。</p><pre class=" language-lang-css"><code class="language-lang-css">// 示例h1 &#123;    font-family: "Microsoft YaHei";&#125;</code></pre><p>font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确body &#123;    font-family: Arial, sans-serif;&#125;h1 &#123;    font-family: Arial, "Microsoft YaHei", sans-serif;&#125;// 错误body &#123;    font-family: arial, sans-serif;&#125;h1 &#123;    font-family: Arial, "Microsoft YaHei", sans-serif;&#125;</code></pre><p>font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )</p><pre class=" language-lang-css"><code class="language-lang-css">// 示例body &#123;    font-family: "Helvetica Neue", Helvetica, Arial, PingFangSC-Regular, "Microsoft Yahei", Verdana, sans-serif;&#125;</code></pre><p>不推荐在业务中重写font-family</p><p>url()中的路径不添加引号</p><pre class=" language-lang-css"><code class="language-lang-css">// 推荐.box &#123;    background-image: url(../imgs/banner.jpg);&#125;// 不推荐.box &#123;    background-image: url('../imgs/banner.jpg');&#125;</code></pre><p>推荐并适当缩写值<br>“适当”是因为缩写总是会包含一系列的值，而有时候我们并不希望设置某一值，反而造成了麻烦，那么这时候你可以不缩写，而是分开写。</p><p>// 有时我们只想设置一个容器水平居中，那么设置left，right就好，而top和bottom不是这个样式要关心的（如果设置了反倒会影响其他样式在这个容器上的使用）</p><pre class=" language-lang-css"><code class="language-lang-css">// 示例<div class="box center"></div>.box &#123;    margin-top: 10px;&#125;// 这种简写将会覆盖.box里的设置.center &#123;    margin: 0 auto;&#125;// 比如下面这个模块的样式设置，我们确实需要设置padding的所有项，于是我们就可以采用缩写.footer &#123;    padding: 12px 3px;&#125;</code></pre><p>对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，.5 代替 0.5；-.5px 代替 -0.5px）</p><p>无边框设置</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.box &#123;    border: none;&#125;// 错误.box &#123;    border: 0; // 浏览器会进行多余的渲染，性能不佳&#125;</code></pre><p>层级(z-index)禁止随意设置，页面弹窗、气泡为最高级（最高级为999）；普通区块为10-90内10的倍数；同层的多个元素，在该层级内使用相同的 z-index 或递增。</p><p>禁止使用 !important (特殊情况除外，如覆盖第三方插件中的样式等)</p><p>禁止使用 filter</p><p>多个class里有一个或多个公共属性，应该将属性抽取到一个单独的class中或者使用泛选择器([attribute~=value], [attribute^=value],[attribute$=value],[attribute*=value])，泛选择器应确保不会有全局污染，避免多次书写重复代码</p><pre><code>    // 正确    &lt;div&gt;        &lt;span class=&quot;icon-book&quot;&gt;&lt;/span&gt;        &lt;span class=&quot;icon-pen&quot;&gt;&lt;/span&gt;    &lt;/div&gt;    [class^=&quot;icon-&quot;] &#123;        background-image: url(../imgs/sprite.png) no-repeat;    &#125;    .icon-book &#123;        background-positon: 0 -16px;    &#125;    .icon-pen &#123;        background-positon: -16px -16px;    &#125;    // 错误    &lt;div&gt;        &lt;span class=&quot;icon-book&quot;&gt;&lt;/span&gt;        &lt;span class=&quot;icon-pen&quot;&gt;&lt;/span&gt;    &lt;/div&gt;    .icon-book &#123;        background-image: url(../imgs/sprite.png) no-repeat;        background-positon: 0 -16px;    &#125;    .icon-pen &#123;        background-image: url(../imgs/sprite.png) no-repeat;        background-positon: -16px -16px;    &#125;</code></pre><h2 id="5-Hack规范"><a href="#5-Hack规范" class="headerlink" title="5 Hack规范"></a>5 Hack规范</h2><p>通常我们禁止在CSS的一个选择器中使用hack混编，如果你确实需要写hack, 我们应该有一个class： xxx-fix, 最好把所有的hack放在一个独立的文件, 通过JS特性检测或者直接添加到dom中。</p><pre class=" language-lang-css"><code class="language-lang-css">  // 错误  .selector &#123;      key: value;      key: fix-value\0; //ie 9-11  &#125;  // 正确  .selector &#123;      key: value;  &#125;  .selecor-ie-fix &#123;      key: fix-value\0; //ie 9-11  &#125;</code></pre><h2 id="6-命名规范"><a href="#6-命名规范" class="headerlink" title="6 命名规范"></a>6 命名规范</h2><h3 id="文件夹命名"><a href="#文件夹命名" class="headerlink" title="文件夹命名"></a>文件夹命名</h3><p>css文件夹命名应参照项目文件夹命名规则，命名总是以字母开头而不是数字，且字母一律小写，以中划线连接多个单词且不带其他标点符号。<br>如：input-number<br>有复数结构时，采取复数命名法。<br>如： style styles<br>|- components<br>|- input-number<br>|- inputNumber.html<br>|- inputNumber.js<br>|- styles<br>|- input_number.scss<br>|- images<br>|- menu</p><h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3><p>全站架构：(以下文件放在跟路径下的styles目录中)<br>基本共用 base.scss<br>布局、版面 layout.scss<br>主题 themes.scss<br>专栏 columns.scss<br>文字 font.scss<br>主要的 main.scss<br>表单 forms.scss<br>补丁 mend.scss<br>打印 print.scss<br>变量 variables.scss<br>功能函数 mixins.scss<br>色值 colors.scss<br>动画 animations.scss<br>字体 iconfont.scss<br>组件级 / 应用级：（放在组件/应用目录中）<br>css模块文件，其文件名必须与模块名一致。<br>css页面文件，其文件名必须与HTML文件名一致。<br>目的是让开发人员快速找到该页面或组件对应的css文件。<br>文件命名总是以字母开头而不是数字，且字母一律小写，以下划线连接且不带其他标点符号。<br>radio.scss<br>main-list.scss<br>main-detail.scss</p><h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>命名变量的最佳方式就是使用抽象名词，尽量取消名字和值之间的直接关系。<br>使用’$’开头+ 语义化的变量名。<br>避免使用无意义的词，如: calendar<br>推荐变量的意义在前面，功能在后面</p><pre class=" language-lang-css"><code class="language-lang-css">// 不推荐$red: #F50707;$yellow: #B3F724;// 推荐$brand-color: #F50707;$accent-color: #B3F724;// 你可能会使用名称加-color的后缀来命名颜色的变量:// Base colors$base-color: #333;$brand-color: #F50707;$brand-80-color: rgba($color-brand, 0.8);$accent-color: #B3F724;// 或者使用header-或者footer-来命名一些特殊的区域：// Header$header-height: 100px;$header-background-color: $color-brand;// Footer$footer-height: 200px;$footer-background-color: #aaa;// 不推荐$z-index-modal$padding-body// 推荐$modal-z-index$body-padding</code></pre><h3 id="选择器命名"><a href="#选择器命名" class="headerlink" title="选择器命名"></a>选择器命名</h3><h4 id="推荐采用BEM方式命名"><a href="#推荐采用BEM方式命名" class="headerlink" title="推荐采用BEM方式命名"></a>推荐采用BEM方式命名</h4><pre><code>        // BE模式 block__element：块里的元素，如：nav（block）里的 a 标签(element)        &lt;nav class=&quot;g-nav&quot;&gt;            &lt;a href=&quot;#&quot; class=&quot;g-nav__item&quot;&gt;工作动态&lt;/a&gt;        &lt;/nav&gt;        .g-nav__item &amp;#123;        &amp;#125;</code></pre><pre><code>        // BM模式 block--modifier: 块元素加修饰符        // g-nav表示导航的通用样式，g-nav-top表示该导航特有的样式，g-nav--active示激活的nav        &lt;nav class=&quot;g-nav g-nav-top g-nav--active&quot;&gt;        &lt;/nav&gt;        .g-nav--active &amp;#123;        &amp;#125;</code></pre><pre><code>        // BEM模式 block__element--modifier nav块里的a元素加上active状态        &lt;nav class=&quot;g-nav&quot;&gt;            &lt;a href=&quot;#&quot; class=&quot;g-nav__item g-nav__item--active&quot;&gt;当前状态&lt;/a&gt;        &lt;/nav&gt;        .g-nav__item--active &amp;#123;        &amp;#125;</code></pre><p>BEM只允许出现B<strong>E—M,不允许出现B</strong>B<strong>B</strong>E—M   B<strong>E</strong>E<strong>E—M   B</strong>E—M—M—M<br>如果层级过多，可以使用以下方式：<br>B<strong>E—M &gt; B</strong>E—M &gt; B<strong>E—M(最多3层B</strong>E—M嵌套)</p><pre><code>    // 推荐    &lt;div class=&quot;c-card&quot;&gt;&lt;!-- B --&gt;        &lt;div class=&quot;c-card__header&quot;&gt;&lt;!-- B__E --&gt;            &lt;h2 class=&quot;c-card-title&quot;&gt;&lt;!-- B__E &gt; B --&gt;                &lt;i class=&quot;c-card-title__icon--small&quot;&gt;&lt;/i&gt;&lt;!-- B__E &gt; B__E--M --&gt;                &lt;i class=&quot;c-card-title__icon--big&quot;&gt;&lt;/i&gt;&lt;!-- B__E &gt; B__E--M --&gt;                &lt;span class=&quot;c-card-title__text-wrap&quot;&gt;Title text here&lt;/span&gt;&lt;!-- B__E &gt; B__E --&gt;            &lt;/h2&gt;        &lt;/div&gt;    &lt;/div&gt;    // 推荐    .c-card &#123;                      // B        &amp;__header &#123;                // B__E            &gt; .c-card-title &#123;      // B__E &gt; B                &amp;__icon--small &#123;   // B__E &gt; B__E--M                &#125;                &amp;__icon--big &#123;     // B__E &gt; B__E--M                &#125;                &amp;__text-wrap &#123;     // B__E &gt; B__E                &#125;            &#125;        &#125;    &#125;    // 不推荐    &lt;div class=&quot;c-card&quot;&gt;        &lt;div class=&quot;c-card__header&quot;&gt;            &lt;h2 class=&quot;c-card__header__title&quot;&gt;                &lt;i class=&quot;c-card__header__title__icon&quot;&gt;&lt;/i&gt;                &lt;span class=&quot;c-card__header__title__text&quot;&gt;Title text here&lt;/span&gt;            &lt;/h2&gt;        &lt;/div&gt;    &lt;/div&gt;    // 不推荐    .c-card &#123;        &amp;__header&#123;            &amp;__title &#123;                &amp;__icon &#123;                &#125;                &amp;__text &#123;                &#125;            &#125;        &#125;    &#125;</code></pre><ul><li>注意到以上示例中使用了c- 前缀。这个c代表’component’，给组件加上命名空间，它提高了代码的可读性。<br>类型 | 前缀 | 例子 | 描述<br>布局 | (g-) | g-header | (global)例如头部，尾部，主体，侧栏等<br>组件 | (c-) | c-card | (component)较大整体，如登录注册，搜索等<br>元件 | (u-) | u-btn | 不可再分个体，例如按钮，input框等<br>功能 | (f-) | f-clear | (function)使用频率较高样式，例如清除浮动<br>皮肤 | (s-) | s-nav | (skin) 只包含皮肤的样式<br>主线 | (ig-) | ig-header | (igoal)主线模块中组件Block的前缀<br>审批 | (ap-) | ap-header | (approve)审批模块中组件Block的前缀<br>…<br>命名时需要注意的点：<ul><li>规则命名中，一律采用小写加中划线的方式，不允许使用大写字母或_</li><li>命名避免使用中文拼音，应该采用更简明有语义的英文单词进行组合</li><li>命名注意缩写，但是不能盲目缩写</li><li>不允许通过1、2、3等序号进行命名</li><li>避免class与id重名</li><li>class用于标识某一个类型的对象，命名必须言简意赅</li><li>尽可能提高代码模块的复用，样式尽量用组合的方式</li><li>公共样式名不得包含业务名称</li></ul></li></ul><h3 id="mixins命名"><a href="#mixins命名" class="headerlink" title="mixins命名"></a>mixins命名</h3><p>见名知义<br>小写加中划线，不允许出现大小字母或_</p><pre class=" language-lang-css"><code class="language-lang-css">// 不推荐@mixin button($background: green) &#123;&#125;// 不推荐@mixin buttonBg($background: green) &#123;&#125;// 不推荐@mixin button_bg($background: green) &#123;&#125;// 推荐@mixin button-bg($background: green) &#123;&#125;</code></pre><p>多个参数之间用逗号分隔，给参数设置默认值</p><h2 id="7-重写规范"><a href="#7-重写规范" class="headerlink" title="7 重写规范"></a>7 重写规范</h2><p>我们不允许直接使用公共库的选择器进行重写，如果要进行重写，必须自己重新加一个新的选择器，并且，这个选择器不能对公共库有影响。</p><pre class=" language-lang-css"><code class="language-lang-css">  // 错误  .qf-xxx .qf-btn &#123;      //some rewriting code  &#125;  // 正确  .qf-xxx__qf-btn &#123;      //some rewriting code  &#125;</code></pre><p>使用的时候用qf-btn 和 qf-xxx__qf-btn两个class, 所以在写组件的时候，为了考虑组件的通用性和可重写性，建议组件开发人员，都提供一个外部的样式输入接口</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="当浏览器地址栏输入一个url网址后，敲下回车会发生什么？"><a href="#当浏览器地址栏输入一个url网址后，敲下回车会发生什么？" class="headerlink" title="当浏览器地址栏输入一个url网址后，敲下回车会发生什么？"></a>当浏览器地址栏输入一个url网址后，敲下回车会发生什么？</h3><ul><li><p>1.利用DNS域名解析系统进行域名解析，将域名解析成IP<br>因为域名只是一个别名，计算机只认识IP，所以需要DNS解析一下（如果有端口号需要识别端口号，否则进入默认端口：http协议默认端口号是80，https默认端口号是443）</p></li><li><p>2.查找ip对应的主机服务器<br>如果是第一次访问该服务器，会向网络供应商（移动、联通…）请求</p></li><li><p>3.TCP的三次握手，经过三次在客户端和服务器之间传递报文，建立连接</p></li><li><p>4.发起http请求，请求入口文件，后端接收到请求相关信息，返回入口文件</p></li><li><p>5.解析入口文件，同时如果有资源请求继续发送http请求…</p></li><li><p>6.过程中如果碰到css文件，js文件，需要去加载外部文件</p><ul><li>加载css，渲染html结构</li><li>加载js</li><li>执行js的逻辑，有ajax请求，在此去服务器请求数据</li><li>通过数据刷新DOM</li></ul></li><li><p>7.文件渲染完成（TCP的四次挥手，断开连接）</p></li></ul><p><img src="https://i.loli.net/2020/09/12/4TJIu2gLXBphMP7.png" alt="访问网页过程"></p>]]></content>
       
       
       <categories>
           
-          <category> CSS-SCSS </category>
+          <category> 一些面试常问问题总结 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CSS-SCSS代码规范 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>express应用程序生成器</title>
-      <link href="/posts/express.html"/>
-      <url>/posts/express.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="express-应用程序生成器"><a href="#express-应用程序生成器" class="headerlink" title="express 应用程序生成器"></a>express 应用程序生成器</h3><p>安装：$ npm install express-generator -g</p><p>npm list -g —depth=0 查看全局安装的插件</p><p>npx 临时使用的命令，临时安装插件时使用，用完之后删除</p><p>npx express-generator backend -e 添加对 ejs 模板引擎的支持,会生成以下文件：<br><a href="https://upload-images.jianshu.io/upload_images/15859737-a6e8e7a41460b756.png?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp">https://upload-images.jianshu.io/upload_images/15859737-a6e8e7a41460b756.png?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp</a></p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//创建HTTP错误请求var createError = require('http-errors');//expressvar express = require('express');//原生模块pathvar path = require('path');//express的cookie处理的中间键(middleware)var cookieParser = require('cookie-parser');//日志中间键var logger = require('morgan');//引用首页的路由var indexRouter = require('./routes/index');//引用users的路由var usersRouter = require('./routes/users');var app = express();// view engine setup 设置view渲染引擎为ejsapp.set('views', path.join(__dirname, 'views'));app.set('view engine', 'ejs');//app.use是express实例上的方法，表示应用中间键app.use(logger('dev'));app.use(express.json());app.use(express.urlencoded(&#123; extended: false &#125;));app.use(cookieParser());app.use(express.static(path.join(__dirname, 'public')));//把路由也当初中间键来挂载app.use('/', indexRouter);app.use('/users', usersRouter);// catch 404 and forward to error handlerapp.use(function(req, res, next) &#123;  next(createError(404));&#125;);// error handlerapp.use(function(err, req, res, next) &#123;  // set locals, only providing error in development  res.locals.message = err.message;  res.locals.error = req.app.get('env') === 'development' ? err : &#123;&#125;;  // render the error page  res.status(err.status || 500);  res.render('error');&#125;);module.exports = app;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> NodeJS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> express应用程序生成器 </tag>
-            
-            <tag> NodeJS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>NodeJS基本介绍</title>
-      <link href="/posts/nodejs.html"/>
-      <url>/posts/nodejs.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="一、NodeJS基本介绍"><a href="#一、NodeJS基本介绍" class="headerlink" title="一、NodeJS基本介绍"></a>一、NodeJS基本介绍</h3><p> 1、NodeJS是为了开发高性能的服务器而诞生的一种技术</p><p> 2、是运行在服务端的 JavaScript，基于V8引擎（谷歌浏览器的版本）进行运行 </p><p> 3、使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效</p><p>node官网 <a href="https://nodejs.org">https://nodejs.org</a><br>node中文网 <a href="http://nodejs.cn">http://nodejs.cn</a><br>Node.js 的包管理器 npm，是全球最大的开源库生态系统<br><em>注意：NodeJS不是语言，是运行环境！！</em></p><h4 id="引擎-engine是什么？"><a href="#引擎-engine是什么？" class="headerlink" title="引擎 engine是什么？"></a>引擎 engine是什么？</h4><ul><li>Node是一个基于 <strong>Chrome V8</strong> 引擎的 JavaScript <strong>运行环境</strong>（服务器端的浏览器）</li><li>内核里有引擎：渲染引擎（渲染dom结构）、脚本引擎（运行脚本语言）<br>脚本引擎最流行的就是chrome V8引擎，快、高效<br>| <strong>内核</strong> | <strong>浏览器</strong>          | Cool     | company      |<br>| ———— | —————————- | ———— | —————— |<br>| trident  | IE                  | -ms-     | microsoft    |<br>| webkit   | safari、chrome(l)   | -webkit- | apple/google |<br>| blink    | chrome(h)、opera(h) |          | google       |<br>| presto   | opera(l)            | -o-      | opera        |<br>| gecko    | firefox             | -mz-     | mozilla      |</li></ul><h3 id="二、前端学习node的意义"><a href="#二、前端学习node的意义" class="headerlink" title="二、前端学习node的意义"></a>二、前端学习node的意义</h3><p> 1、 开发沟通：开发时更容易理解后端实现，降低交流成本<br> 2、 后端开发：想写些自己感兴趣的项目时，可以自己独立完成，即使没有后端支持，且成本特别低。<br> 3、 中间层开发：为了进一步的前后端分离，提高性能，使用nodejs做中间层是一个非常好的实践（由于nodejs具有异步io的特点）</p><h3 id="三、使用node的方式"><a href="#三、使用node的方式" class="headerlink" title="三、使用node的方式"></a>三、使用node的方式</h3><p> 1、 在node交互模式下运行（类似于命令窗口），这种方式类似于浏览器控制台，一般是用于运行单独的代码段。<br> 2、 单独创建一个node文件，其实就是一个不包含bom与dom的js文件，然后使用node 文件名.js来运行，当然你也可以不给js后缀，这种方式一般是用于运行一个独 立的nodejs文件</p><h3 id="四、前端要掌握的nodejs核心内容"><a href="#四、前端要掌握的nodejs核心内容" class="headerlink" title="四、前端要掌握的nodejs核心内容"></a>四、前端要掌握的nodejs核心内容</h3><p> 1、file模块 +  http模块</p><p> 2、File+http模块 构建静态的webserver</p><p> 3、使用nodejs的web框架express构建主流的ApiServer</p><h3 id="五、file模块"><a href="#五、file模块" class="headerlink" title="五、file模块"></a>五、file模块</h3><p>1、创建文件夹—fs.mkdir(path[, options], callback)　</p><p>　　path - 要创建的文件夹路径</p><p>　　options 参数可以是：</p><p>　　　　recursive - 是否以递归的方式创建目录，默认为 false。</p><p>　　　　mode - 设置目录权限，默认为 0777。</p><p>　　callback - 文件夹创建完成后的回调函数，创建成功是没有参数的，如果创建失败会有个错误对象作为参数</p><p>2、读取文件夹—fs.readdir(path, callback)</p><p>3、 删除空文件夹—fs.rmdir(path, callback)</p><p>4、写入(创建)文件—-fs.writeFile(filename,data,callback)</p><p>　　filename:写入文件名</p><p>　　data:写入文件的数据(String|Buffer)</p><p>　　callback(err):错误信息参数</p><p>5、读取文件内容—fs.readFile(filename,callback)</p><p>6、向文件中追加内容—fs.appendFile(filename,data,callback)</p><p>7、删除文件—fs.unlink(path,callback)</p><h3 id="六、HTTP模块构建流程"><a href="#六、HTTP模块构建流程" class="headerlink" title="六、HTTP模块构建流程"></a>六、HTTP模块构建流程</h3><p> 1、导入http模块      var http = require(‘http’)<br> 2、使用http模块创建一个服务器  http.creatServer(fn).listen(端口号)<br> 3、给服务器添加请求处理函数fn—&gt;绑定端口 </p><p>可以参考：Node.js到底是做什么的？这是我看到最好的解释了。<a href="https://www.cnblogs.com/suhaihong/p/6598308.html">https://www.cnblogs.com/suhaihong/p/6598308.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> NodeJS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> NodeJS基本介绍 </tag>
-            
-            <tag> file模块 </tag>
-            
-            <tag> http模块 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>NodeJS使用流程</title>
-      <link href="/posts/use-nodejs.html"/>
-      <url>/posts/use-nodejs.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="一些命令行："><a href="#一些命令行：" class="headerlink" title="一些命令行："></a>一些命令行：</h3><p>ls:   查看当前目录有哪些文件,加上-a显示所有文件(夹)<br>ll:   同ls,只是显示方式不一样<br>clear:    清屏</p><p>pwd:  print work directory, 打印工作目录的路径</p><p>cd  目录: 进入某个目录, 如果不跟用户名，直接进行用户的根目录</p><p>mkdir   目录名：创建一个目录</p><p>touch   文件名：创建一个文件</p><p>rm -rf  文件或者目录名： 删除一个文件或者一个目录</p><p>npm init:   初始一个项目， 加-y参数可以不用提示直接创建package.json</p><p>在package.json  里可以添加任意的执行脚本。</p><p>如果node项目要监听代码的修改，可以使用 nodemon</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// http是node原生模块，不需要安装可以直接引入const http = require('http')​// 使用http.createServer的方法创建一个serverconst app = http.createServer((req, res) => &#123;res.end('hello 1901!')&#125;)// 让server运行起来吧！！！app.listen(3000, () => &#123;console.log('server is running on http://localhost:3000')&#125;)</code></pre><p>一般在项目中，不会使用原生的方式来写应用。推荐有一些nodejs的框架</p><p>express</p><p>koa</p><h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><p>首先要安装npm i express -S</p><p>创建一个基本的express应用</p><p>// 从express包里引入express方法, 这个不是原生的模块，所以需要先安装npm i express -S<br>const express = require(‘express’)<br>​<br>// 创建一个express实例<br>const app = express()<br>​<br>// 定义一个路由，这个路由是通过get方法访问，当访问的时候，服务器发送一个响应给客户端<br>app.get(‘/‘, (req, res) =&gt; {<br>res.send(‘hello express’)<br>})<br>​<br>// 要让app运行起来，需要监听<br>app.listen(3000, () =&gt; {<br>console.log(‘server is running on <a href="http://localhost:3000">http://localhost:3000</a>‘)<br>})</p><p>就可以通过<a href="http://localhost:3000访问，你将看到页面上有hello">http://localhost:3000访问，你将看到页面上有hello</a> express</p><p>npm list -g —depth=0 查看全局安装</p><p>npx 临时使用的命令</p><p>__dirname 当前文件所在的目录<br>peocess.cwd() 命令开始执行时的目录</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> NodeJS </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> NodeJS使用流程 </tag>
-            
-            <tag> express </tag>
+            <tag> 浏览器地址栏输入url地址发生的事 </tag>
             
         </tags>
       
@@ -578,189 +470,23 @@
     
     
     <entry>
-      <title>gulp</title>
-      <link href="/posts/gulp.html"/>
-      <url>/posts/gulp.html</url>
+      <title>CSS-SCSS代码规范</title>
+      <link href="/posts/css-scss.html"/>
+      <url>/posts/css-scss.html</url>
       
-        <content type="html"><![CDATA[<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>gulp是基于Nodejs的自动任务运行器<br>能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤</p><h3 id="使用流程："><a href="#使用流程：" class="headerlink" title="使用流程："></a>使用流程：</h3><p>安装nodejs -&gt; 全局安装gulp -&gt; 项目安装gulp以及gulp插件 -&gt; 配置gulpfile.js -&gt; 运行任务</p><h3 id="1-安装-nodejs"><a href="#1-安装-nodejs" class="headerlink" title="1.安装 nodejs"></a>1.安装 nodejs</h3><p>node -v<br>npm -v<br>npm install <package-name> -g （—save-dev）<br>-g 全局安装<br>—save 局部安装并保存到package.json配置中<br>-dev 存在package.json的devDependencies配置项里，意思是生产环境依赖的模块</package-name></p><p>npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a><br>可以使用 cnpm 替代 npm 来安装资源</p><h3 id="2-全局安装-gulp"><a href="#2-全局安装-gulp" class="headerlink" title="2.全局安装 gulp"></a>2.全局安装 gulp</h3><p>npm install gulp@3 -g<br>或：<br>cnpm install gulp@3 -g</p><p>测试：gulp -v</p><h3 id="3-在项目目录下生成-package-json-文件："><a href="#3-在项目目录下生成-package-json-文件：" class="headerlink" title="3.在项目目录下生成 package.json 文件："></a>3.在项目目录下生成 package.json 文件：</h3><p>npm init<br>或<br>cnpm init</p><h3 id="4-在项目目录中本地安装-gulp："><a href="#4-在项目目录中本地安装-gulp：" class="headerlink" title="4.在项目目录中本地安装 gulp："></a>4.在项目目录中本地安装 gulp：</h3><p>npm install gulp —save-dev<br>本地安装成功后，会生成 node_modules 文件夹</p><h3 id="5-在项目目录中本地安装-gulp-插件https-www-npmjs-com"><a href="#5-在项目目录中本地安装-gulp-插件https-www-npmjs-com" class="headerlink" title="5.在项目目录中本地安装 gulp 插件https://www.npmjs.com"></a>5.在项目目录中本地安装 gulp 插件<a href="https://www.npmjs.com">https://www.npmjs.com</a></h3><p>（1）压缩CSS：gulp-minify-css<br>npm install gulp-minify-css —save-dev</p><p>（2）压缩JS：gulp-uglify<br>npm install —save-dev gulp-uglify</p><p>（3）压缩Html：gulp-htmlmin<br>npm install —save-dev gulp-htmlmin</p><p>（4）将ES6转换为ES5：gulp-babel<br>npm install —save-dev gulp-babel @babel/core @babel/preset-env</p><h4 id="文件合并"><a href="#文件合并" class="headerlink" title="文件合并"></a>文件合并</h4><p>npm install —save-dev gulp-concat</p><h4 id="gulpfile-js中修改js任务"><a href="#gulpfile-js中修改js任务" class="headerlink" title="gulpfile.js中修改js任务"></a>gulpfile.js中修改js任务</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">var concat = require("gulp-concat");gulp.task("js", function()&#123;    gulp.src("src/js/**/*.js") .pipe(babel(&#123;   presets: ['@babel/env'] &#125;))    .pipe(concat('all.js'))    .pipe(uglify())    .pipe(gulp.dest("dist/js"))    .pipe(connect.reload());&#125;);</code></pre><h4 id="服务器：gulp-connect"><a href="#服务器：gulp-connect" class="headerlink" title="服务器：gulp-connect"></a>服务器：gulp-connect</h4><p>npm install —save-dev gulp-connect</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var connect = require('gulp-connect');gulp.task('server', function() &#123;    connect.server(&#123;        livereload: true,        port: 2333    &#125;);&#125;);</code></pre><h4 id="处理图片"><a href="#处理图片" class="headerlink" title="处理图片"></a>处理图片</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">gulp.task("img", function()&#123;    gulp.src('src/images/**/*')    .pipe(gulp.dest('dist/images'))&#125;)gulp.task("default", ["sass", "html", "minijs", "connect", "watch", "img"]);</code></pre><h4 id="sass转css-gulp-sass"><a href="#sass转css-gulp-sass" class="headerlink" title="sass转css gulp-sass"></a>sass转css gulp-sass</h4><p>npm install —save-dev gulp-sass</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var sass = require('gulp-sass');gulp.task('sass', function()&#123;    gulp.src('src/css/*.scss')    .pipe(sass())    .pipe(gulp.dest('dist/css'))&#125;);</code></pre><h4 id="watch：监听文件的的变化执行对应的任务"><a href="#watch：监听文件的的变化执行对应的任务" class="headerlink" title="watch：监听文件的的变化执行对应的任务"></a>watch：监听文件的的变化执行对应的任务</h4><p>给每一个任务加上pipe(connect.reload())</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">gulp.task('watch',function()&#123;    gulp.watch('./src/css/*.scss',['sass']);    gulp.watch('./src/*.html',['html']);    gulp.watch('./src/css/*.css',['css']);    gulp.watch('./src/js/*.js',['js']);&#125;)gulp.task("default", ["sass", "html", "js", "connect", "watch"]);</code></pre><h4 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">const gulp = require('gulp');const minifyCss = require('gulp-minify-css');const uglify = require('gulp-uglify');const babel = require('gulp-babel');const htmlmin = require('gulp-htmlmin');gulp.task('default', function() &#123;    // 将你的默认的任务代码放在这    console.log('gulp启动成功');&#125;);gulp.task("hello", function()&#123;    console.log("hello gulp");&#125;);gulp.task("html", function()&#123;    gulp.src("src/index.html")      .pipe(htmlmin(&#123;        removeComments: true,//清除HTML注释        collapseWhitespace: true,//压缩HTML        collapseBooleanAttributes: true,//省略布尔属性的值 input标签的 checked="true"        removeEmptyAttributes: true,//删除所有空格作属性值 input 标签        removeScriptTypeAttributes: true,//删除script标签的type="textjavascript"        removeStyleLinkTypeAttributes: true,//删除style标签和link标签的type="text/css"        minifyJS: true,//压缩页面JS        minifyCSS: true//压缩页面CSS       &#125;)    )    .pipe(gulp.dest("dist"))&#125;);gulp.task("css", function()&#123;  gulp.src("src/css/*.css")      .pipe(minifyCss())      .pipe(gulp.dest("dist/css"));&#125;);gulp.task("js", function()&#123;  gulp.src("src/js/*.js")  .pipe(uglify())  .pipe(gulp.dest("dist/js"));&#125;);</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-注释规范"><a href="#1-注释规范" class="headerlink" title="1 注释规范"></a>1 注释规范</h2><h2 id="2-缩进-空格-换行规范"><a href="#2-缩进-空格-换行规范" class="headerlink" title="2 缩进/空格/换行规范"></a>2 缩进/空格/换行规范</h2><p>(1)每个缩进使用4个空格，不允许使用 2 个空格 或 tab</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.sample &#123;    display: flex;&#125;//错误.sample &#123;  display: flex;&#125;(2)选择器 与 花括号 之间必须包含空格```css//正确.sample &#123;    display: flex;&#125;//错误.sample&#123;    display: flex;&#125;</code></pre><p>(3)每条规则之间必须包含空行</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.sample &#123;    display: flex;&#125;.sample1 &#123;    display: block;&#125;//错误.sample &#123;    display: flex;&#125;.sample1 &#123;    display: block;&#125;(4)属性名与冒号之间不允许包含空格， 冒号与属性值之间必须包含空格```css//正确display: flex;//错误display:flex;display : flex;display :flex;</code></pre><p>(5)逗号前不允许有空格，逗号后必须跟一个空格</p><pre><code>//正确font-family: Helvetica, Arial//错误font-family: Helvetica , Arialfont-family: Helvetica ,Arialfont-family: Helvetica, Arial</code></pre><p>(6)SCSS mixin的方法参数括号与 { 之间必须包含一个空格, 各参数间必须有一个空格</p><pre class=" language-lang-css"><code class="language-lang-css">//正确@mixin color-box($bg-color: $grey-light, $border-color: $grey) &#123;    background-color: $bg-color;    border: 1px solid $border-olor;&#125;//错误@mixin color-box($bg-color:$grey-light,$border-color:$grey) &#123;    background-color: $bg-color;    border: 1px solid $border-olor;&#125;</code></pre><p>(7) ‘+’ ‘~’ ‘&gt;’选择器前后必须跟一个空格</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.radio-label + .radio-box &#123;&#125;//错误.radio-label+.radio-box &#123;&#125;</code></pre><p>(8)引用mixin和多层嵌套必须有一个空行</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.sample &#123;    @include color-box;    margin: 15px;    &:hover &#123;      display: block;    &#125;&#125;//错误.sample &#123;    @include color-box;    margin: 15px;    &:hover &#123;      display: block;    &#125;&#125;</code></pre><p>(9)一组变量的定义，尽量以冒号对齐</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐$link-hover-color        : #29e;$hover-color-gray        : #ebebeb;$icon-hover-color        : #4d4d4d;$btn-hover-color         : #f0f0f0;$btn-hover-color-form    : #f9f9f9;$btn-hover-color-cancel  : #f63737;//不推荐$link-hover-color : #29e;$hover-color-gray : #ebebeb;$icon-hover-color : #4d4d4d;$btn-hover-color : #f0f0f0;$btn-hover-color-form : #f9f9f9;$btn-hover-color-cancel : #f63737;</code></pre><p>(10)多个并行选择器使用同一规则，必须换行</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.a,.b,.c &#123;    box-sizing: border-box;&#125;//错误.a, .b, .c &#123;    box-sizing: border-box;&#125;</code></pre><h2 id="3-选择器"><a href="#3-选择器" class="headerlink" title="3 选择器"></a>3 选择器</h2><p>禁止使用ID应用于样式，应该使用class</p><pre class=" language-lang-css"><code class="language-lang-css">//正确.content &#123;    display: flex;&#125;//错误#content &#123;    display: flex;&#125;</code></pre><p>CSS选择器中避免标签名<br>选择器应该是准确和有语义的class(类)名，不推荐使用标签选择器。这样会更容易维护, 只需要修改你的标签名，而不是你的class<br>从分离的角度考虑,在表现层中不应该分配html标记/语义。</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    display: flex;    > .nav &#123;        flex: 1;    &#125;&#125;//不推荐.content &#123;    display: flex;    > nav &#123;        flex: 1    &#125;&#125;</code></pre><p>尽量精准的选择</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    display: flex;    > .nav &#123;        flex: 1;    &#125;&#125;//不推荐.content &#123;    display: flex;    .nav &#123;        flex: 1    &#125;&#125;</code></pre><p>选择器嵌套<br>正常的情况下，我们不推荐使用嵌套，如果需要使用嵌套，我们不推荐嵌套超过三层, 如果嵌套超过三层，应该考虑是不是哪里可以使用更精准更语义化的class。不推荐直接使用css的嵌套，而是使用SCSS的嵌套。</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    display: flex;    > .nav &#123;        flex: 1;        > .item &#123;            text-align: center;        &#125;    &#125;&#125;//不推荐.content .nav .item a &#123;    text-align: center;&#125;</code></pre><p>在CSS预处理器如LESS 和 SASS 里 media query 推荐直接在选择器的嵌套中使用，有助于保持媒体查询属于的上下文</p><pre class=" language-lang-css"><code class="language-lang-css">//推荐.content &#123;    font-size: 1.2rem;    @media screen and (min-width: 767px) &#123;        font-size: 1rem;    &#125;&#125;//不推荐.content &#123;    font-size: 1.2rem;&#125;@media screen and (min-width: 767px) &#123;    .content &#123;        font-size: 1rem;    &#125;&#125;</code></pre><p>属性选择器必须使用双引号</p><pre class=" language-lang-css"><code class="language-lang-css">//正确[class="icon-"] &#123;    font-size: 1rem;&#125;//错误[class='icon-'] &#123;    font-size: 1rem;&#125;</code></pre><h2 id="4-属性规范"><a href="#4-属性规范" class="headerlink" title="4 属性规范"></a>4 属性规范</h2><p>属性定义必须另起一行</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.selector &#123;    margin: 0;    padding: 0;&#125;// 错误.selector &#123; margin: 0; padding: 0; &#125;</code></pre><p>属性必须以分号结尾</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.selector &#123;    margin: 0;    padding: 0;&#125;// 错误.selector &#123;    margin: 0;    padding: 0&#125;</code></pre><p>属性值为0时，省略单位</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.box &#123;    padding: 0;&#125;// 错误.box &#123;    padding: 0px;&#125;</code></pre><p>使用16进制表示颜色，颜色值采用小写，#rrggbb的情况简写为#rgb，有透明度的情况使用rgba表示</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.box &#123;    background: rgba(0, 0, 255, .5);    color: #3ec;&#125;// 错误.box &#123;    background: white;    opacity: 0.5;    color: #33eecc;&#125;同一组属性尽量按照功能顺序书写，以 Formatting Model（布局方式、位置） > Box Model（尺寸） > Typographic（文本相关） > Visual（视觉效果） 的顺序书写，以提高代码的可读性Formatting Model 相关属性包括：display / position / top / right / bottom / left / float / overflow 等Box Model 相关属性包括：margin / border / padding / width / height 等Typographic 相关属性包括：font / line-height / text-align / word-wrap 等Visual 相关属性包括：background / color / transition / list-style 等```css// 推荐.sidebar &#123;    // formatting model    position: absolute;    top: 50px;    left: 0;    overflow-x: hidden;    // box model    width: 200px;    padding: 5px;    border: 1px solid #ddd;    // typographic    font-size: 14px;    line-height: 20px;    // visual    background: #f5f5f5;    color: #333;    transition: color 1s;&#125;</code></pre><p>font-family 属性</p><p>font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。</p><pre class=" language-lang-css"><code class="language-lang-css">// 示例h1 &#123;    font-family: "Microsoft YaHei";&#125;</code></pre><p>font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确body &#123;    font-family: Arial, sans-serif;&#125;h1 &#123;    font-family: Arial, "Microsoft YaHei", sans-serif;&#125;// 错误body &#123;    font-family: arial, sans-serif;&#125;h1 &#123;    font-family: Arial, "Microsoft YaHei", sans-serif;&#125;</code></pre><p>font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )</p><pre class=" language-lang-css"><code class="language-lang-css">// 示例body &#123;    font-family: "Helvetica Neue", Helvetica, Arial, PingFangSC-Regular, "Microsoft Yahei", Verdana, sans-serif;&#125;</code></pre><p>不推荐在业务中重写font-family</p><p>url()中的路径不添加引号</p><pre class=" language-lang-css"><code class="language-lang-css">// 推荐.box &#123;    background-image: url(../imgs/banner.jpg);&#125;// 不推荐.box &#123;    background-image: url('../imgs/banner.jpg');&#125;</code></pre><p>推荐并适当缩写值<br>“适当”是因为缩写总是会包含一系列的值，而有时候我们并不希望设置某一值，反而造成了麻烦，那么这时候你可以不缩写，而是分开写。</p><p>// 有时我们只想设置一个容器水平居中，那么设置left，right就好，而top和bottom不是这个样式要关心的（如果设置了反倒会影响其他样式在这个容器上的使用）</p><pre class=" language-lang-css"><code class="language-lang-css">// 示例<div class="box center"></div>.box &#123;    margin-top: 10px;&#125;// 这种简写将会覆盖.box里的设置.center &#123;    margin: 0 auto;&#125;// 比如下面这个模块的样式设置，我们确实需要设置padding的所有项，于是我们就可以采用缩写.footer &#123;    padding: 12px 3px;&#125;</code></pre><p>对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，.5 代替 0.5；-.5px 代替 -0.5px）</p><p>无边框设置</p><pre class=" language-lang-css"><code class="language-lang-css">// 正确.box &#123;    border: none;&#125;// 错误.box &#123;    border: 0; // 浏览器会进行多余的渲染，性能不佳&#125;</code></pre><p>层级(z-index)禁止随意设置，页面弹窗、气泡为最高级（最高级为999）；普通区块为10-90内10的倍数；同层的多个元素，在该层级内使用相同的 z-index 或递增。</p><p>禁止使用 !important (特殊情况除外，如覆盖第三方插件中的样式等)</p><p>禁止使用 filter</p><p>多个class里有一个或多个公共属性，应该将属性抽取到一个单独的class中或者使用泛选择器([attribute~=value], [attribute^=value],[attribute$=value],[attribute*=value])，泛选择器应确保不会有全局污染，避免多次书写重复代码</p><pre><code>    // 正确    &lt;div&gt;        &lt;span class=&quot;icon-book&quot;&gt;&lt;/span&gt;        &lt;span class=&quot;icon-pen&quot;&gt;&lt;/span&gt;    &lt;/div&gt;    [class^=&quot;icon-&quot;] &#123;        background-image: url(../imgs/sprite.png) no-repeat;    &#125;    .icon-book &#123;        background-positon: 0 -16px;    &#125;    .icon-pen &#123;        background-positon: -16px -16px;    &#125;    // 错误    &lt;div&gt;        &lt;span class=&quot;icon-book&quot;&gt;&lt;/span&gt;        &lt;span class=&quot;icon-pen&quot;&gt;&lt;/span&gt;    &lt;/div&gt;    .icon-book &#123;        background-image: url(../imgs/sprite.png) no-repeat;        background-positon: 0 -16px;    &#125;    .icon-pen &#123;        background-image: url(../imgs/sprite.png) no-repeat;        background-positon: -16px -16px;    &#125;</code></pre><h2 id="5-Hack规范"><a href="#5-Hack规范" class="headerlink" title="5 Hack规范"></a>5 Hack规范</h2><p>通常我们禁止在CSS的一个选择器中使用hack混编，如果你确实需要写hack, 我们应该有一个class： xxx-fix, 最好把所有的hack放在一个独立的文件, 通过JS特性检测或者直接添加到dom中。</p><pre class=" language-lang-css"><code class="language-lang-css">  // 错误  .selector &#123;      key: value;      key: fix-value\0; //ie 9-11  &#125;  // 正确  .selector &#123;      key: value;  &#125;  .selecor-ie-fix &#123;      key: fix-value\0; //ie 9-11  &#125;</code></pre><h2 id="6-命名规范"><a href="#6-命名规范" class="headerlink" title="6 命名规范"></a>6 命名规范</h2><h3 id="文件夹命名"><a href="#文件夹命名" class="headerlink" title="文件夹命名"></a>文件夹命名</h3><p>css文件夹命名应参照项目文件夹命名规则，命名总是以字母开头而不是数字，且字母一律小写，以中划线连接多个单词且不带其他标点符号。<br>如：input-number<br>有复数结构时，采取复数命名法。<br>如： style styles<br>|- components<br>|- input-number<br>|- inputNumber.html<br>|- inputNumber.js<br>|- styles<br>|- input_number.scss<br>|- images<br>|- menu</p><h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3><p>全站架构：(以下文件放在跟路径下的styles目录中)<br>基本共用 base.scss<br>布局、版面 layout.scss<br>主题 themes.scss<br>专栏 columns.scss<br>文字 font.scss<br>主要的 main.scss<br>表单 forms.scss<br>补丁 mend.scss<br>打印 print.scss<br>变量 variables.scss<br>功能函数 mixins.scss<br>色值 colors.scss<br>动画 animations.scss<br>字体 iconfont.scss<br>组件级 / 应用级：（放在组件/应用目录中）<br>css模块文件，其文件名必须与模块名一致。<br>css页面文件，其文件名必须与HTML文件名一致。<br>目的是让开发人员快速找到该页面或组件对应的css文件。<br>文件命名总是以字母开头而不是数字，且字母一律小写，以下划线连接且不带其他标点符号。<br>radio.scss<br>main-list.scss<br>main-detail.scss</p><h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>命名变量的最佳方式就是使用抽象名词，尽量取消名字和值之间的直接关系。<br>使用’$’开头+ 语义化的变量名。<br>避免使用无意义的词，如: calendar<br>推荐变量的意义在前面，功能在后面</p><pre class=" language-lang-css"><code class="language-lang-css">// 不推荐$red: #F50707;$yellow: #B3F724;// 推荐$brand-color: #F50707;$accent-color: #B3F724;// 你可能会使用名称加-color的后缀来命名颜色的变量:// Base colors$base-color: #333;$brand-color: #F50707;$brand-80-color: rgba($color-brand, 0.8);$accent-color: #B3F724;// 或者使用header-或者footer-来命名一些特殊的区域：// Header$header-height: 100px;$header-background-color: $color-brand;// Footer$footer-height: 200px;$footer-background-color: #aaa;// 不推荐$z-index-modal$padding-body// 推荐$modal-z-index$body-padding</code></pre><h3 id="选择器命名"><a href="#选择器命名" class="headerlink" title="选择器命名"></a>选择器命名</h3><h4 id="推荐采用BEM方式命名"><a href="#推荐采用BEM方式命名" class="headerlink" title="推荐采用BEM方式命名"></a>推荐采用BEM方式命名</h4><pre><code>        // BE模式 block__element：块里的元素，如：nav（block）里的 a 标签(element)        &lt;nav class=&quot;g-nav&quot;&gt;            &lt;a href=&quot;#&quot; class=&quot;g-nav__item&quot;&gt;工作动态&lt;/a&gt;        &lt;/nav&gt;        .g-nav__item &amp;#123;        &amp;#125;</code></pre><pre><code>        // BM模式 block--modifier: 块元素加修饰符        // g-nav表示导航的通用样式，g-nav-top表示该导航特有的样式，g-nav--active示激活的nav        &lt;nav class=&quot;g-nav g-nav-top g-nav--active&quot;&gt;        &lt;/nav&gt;        .g-nav--active &amp;#123;        &amp;#125;</code></pre><pre><code>        // BEM模式 block__element--modifier nav块里的a元素加上active状态        &lt;nav class=&quot;g-nav&quot;&gt;            &lt;a href=&quot;#&quot; class=&quot;g-nav__item g-nav__item--active&quot;&gt;当前状态&lt;/a&gt;        &lt;/nav&gt;        .g-nav__item--active &amp;#123;        &amp;#125;</code></pre><p>BEM只允许出现B<strong>E—M,不允许出现B</strong>B<strong>B</strong>E—M   B<strong>E</strong>E<strong>E—M   B</strong>E—M—M—M<br>如果层级过多，可以使用以下方式：<br>B<strong>E—M &gt; B</strong>E—M &gt; B<strong>E—M(最多3层B</strong>E—M嵌套)</p><pre><code>    // 推荐    &lt;div class=&quot;c-card&quot;&gt;&lt;!-- B --&gt;        &lt;div class=&quot;c-card__header&quot;&gt;&lt;!-- B__E --&gt;            &lt;h2 class=&quot;c-card-title&quot;&gt;&lt;!-- B__E &gt; B --&gt;                &lt;i class=&quot;c-card-title__icon--small&quot;&gt;&lt;/i&gt;&lt;!-- B__E &gt; B__E--M --&gt;                &lt;i class=&quot;c-card-title__icon--big&quot;&gt;&lt;/i&gt;&lt;!-- B__E &gt; B__E--M --&gt;                &lt;span class=&quot;c-card-title__text-wrap&quot;&gt;Title text here&lt;/span&gt;&lt;!-- B__E &gt; B__E --&gt;            &lt;/h2&gt;        &lt;/div&gt;    &lt;/div&gt;    // 推荐    .c-card &#123;                      // B        &amp;__header &#123;                // B__E            &gt; .c-card-title &#123;      // B__E &gt; B                &amp;__icon--small &#123;   // B__E &gt; B__E--M                &#125;                &amp;__icon--big &#123;     // B__E &gt; B__E--M                &#125;                &amp;__text-wrap &#123;     // B__E &gt; B__E                &#125;            &#125;        &#125;    &#125;    // 不推荐    &lt;div class=&quot;c-card&quot;&gt;        &lt;div class=&quot;c-card__header&quot;&gt;            &lt;h2 class=&quot;c-card__header__title&quot;&gt;                &lt;i class=&quot;c-card__header__title__icon&quot;&gt;&lt;/i&gt;                &lt;span class=&quot;c-card__header__title__text&quot;&gt;Title text here&lt;/span&gt;            &lt;/h2&gt;        &lt;/div&gt;    &lt;/div&gt;    // 不推荐    .c-card &#123;        &amp;__header&#123;            &amp;__title &#123;                &amp;__icon &#123;                &#125;                &amp;__text &#123;                &#125;            &#125;        &#125;    &#125;</code></pre><ul><li>注意到以上示例中使用了c- 前缀。这个c代表’component’，给组件加上命名空间，它提高了代码的可读性。<br>类型 | 前缀 | 例子 | 描述<br>布局 | (g-) | g-header | (global)例如头部，尾部，主体，侧栏等<br>组件 | (c-) | c-card | (component)较大整体，如登录注册，搜索等<br>元件 | (u-) | u-btn | 不可再分个体，例如按钮，input框等<br>功能 | (f-) | f-clear | (function)使用频率较高样式，例如清除浮动<br>皮肤 | (s-) | s-nav | (skin) 只包含皮肤的样式<br>主线 | (ig-) | ig-header | (igoal)主线模块中组件Block的前缀<br>审批 | (ap-) | ap-header | (approve)审批模块中组件Block的前缀<br>…<br>命名时需要注意的点：<ul><li>规则命名中，一律采用小写加中划线的方式，不允许使用大写字母或_</li><li>命名避免使用中文拼音，应该采用更简明有语义的英文单词进行组合</li><li>命名注意缩写，但是不能盲目缩写</li><li>不允许通过1、2、3等序号进行命名</li><li>避免class与id重名</li><li>class用于标识某一个类型的对象，命名必须言简意赅</li><li>尽可能提高代码模块的复用，样式尽量用组合的方式</li><li>公共样式名不得包含业务名称</li></ul></li></ul><h3 id="mixins命名"><a href="#mixins命名" class="headerlink" title="mixins命名"></a>mixins命名</h3><p>见名知义<br>小写加中划线，不允许出现大小字母或_</p><pre class=" language-lang-css"><code class="language-lang-css">// 不推荐@mixin button($background: green) &#123;&#125;// 不推荐@mixin buttonBg($background: green) &#123;&#125;// 不推荐@mixin button_bg($background: green) &#123;&#125;// 推荐@mixin button-bg($background: green) &#123;&#125;</code></pre><p>多个参数之间用逗号分隔，给参数设置默认值</p><h2 id="7-重写规范"><a href="#7-重写规范" class="headerlink" title="7 重写规范"></a>7 重写规范</h2><p>我们不允许直接使用公共库的选择器进行重写，如果要进行重写，必须自己重新加一个新的选择器，并且，这个选择器不能对公共库有影响。</p><pre class=" language-lang-css"><code class="language-lang-css">  // 错误  .qf-xxx .qf-btn &#123;      //some rewriting code  &#125;  // 正确  .qf-xxx__qf-btn &#123;      //some rewriting code  &#125;</code></pre><p>使用的时候用qf-btn 和 qf-xxx__qf-btn两个class, 所以在写组件的时候，为了考虑组件的通用性和可重写性，建议组件开发人员，都提供一个外部的样式输入接口</p>]]></content>
       
       
       <categories>
           
-          <category> NodeJS </category>
+          <category> CSS-SCSS </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> gulp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git</title>
-      <link href="/posts/git.html"/>
-      <url>/posts/git.html</url>
-      
-        <content type="html"><![CDATA[<p>写在前面的话：史上最浅显易懂的Git教程！推荐廖雪峰的教程！<a href="https://www.liaoxuefeng.com/wiki/896043488029600">https://www.liaoxuefeng.com/wiki/896043488029600</a></p><h3 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h3><p>Git是目前世界上最先进的分布式版本控制系统。</p><h3 id="SVN与Git的最主要的区别"><a href="#SVN与Git的最主要的区别" class="headerlink" title="SVN与Git的最主要的区别?"></a>SVN与Git的最主要的区别?</h3><p>SVN的存储需要依赖一个服务器，而git所有的东西是放在线上的。节约成本，省时省力</p><h3 id="Git命令："><a href="#Git命令：" class="headerlink" title="Git命令："></a>Git命令：</h3><p>命令 1 . git config —global user.name “你的git名称”</p><p>命令2. git config —global user.email “你的git验证邮箱”</p><p>命令 1 . cd D: 进入 相应的磁盘</p><p>命令 2 . mkdir ‘你自己定义的文件夹名’</p><p>命令 3 . cd ‘你自己定义的文件夹名’</p><p>命令 4. pwd 显示（你自己定义的文件夹名）的路径</p><p>git init 初始化<br>git add ‘文件名’<br>git commit -m ‘我提交时候的备注（相当于注释）’<br>git status 查看commit状态<br>git remote add origin https: // github.com/你的账号/你的项目名称<br>git push -u origin master 将本地的库推送到master<br>git push origin —all push本地所有分支代码<br>分支 （就是推送到服务器上）<br>git pull 拉取远程版本库代码<br>git clone 将服务器端的数据克隆过来</p><p>git log （ 修改日志）</p><p>git reset —hard HEAD^ 退回到上个版本 如果需要退回好多版本就在后面加上 ^ 例： git reset —hard HEAD^^退回两个版本。</p><p>git reflog 查看操作记录</p><p>rm b.txt 这个是删除b文件的命令</p><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>分支( branches ) 是指在开发主线中分离出来，做进一步开发而不影响到原来主线。</p><p>git init 命令运行时默认创建一个分支，并命名为 master</p><p>git branch<br>— 查看所有分支</p><p>git branch <branch-name><br>— 创建分支</branch-name></p><p>git checkout <branch-name><br>— 切换分支</branch-name></p><p>git merge <branch-name><br>— 合并分支</branch-name></p><p>git branch -d <branch-name><br>— 删除分支</branch-name></p><p>如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 提示出错信息：fatal: remote origin already exists.</p><p>解决办法如下：</p><p>1、先输入$ git remote rm origin</p><p>2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！</p><p>3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section ‘remote.origin’. 我们需要修改gitconfig文件的内容</p><p>4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc</p><p>5、找到一个名为gitconfig的文件，打开它把里面的[remote “origin”]那一行删掉就好了！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>chrome调试</title>
-      <link href="/posts/chrome-debug.html"/>
-      <url>/posts/chrome-debug.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="1-console-table"><a href="#1-console-table" class="headerlink" title="1.console.table();"></a>1.console.table();</h3><p>将数组打开展示。<br><img src="https://i.loli.net/2020/09/13/BgC2neTEO7fVIrN.png" alt="1.PNG"></p><h3 id="2-console-time"><a href="#2-console-time" class="headerlink" title="2.console.time()"></a>2.console.time()</h3><p>代码运行时间,console.timeEnd()放在结尾<br><img src="https://i.loli.net/2020/09/13/hoYGDM2Jive1ysW.png" alt="2.PNG"></p><h3 id="3-monitorEvents（）"><a href="#3-monitorEvents（）" class="headerlink" title="3.monitorEvents（）;"></a>3.monitorEvents（）;</h3><p>事件执行顺序。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> chrome调试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS-模块化</title>
-      <link href="/posts/amd-cmd.html"/>
-      <url>/posts/amd-cmd.html</url>
-      
-        <content type="html"><![CDATA[<p>函数封装 —-&gt; 对象 —-&gt; 立即执行函数 —-&gt; 模块化规范</p><p>是一种项目的构架模式， 这种构架模式让JS代码重用性变得非常高，让项目构架的一些复杂问题全部得以解决。 例如，多个script标签不会再出现了，我们只要用一个script标签进行引入就可以了。</p><p>模块化那有两个规范，AMD规范和CMD规范，当然还有针对于nodejs后台的commonJS规范;</p><h3 id="1-首先对于依赖："><a href="#1-首先对于依赖：" class="headerlink" title="1. 首先对于依赖："></a>1. 首先对于依赖：</h3><p>AMD提前执行(不管什么时候用， 先加载过来) //特点 : 前期消耗网络资源大， 但是后期运行效率高.</p><p>CMD需求执行(有用我再去加载) //特点:整个自选消耗曲线比较平缓。</p><h3 id="2-CMD-推崇依赖就近，AMD-推崇依赖前置。"><a href="#2-CMD-推崇依赖就近，AMD-推崇依赖前置。" class="headerlink" title="2. CMD 推崇依赖就近，AMD 推崇依赖前置。"></a>2. CMD 推崇依赖就近，AMD 推崇依赖前置。</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> // CMDdefine(function(require, exports, module) &#123;var a = require('./a')a.doSomething()// 此处略去 100 行var b = require('./b') // 依赖可以就近书写b.doSomething()// ...&#125;)</code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript"> // AMD 默认推荐的是define(['./a', './b'], function(a, b) &#123; // 依赖必须一开始就写好a.doSomething()// 此处略去 100 行b.doSomething()...&#125;)</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 模块化规范 </tag>
-            
-            <tag> AMD/CMD </tag>
-            
-            <tag> 依赖 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jQuery</title>
-      <link href="/posts/jquery.html"/>
-      <url>/posts/jquery.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="jQuery-语法"><a href="#jQuery-语法" class="headerlink" title="jQuery 语法"></a>jQuery 语法</h2><p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。<br>基础语法： $(selector).action()</p><h3 id="美元符号定义-jQuery"><a href="#美元符号定义-jQuery" class="headerlink" title="美元符号定义 jQuery"></a>美元符号定义 jQuery</h3><p>选择符（selector）”查询”和”查找” HTML 元素<br>jQuery 的 action() 执行对元素的操作<br>jQuery 中所有选择器都以美元符号开头：$()</p><h3 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h3><p>$(document).ready(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});</p><p>简洁写法（与以上写法效果相同）:<br>$(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});<br>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作</p><pre><code>    &lt;div&gt;123&lt;/div&gt;    &lt;div class=&quot;div1&quot;&gt;456&lt;/div&gt;    &lt;div id=&quot;div2&quot;&gt;789&lt;/div&gt;    &lt;p class=&quot;p1&quot;&gt;qeq&lt;/p&gt;    &lt;p&gt;xxx&lt;/p&gt;    &lt;ul&gt;        &lt;li&gt;1&lt;/li&gt;        &lt;li&gt;2&lt;/li&gt;        &lt;li&gt;3&lt;/li&gt;    &lt;/ul&gt;    &lt;script&gt;        var div = $(&quot;div&quot;);        console.log(div);           // console.log(jQuery);        console.log($(&quot;div&quot;).eq(1));//选择第一个div        console.log($(&quot;div:eq(2)&quot;));//选择第二个div        //:eq     匹配一个给定索引值的元素,单个元素        console.log($(&quot;div&quot;).html());//div的内容        console.log($(&quot;*&quot;));//查找所有的元素        console.log($(this));//选取当前的HTML元素        console.log($(&quot;p.p1&quot;));//选择class=&quot;p1&quot;的p标签        console.log($(&quot;p:first&quot;));//选择第一个p标签        console.log($(&quot;ul li:first&quot;));//选择ul下的第一个li        $(&quot;p:first&quot;).dblclick(function()&#123;            alert(&quot;双击！&quot;);        &#125;)        console.log($(&quot;div&quot;)[0]);//转换为原生js        console.log($(&quot;div&quot;).get(0));转换为原生js        $(&quot;div&quot;).eq(1).html(&quot;我QQ(#`O′)&quot;).addClass(&quot;box1&quot;).css(&quot;color&quot;,&quot;red&quot;);        var div2 = document.querySelector(&quot;#div2&quot;);        console.log($(&quot;div2&quot;));//转换为jQuery        console.log($(&quot;ul&quot;).children(&quot;.two&quot;));//ul下class=&quot;two&quot;的li        console.log($(&quot;ul&quot;).find(&quot;.two&quot;));//ul下的class=&quot;two&quot;的所有元素    &lt;/script&gt;</code></pre><p>1.jQuery选择器<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp</a></p><p>2.jQuery事件<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> jQuery </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> jQuery </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS-闭包和继承</title>
-      <link href="/posts/closure-inheritance.html"/>
-      <url>/posts/closure-inheritance.html</url>
-      
-        <content type="html"><![CDATA[<p>函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象<br>函数在调用的时候会创建一个执行环境对象（活动对象）</p><h2 id="闭包（closure）"><a href="#闭包（closure）" class="headerlink" title="闭包（closure）"></a>闭包（closure）</h2><p>闭包可以在全局函数里面操作另一个作用域的局部变量, 既能重复使用，又不会污染全局<br>闭包有三步：</p><p>1、外层函数嵌套内层函数<br>2、内层函数使用外层函数的局部变量<br>3、把内层函数作为外层函数的返回值</p><p>图例展示：<br>1-预解析<br><img src="https://i.loli.net/2020/09/13/uEgYM9xGc6tbPZW.png" alt="1-预解析.png"></p><p>2-调用时<br><img src="https://i.loli.net/2020/09/13/lzGn5KN4yYZpReO.png" alt="2-调用时.png"></p><p>3-调用后<br><img src="https://i.loli.net/2020/09/13/1FQXrTwCpkH3abS.png" alt="3-调用后.png"></p><p>4-fn调用时<br><img src="https://i.loli.net/2020/09/13/SIjo2mkyeBEv4wQ.png" alt="4-fn调用时.png"></p><p>5-fn调用后<br><img src="https://i.loli.net/2020/09/13/S24RgQIqUwEPnHv.png" alt="5-fn调用后.png"></p><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>子类共享父类的属性和方法,js的继承都是基于原型实现的</p><h3 id="1-原型链继承：子类的原型指向父类的实例"><a href="#1-原型链继承：子类的原型指向父类的实例" class="headerlink" title="1. 原型链继承：子类的原型指向父类的实例"></a>1. 原型链继承：子类的原型指向父类的实例</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> function Cat()&#123;&#125;Cat.prototype = new Animal();Cat.prototype.name = 'cat';var cat = new Cat();console.log(cat.name);cat.say();cat.eat('fish');console.log(cat instanceof Animal); //trueconsole.log(cat instanceof Cat); //true</code></pre><p>特点：<br>非常纯粹的继承关系，实例是子类的实例，也是父类的实例<br>父类新增原型方法/原型属性，子类都能访问到<br>简单，易于实现</p><p>缺点：<br>要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中<br>无法实现多继承<br>来自原型对象的引用属性是所有实例共享的<br>创建子类实例时，无法向构造函数传参</p><h3 id="2-构造继承（call、apply继承）"><a href="#2-构造继承（call、apply继承）" class="headerlink" title="2. 构造继承（call、apply继承）"></a>2. 构造继承（call、apply继承）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> function Cat(name)&#123;    Animal.call(this,name);&#125;var cat = new Cat("Tom");console.log(cat.name);cat.say();console.log(cat instanceof Animal); // falseconsole.log(cat instanceof Cat); // true</code></pre><p>特点：<br>解决了1中，子类实例共享父类引用属性的问题<br>创建子类实例时，可以向父类传递参数<br>可以实现多继承（call多个父类对象）</p><p>缺点：<br>实例并不是父类的实例，只是子类的实例<br>只能继承父类的实例属性和方法，不能继承原型属性/方法<br>无法实现函数复用，每个子类都有父类实例函数的副本，影响性能</p><h3 id="3-拷贝继承"><a href="#3-拷贝继承" class="headerlink" title="3. 拷贝继承"></a>3. 拷贝继承</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Cat(name)&#123;    var animal = new Animal(name);    for(var key in animal)&#123;        Cat.prototype[key] = animal[key];    &#125;&#125;// Test Codevar cat = new Cat("Tom");console.log(cat.name);cat.say();console.log(cat instanceof Animal); // falseconsole.log(cat instanceof Cat); // true</code></pre><p>特点：<br>支持多继承</p><p>缺点：<br>效率较低，内存占用高（因为要拷贝父类的属性）<br>无法获取父类不可枚举的方法（不可枚举方法，不能使用for in 访问到）</p><h3 id="4-组合继承（原型链和构造继承的组合）"><a href="#4-组合继承（原型链和构造继承的组合）" class="headerlink" title="4. 组合继承（原型链和构造继承的组合）"></a>4. 组合继承（原型链和构造继承的组合）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Cat(name)&#123;    Animal.call(this,name);&#125;Cat.prototype = new Animal();Cat.prototype.constructor = Cat;// Test Codevar cat = new Cat();console.log(cat.name);cat.say();console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); // true</code></pre><p>特点：<br>弥补了方式2的缺陷，可以继承实例属性/方法，也可以继承原型属性/方法<br>既是子类的实例，也是父类的实例<br>不存在引用属性共享问题<br>可传参<br>函数可复用</p><p>缺点：<br>调用了两次父类构造函数，生成了两份实例（子类实例将子类原型上的那份屏蔽了）</p><h3 id="5-寄生组合继承"><a href="#5-寄生组合继承" class="headerlink" title="5. 寄生组合继承"></a>5. 寄生组合继承</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Cat(name)&#123;    Animal.call(this);    this.name = name;&#125;(function()&#123;    // 创建一个没有实例方法的类    var Super = function()&#123;&#125;;    Super.prototype = Animal.prototype;    //将实例作为子类的原型    Cat.prototype = new Super();&#125;)();// Test Codevar cat = new Cat();console.log(cat.name);cat.say();console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); //true</code></pre><p>特点：堪称完美<br>缺点：实现较为复杂</p><h3 id="6-ES6继承（语法糖）"><a href="#6-ES6继承（语法糖）" class="headerlink" title="6. ES6继承（语法糖）"></a>6. ES6继承（语法糖）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">class Animal&#123;    constructor(name)&#123;        this.name = name;    &#125;    say()&#123;        alert("My name is "+this.name);    &#125;    eat(food)&#123;        alert(this.name+" is eating "+food);    &#125;&#125;class Cat extends Animal&#123;    constructor(name)&#123;        super(name);    &#125;&#125;var  tom = new Cat("Tom");tom.say();tom.eat("apple");console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); //true</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 闭包 </tag>
-            
-            <tag> 继承 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS-ajax</title>
-      <link href="/posts/ajax.html"/>
-      <url>/posts/ajax.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="注意同步和异步的区分"><a href="#注意同步和异步的区分" class="headerlink" title="注意同步和异步的区分"></a>注意同步和异步的区分</h3><ul><li><p>同步 sync： 首先，JS 是单线程的语言，所谓“单线程”就是一根筋，对于拿到的程序，一行一行的执行，前面的执行完成，后面的傻傻的等着。若前面的代码没执行完就会造成堵塞，后面的没法执行。</p></li><li><p>异步 async： 而AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。异步代码执行的时候就不会阻塞后面的代码执行。</p></li><li><p>记住： 同步执行代码总是优先于异步执行代码，同步代码在异步代码之前执行。</p><ul><li>因为碰到异步代码时，会将异步代码另行存到一个异步队列里面，然后将这个异步队列放到同步代码的最后，才执行<br>例如：Ajax和setTimeout和setInterval这些是异步执行的</li></ul></li></ul><h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；</p><h3 id="Ajax-的不足"><a href="#Ajax-的不足" class="headerlink" title="Ajax 的不足:"></a>Ajax 的不足:</h3><p>1.不同版本的浏览器度 XMLHttpRequest 对象支持度不足(比如 IE5 之前)；<br>2.前进、后退的功能被破坏（因为 Ajax 永远在当前页，不会记录前后页面）；<br>3.搜索引擎的支持度不够（因为搜索引擎爬虫还不能理解 JS 引起变化数据的内容）；</p><p>json是一种数据格式，由对象，数组互相嵌套组成，属性名必须加双引号，数据传输格式</p><h3 id="ajax-readyState"><a href="#ajax-readyState" class="headerlink" title="ajax.readyState:"></a>ajax.readyState:</h3><p>0 － （未初始化）还没有调用send()方法<br>1 － （载入）已调用send()方法，正在发送请求<br>2 － （载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 － （交互）正在解析响应内容<br>4 － （完成）响应内容解析完成，可以在客户端调用了</p><h3 id="HTTP-状态码-ajax-status"><a href="#HTTP-状态码-ajax-status" class="headerlink" title="HTTP 状态码 ajax.status"></a>HTTP 状态码 ajax.status</h3><p>101——客户要求服务器根据请求转换HTTP协议版本<br>200——交易成功<br>304——客户端已经执行了GET，但文件未变化<br>306——前一版本HTTP中使用的代码，现行版本中不再使用<br>400——错误请求，如语法错误<br>404——没有发现文件、查询或UR<br>405——用户在Request-Line字段定义的方法不允许<br>500——服务器产生内部错误<br>505——服务器不支持或拒绝支请求头中指定的HTTP版本</p><h3 id="GET，POST方式比较"><a href="#GET，POST方式比较" class="headerlink" title="GET，POST方式比较"></a>GET，POST方式比较</h3><p>只是不同的发送和请求数据的方式<br>GET：参数有长度限制，<a href="http://www.taobao.com?id=">http://www.taobao.com?id=</a>… , 明文传输<br>POST：参数无限制，放在请求体里, 更安全</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// get方式var ajax = new XMLHttpRequest();ajax.open("GET","url",true);ajax.send(null);ajax.onreadystatechange = function()&#123;if(ajax.readyState == 4 && ajax.status == 200)&#123;     var json = JSON.parse(ajax.responseText);    fn(json);&#125;// post方式var ajax = new XMLHttpRequest();ajax.open("POST","url",true);ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");ajax.send("name=zhangsan&age=18");ajax.onreadystatechange = function()&#123;if(ajax.readyState == 4 && ajax.status == 200)&#123;     var json = JSON.parse(ajax.responseText);    fn(json);&#125;</code></pre><h3 id="封装一个Ajax的get和post方式"><a href="#封装一个Ajax的get和post方式" class="headerlink" title="封装一个Ajax的get和post方式"></a>封装一个Ajax的get和post方式</h3><h4 id="ajax的get方式："><a href="#ajax的get方式：" class="headerlink" title="ajax的get方式："></a>ajax的get方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求get * @param url     string   请求的路径 * @param query   object   请求的参数query * @param succCb  function 请求成功之后的回调 * @param failCb  function 请求失败的回调 * @param isJson  boolean  true： 解析json  false：文本请求  默认值true  */ajaxGet : function (url, query, succCb, failCb, isJson) &#123;    // 拼接url加query    if(query) &#123;        url += "?";        for(var key in query)&#123;            url += key+"="+query[key]+"&";        &#125;        // 把最后一个&删掉        url = url.slice(0, -1);    &#125;    // 1、创建对象    var ajax = new XMLHttpRequest();    // 2、建立连接    ajax.open("GET", url, true);    // 3、发送请求    ajax.send(null);    // 4、监听状态的改变    ajax.onreadystatechange = function()&#123;        if(ajax.readyState === 4)&#123;            if(ajax.status === 200)&#123;                // 用户传了回调才执行                // isJson默认值为true，要解析json                if(isJson === undefined)&#123;                    isJson = true;                &#125;                var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;                succCb && succCb(res);            &#125;else&#123;                // 请求失败                failCb && failCb();            &#125;        &#125;    &#125;&#125;// 调用该方法实例：//tools.ajaxGet("03-ajax.php", &#123;"name": "lisi"&#125;, function(res)&#123;console.log(res);&#125;, function() &#123;&#125;,false);</code></pre><h4 id="ajax的post方式："><a href="#ajax的post方式：" class="headerlink" title="ajax的post方式："></a>ajax的post方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求post * @param url     string   请求的路径 * @param query   object   请求的参数query * @param succCb  function 请求成功之后的回调 * @param failCb  function 请求失败的回调 * @param isJson  boolean  true： 解析json  false：文本请求  默认值true  */ajaxPost: function(url, query, succCb, failCb, isJson)&#123;    var ajax = new XMLHttpRequest();    ajax.open("POST", url, true);    // 设置请求头数据传输格式    ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");    // 把query拼接成urlencoded    var str = "";    for(var key in query)&#123;        str += key + "=" + query[key] + "&";    &#125;    str = str.slice(0,-1);    ajax.send(str);    ajax.onreadystatechange = function () &#123;        if(ajax.readyState === 4) &#123;            if(ajax.status === 200)&#123;                // 判断isJson是否传进来了                isJson = isJson === undefined ? true : isJson;                succCb && succCb(isJson ? JSON.parse(ajax.responseText) : ajax.responseText);            &#125;        &#125;    &#125;&#125;// 调用该方法实例：//tools.ajaxGet("03-ajax.php", &#123;"name": "lisi"&#125;, function(res)&#123;console.log(res);&#125;, function() &#123;&#125;,false);</code></pre><h3 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h3><p>浏览器安全策略，保障非同源资源之间数据访问的安全性。<br>默认不允许非同源的资源直接访问。<br>URL：<br>协议://域名:端口/路径名称?查询字符串#位置标识符<br>同源：协议、域名、端口完全一致，只要三个中有任何一个不一致，则是非同源<br>非同源资源间需要进行访问，则需要实现跨域。</p><h2 id="解决资源跨域访问："><a href="#解决资源跨域访问：" class="headerlink" title="解决资源跨域访问："></a>解决资源跨域访问：</h2><h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>cross-origin resource sharing<br>服务器端：设置响应头信息：Access-Control-Allow-Origin:*<br>前端： ajax可解决GET/POST跨域需求</p><h4 id="GET方式："><a href="#GET方式：" class="headerlink" title="GET方式："></a>GET方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre><h4 id="POST方式"><a href="#POST方式" class="headerlink" title="POST方式:"></a>POST方式:</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre><h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><p>利用script标签的src属性在引入外部JS时不受同源策略限制的特性，来实现跨域。<br>JSONP只能处理GET请求方式的跨域<br>后端：<br>由服务器端构建一个字符串：字符串中的内容是能够在 JS 中执行的函数调用的结构<br>前端：</p><ol><li>创建 script 元素</li><li>设置 src 属性，传递 callback 参数指明全局回调函数的名称</li><li>添加到 body 中</li><li>创建全局函数，用于处理响应数据</li><li><p>删除 script 元素</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* jsonp ajax请求* @param  url  string 请求路径* @param  cb    string  全局函数名* @param  query  object  请求参数*/ajaxJsonp : function(url, cb, query) &#123; // 1、 创建script标签 var script  = document.createElement("script"); // 2、拼接url和回调函数以及请求参数 url += "?cb="+cb; if(query)&#123;     for(var key in query)&#123;         url += "&"+key+"="+query[key];     &#125; &#125; // 3、设置script的src属性 script.src = url; // 4、 把script添加到body中 document.body.appendChild(script); document.body.removeChild(script);&#125;</code></pre></li></ol><h3 id="promise（ES6）"><a href="#promise（ES6）" class="headerlink" title="promise（ES6）"></a>promise（ES6）</h3><p>承诺：—-&gt; 兑现 （resolve） 或 失信（rejected）<br>用于表示一个异步操作的最终状态（完成或失败），以及其返回的值。它允许你为异步操作的成功和失败分别绑定相应的处理方法。这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象。</p><p>一个 Promise有以下几种状态:<br>pending: 初始状态，既不是成功，也不是失败状态。<br>fulfilled: 意味着操作成功完成。<br>rejected: 意味着操作失败。</p><h4 id="创建Promise对象："><a href="#创建Promise对象：" class="headerlink" title="创建Promise对象："></a>创建Promise对象：</h4><p>var promise = new Promise( executor );<br>executor: 是一个函数，该函数在创建Promise对象的同时被调用执行。<br>executor:<br>语法：function(resolve, reject) {…}</p><ul><li>resolve：将Promise对象状态修改为 fulfilled，可以传递参数到then方法的第一个函数中</li><li>reject：将Promise对象状态修改为 rejected，可以传递参数到 then 方法的第二个函数中</li></ul><h4 id="API："><a href="#API：" class="headerlink" title="API："></a>API：</h4><ul><li><p>Promise.prototype.then(onfulfilled, onrejected) 方法：<br>— onfulfilled 绑定的是成功时执行的函数<br>— onrejected 绑定的是失败时执行的函数</p></li><li><p>Promise.all(iterable)<br>— iterable : 可迭代对象（数组）<br>— 返回Promise对象<br>— 当数组中所有Promise对象都完成时，回调执行成功的函数，当只要有一个执行失败时，就回调执行失败的函数。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">ajaxGetPromise : function(url, query, isJson)&#123;return new Promise(function(resolve, reject) &#123;// 拼接url加queryif(query) &#123;    url += "?";    for(var key in query)&#123;        url += key+"="+query[key]+"&";    &#125;    // 把最后一个&删掉    url = url.slice(0, -1);&#125;// 1、创建对象var ajax = new XMLHttpRequest();// 2、建立连接ajax.open("GET", url, true);// 3、发送请求ajax.send(null);// 4、监听状态的改变ajax.onreadystatechange = function()&#123;if(ajax.readyState === 4)&#123;    if(ajax.status === 200)&#123;        // 用户传了回调才执行        // isJson默认值为true，要解析json        if(isJson === undefined)&#123;            isJson = true;        &#125;        var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;        resolve(res);    &#125;else&#123;        // 请求失败        reject();    &#125;&#125;&#125;&#125;)&#125;</code></pre></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ajax </tag>
-            
-            <tag> cors </tag>
-            
-            <tag> jsonp </tag>
-            
-            <tag> promise </tag>
-            
-            <tag> 同步/异步 </tag>
-            
-            <tag> GET/POST </tag>
+            <tag> CSS-SCSS代码规范 </tag>
             
         </tags>
       
@@ -823,11 +549,11 @@
     
     
     <entry>
-      <title>JS基础-string内置对象</title>
-      <link href="/posts/js-string.html"/>
-      <url>/posts/js-string.html</url>
+      <title>JS-设计模式</title>
+      <link href="/posts/design-patterns.html"/>
+      <url>/posts/design-patterns.html</url>
       
-        <content type="html"><![CDATA[<p>String 对象用于处理文本（字符串）。<br>String 对象创建方法： new String()。<br>语法：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var txt = new String("string");//或者更简单方式：var txt = "string";</code></pre><h3 id="string对象方法表："><a href="#string对象方法表：" class="headerlink" title="string对象方法表："></a>string对象方法表：</h3><p><a href="https://upload-images.jianshu.io/upload_images/15859737-01b5d756294501e9.png?imageMogr2/auto-orient/strip|imageView2/2/w/670/format/webp">https://upload-images.jianshu.io/upload_images/15859737-01b5d756294501e9.png?imageMogr2/auto-orient/strip|imageView2/2/w/670/format/webp</a></p><h3 id="ASCII表："><a href="#ASCII表：" class="headerlink" title="ASCII表："></a>ASCII表：</h3><p><a href="https://upload-images.jianshu.io/upload_images/15859737-4f1aa1dfab830324.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1155/format/webp">https://upload-images.jianshu.io/upload_images/15859737-4f1aa1dfab830324.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1155/format/webp</a></p><h3 id="一些常用方法"><a href="#一些常用方法" class="headerlink" title="一些常用方法"></a>一些常用方法</h3><p>charAt() 方法可返回指定位置的字符。第一个字符位置为 0, 第二个字符位置为 1,以此类推</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "HELLO WORLD";var n = str.charAt(2)//L</code></pre><p>charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。字符串中第一个字符的位置为 0， 第二个字符位置为 1，以此类推。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "HELLO WORLD";var n = str.charCodeAt(0);//72</code></pre><p>concat() 方法用于连接两个或多个字符串。<br>该方法没有改变原有字符串，但是会返回连接两个或多个字符串新字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str1 = "Hello ";var str2 = "world!";var n = str1.concat(str2);//Hello world!</code></pre><p>fromCharCode() 可接受一个指定的 Unicode 值，然后返回一个字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var n = String.fromCharCode(65);//A</code></pre><p>indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world, welcome to the universe.";var n=str.indexOf("welcome");//13</code></pre><p>lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。<br>开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回 -1 。<br>注意：lastIndexOf() 方法是区分大小写的！</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="I am from runoob，welcome to runoob site.";var n=str.lastIndexOf("runoob");//28</code></pre><p>includes() 方法用于判断字符串是否包含指定的子字符串。<br>如果找到匹配的字符串则返回 true，否则返回 false。<br>注意： includes() 方法区分大小写。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello world, welcome to the Runoob。";var n = str.includes("world");//true</code></pre><p>match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="The rain in SPAIN stays mainly in the plain"; var n=str.match(/ain/g);//ain,ain,ain</code></pre><p>repeat() 方法字符串复制指定次数。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Runoob";str.repeat(2);//RunoobRunoob</code></pre><p>replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。该方法不会改变原始字符串</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Visit Microsoft! Visit Microsoft!";var n=str.replace("Microsoft","Runoob");//Visit Runoob!Visit Microsoft!</code></pre><p>search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。如果没有找到任何匹配的子串，则返回 -1。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Visit Runoob!"; var n=str.search("Runoob");//6</code></pre><p>slice(start, end) 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。<br>使用 start（包含） 和 end（不包含） 参数来指定字符串提取的部分。<br>字符串中第一个字符位置为 0, 第二个字符位置为 1, 以此类推。<br>提示： 如果是负数，则该参数规定的是从字符串的尾部开始算起的位置。也就是说，-1 指字符串的最后一个字符，-2 指倒数第二个字符，以此类推。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world!";var n=str.slice(1,5);/ello</code></pre><p>split() 方法用于把一个字符串分割成字符串数组。<br>提示： 如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>注意： split() 方法不改变原始字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="How are you doing today?";var n=str.split(" ");//How,are,you,doing,today?</code></pre><p>startsWith() 方法用于检测字符串是否以指定的子字符串开始。<br>如果是以指定的子字符串开头返回 true，否则 false。<br>startsWith() 方法对大小写敏感。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello world, welcome to the Runoob.";var n = str.startsWith("Hello");//true</code></pre><p>substr() 方法可在字符串中抽取从 开始 下标开始的指定数目的字符。<br>提示： substr() 的参数指定的是子串的开始位置和长度，因此它可以替代 substring() 和 slice() 来使用。<br>注意： substr() 方法不会改变源字符串</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world!";var n=str.substr(2,3)//llo</code></pre><p>比较：<br>substr() 方法用于在字符串中抽取从 开始 下标开始的指定数目的字符。<br>substring() 提取字符串中介于两个指定下标之间的字符，方法返回的子串包括 开始 处的字符，但不包括 结束 处的字符。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world!";document.write(str.substr(3)+"<br>");//lo world!document.write(str.substring(3,7));//lo w</code></pre><p>toLowerCase() 方法用于把字符串转换为小写。<br>toUpperCase() 方法用于把字符串转换为大写。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Runoob";document.write(str.toLowerCase());var str="Runoob";document.write(str.toUpperCase());</code></pre><p>trim() 方法用于删除字符串的头尾空格。<br>注意：trim() 方法不会改变原始字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "       Runoob        ";alert(str.trim());//Runoob</code></pre><p>toString() 返回一个字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = 123;var res = str.toString();//"123"</code></pre><p>案例：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//var str = "I say: 'I am a boy'";var str = 'I say: "I am a boy"';console.log(str.length);console.log(str[2]);console.log(str.charCodeAt(0)); //返回str第0个的ASCII编码console.log(String.fromCharCode(65)); //利用编码得到字符</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>设计模式：代码经验的总结<br>设计模式都是面向对象的</p><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><p>工厂函数就是做一个对象创建的封装，并将创建的对象return出去</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function newObj(name,age)&#123;    var o = new Object();    o.name = name;    o.age = age;    return o;&#125;var obj = newObj();</code></pre><h3 id="单例模式：只允许存在一个实例的模式"><a href="#单例模式：只允许存在一个实例的模式" class="headerlink" title="单例模式：只允许存在一个实例的模式"></a>单例模式：只允许存在一个实例的模式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var Instance = (function()&#123;    var obj;    return function()&#123;        if(obj === undefined) obj = new Date();        return obj;    &#125;&#125;)();var ibs = Instance();</code></pre><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>又称发布订阅者模式，经典案例：事件监听，一个元素同时监听多个同类型事件，元素对象即为发布者，每一个事件处理函数即为订阅者。</p><h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p>策略模式的定义是：定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换，从而避免很多if语句，曾经学过最简单的策略模式雏形就是使用数组的方式解决传入数字得到对应星期几问题的算法。</p><p>比如公司的年终奖是根据员工的工资和绩效来考核的，绩效为A的人，年终奖为工资的4倍，绩效为B的人，年终奖为工资的3倍，绩效为C的人，年终奖为工资的2倍</p><pre class=" language-lang-javascript"><code class="language-lang-javascript"> var obj = &#123;    "A": function(salary) &#123;        return salary * 4;    &#125;,    "B" : function(salary) &#123;        return salary * 3;    &#125;,    "C" : function(salary) &#123;        return salary * 2;    &#125;&#125;;var calculateBouns =function(level,salary) &#123;    return obj[level](salary);&#125;;console.log(calculateBouns('A',10000)); // 40000</code></pre><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>代理模式（Proxy），为其他对象提供一种代理以控制对这个对象的访问，为了不暴露执行对象的部分代码</p><pre class=" language-lang-javascript"><code class="language-lang-javascript"> //三个对象//用户委托快捷方式打开exe//为了不暴露执行对象的部分代码//男孩委托快递小哥给女孩送礼物var girl = function(name)&#123;    this.name = name;&#125;//隐藏复杂，不愿意修改的的方法var boy = function(girl)&#123;    this.girl = girl;    this.send = function(gift)&#123;        alert("你好："+this.girl.name+",给你一个"+gift);    &#125;&#125;var proxyBro = function(girl)&#123;    this.send = function(gift)&#123;        new boy(girl).send(gift);    &#125;&#125;var pro = new proxyBro(new girl("Lisa"));pro.send("么么哒");pro.send("玫瑰花");</code></pre>]]></content>
       
       
       <categories>
@@ -839,7 +565,9 @@
       
         <tags>
             
-            <tag> string对象方法 </tag>
+            <tag> 工厂模式 </tag>
+            
+            <tag> 代理模式（proxy） </tag>
             
         </tags>
       
@@ -848,11 +576,117 @@
     
     
     <entry>
-      <title>JS基础-json</title>
-      <link href="/posts/about-json.html"/>
-      <url>/posts/about-json.html</url>
+      <title>express应用程序生成器</title>
+      <link href="/posts/express.html"/>
+      <url>/posts/express.html</url>
       
-        <content type="html"><![CDATA[<p>json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。</p><p>1、对象：对象在js中表示为“{}”括起来的内容，数据结构为 {key：value,key：value,…}的键值对的结构，在面向对象的语言中，key为对象的属性，value为对应的属性值，所以很容易理解，取值方法为 对象.key 获取属性值，这个属性值的类型可以是 数字、字符串、数组、对象几种。</p><p>2、数组：数组在js中是中括号“[]”括起来的内容，数据结构为 [“java”,”javascript”,”vb”,…]，取值方式和所有语言中一样，使用索引获取，字段值的类型可以是 数字、字符串、数组、对象几种。</p><p>举例：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var students = ["小明","小红"];var ages = [18,17];var stuJson = [    &#123;        "name":"xiaoming",        "age":18,        "likes":["抽烟","喝酒","烫头"]    &#125;,    &#123;        name:"xiaohong",        age:17    &#125;,    &#123;        name:"xiaogang",        age:70    &#125;];</code></pre><p>根据json打印表格：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//发送了一个请求,服务器返回jsonvar list = [    &#123;        "name":"显示器",        "price": 800    &#125;,    &#123;        "name":"鼠标",        "price": 9.9    &#125;,    &#123;        "name":"键盘",        "price": 666    &#125;];var table = "<table>";for(var i = 0; i < list.length; i++)&#123;    table += "<tr>";    //遍历list[i](对象)    for(var key in list[i])&#123;        table += "<td>"+ list[i][key] +"</td>";    &#125;    table += "</tr>";&#125;table += "</table>";document.write(table);</code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="express-应用程序生成器"><a href="#express-应用程序生成器" class="headerlink" title="express 应用程序生成器"></a>express 应用程序生成器</h3><p>安装：$ npm install express-generator -g</p><p>npm list -g —depth=0 查看全局安装的插件</p><p>npx 临时使用的命令，临时安装插件时使用，用完之后删除</p><p>npx express-generator backend -e 添加对 ejs 模板引擎的支持,会生成以下文件：<br><a href="https://upload-images.jianshu.io/upload_images/15859737-a6e8e7a41460b756.png?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp">https://upload-images.jianshu.io/upload_images/15859737-a6e8e7a41460b756.png?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp</a></p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//创建HTTP错误请求var createError = require('http-errors');//expressvar express = require('express');//原生模块pathvar path = require('path');//express的cookie处理的中间键(middleware)var cookieParser = require('cookie-parser');//日志中间键var logger = require('morgan');//引用首页的路由var indexRouter = require('./routes/index');//引用users的路由var usersRouter = require('./routes/users');var app = express();// view engine setup 设置view渲染引擎为ejsapp.set('views', path.join(__dirname, 'views'));app.set('view engine', 'ejs');//app.use是express实例上的方法，表示应用中间键app.use(logger('dev'));app.use(express.json());app.use(express.urlencoded(&#123; extended: false &#125;));app.use(cookieParser());app.use(express.static(path.join(__dirname, 'public')));//把路由也当初中间键来挂载app.use('/', indexRouter);app.use('/users', usersRouter);// catch 404 and forward to error handlerapp.use(function(req, res, next) &#123;  next(createError(404));&#125;);// error handlerapp.use(function(err, req, res, next) &#123;  // set locals, only providing error in development  res.locals.message = err.message;  res.locals.error = req.app.get('env') === 'development' ? err : &#123;&#125;;  // render the error page  res.status(err.status || 500);  res.render('error');&#125;);module.exports = app;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> NodeJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> express应用程序生成器 </tag>
+            
+            <tag> NodeJS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gulp</title>
+      <link href="/posts/gulp.html"/>
+      <url>/posts/gulp.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>gulp是基于Nodejs的自动任务运行器<br>能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤</p><h3 id="使用流程："><a href="#使用流程：" class="headerlink" title="使用流程："></a>使用流程：</h3><p>安装nodejs -&gt; 全局安装gulp -&gt; 项目安装gulp以及gulp插件 -&gt; 配置gulpfile.js -&gt; 运行任务</p><h3 id="1-安装-nodejs"><a href="#1-安装-nodejs" class="headerlink" title="1.安装 nodejs"></a>1.安装 nodejs</h3><p>node -v<br>npm -v<br>npm install <package-name> -g （—save-dev）<br>-g 全局安装<br>—save 局部安装并保存到package.json配置中<br>-dev 存在package.json的devDependencies配置项里，意思是生产环境依赖的模块</package-name></p><p>npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a><br>可以使用 cnpm 替代 npm 来安装资源</p><h3 id="2-全局安装-gulp"><a href="#2-全局安装-gulp" class="headerlink" title="2.全局安装 gulp"></a>2.全局安装 gulp</h3><p>npm install gulp@3 -g<br>或：<br>cnpm install gulp@3 -g</p><p>测试：gulp -v</p><h3 id="3-在项目目录下生成-package-json-文件："><a href="#3-在项目目录下生成-package-json-文件：" class="headerlink" title="3.在项目目录下生成 package.json 文件："></a>3.在项目目录下生成 package.json 文件：</h3><p>npm init<br>或<br>cnpm init</p><h3 id="4-在项目目录中本地安装-gulp："><a href="#4-在项目目录中本地安装-gulp：" class="headerlink" title="4.在项目目录中本地安装 gulp："></a>4.在项目目录中本地安装 gulp：</h3><p>npm install gulp —save-dev<br>本地安装成功后，会生成 node_modules 文件夹</p><h3 id="5-在项目目录中本地安装-gulp-插件https-www-npmjs-com"><a href="#5-在项目目录中本地安装-gulp-插件https-www-npmjs-com" class="headerlink" title="5.在项目目录中本地安装 gulp 插件https://www.npmjs.com"></a>5.在项目目录中本地安装 gulp 插件<a href="https://www.npmjs.com">https://www.npmjs.com</a></h3><p>（1）压缩CSS：gulp-minify-css<br>npm install gulp-minify-css —save-dev</p><p>（2）压缩JS：gulp-uglify<br>npm install —save-dev gulp-uglify</p><p>（3）压缩Html：gulp-htmlmin<br>npm install —save-dev gulp-htmlmin</p><p>（4）将ES6转换为ES5：gulp-babel<br>npm install —save-dev gulp-babel @babel/core @babel/preset-env</p><h4 id="文件合并"><a href="#文件合并" class="headerlink" title="文件合并"></a>文件合并</h4><p>npm install —save-dev gulp-concat</p><h4 id="gulpfile-js中修改js任务"><a href="#gulpfile-js中修改js任务" class="headerlink" title="gulpfile.js中修改js任务"></a>gulpfile.js中修改js任务</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">var concat = require("gulp-concat");gulp.task("js", function()&#123;    gulp.src("src/js/**/*.js") .pipe(babel(&#123;   presets: ['@babel/env'] &#125;))    .pipe(concat('all.js'))    .pipe(uglify())    .pipe(gulp.dest("dist/js"))    .pipe(connect.reload());&#125;);</code></pre><h4 id="服务器：gulp-connect"><a href="#服务器：gulp-connect" class="headerlink" title="服务器：gulp-connect"></a>服务器：gulp-connect</h4><p>npm install —save-dev gulp-connect</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var connect = require('gulp-connect');gulp.task('server', function() &#123;    connect.server(&#123;        livereload: true,        port: 2333    &#125;);&#125;);</code></pre><h4 id="处理图片"><a href="#处理图片" class="headerlink" title="处理图片"></a>处理图片</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">gulp.task("img", function()&#123;    gulp.src('src/images/**/*')    .pipe(gulp.dest('dist/images'))&#125;)gulp.task("default", ["sass", "html", "minijs", "connect", "watch", "img"]);</code></pre><h4 id="sass转css-gulp-sass"><a href="#sass转css-gulp-sass" class="headerlink" title="sass转css gulp-sass"></a>sass转css gulp-sass</h4><p>npm install —save-dev gulp-sass</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var sass = require('gulp-sass');gulp.task('sass', function()&#123;    gulp.src('src/css/*.scss')    .pipe(sass())    .pipe(gulp.dest('dist/css'))&#125;);</code></pre><h4 id="watch：监听文件的的变化执行对应的任务"><a href="#watch：监听文件的的变化执行对应的任务" class="headerlink" title="watch：监听文件的的变化执行对应的任务"></a>watch：监听文件的的变化执行对应的任务</h4><p>给每一个任务加上pipe(connect.reload())</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">gulp.task('watch',function()&#123;    gulp.watch('./src/css/*.scss',['sass']);    gulp.watch('./src/*.html',['html']);    gulp.watch('./src/css/*.css',['css']);    gulp.watch('./src/js/*.js',['js']);&#125;)gulp.task("default", ["sass", "html", "js", "connect", "watch"]);</code></pre><h4 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">const gulp = require('gulp');const minifyCss = require('gulp-minify-css');const uglify = require('gulp-uglify');const babel = require('gulp-babel');const htmlmin = require('gulp-htmlmin');gulp.task('default', function() &#123;    // 将你的默认的任务代码放在这    console.log('gulp启动成功');&#125;);gulp.task("hello", function()&#123;    console.log("hello gulp");&#125;);gulp.task("html", function()&#123;    gulp.src("src/index.html")      .pipe(htmlmin(&#123;        removeComments: true,//清除HTML注释        collapseWhitespace: true,//压缩HTML        collapseBooleanAttributes: true,//省略布尔属性的值 input标签的 checked="true"        removeEmptyAttributes: true,//删除所有空格作属性值 input 标签        removeScriptTypeAttributes: true,//删除script标签的type="textjavascript"        removeStyleLinkTypeAttributes: true,//删除style标签和link标签的type="text/css"        minifyJS: true,//压缩页面JS        minifyCSS: true//压缩页面CSS       &#125;)    )    .pipe(gulp.dest("dist"))&#125;);gulp.task("css", function()&#123;  gulp.src("src/css/*.css")      .pipe(minifyCss())      .pipe(gulp.dest("dist/css"));&#125;);gulp.task("js", function()&#123;  gulp.src("src/js/*.js")  .pipe(uglify())  .pipe(gulp.dest("dist/js"));&#125;);</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> NodeJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gulp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git</title>
+      <link href="/posts/git.html"/>
+      <url>/posts/git.html</url>
+      
+        <content type="html"><![CDATA[<p>写在前面的话：史上最浅显易懂的Git教程！推荐廖雪峰的教程！<a href="https://www.liaoxuefeng.com/wiki/896043488029600">https://www.liaoxuefeng.com/wiki/896043488029600</a></p><h3 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h3><p>Git是目前世界上最先进的分布式版本控制系统。</p><h3 id="SVN与Git的最主要的区别"><a href="#SVN与Git的最主要的区别" class="headerlink" title="SVN与Git的最主要的区别?"></a>SVN与Git的最主要的区别?</h3><p>SVN的存储需要依赖一个服务器，而git所有的东西是放在线上的。节约成本，省时省力</p><h3 id="Git命令："><a href="#Git命令：" class="headerlink" title="Git命令："></a>Git命令：</h3><p>命令 1 . git config —global user.name “你的git名称”</p><p>命令2. git config —global user.email “你的git验证邮箱”</p><p>命令 1 . cd D: 进入 相应的磁盘</p><p>命令 2 . mkdir ‘你自己定义的文件夹名’</p><p>命令 3 . cd ‘你自己定义的文件夹名’</p><p>命令 4. pwd 显示（你自己定义的文件夹名）的路径</p><p>git init 初始化<br>git add ‘文件名’<br>git commit -m ‘我提交时候的备注（相当于注释）’<br>git status 查看commit状态<br>git remote add origin https: // github.com/你的账号/你的项目名称<br>git push -u origin master 将本地的库推送到master<br>git push origin —all push本地所有分支代码<br>分支 （就是推送到服务器上）<br>git pull 拉取远程版本库代码<br>git clone 将服务器端的数据克隆过来</p><p>git log （ 修改日志）</p><p>git reset —hard HEAD^ 退回到上个版本 如果需要退回好多版本就在后面加上 ^ 例： git reset —hard HEAD^^退回两个版本。</p><p>git reflog 查看操作记录</p><p>rm b.txt 这个是删除b文件的命令</p><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>分支( branches ) 是指在开发主线中分离出来，做进一步开发而不影响到原来主线。</p><p>git init 命令运行时默认创建一个分支，并命名为 master</p><p>git branch<br>— 查看所有分支</p><p>git branch <branch-name><br>— 创建分支</branch-name></p><p>git checkout <branch-name><br>— 切换分支</branch-name></p><p>git merge <branch-name><br>— 合并分支</branch-name></p><p>git branch -d <branch-name><br>— 删除分支</branch-name></p><p>如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 提示出错信息：fatal: remote origin already exists.</p><p>解决办法如下：</p><p>1、先输入$ git remote rm origin</p><p>2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！</p><p>3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section ‘remote.origin’. 我们需要修改gitconfig文件的内容</p><p>4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc</p><p>5、找到一个名为gitconfig的文件，打开它把里面的[remote “origin”]那一行删掉就好了！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NodeJS基本介绍</title>
+      <link href="/posts/nodejs.html"/>
+      <url>/posts/nodejs.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、NodeJS基本介绍"><a href="#一、NodeJS基本介绍" class="headerlink" title="一、NodeJS基本介绍"></a>一、NodeJS基本介绍</h3><p> 1、NodeJS是为了开发高性能的服务器而诞生的一种技术</p><p> 2、是运行在服务端的 JavaScript，基于V8引擎（谷歌浏览器的版本）进行运行 </p><p> 3、使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效</p><p>node官网 <a href="https://nodejs.org">https://nodejs.org</a><br>node中文网 <a href="http://nodejs.cn">http://nodejs.cn</a><br>Node.js 的包管理器 npm，是全球最大的开源库生态系统<br><em>注意：NodeJS不是语言，是运行环境！！</em></p><h4 id="引擎-engine是什么？"><a href="#引擎-engine是什么？" class="headerlink" title="引擎 engine是什么？"></a>引擎 engine是什么？</h4><ul><li>Node是一个基于 <strong>Chrome V8</strong> 引擎的 JavaScript <strong>运行环境</strong>（服务器端的浏览器）</li><li>内核里有引擎：渲染引擎（渲染dom结构）、脚本引擎（运行脚本语言）<br>脚本引擎最流行的就是chrome V8引擎，快、高效<br>| <strong>内核</strong> | <strong>浏览器</strong>          | Cool     | company      |<br>| ———— | —————————- | ———— | —————— |<br>| trident  | IE                  | -ms-     | microsoft    |<br>| webkit   | safari、chrome(l)   | -webkit- | apple/google |<br>| blink    | chrome(h)、opera(h) |          | google       |<br>| presto   | opera(l)            | -o-      | opera        |<br>| gecko    | firefox             | -mz-     | mozilla      |</li></ul><h3 id="二、前端学习node的意义"><a href="#二、前端学习node的意义" class="headerlink" title="二、前端学习node的意义"></a>二、前端学习node的意义</h3><p> 1、 开发沟通：开发时更容易理解后端实现，降低交流成本<br> 2、 后端开发：想写些自己感兴趣的项目时，可以自己独立完成，即使没有后端支持，且成本特别低。<br> 3、 中间层开发：为了进一步的前后端分离，提高性能，使用nodejs做中间层是一个非常好的实践（由于nodejs具有异步io的特点）</p><h3 id="三、使用node的方式"><a href="#三、使用node的方式" class="headerlink" title="三、使用node的方式"></a>三、使用node的方式</h3><p> 1、 在node交互模式下运行（类似于命令窗口），这种方式类似于浏览器控制台，一般是用于运行单独的代码段。<br> 2、 单独创建一个node文件，其实就是一个不包含bom与dom的js文件，然后使用node 文件名.js来运行，当然你也可以不给js后缀，这种方式一般是用于运行一个独 立的nodejs文件</p><h3 id="四、前端要掌握的nodejs核心内容"><a href="#四、前端要掌握的nodejs核心内容" class="headerlink" title="四、前端要掌握的nodejs核心内容"></a>四、前端要掌握的nodejs核心内容</h3><p> 1、file模块 +  http模块</p><p> 2、File+http模块 构建静态的webserver</p><p> 3、使用nodejs的web框架express构建主流的ApiServer</p><h3 id="五、file模块"><a href="#五、file模块" class="headerlink" title="五、file模块"></a>五、file模块</h3><p>1、创建文件夹—fs.mkdir(path[, options], callback)　</p><p>　　path - 要创建的文件夹路径</p><p>　　options 参数可以是：</p><p>　　　　recursive - 是否以递归的方式创建目录，默认为 false。</p><p>　　　　mode - 设置目录权限，默认为 0777。</p><p>　　callback - 文件夹创建完成后的回调函数，创建成功是没有参数的，如果创建失败会有个错误对象作为参数</p><p>2、读取文件夹—fs.readdir(path, callback)</p><p>3、 删除空文件夹—fs.rmdir(path, callback)</p><p>4、写入(创建)文件—-fs.writeFile(filename,data,callback)</p><p>　　filename:写入文件名</p><p>　　data:写入文件的数据(String|Buffer)</p><p>　　callback(err):错误信息参数</p><p>5、读取文件内容—fs.readFile(filename,callback)</p><p>6、向文件中追加内容—fs.appendFile(filename,data,callback)</p><p>7、删除文件—fs.unlink(path,callback)</p><h3 id="六、HTTP模块构建流程"><a href="#六、HTTP模块构建流程" class="headerlink" title="六、HTTP模块构建流程"></a>六、HTTP模块构建流程</h3><p> 1、导入http模块      var http = require(‘http’)<br> 2、使用http模块创建一个服务器  http.creatServer(fn).listen(端口号)<br> 3、给服务器添加请求处理函数fn—&gt;绑定端口 </p><p>可以参考：Node.js到底是做什么的？这是我看到最好的解释了。<a href="https://www.cnblogs.com/suhaihong/p/6598308.html">https://www.cnblogs.com/suhaihong/p/6598308.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> NodeJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NodeJS基本介绍 </tag>
+            
+            <tag> file模块 </tag>
+            
+            <tag> http模块 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS正则表达式</title>
+      <link href="/posts/regular-expression.html"/>
+      <url>/posts/regular-expression.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p>（英语：Regular Expression，在代码中常简写为regex、regexp或RE）<br>语法<br>/正则表达式主体/修饰符(可选)</p><h4 id="正则的第一种写法"><a href="#正则的第一种写法" class="headerlink" title="正则的第一种写法"></a>正则的第一种写法</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg=new RegExp('a');var str='abcdefg';alert(reg.test(str));   //返回bool值，代表是否匹配成功</code></pre><h4 id="正则表达式的第二种写法"><a href="#正则表达式的第二种写法" class="headerlink" title="正则表达式的第二种写法"></a>正则表达式的第二种写法</h4><p>perl风格 古老的语言</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var re = /a/var str='abcdefg';re.test(str);</code></pre><h3 id="中括号：匹配其中的某一个字符"><a href="#中括号：匹配其中的某一个字符" class="headerlink" title="[ ] 中括号：匹配其中的某一个字符"></a>[ ] 中括号：匹配其中的某一个字符</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = prompt();var reg = /[abcde]/;//匹配是否有abcde中的字符console.log(reg.test(str));</code></pre><p>[ a-z ] 匹配所有小写字母<br>[0-9] == \d 匹配任意一个数字( )</p><p>小括号：分组：小括号里面的内容作为整体进行匹配<br>小括号用于分组，竖线作为间隔代表“或者”的含义<br>/(ab) | (cd)/ 匹配’ab’ 或者 ‘cd’<br>/(a|b)cd/ 匹配 ‘acd’ 或者 ‘bcd’<br>注意：小括号、竖线不要放在 [ ] 内（无意义）</p><p>| : 或，跟js中的（||）一样<br>^：排除（除了） 类似js中的（！）<br>^ (不在中括号里)匹配字符串开头<br>$ 匹配结尾</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg = /^[a-z]$/;//小写字母 开头并且小写字母结尾,中间不能有字符(完整匹配)/^$/这样的正则代表完整匹配</code></pre><h3 id="转义字符：元字符"><a href="#转义字符：元字符" class="headerlink" title="转义字符：元字符"></a>转义字符：元字符</h3><p>\d —— [0-9] 数字<br>\w ——-[a-z0-9_A-Z] 数字，字母，下划线<br>\s —- 空白字符</p><p>\D ——-<sup><a href="#fn_0-9" id="reffn_0-9">0-9</a></sup> 非数字<br>\W ——-<sup><a href="#fn_a-z0-9_" id="reffn_a-z0-9_">a-z0-9_</a></sup> 非数字，字母，下划线<br>\ S ——-非空白字符</p><p>. ——-全部字符<br>b ——-匹配单词边界<br>\B ——-匹配 非 单词边界<br>\0(数字0) ——-匹配 NUL 字符<br>\n ——-匹配 换行符<br>\f ——-匹配 换页符<br>\r ——-匹配 回车符<br>\t ——-匹配 制表符<br>\v ——-匹配 垂直制表符<br>\u4e00 - \u9fa5 验证中文</p><h3 id="量词：（单位名称）"><a href="#量词：（单位名称）" class="headerlink" title="量词：（单位名称）"></a>量词：（单位名称）</h3><p>{n} —-匹配n次</p><p>{n,m} —-最少n次，最多m次；</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">QQ号验证  /^[1-9]\d&#123;4,10&#125;$/</code></pre><p>{n,} —-最少n次，最多不限</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">+  == &#123;1,&#125;最少为一个</code></pre><p>? {0,1} 可有可无，最多一个</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">*  &#123;0,&#125; 可以有也可以没有，个数不限</code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript">/(ab|cd)&#123;2&#125;/ 匹配字符串"ab" 或者 "cd" 的2次，或者abcd 结果为:abab cdcd abcd cdab</code></pre><h3 id="匹配大小写不一样的字母怎么办？"><a href="#匹配大小写不一样的字母怎么办？" class="headerlink" title="匹配大小写不一样的字母怎么办？"></a>匹配大小写不一样的字母怎么办？</h3><p>var re=new RegExp(‘a’,’i’)<br>正则对象中有一个参数，可以传入对应的值，i 代表让正则不区分大小写；<br>i：忽略大小写<br>var re= /a/i</p><p>g：全局查找<br>reg = /\d+/ g<br>g: 代表全局所有 （global）</p><p>m： 多行查找（必须与g一起实用,并且,当使用^和$模式时才会起作用）</p><h3 id="正则对象的方法："><a href="#正则对象的方法：" class="headerlink" title="正则对象的方法："></a>正则对象的方法：</h3><h4 id="1-test方法"><a href="#1-test方法" class="headerlink" title="1.test方法"></a>1.test方法</h4><p>该方法用来测试某个字符串是否与正则匹配，匹配就返回true，否则返回false</p><h4 id="2-compile方法"><a href="#2-compile方法" class="headerlink" title="2.compile方法"></a>2.compile方法</h4><p>该方法的作用是能够对正则表达式进行编译，被编译过的正则在使用的时候效率会更高，适合于对一个正则多次调用的情况下，如果对一个正则只使用一两次，那么该方法没有特别显著的效应</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg=/[abc]/gi;console.log(reg.test('a'));reg=/[cde]/gi;console.log(reg.test('a'));reg.compile(reg);console.log(reg.test('a'));</code></pre><h4 id="3-exec方法"><a href="#3-exec方法" class="headerlink" title="3.exec方法"></a>3.exec方法</h4><p>返回的是一个数组，数组元素为匹配的子字符串</p><h3 id="支持正则的字符串方法"><a href="#支持正则的字符串方法" class="headerlink" title="支持正则的字符串方法"></a>支持正则的字符串方法</h3><h4 id="search"><a href="#search" class="headerlink" title="search"></a>search</h4><p>查找第一次匹配的子字符串的位置，如果找到就返回一个number类型的index值，否则返回-1</p><h4 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h4><p>该方法用来将字符串中的某些子串替换为需要的内容，接受两个参数，第一个参数可以为正则或者子字符串，表示匹配需要被替换的内容，第二个参数为被替换的新的子字符串</p><h4 id="split"><a href="#split" class="headerlink" title="split"></a>split</h4><p>将一个字符串拆分成一个数组，它接受一个正则或者子字符（串）作为参数，返回一个数组</p><h4 id="match"><a href="#match" class="headerlink" title="match"></a>match</h4><p>接受一个正则作为参数，用来匹配一个字符串，返回一个数组</p><p>例子：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">    var reg = new RegExp("b");//写法1    var str = prompt();    var reg = /b/;// 写法2  匹配是否存在b    var reg = /[abcde]/;//匹配是否有abcde中的字符    var reg = /[a-z]/;//匹配所有小写字母    var reg = /(ab)|(cd)/;//ab  或 cd    var reg = /(a|b)cd/;//acd  或bcd    var reg = /[^a-z]/;//不能有小写字母    var reg = /^[a-z]/;//小写字母开头    var reg = /^[a-z]$/;//小写字母 开头并且小写字母结尾,中间不能有字符(完整匹配)    var reg = /\d/;//匹配0-9的数字[0-9];    var reg = /./;//匹配所有字符    var reg = /\./;//转义字符z    var reg = /\d&#123;6&#125;/;//6个数字（超过也为true）    var reg = /a\d&#123;6,8&#125;a/;//六到8个数字,前后做好限定,否则会自动过滤掉多余的数字    var reg = /^[1-9]\d&#123;4,10&#125;$/;//5-11位,完整匹配    var reg = /\w/;//-[a-z0-9_A-Z]     数字，字母，下划线    var reg = /\s/;//空格    var reg = /\D/;//不为数字    var reg = /^\d+.&#123;3,&#125;$/;// 必须以数字开头,数量一个以上,紧接着任意字符至少三个,并以之结尾    var reg = /^\d?$/;//以数字开头 一个数字或者没有  &#123;0,1&#125; 可有可无，最多一个    var reg = /^\d*$/;//&#123;0,&#125; 可以有也可以没有，个数不限    var reg = /zhangsan/i;//i：忽略大小写    var reg = /\d+/g;//g: 代表全局所有  （global）    console.log(reg.test(str));</code></pre><h3 id="案例-密码强度"><a href="#案例-密码强度" class="headerlink" title="案例:密码强度"></a>案例:密码强度</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">            // html代码如下            // input type="text" id="pwd"     input标签            // button 登录 button             button标签            //js代码如下            var input = document.querySelector("#pwd");            var numReg = /\d+/;            //var letterReg = /^[a-zA-Z]$/;            var letterReg = /[a-z]+/i;            var charReg = /[^0-9a-z]+/i;            //存储三个正则的验证结果            document.querySelector("button").onclick = function()&#123;                var arr = [];                var pwd = input.value;                arr.push(numReg.test(pwd));                arr.push(letterReg.test(pwd));                arr.push(charReg.test(pwd));                console.log(arr);                var arr1 = arr.filter(function(item)&#123;                    return item;                &#125;)                if(arr1.length === 1) alert("弱");                else if(arr1.length === 2) alert("中");                if(arr1.length === 3) alert("强");            &#125;</code></pre><h3 id="附：扩展正则案例"><a href="#附：扩展正则案例" class="headerlink" title="附：扩展正则案例"></a>附：扩展正则案例</h3><p>只能用数字开头，长度在6—18位之间 /^\d.{5,17}$/</p><p>以字母开头，数字结尾，中间任意一个字符 /^[a-z].\d$/i</p><p>密码不能少于6位的字符 /^.{6,}$/</p><p>以a开头 b字符至少出现2个，至多出现6个(b连续出现) /^a.*b{2,6}/</p><p>变量的命名正则表达式(不能用数字开头 由字母、数字、下划线 、][\w/</p><p>开头为0的2或者三位数字加上 - 开头为非零的八位数字结尾是1到4位的分机号<br>/^0\d{2,3}-[1-9]\d{7}-\d{1,4}$/</p>]]></content>
       
       
       <categories>
@@ -864,7 +698,175 @@
       
         <tags>
             
-            <tag> json </tag>
+            <tag> JS正则表达式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NodeJS使用流程</title>
+      <link href="/posts/use-nodejs.html"/>
+      <url>/posts/use-nodejs.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一些命令行："><a href="#一些命令行：" class="headerlink" title="一些命令行："></a>一些命令行：</h3><p>ls:   查看当前目录有哪些文件,加上-a显示所有文件(夹)<br>ll:   同ls,只是显示方式不一样<br>clear:    清屏</p><p>pwd:  print work directory, 打印工作目录的路径</p><p>cd  目录: 进入某个目录, 如果不跟用户名，直接进行用户的根目录</p><p>mkdir   目录名：创建一个目录</p><p>touch   文件名：创建一个文件</p><p>rm -rf  文件或者目录名： 删除一个文件或者一个目录</p><p>npm init:   初始一个项目， 加-y参数可以不用提示直接创建package.json</p><p>在package.json  里可以添加任意的执行脚本。</p><p>如果node项目要监听代码的修改，可以使用 nodemon</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// http是node原生模块，不需要安装可以直接引入const http = require('http')​// 使用http.createServer的方法创建一个serverconst app = http.createServer((req, res) => &#123;res.end('hello 1901!')&#125;)// 让server运行起来吧！！！app.listen(3000, () => &#123;console.log('server is running on http://localhost:3000')&#125;)</code></pre><p>一般在项目中，不会使用原生的方式来写应用。推荐有一些nodejs的框架</p><p>express</p><p>koa</p><h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><p>首先要安装npm i express -S</p><p>创建一个基本的express应用</p><p>// 从express包里引入express方法, 这个不是原生的模块，所以需要先安装npm i express -S<br>const express = require(‘express’)<br>​<br>// 创建一个express实例<br>const app = express()<br>​<br>// 定义一个路由，这个路由是通过get方法访问，当访问的时候，服务器发送一个响应给客户端<br>app.get(‘/‘, (req, res) =&gt; {<br>res.send(‘hello express’)<br>})<br>​<br>// 要让app运行起来，需要监听<br>app.listen(3000, () =&gt; {<br>console.log(‘server is running on <a href="http://localhost:3000">http://localhost:3000</a>‘)<br>})</p><p>就可以通过<a href="http://localhost:3000访问，你将看到页面上有hello">http://localhost:3000访问，你将看到页面上有hello</a> express</p><p>npm list -g —depth=0 查看全局安装</p><p>npx 临时使用的命令</p><p>__dirname 当前文件所在的目录<br>peocess.cwd() 命令开始执行时的目录</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> NodeJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NodeJS使用流程 </tag>
+            
+            <tag> express </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS函数</title>
+      <link href="/posts/js-function.html"/>
+      <url>/posts/js-function.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"><a href="#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一" class="headerlink" title="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"></a>函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一</h2><p>把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（函数名）<br>我们在需要的时候可以调用一个封装好的函数，函数内的一些代码就会被执行，功能就会被实现</p><h3 id="系统函数："><a href="#系统函数：" class="headerlink" title="系统函数："></a>系统函数：</h3><p>parseInt()   alert()  prompt()  eval()</p><h3 id="函数的声明和使用"><a href="#函数的声明和使用" class="headerlink" title="函数的声明和使用"></a>函数的声明和使用</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">//通过function关键字声明一个函数，跟上函数名，一堆小括号，一堆花括号，花括号里面放代码块//提升到顶部function test()&#123;    //可重复执行的代码块&#125;  test();//表达式定义法//不会提升var test1 = function()&#123;    //可重复执行的代码块&#125;for (var i = 0; i < 10; i++) &#123;    test1();&#125;</code></pre><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>2.实参个数大于形参，多余实参自动舍弃<br>3.形参个数大于形参，多余形参默认为undefined<br>4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;    console.log(arguments);    console.log(arguments.length);&#125;        test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5</code></pre><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>作用范围为整个程序的执行范围<br>在函数体外部定义的变量就是全局变量<br>在函数体内部不使用var定义的也是全局变量</p><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>作用范围是某个函数体内部<br>在函数体内部通过var关键字定义的变量或者形参，都是局部变量<br>当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</p><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</p><h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p><h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p><h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p><h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p><ol><li>子问题须与原始问题为同样的事，且更为简单；</li><li>不能无限制地调用本身，须有个出口，化简为非递归状况处理。<br>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</li></ol><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> function </tag>
+            
+            <tag> 函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS程序执行</title>
+      <link href="/posts/program-execution.html"/>
+      <url>/posts/program-execution.html</url>
+      
+        <content type="html"><![CDATA[<p> 顺序结构：按照由上到下的顺序一行一行地执行的程序结构<br> 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）<br> 循环结构：需要重复执行同一操作的程序结构称为循环结构。</p><h3 id="if-判断逻辑语句"><a href="#if-判断逻辑语句" class="headerlink" title="if 判断逻辑语句"></a>if 判断逻辑语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">if(true)&#123;    //会执行的语句&#125;if(false)&#123;    //会跳过不执行的语句&#125;if(判断条件)&#123; //当if括号中结果为true时执行语句1，否则执行语句2    //语句1&#125;else&#123;    //语句2&#125;if(判断条件1)&#123; //当条件1结果为true时执行语句1    //语句1&#125;else if(判断条件2)&#123; //当条件1结果为false而且条件2结果为true时执行语句2    //语句2&#125;else&#123; //当条件1条件2结果都为false时执行语句3    //语句3&#125;</code></pre><p>我们都知道，if括号中只需要布尔类型值。那么在if判断中，所有的数据类型都会被隐式转换为布尔类型。<br>注意：0、-0、null、””、false、undefined 或者 NaN在if条件里结果为false</p><h3 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h3><p>除了+运算符具有两层含义以外，- <em> /只有数学意义，所以当进行- </em> /运算的时候默认会将运算符两侧的数据类型隐式转换为数字类型，再进行运算。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 2, b = "2";if(a == b)&#123;    alert("a和b相等");    // 会弹  &#125;if(a === b)&#123;    alert("a和b相等");    // 不会弹  &#125;if(1 == true)&#123;    alert("数字1是true");&#125;if(a = b)&#123;    alert("a和b相等");&#125;//一个等号代表赋值操作，结果为等号右边的值</code></pre><h3 id="switch-case多分支语句"><a href="#switch-case多分支语句" class="headerlink" title="switch case多分支语句"></a>switch case多分支语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">switch(语句)&#123;  //语句的结果与每一条case内容进行匹配    case 1:       alert(1);           break;        case 2:             alert(2);             break;        case 3:            alert(3);            break;        default:            alert(0);&#125;</code></pre><p>注意switch的应用场景（有多个确定值需要判断的时候）；<br>注意case穿透，要加break语句（如果程序没有发现break语句，那么解析器会继续向下解析）;</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 1;switch(a)&#123;     case 1:       alert(1);    case 2:        alert(2);    case 3:        alert(3);    default:        alert(0);&#125;//每一个alert都会被执行，而且alert会阻断程序进程</code></pre><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1.判断一个整数，属于哪个范围：大于0；小于0；等于0<br>2.判断一个整数是偶数还是奇数，并输出判断结果<br>3.开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适<br>4.判断一个三位数是否是水仙花数（如：153 = 1^3 + 5^3 + 3^3，那么153就是水仙花数）</p><h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><p>1.点击切换div颜色<br>2.输入分数，判定成绩等级<br>3.输入年份，计算某一年是否是闰年<br>4.输入月份，显示当月的天数，要求：利用case穿透简化代码<br>5.输入数字，显示星期几，如：输入0，弹出星期日，以此类推（两种方法）<br>6.设计一个猜拳游戏：<br>假设： 1代表石头 2代表剪刀 3代表 布<br>计算机每次随机出现1—3中的任意一个数（parseInt (Math.random()*3) + 1）<br>玩家也有三种状态，用玩家出的数和计算机出的数进行比对，按照游戏规则比出胜负。</p><h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><p>1.根据一个数字日期，判断这个日期是这一年的第几天<br>例如： 20160211，计算后结果为42<br>2.制作一个表单，包括用户名，密码，电话<br>要求：<br>1）做好看点<br>2）点击保存按钮时，使用JS判断用户的联系电话是否为纯数字，如果用户输入有错误，使用alert()弹框警告<br>3）判断用户名是否填写，如果空白，使用alert弹框警告<br>4）判断密码长度，必须大于8位，否则alert警告<br>提示：通过length属性取得字符串的长度</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "hello";str.length // 得到长度</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
+            
+            <tag> if/else </tag>
+            
+            <tag> switch/case </tag>
+            
+            <tag> 显/隐式转换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS循环结构</title>
+      <link href="/posts/js-loop.html"/>
+      <url>/posts/js-loop.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">while(条件)&#123;    //条件成立就会反复执行这里的代码&#125;var count = 0;while(count < 10)&#123;    count++;    document.write("Hello world");&#125;</code></pre><p>注意死循环： 没有终止条件的循环即为死循环，在代码中应尽量避免死循环</p><h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">do&#123;    //先执行一遍代码    //while条件成立再继续反复执行&#125;while(条件)</code></pre><h3 id="while和do…while循环的区别"><a href="#while和do…while循环的区别" class="headerlink" title="while和do…while循环的区别"></a>while和do…while循环的区别</h3><p>do…while循环至少会执行一遍，不管条件是否成立，但是while循环如果初始条件不成立一遍也不会执行。</p><h3 id="break和continue关键字"><a href="#break和continue关键字" class="headerlink" title="break和continue关键字"></a>break和continue关键字</h3><p>break：跳出循环体，整个循环结束<br>continue：结束本次循环进入下一次循环体</p><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">for (var i = 0; i < 10; i++) &#123;    console.log(i);&#125;</code></pre><p>如下图所示：注意for循环时的执行顺序,并且：for循环1，2，4步是可选的<br><!-- ![for的循环执行顺序](JS循环结构/for.png) --><br><img src="https://i.loli.net/2020/09/12/4homTRBp1gKLOe9.png" alt="loop.png"></p><h3 id="三种循环的联系和区别"><a href="#三种循环的联系和区别" class="headerlink" title="三种循环的联系和区别"></a>三种循环的联系和区别</h3><p>1、都是会反复执行的代码块<br>2、大部分情况下可以互相替换<br>3、do…while至少执行一次，while和for有可能0次，while不太能确定执行次数，for可以</p><h3 id="练习（while和for两种方式）"><a href="#练习（while和for两种方式）" class="headerlink" title="练习（while和for两种方式）"></a>练习（while和for两种方式）</h3><p>1.打印100以内所有偶数的和<br>2.求出1-1/2+1/3-1/4…..1/100的和<br>3.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出<br>4.打印九九乘法表<br>5.求1+2!+3!+…+20!的值<br>6.有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，按每一个格子是前一个格子的二倍（第四个格子放8个）计算，问棋盘上放的所有芝麻的重量是多少？<br>7.打印100–200之间所有能被3或者7整除的数<br>8.计算100的阶乘</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> while </tag>
+            
+            <tag> do...while </tag>
+            
+            <tag> break和continue </tag>
+            
+            <tag> for </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jQuery</title>
+      <link href="/posts/jquery.html"/>
+      <url>/posts/jquery.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="jQuery-语法"><a href="#jQuery-语法" class="headerlink" title="jQuery 语法"></a>jQuery 语法</h2><p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。<br>基础语法： $(selector).action()</p><h3 id="美元符号定义-jQuery"><a href="#美元符号定义-jQuery" class="headerlink" title="美元符号定义 jQuery"></a>美元符号定义 jQuery</h3><p>选择符（selector）”查询”和”查找” HTML 元素<br>jQuery 的 action() 执行对元素的操作<br>jQuery 中所有选择器都以美元符号开头：$()</p><h3 id="文档就绪事件"><a href="#文档就绪事件" class="headerlink" title="文档就绪事件"></a>文档就绪事件</h3><p>$(document).ready(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});</p><p>简洁写法（与以上写法效果相同）:<br>$(function(){</p><p>   // 开始写 jQuery 代码…</p><p>});<br>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作</p><pre><code>    &lt;div&gt;123&lt;/div&gt;    &lt;div class=&quot;div1&quot;&gt;456&lt;/div&gt;    &lt;div id=&quot;div2&quot;&gt;789&lt;/div&gt;    &lt;p class=&quot;p1&quot;&gt;qeq&lt;/p&gt;    &lt;p&gt;xxx&lt;/p&gt;    &lt;ul&gt;        &lt;li&gt;1&lt;/li&gt;        &lt;li&gt;2&lt;/li&gt;        &lt;li&gt;3&lt;/li&gt;    &lt;/ul&gt;    &lt;script&gt;        var div = $(&quot;div&quot;);        console.log(div);           // console.log(jQuery);        console.log($(&quot;div&quot;).eq(1));//选择第一个div        console.log($(&quot;div:eq(2)&quot;));//选择第二个div        //:eq     匹配一个给定索引值的元素,单个元素        console.log($(&quot;div&quot;).html());//div的内容        console.log($(&quot;*&quot;));//查找所有的元素        console.log($(this));//选取当前的HTML元素        console.log($(&quot;p.p1&quot;));//选择class=&quot;p1&quot;的p标签        console.log($(&quot;p:first&quot;));//选择第一个p标签        console.log($(&quot;ul li:first&quot;));//选择ul下的第一个li        $(&quot;p:first&quot;).dblclick(function()&#123;            alert(&quot;双击！&quot;);        &#125;)        console.log($(&quot;div&quot;)[0]);//转换为原生js        console.log($(&quot;div&quot;).get(0));转换为原生js        $(&quot;div&quot;).eq(1).html(&quot;我QQ(#`O′)&quot;).addClass(&quot;box1&quot;).css(&quot;color&quot;,&quot;red&quot;);        var div2 = document.querySelector(&quot;#div2&quot;);        console.log($(&quot;div2&quot;));//转换为jQuery        console.log($(&quot;ul&quot;).children(&quot;.two&quot;));//ul下class=&quot;two&quot;的li        console.log($(&quot;ul&quot;).find(&quot;.two&quot;));//ul下的class=&quot;two&quot;的所有元素    &lt;/script&gt;</code></pre><p>1.jQuery选择器<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0b882c867eebb34.png?imageMogr2/auto-orient/strip|imageView2/2/w/732/format/webp</a></p><p>2.jQuery事件<br><a href="https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp">https://upload-images.jianshu.io/upload_images/15859737-b0a12d607a4c78c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/657/format/webp</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> jQuery </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jQuery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>chrome调试</title>
+      <link href="/posts/chrome-debug.html"/>
+      <url>/posts/chrome-debug.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-console-table"><a href="#1-console-table" class="headerlink" title="1.console.table();"></a>1.console.table();</h3><p>将数组打开展示。<br><img src="https://i.loli.net/2020/09/13/BgC2neTEO7fVIrN.png" alt="1.PNG"></p><h3 id="2-console-time"><a href="#2-console-time" class="headerlink" title="2.console.time()"></a>2.console.time()</h3><p>代码运行时间,console.timeEnd()放在结尾<br><img src="https://i.loli.net/2020/09/13/hoYGDM2Jive1ysW.png" alt="2.PNG"></p><h3 id="3-monitorEvents（）"><a href="#3-monitorEvents（）" class="headerlink" title="3.monitorEvents（）;"></a>3.monitorEvents（）;</h3><p>事件执行顺序。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> chrome调试 </tag>
             
         </tags>
       
@@ -904,11 +906,11 @@
     
     
     <entry>
-      <title>JS-设计模式</title>
-      <link href="/posts/design-patterns.html"/>
-      <url>/posts/design-patterns.html</url>
+      <title>JS-模块化</title>
+      <link href="/posts/amd-cmd.html"/>
+      <url>/posts/amd-cmd.html</url>
       
-        <content type="html"><![CDATA[<p>设计模式：代码经验的总结<br>设计模式都是面向对象的</p><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><p>工厂函数就是做一个对象创建的封装，并将创建的对象return出去</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function newObj(name,age)&#123;    var o = new Object();    o.name = name;    o.age = age;    return o;&#125;var obj = newObj();</code></pre><h3 id="单例模式：只允许存在一个实例的模式"><a href="#单例模式：只允许存在一个实例的模式" class="headerlink" title="单例模式：只允许存在一个实例的模式"></a>单例模式：只允许存在一个实例的模式</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var Instance = (function()&#123;    var obj;    return function()&#123;        if(obj === undefined) obj = new Date();        return obj;    &#125;&#125;)();var ibs = Instance();</code></pre><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>又称发布订阅者模式，经典案例：事件监听，一个元素同时监听多个同类型事件，元素对象即为发布者，每一个事件处理函数即为订阅者。</p><h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p>策略模式的定义是：定义一系列的算法，把它们一个个封装起来，并且使它们可以相互替换，从而避免很多if语句，曾经学过最简单的策略模式雏形就是使用数组的方式解决传入数字得到对应星期几问题的算法。</p><p>比如公司的年终奖是根据员工的工资和绩效来考核的，绩效为A的人，年终奖为工资的4倍，绩效为B的人，年终奖为工资的3倍，绩效为C的人，年终奖为工资的2倍</p><pre class=" language-lang-javascript"><code class="language-lang-javascript"> var obj = &#123;    "A": function(salary) &#123;        return salary * 4;    &#125;,    "B" : function(salary) &#123;        return salary * 3;    &#125;,    "C" : function(salary) &#123;        return salary * 2;    &#125;&#125;;var calculateBouns =function(level,salary) &#123;    return obj[level](salary);&#125;;console.log(calculateBouns('A',10000)); // 40000</code></pre><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>代理模式（Proxy），为其他对象提供一种代理以控制对这个对象的访问，为了不暴露执行对象的部分代码</p><pre class=" language-lang-javascript"><code class="language-lang-javascript"> //三个对象//用户委托快捷方式打开exe//为了不暴露执行对象的部分代码//男孩委托快递小哥给女孩送礼物var girl = function(name)&#123;    this.name = name;&#125;//隐藏复杂，不愿意修改的的方法var boy = function(girl)&#123;    this.girl = girl;    this.send = function(gift)&#123;        alert("你好："+this.girl.name+",给你一个"+gift);    &#125;&#125;var proxyBro = function(girl)&#123;    this.send = function(gift)&#123;        new boy(girl).send(gift);    &#125;&#125;var pro = new proxyBro(new girl("Lisa"));pro.send("么么哒");pro.send("玫瑰花");</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>函数封装 —-&gt; 对象 —-&gt; 立即执行函数 —-&gt; 模块化规范</p><p>是一种项目的构架模式， 这种构架模式让JS代码重用性变得非常高，让项目构架的一些复杂问题全部得以解决。 例如，多个script标签不会再出现了，我们只要用一个script标签进行引入就可以了。</p><p>模块化那有两个规范，AMD规范和CMD规范，当然还有针对于nodejs后台的commonJS规范;</p><h3 id="1-首先对于依赖："><a href="#1-首先对于依赖：" class="headerlink" title="1. 首先对于依赖："></a>1. 首先对于依赖：</h3><p>AMD提前执行(不管什么时候用， 先加载过来) //特点 : 前期消耗网络资源大， 但是后期运行效率高.</p><p>CMD需求执行(有用我再去加载) //特点:整个自选消耗曲线比较平缓。</p><h3 id="2-CMD-推崇依赖就近，AMD-推崇依赖前置。"><a href="#2-CMD-推崇依赖就近，AMD-推崇依赖前置。" class="headerlink" title="2. CMD 推崇依赖就近，AMD 推崇依赖前置。"></a>2. CMD 推崇依赖就近，AMD 推崇依赖前置。</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> // CMDdefine(function(require, exports, module) &#123;var a = require('./a')a.doSomething()// 此处略去 100 行var b = require('./b') // 依赖可以就近书写b.doSomething()// ...&#125;)</code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript"> // AMD 默认推荐的是define(['./a', './b'], function(a, b) &#123; // 依赖必须一开始就写好a.doSomething()// 此处略去 100 行b.doSomething()...&#125;)</code></pre>]]></content>
       
       
       <categories>
@@ -920,9 +922,123 @@
       
         <tags>
             
-            <tag> 工厂模式 </tag>
+            <tag> 模块化规范 </tag>
             
-            <tag> 代理模式（proxy） </tag>
+            <tag> AMD/CMD </tag>
+            
+            <tag> 依赖 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS基础-string内置对象</title>
+      <link href="/posts/js-string.html"/>
+      <url>/posts/js-string.html</url>
+      
+        <content type="html"><![CDATA[<p>String 对象用于处理文本（字符串）。<br>String 对象创建方法： new String()。<br>语法：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var txt = new String("string");//或者更简单方式：var txt = "string";</code></pre><h3 id="string对象方法表："><a href="#string对象方法表：" class="headerlink" title="string对象方法表："></a>string对象方法表：</h3><p><a href="https://upload-images.jianshu.io/upload_images/15859737-01b5d756294501e9.png?imageMogr2/auto-orient/strip|imageView2/2/w/670/format/webp">https://upload-images.jianshu.io/upload_images/15859737-01b5d756294501e9.png?imageMogr2/auto-orient/strip|imageView2/2/w/670/format/webp</a></p><h3 id="ASCII表："><a href="#ASCII表：" class="headerlink" title="ASCII表："></a>ASCII表：</h3><p><a href="https://upload-images.jianshu.io/upload_images/15859737-4f1aa1dfab830324.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1155/format/webp">https://upload-images.jianshu.io/upload_images/15859737-4f1aa1dfab830324.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1155/format/webp</a></p><h3 id="一些常用方法"><a href="#一些常用方法" class="headerlink" title="一些常用方法"></a>一些常用方法</h3><p>charAt() 方法可返回指定位置的字符。第一个字符位置为 0, 第二个字符位置为 1,以此类推</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "HELLO WORLD";var n = str.charAt(2)//L</code></pre><p>charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。字符串中第一个字符的位置为 0， 第二个字符位置为 1，以此类推。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "HELLO WORLD";var n = str.charCodeAt(0);//72</code></pre><p>concat() 方法用于连接两个或多个字符串。<br>该方法没有改变原有字符串，但是会返回连接两个或多个字符串新字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str1 = "Hello ";var str2 = "world!";var n = str1.concat(str2);//Hello world!</code></pre><p>fromCharCode() 可接受一个指定的 Unicode 值，然后返回一个字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var n = String.fromCharCode(65);//A</code></pre><p>indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world, welcome to the universe.";var n=str.indexOf("welcome");//13</code></pre><p>lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。<br>开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回 -1 。<br>注意：lastIndexOf() 方法是区分大小写的！</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="I am from runoob，welcome to runoob site.";var n=str.lastIndexOf("runoob");//28</code></pre><p>includes() 方法用于判断字符串是否包含指定的子字符串。<br>如果找到匹配的字符串则返回 true，否则返回 false。<br>注意： includes() 方法区分大小写。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello world, welcome to the Runoob。";var n = str.includes("world");//true</code></pre><p>match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="The rain in SPAIN stays mainly in the plain"; var n=str.match(/ain/g);//ain,ain,ain</code></pre><p>repeat() 方法字符串复制指定次数。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Runoob";str.repeat(2);//RunoobRunoob</code></pre><p>replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。该方法不会改变原始字符串</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Visit Microsoft! Visit Microsoft!";var n=str.replace("Microsoft","Runoob");//Visit Runoob!Visit Microsoft!</code></pre><p>search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。如果没有找到任何匹配的子串，则返回 -1。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Visit Runoob!"; var n=str.search("Runoob");//6</code></pre><p>slice(start, end) 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。<br>使用 start（包含） 和 end（不包含） 参数来指定字符串提取的部分。<br>字符串中第一个字符位置为 0, 第二个字符位置为 1, 以此类推。<br>提示： 如果是负数，则该参数规定的是从字符串的尾部开始算起的位置。也就是说，-1 指字符串的最后一个字符，-2 指倒数第二个字符，以此类推。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world!";var n=str.slice(1,5);/ello</code></pre><p>split() 方法用于把一个字符串分割成字符串数组。<br>提示： 如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>注意： split() 方法不改变原始字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="How are you doing today?";var n=str.split(" ");//How,are,you,doing,today?</code></pre><p>startsWith() 方法用于检测字符串是否以指定的子字符串开始。<br>如果是以指定的子字符串开头返回 true，否则 false。<br>startsWith() 方法对大小写敏感。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "Hello world, welcome to the Runoob.";var n = str.startsWith("Hello");//true</code></pre><p>substr() 方法可在字符串中抽取从 开始 下标开始的指定数目的字符。<br>提示： substr() 的参数指定的是子串的开始位置和长度，因此它可以替代 substring() 和 slice() 来使用。<br>注意： substr() 方法不会改变源字符串</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world!";var n=str.substr(2,3)//llo</code></pre><p>比较：<br>substr() 方法用于在字符串中抽取从 开始 下标开始的指定数目的字符。<br>substring() 提取字符串中介于两个指定下标之间的字符，方法返回的子串包括 开始 处的字符，但不包括 结束 处的字符。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Hello world!";document.write(str.substr(3)+"<br>");//lo world!document.write(str.substring(3,7));//lo w</code></pre><p>toLowerCase() 方法用于把字符串转换为小写。<br>toUpperCase() 方法用于把字符串转换为大写。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str="Runoob";document.write(str.toLowerCase());var str="Runoob";document.write(str.toUpperCase());</code></pre><p>trim() 方法用于删除字符串的头尾空格。<br>注意：trim() 方法不会改变原始字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "       Runoob        ";alert(str.trim());//Runoob</code></pre><p>toString() 返回一个字符串。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = 123;var res = str.toString();//"123"</code></pre><p>案例：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//var str = "I say: 'I am a boy'";var str = 'I say: "I am a boy"';console.log(str.length);console.log(str[2]);console.log(str.charCodeAt(0)); //返回str第0个的ASCII编码console.log(String.fromCharCode(65)); //利用编码得到字符</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> string对象方法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-闭包和继承</title>
+      <link href="/posts/closure-inheritance.html"/>
+      <url>/posts/closure-inheritance.html</url>
+      
+        <content type="html"><![CDATA[<p>函数在创建的时候会创建两个对象，一个是函数对象本身，另一个是作用域链对象<br>函数在调用的时候会创建一个执行环境对象（活动对象）</p><h2 id="闭包（closure）"><a href="#闭包（closure）" class="headerlink" title="闭包（closure）"></a>闭包（closure）</h2><p>闭包可以在全局函数里面操作另一个作用域的局部变量, 既能重复使用，又不会污染全局<br>闭包有三步：</p><p>1、外层函数嵌套内层函数<br>2、内层函数使用外层函数的局部变量<br>3、把内层函数作为外层函数的返回值</p><p>图例展示：<br>1-预解析<br><img src="https://i.loli.net/2020/09/13/uEgYM9xGc6tbPZW.png" alt="1-预解析.png"></p><p>2-调用时<br><img src="https://i.loli.net/2020/09/13/lzGn5KN4yYZpReO.png" alt="2-调用时.png"></p><p>3-调用后<br><img src="https://i.loli.net/2020/09/13/1FQXrTwCpkH3abS.png" alt="3-调用后.png"></p><p>4-fn调用时<br><img src="https://i.loli.net/2020/09/13/SIjo2mkyeBEv4wQ.png" alt="4-fn调用时.png"></p><p>5-fn调用后<br><img src="https://i.loli.net/2020/09/13/S24RgQIqUwEPnHv.png" alt="5-fn调用后.png"></p><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>子类共享父类的属性和方法,js的继承都是基于原型实现的</p><h3 id="1-原型链继承：子类的原型指向父类的实例"><a href="#1-原型链继承：子类的原型指向父类的实例" class="headerlink" title="1. 原型链继承：子类的原型指向父类的实例"></a>1. 原型链继承：子类的原型指向父类的实例</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> function Cat()&#123;&#125;Cat.prototype = new Animal();Cat.prototype.name = 'cat';var cat = new Cat();console.log(cat.name);cat.say();cat.eat('fish');console.log(cat instanceof Animal); //trueconsole.log(cat instanceof Cat); //true</code></pre><p>特点：<br>非常纯粹的继承关系，实例是子类的实例，也是父类的实例<br>父类新增原型方法/原型属性，子类都能访问到<br>简单，易于实现</p><p>缺点：<br>要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中<br>无法实现多继承<br>来自原型对象的引用属性是所有实例共享的<br>创建子类实例时，无法向构造函数传参</p><h3 id="2-构造继承（call、apply继承）"><a href="#2-构造继承（call、apply继承）" class="headerlink" title="2. 构造继承（call、apply继承）"></a>2. 构造继承（call、apply继承）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript"> function Cat(name)&#123;    Animal.call(this,name);&#125;var cat = new Cat("Tom");console.log(cat.name);cat.say();console.log(cat instanceof Animal); // falseconsole.log(cat instanceof Cat); // true</code></pre><p>特点：<br>解决了1中，子类实例共享父类引用属性的问题<br>创建子类实例时，可以向父类传递参数<br>可以实现多继承（call多个父类对象）</p><p>缺点：<br>实例并不是父类的实例，只是子类的实例<br>只能继承父类的实例属性和方法，不能继承原型属性/方法<br>无法实现函数复用，每个子类都有父类实例函数的副本，影响性能</p><h3 id="3-拷贝继承"><a href="#3-拷贝继承" class="headerlink" title="3. 拷贝继承"></a>3. 拷贝继承</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Cat(name)&#123;    var animal = new Animal(name);    for(var key in animal)&#123;        Cat.prototype[key] = animal[key];    &#125;&#125;// Test Codevar cat = new Cat("Tom");console.log(cat.name);cat.say();console.log(cat instanceof Animal); // falseconsole.log(cat instanceof Cat); // true</code></pre><p>特点：<br>支持多继承</p><p>缺点：<br>效率较低，内存占用高（因为要拷贝父类的属性）<br>无法获取父类不可枚举的方法（不可枚举方法，不能使用for in 访问到）</p><h3 id="4-组合继承（原型链和构造继承的组合）"><a href="#4-组合继承（原型链和构造继承的组合）" class="headerlink" title="4. 组合继承（原型链和构造继承的组合）"></a>4. 组合继承（原型链和构造继承的组合）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Cat(name)&#123;    Animal.call(this,name);&#125;Cat.prototype = new Animal();Cat.prototype.constructor = Cat;// Test Codevar cat = new Cat();console.log(cat.name);cat.say();console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); // true</code></pre><p>特点：<br>弥补了方式2的缺陷，可以继承实例属性/方法，也可以继承原型属性/方法<br>既是子类的实例，也是父类的实例<br>不存在引用属性共享问题<br>可传参<br>函数可复用</p><p>缺点：<br>调用了两次父类构造函数，生成了两份实例（子类实例将子类原型上的那份屏蔽了）</p><h3 id="5-寄生组合继承"><a href="#5-寄生组合继承" class="headerlink" title="5. 寄生组合继承"></a>5. 寄生组合继承</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function Cat(name)&#123;    Animal.call(this);    this.name = name;&#125;(function()&#123;    // 创建一个没有实例方法的类    var Super = function()&#123;&#125;;    Super.prototype = Animal.prototype;    //将实例作为子类的原型    Cat.prototype = new Super();&#125;)();// Test Codevar cat = new Cat();console.log(cat.name);cat.say();console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); //true</code></pre><p>特点：堪称完美<br>缺点：实现较为复杂</p><h3 id="6-ES6继承（语法糖）"><a href="#6-ES6继承（语法糖）" class="headerlink" title="6. ES6继承（语法糖）"></a>6. ES6继承（语法糖）</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">class Animal&#123;    constructor(name)&#123;        this.name = name;    &#125;    say()&#123;        alert("My name is "+this.name);    &#125;    eat(food)&#123;        alert(this.name+" is eating "+food);    &#125;&#125;class Cat extends Animal&#123;    constructor(name)&#123;        super(name);    &#125;&#125;var  tom = new Cat("Tom");tom.say();tom.eat("apple");console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); //true</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 闭包 </tag>
+            
+            <tag> 继承 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS基础-json</title>
+      <link href="/posts/about-json.html"/>
+      <url>/posts/about-json.html</url>
+      
+        <content type="html"><![CDATA[<p>json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。</p><p>1、对象：对象在js中表示为“{}”括起来的内容，数据结构为 {key：value,key：value,…}的键值对的结构，在面向对象的语言中，key为对象的属性，value为对应的属性值，所以很容易理解，取值方法为 对象.key 获取属性值，这个属性值的类型可以是 数字、字符串、数组、对象几种。</p><p>2、数组：数组在js中是中括号“[]”括起来的内容，数据结构为 [“java”,”javascript”,”vb”,…]，取值方式和所有语言中一样，使用索引获取，字段值的类型可以是 数字、字符串、数组、对象几种。</p><p>举例：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var students = ["小明","小红"];var ages = [18,17];var stuJson = [    &#123;        "name":"xiaoming",        "age":18,        "likes":["抽烟","喝酒","烫头"]    &#125;,    &#123;        name:"xiaohong",        age:17    &#125;,    &#123;        name:"xiaogang",        age:70    &#125;];</code></pre><p>根据json打印表格：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">//发送了一个请求,服务器返回jsonvar list = [    &#123;        "name":"显示器",        "price": 800    &#125;,    &#123;        "name":"鼠标",        "price": 9.9    &#125;,    &#123;        "name":"键盘",        "price": 666    &#125;];var table = "<table>";for(var i = 0; i < list.length; i++)&#123;    table += "<tr>";    //遍历list[i](对象)    for(var key in list[i])&#123;        table += "<td>"+ list[i][key] +"</td>";    &#125;    table += "</tr>";&#125;table += "</table>";document.write(table);</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> json </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-ajax</title>
+      <link href="/posts/ajax.html"/>
+      <url>/posts/ajax.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Ajax（-Asynchronous-Javascript-And-XML）"><a href="#Ajax（-Asynchronous-Javascript-And-XML）" class="headerlink" title="Ajax（ Asynchronous Javascript And XML）"></a>Ajax（ Asynchronous Javascript And XML）</h2><h3 id="注意同步和异步的区分"><a href="#注意同步和异步的区分" class="headerlink" title="注意同步和异步的区分"></a>注意同步和异步的区分</h3><ul><li><p>同步 sync： 首先，JS 是单线程的语言，所谓“单线程”就是一根筋，对于拿到的程序，一行一行的执行，前面的执行完成，后面的傻傻的等着。若前面的代码没执行完就会造成堵塞，后面的没法执行。</p></li><li><p>异步 async： 而AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。异步代码执行的时候就不会阻塞后面的代码执行。</p></li><li><p>记住： 同步执行代码总是优先于异步执行代码，同步代码在异步代码之前执行。</p><ul><li>因为碰到异步代码时，会将异步代码另行存到一个异步队列里面，然后将这个异步队列放到同步代码的最后，才执行<br>例如：Ajax和setTimeout和setInterval这些是异步执行的</li></ul></li></ul><h3 id="Ajax-优势"><a href="#Ajax-优势" class="headerlink" title="Ajax 优势:"></a>Ajax 优势:</h3><p>1.不需要插件支持（一般浏览器且默认开启 JavaScript 即可）；<br>2.用户体验极佳（不刷新页面即可获取可更新的数据）；<br>3.提升 Web 程序的性能（在传递数据方面做到按需放松，不必整体提交）；<br>4.减轻服务器和带宽的负担（将服务器的一些操作转移到客户端）；</p><h3 id="Ajax-的不足"><a href="#Ajax-的不足" class="headerlink" title="Ajax 的不足:"></a>Ajax 的不足:</h3><p>1.不同版本的浏览器度 XMLHttpRequest 对象支持度不足(比如 IE5 之前)；<br>2.前进、后退的功能被破坏（因为 Ajax 永远在当前页，不会记录前后页面）；<br>3.搜索引擎的支持度不够（因为搜索引擎爬虫还不能理解 JS 引起变化数据的内容）；</p><p>json是一种数据格式，由对象，数组互相嵌套组成，属性名必须加双引号，数据传输格式</p><h3 id="ajax-readyState"><a href="#ajax-readyState" class="headerlink" title="ajax.readyState:"></a>ajax.readyState:</h3><p>0 － （未初始化）还没有调用send()方法<br>1 － （载入）已调用send()方法，正在发送请求<br>2 － （载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 － （交互）正在解析响应内容<br>4 － （完成）响应内容解析完成，可以在客户端调用了</p><h3 id="HTTP-状态码-ajax-status"><a href="#HTTP-状态码-ajax-status" class="headerlink" title="HTTP 状态码 ajax.status"></a>HTTP 状态码 ajax.status</h3><p>101——客户要求服务器根据请求转换HTTP协议版本<br>200——交易成功<br>304——客户端已经执行了GET，但文件未变化<br>306——前一版本HTTP中使用的代码，现行版本中不再使用<br>400——错误请求，如语法错误<br>404——没有发现文件、查询或UR<br>405——用户在Request-Line字段定义的方法不允许<br>500——服务器产生内部错误<br>505——服务器不支持或拒绝支请求头中指定的HTTP版本</p><h3 id="GET，POST方式比较"><a href="#GET，POST方式比较" class="headerlink" title="GET，POST方式比较"></a>GET，POST方式比较</h3><p>只是不同的发送和请求数据的方式<br>GET：参数有长度限制，<a href="http://www.taobao.com?id=">http://www.taobao.com?id=</a>… , 明文传输<br>POST：参数无限制，放在请求体里, 更安全</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">// get方式var ajax = new XMLHttpRequest();ajax.open("GET","url",true);ajax.send(null);ajax.onreadystatechange = function()&#123;if(ajax.readyState == 4 && ajax.status == 200)&#123;     var json = JSON.parse(ajax.responseText);    fn(json);&#125;// post方式var ajax = new XMLHttpRequest();ajax.open("POST","url",true);ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");ajax.send("name=zhangsan&age=18");ajax.onreadystatechange = function()&#123;if(ajax.readyState == 4 && ajax.status == 200)&#123;     var json = JSON.parse(ajax.responseText);    fn(json);&#125;</code></pre><h3 id="封装一个Ajax的get和post方式"><a href="#封装一个Ajax的get和post方式" class="headerlink" title="封装一个Ajax的get和post方式"></a>封装一个Ajax的get和post方式</h3><h4 id="ajax的get方式："><a href="#ajax的get方式：" class="headerlink" title="ajax的get方式："></a>ajax的get方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求get * @param url     string   请求的路径 * @param query   object   请求的参数query * @param succCb  function 请求成功之后的回调 * @param failCb  function 请求失败的回调 * @param isJson  boolean  true： 解析json  false：文本请求  默认值true  */ajaxGet : function (url, query, succCb, failCb, isJson) &#123;    // 拼接url加query    if(query) &#123;        url += "?";        for(var key in query)&#123;            url += key+"="+query[key]+"&";        &#125;        // 把最后一个&删掉        url = url.slice(0, -1);    &#125;    // 1、创建对象    var ajax = new XMLHttpRequest();    // 2、建立连接    ajax.open("GET", url, true);    // 3、发送请求    ajax.send(null);    // 4、监听状态的改变    ajax.onreadystatechange = function()&#123;        if(ajax.readyState === 4)&#123;            if(ajax.status === 200)&#123;                // 用户传了回调才执行                // isJson默认值为true，要解析json                if(isJson === undefined)&#123;                    isJson = true;                &#125;                var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;                succCb && succCb(res);            &#125;else&#123;                // 请求失败                failCb && failCb();            &#125;        &#125;    &#125;&#125;// 调用该方法实例：//tools.ajaxGet("03-ajax.php", &#123;"name": "lisi"&#125;, function(res)&#123;console.log(res);&#125;, function() &#123;&#125;,false);</code></pre><h4 id="ajax的post方式："><a href="#ajax的post方式：" class="headerlink" title="ajax的post方式："></a>ajax的post方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* ajax请求post * @param url     string   请求的路径 * @param query   object   请求的参数query * @param succCb  function 请求成功之后的回调 * @param failCb  function 请求失败的回调 * @param isJson  boolean  true： 解析json  false：文本请求  默认值true  */ajaxPost: function(url, query, succCb, failCb, isJson)&#123;    var ajax = new XMLHttpRequest();    ajax.open("POST", url, true);    // 设置请求头数据传输格式    ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");    // 把query拼接成urlencoded    var str = "";    for(var key in query)&#123;        str += key + "=" + query[key] + "&";    &#125;    str = str.slice(0,-1);    ajax.send(str);    ajax.onreadystatechange = function () &#123;        if(ajax.readyState === 4) &#123;            if(ajax.status === 200)&#123;                // 判断isJson是否传进来了                isJson = isJson === undefined ? true : isJson;                succCb && succCb(isJson ? JSON.parse(ajax.responseText) : ajax.responseText);            &#125;        &#125;    &#125;&#125;// 调用该方法实例：//tools.ajaxGet("03-ajax.php", &#123;"name": "lisi"&#125;, function(res)&#123;console.log(res);&#125;, function() &#123;&#125;,false);</code></pre><h3 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h3><p>浏览器安全策略，保障非同源资源之间数据访问的安全性。<br>默认不允许非同源的资源直接访问。<br>URL：<br>协议://域名:端口/路径名称?查询字符串#位置标识符<br>同源：协议、域名、端口完全一致，只要三个中有任何一个不一致，则是非同源<br>非同源资源间需要进行访问，则需要实现跨域。</p><h2 id="解决资源跨域访问："><a href="#解决资源跨域访问：" class="headerlink" title="解决资源跨域访问："></a>解决资源跨域访问：</h2><h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>cross-origin resource sharing<br>服务器端：设置响应头信息：Access-Control-Allow-Origin:*<br>前端： ajax可解决GET/POST跨域需求</p><h4 id="GET方式："><a href="#GET方式：" class="headerlink" title="GET方式："></a>GET方式：</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre><h4 id="POST方式"><a href="#POST方式" class="headerlink" title="POST方式:"></a>POST方式:</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript"></code></pre><h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><p>利用script标签的src属性在引入外部JS时不受同源策略限制的特性，来实现跨域。<br>JSONP只能处理GET请求方式的跨域<br>后端：<br>由服务器端构建一个字符串：字符串中的内容是能够在 JS 中执行的函数调用的结构<br>前端：</p><ol><li>创建 script 元素</li><li>设置 src 属性，传递 callback 参数指明全局回调函数的名称</li><li>添加到 body 中</li><li>创建全局函数，用于处理响应数据</li><li><p>删除 script 元素</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">/* jsonp ajax请求* @param  url  string 请求路径* @param  cb    string  全局函数名* @param  query  object  请求参数*/ajaxJsonp : function(url, cb, query) &#123; // 1、 创建script标签 var script  = document.createElement("script"); // 2、拼接url和回调函数以及请求参数 url += "?cb="+cb; if(query)&#123;     for(var key in query)&#123;         url += "&"+key+"="+query[key];     &#125; &#125; // 3、设置script的src属性 script.src = url; // 4、 把script添加到body中 document.body.appendChild(script); document.body.removeChild(script);&#125;</code></pre></li></ol><h3 id="promise（ES6）"><a href="#promise（ES6）" class="headerlink" title="promise（ES6）"></a>promise（ES6）</h3><p>承诺：—-&gt; 兑现 （resolve） 或 失信（rejected）<br>用于表示一个异步操作的最终状态（完成或失败），以及其返回的值。它允许你为异步操作的成功和失败分别绑定相应的处理方法。这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象。</p><p>一个 Promise有以下几种状态:<br>pending: 初始状态，既不是成功，也不是失败状态。<br>fulfilled: 意味着操作成功完成。<br>rejected: 意味着操作失败。</p><h4 id="创建Promise对象："><a href="#创建Promise对象：" class="headerlink" title="创建Promise对象："></a>创建Promise对象：</h4><p>var promise = new Promise( executor );<br>executor: 是一个函数，该函数在创建Promise对象的同时被调用执行。<br>executor:<br>语法：function(resolve, reject) {…}</p><ul><li>resolve：将Promise对象状态修改为 fulfilled，可以传递参数到then方法的第一个函数中</li><li>reject：将Promise对象状态修改为 rejected，可以传递参数到 then 方法的第二个函数中</li></ul><h4 id="API："><a href="#API：" class="headerlink" title="API："></a>API：</h4><ul><li><p>Promise.prototype.then(onfulfilled, onrejected) 方法：<br>— onfulfilled 绑定的是成功时执行的函数<br>— onrejected 绑定的是失败时执行的函数</p></li><li><p>Promise.all(iterable)<br>— iterable : 可迭代对象（数组）<br>— 返回Promise对象<br>— 当数组中所有Promise对象都完成时，回调执行成功的函数，当只要有一个执行失败时，就回调执行失败的函数。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">ajaxGetPromise : function(url, query, isJson)&#123;return new Promise(function(resolve, reject) &#123;// 拼接url加queryif(query) &#123;    url += "?";    for(var key in query)&#123;        url += key+"="+query[key]+"&";    &#125;    // 把最后一个&删掉    url = url.slice(0, -1);&#125;// 1、创建对象var ajax = new XMLHttpRequest();// 2、建立连接ajax.open("GET", url, true);// 3、发送请求ajax.send(null);// 4、监听状态的改变ajax.onreadystatechange = function()&#123;if(ajax.readyState === 4)&#123;    if(ajax.status === 200)&#123;        // 用户传了回调才执行        // isJson默认值为true，要解析json        if(isJson === undefined)&#123;            isJson = true;        &#125;        var res = isJson ? JSON.parse(ajax.responseText) : ajax.responseText;        resolve(res);    &#125;else&#123;        // 请求失败        reject();    &#125;&#125;&#125;&#125;)&#125;</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ajax </tag>
+            
+            <tag> cors </tag>
+            
+            <tag> jsonp </tag>
+            
+            <tag> promise </tag>
+            
+            <tag> 同步/异步 </tag>
+            
+            <tag> GET/POST </tag>
             
         </tags>
       
@@ -1063,31 +1179,6 @@
     
     
     <entry>
-      <title>JS正则表达式</title>
-      <link href="/posts/regular-expression.html"/>
-      <url>/posts/regular-expression.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p>（英语：Regular Expression，在代码中常简写为regex、regexp或RE）<br>语法<br>/正则表达式主体/修饰符(可选)</p><h4 id="正则的第一种写法"><a href="#正则的第一种写法" class="headerlink" title="正则的第一种写法"></a>正则的第一种写法</h4><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg=new RegExp('a');var str='abcdefg';alert(reg.test(str));   //返回bool值，代表是否匹配成功</code></pre><h4 id="正则表达式的第二种写法"><a href="#正则表达式的第二种写法" class="headerlink" title="正则表达式的第二种写法"></a>正则表达式的第二种写法</h4><p>perl风格 古老的语言</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var re = /a/var str='abcdefg';re.test(str);</code></pre><h3 id="中括号：匹配其中的某一个字符"><a href="#中括号：匹配其中的某一个字符" class="headerlink" title="[ ] 中括号：匹配其中的某一个字符"></a>[ ] 中括号：匹配其中的某一个字符</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = prompt();var reg = /[abcde]/;//匹配是否有abcde中的字符console.log(reg.test(str));</code></pre><p>[ a-z ] 匹配所有小写字母<br>[0-9] == \d 匹配任意一个数字( )</p><p>小括号：分组：小括号里面的内容作为整体进行匹配<br>小括号用于分组，竖线作为间隔代表“或者”的含义<br>/(ab) | (cd)/ 匹配’ab’ 或者 ‘cd’<br>/(a|b)cd/ 匹配 ‘acd’ 或者 ‘bcd’<br>注意：小括号、竖线不要放在 [ ] 内（无意义）</p><p>| : 或，跟js中的（||）一样<br>^：排除（除了） 类似js中的（！）<br>^ (不在中括号里)匹配字符串开头<br>$ 匹配结尾</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg = /^[a-z]$/;//小写字母 开头并且小写字母结尾,中间不能有字符(完整匹配)/^$/这样的正则代表完整匹配</code></pre><h3 id="转义字符：元字符"><a href="#转义字符：元字符" class="headerlink" title="转义字符：元字符"></a>转义字符：元字符</h3><p>\d —— [0-9] 数字<br>\w ——-[a-z0-9_A-Z] 数字，字母，下划线<br>\s —- 空白字符</p><p>\D ——-<sup><a href="#fn_0-9" id="reffn_0-9">0-9</a></sup> 非数字<br>\W ——-<sup><a href="#fn_a-z0-9_" id="reffn_a-z0-9_">a-z0-9_</a></sup> 非数字，字母，下划线<br>\ S ——-非空白字符</p><p>. ——-全部字符<br>b ——-匹配单词边界<br>\B ——-匹配 非 单词边界<br>\0(数字0) ——-匹配 NUL 字符<br>\n ——-匹配 换行符<br>\f ——-匹配 换页符<br>\r ——-匹配 回车符<br>\t ——-匹配 制表符<br>\v ——-匹配 垂直制表符<br>\u4e00 - \u9fa5 验证中文</p><h3 id="量词：（单位名称）"><a href="#量词：（单位名称）" class="headerlink" title="量词：（单位名称）"></a>量词：（单位名称）</h3><p>{n} —-匹配n次</p><p>{n,m} —-最少n次，最多m次；</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">QQ号验证  /^[1-9]\d&#123;4,10&#125;$/</code></pre><p>{n,} —-最少n次，最多不限</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">+  == &#123;1,&#125;最少为一个</code></pre><p>? {0,1} 可有可无，最多一个</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">*  &#123;0,&#125; 可以有也可以没有，个数不限</code></pre><pre class=" language-lang-javascript"><code class="language-lang-javascript">/(ab|cd)&#123;2&#125;/ 匹配字符串"ab" 或者 "cd" 的2次，或者abcd 结果为:abab cdcd abcd cdab</code></pre><h3 id="匹配大小写不一样的字母怎么办？"><a href="#匹配大小写不一样的字母怎么办？" class="headerlink" title="匹配大小写不一样的字母怎么办？"></a>匹配大小写不一样的字母怎么办？</h3><p>var re=new RegExp(‘a’,’i’)<br>正则对象中有一个参数，可以传入对应的值，i 代表让正则不区分大小写；<br>i：忽略大小写<br>var re= /a/i</p><p>g：全局查找<br>reg = /\d+/ g<br>g: 代表全局所有 （global）</p><p>m： 多行查找（必须与g一起实用,并且,当使用^和$模式时才会起作用）</p><h3 id="正则对象的方法："><a href="#正则对象的方法：" class="headerlink" title="正则对象的方法："></a>正则对象的方法：</h3><h4 id="1-test方法"><a href="#1-test方法" class="headerlink" title="1.test方法"></a>1.test方法</h4><p>该方法用来测试某个字符串是否与正则匹配，匹配就返回true，否则返回false</p><h4 id="2-compile方法"><a href="#2-compile方法" class="headerlink" title="2.compile方法"></a>2.compile方法</h4><p>该方法的作用是能够对正则表达式进行编译，被编译过的正则在使用的时候效率会更高，适合于对一个正则多次调用的情况下，如果对一个正则只使用一两次，那么该方法没有特别显著的效应</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var reg=/[abc]/gi;console.log(reg.test('a'));reg=/[cde]/gi;console.log(reg.test('a'));reg.compile(reg);console.log(reg.test('a'));</code></pre><h4 id="3-exec方法"><a href="#3-exec方法" class="headerlink" title="3.exec方法"></a>3.exec方法</h4><p>返回的是一个数组，数组元素为匹配的子字符串</p><h3 id="支持正则的字符串方法"><a href="#支持正则的字符串方法" class="headerlink" title="支持正则的字符串方法"></a>支持正则的字符串方法</h3><h4 id="search"><a href="#search" class="headerlink" title="search"></a>search</h4><p>查找第一次匹配的子字符串的位置，如果找到就返回一个number类型的index值，否则返回-1</p><h4 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h4><p>该方法用来将字符串中的某些子串替换为需要的内容，接受两个参数，第一个参数可以为正则或者子字符串，表示匹配需要被替换的内容，第二个参数为被替换的新的子字符串</p><h4 id="split"><a href="#split" class="headerlink" title="split"></a>split</h4><p>将一个字符串拆分成一个数组，它接受一个正则或者子字符（串）作为参数，返回一个数组</p><h4 id="match"><a href="#match" class="headerlink" title="match"></a>match</h4><p>接受一个正则作为参数，用来匹配一个字符串，返回一个数组</p><p>例子：</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">    var reg = new RegExp("b");//写法1    var str = prompt();    var reg = /b/;// 写法2  匹配是否存在b    var reg = /[abcde]/;//匹配是否有abcde中的字符    var reg = /[a-z]/;//匹配所有小写字母    var reg = /(ab)|(cd)/;//ab  或 cd    var reg = /(a|b)cd/;//acd  或bcd    var reg = /[^a-z]/;//不能有小写字母    var reg = /^[a-z]/;//小写字母开头    var reg = /^[a-z]$/;//小写字母 开头并且小写字母结尾,中间不能有字符(完整匹配)    var reg = /\d/;//匹配0-9的数字[0-9];    var reg = /./;//匹配所有字符    var reg = /\./;//转义字符z    var reg = /\d&#123;6&#125;/;//6个数字（超过也为true）    var reg = /a\d&#123;6,8&#125;a/;//六到8个数字,前后做好限定,否则会自动过滤掉多余的数字    var reg = /^[1-9]\d&#123;4,10&#125;$/;//5-11位,完整匹配    var reg = /\w/;//-[a-z0-9_A-Z]     数字，字母，下划线    var reg = /\s/;//空格    var reg = /\D/;//不为数字    var reg = /^\d+.&#123;3,&#125;$/;// 必须以数字开头,数量一个以上,紧接着任意字符至少三个,并以之结尾    var reg = /^\d?$/;//以数字开头 一个数字或者没有  &#123;0,1&#125; 可有可无，最多一个    var reg = /^\d*$/;//&#123;0,&#125; 可以有也可以没有，个数不限    var reg = /zhangsan/i;//i：忽略大小写    var reg = /\d+/g;//g: 代表全局所有  （global）    console.log(reg.test(str));</code></pre><h3 id="案例-密码强度"><a href="#案例-密码强度" class="headerlink" title="案例:密码强度"></a>案例:密码强度</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">            // html代码如下            // input type="text" id="pwd"     input标签            // button 登录 button             button标签            //js代码如下            var input = document.querySelector("#pwd");            var numReg = /\d+/;            //var letterReg = /^[a-zA-Z]$/;            var letterReg = /[a-z]+/i;            var charReg = /[^0-9a-z]+/i;            //存储三个正则的验证结果            document.querySelector("button").onclick = function()&#123;                var arr = [];                var pwd = input.value;                arr.push(numReg.test(pwd));                arr.push(letterReg.test(pwd));                arr.push(charReg.test(pwd));                console.log(arr);                var arr1 = arr.filter(function(item)&#123;                    return item;                &#125;)                if(arr1.length === 1) alert("弱");                else if(arr1.length === 2) alert("中");                if(arr1.length === 3) alert("强");            &#125;</code></pre><h3 id="附：扩展正则案例"><a href="#附：扩展正则案例" class="headerlink" title="附：扩展正则案例"></a>附：扩展正则案例</h3><p>只能用数字开头，长度在6—18位之间 /^\d.{5,17}$/</p><p>以字母开头，数字结尾，中间任意一个字符 /^[a-z].\d$/i</p><p>密码不能少于6位的字符 /^.{6,}$/</p><p>以a开头 b字符至少出现2个，至多出现6个(b连续出现) /^a.*b{2,6}/</p><p>变量的命名正则表达式(不能用数字开头 由字母、数字、下划线 、][\w/</p><p>开头为0的2或者三位数字加上 - 开头为非零的八位数字结尾是1到4位的分机号<br>/^0\d{2,3}-[1-9]\d{7}-\d{1,4}$/</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JS正则表达式 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>JS冒泡选择快速排序</title>
       <link href="/posts/js-sort-method.html"/>
       <url>/posts/js-sort-method.html</url>
@@ -1181,6 +1272,37 @@
     
     
     <entry>
+      <title>JS事件</title>
+      <link href="/posts/js-event-1.html"/>
+      <url>/posts/js-event-1.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="JS运行和编译"><a href="#JS运行和编译" class="headerlink" title="JS运行和编译"></a>JS运行和编译</h2><h3 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h3><p>查找基本语法有没有错误</p><h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><p>执行之前进行预解析<br>var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。</p><h2 id="变量生命周期"><a href="#变量生命周期" class="headerlink" title="变量生命周期"></a>变量生命周期</h2><p>全局变量的生命周期直至浏览器卸载页面才会结束。<br>局部变量只在函数的执行过程中存在，而在这个过程中会为局部变量在栈或堆上分配相应的空间，以存储它们的值，然后再函数中使用这些变量，直至函数结束</p><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="用户的行为：onclick、ondblclick、onfocus、onblur、window-onload"><a href="#用户的行为：onclick、ondblclick、onfocus、onblur、window-onload" class="headerlink" title="用户的行为：onclick、ondblclick、onfocus、onblur、window.onload"></a>用户的行为：onclick、ondblclick、onfocus、onblur、window.onload</h3><p>是用户跟页面的交互，当用户跟页面进行一些“交流”的时候，页面通过js就会触发一些事件，比如鼠标点击的时候就会触发onclick事件，给这个事件绑定一个函数，那么这个时候函数就会被调用，代码就会被执行</p><h3 id="事件类型："><a href="#事件类型：" class="headerlink" title="事件类型："></a>事件类型：</h3><p>鼠标事件：click，dbclick，mousedown，mouseup，mouseover，mouseout，mouseenter、     mouseleave、mousemove<br>鼠标滚轮：scroll，mousewheel<br>鼠标右键（上下文菜单：在不同环境下右键菜单不一样）：contextmenu<br>  mouseover：鼠标在元素身上移动穿过子元素的时候会被反复触发<br>  mouseenter：只是在进入元素的时候触发<br>键盘事件：keydown，keyup，keypress<br>表单事件：对表单元素操作之后会触发的事件<br>  单选框、多选框、下拉菜单 状态改变的时候会触发  onchange 事件<br>  表单提交的时候会触发 onsubmit ，触发在<form>元素身上</form></p><h2 id="this关键字-事件函数里面的this指的是事件触发对象"><a href="#this关键字-事件函数里面的this指的是事件触发对象" class="headerlink" title="this关键字:事件函数里面的this指的是事件触发对象"></a>this关键字:事件函数里面的this指的是事件触发对象</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> this </tag>
+            
+            <tag> 事件 </tag>
+            
+            <tag> 变量生命周期 </tag>
+            
+            <tag> 运行编译 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS的node节点</title>
       <link href="/posts/js-node.html"/>
       <url>/posts/js-node.html</url>
@@ -1202,6 +1324,64 @@
             <tag> 文档碎片 </tag>
             
             <tag> DOM尺寸 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS的MATH和Date对象</title>
+      <link href="/posts/js-math-date.html"/>
+      <url>/posts/js-math-date.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h2><p>对象的类型是Object。<br>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…<br>javaScript中万事万物皆对象<br>想要有对象怎么办？</p><h2 id="创建对象：（创建两种方式-字面量和new运算符）"><a href="#创建对象：（创建两种方式-字面量和new运算符）" class="headerlink" title="创建对象：（创建两种方式:字面量和new运算符）"></a>创建对象：（创建两种方式:字面量和new运算符）</h2><h3 id="1-New一个对象出来；"><a href="#1-New一个对象出来；" class="headerlink" title="1.New一个对象出来；"></a>1.New一个对象出来；</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();//找到对象了  >>>  第一个想到的就是属性；//给对象添加一个属性；obj.bianmei='哇真的变漂亮了' ;obj.say=function()&#123;    alert(this.bianmei);&#125;obj.say();delete obj.jian; //删除对象的属性</code></pre><p>obj的属性可以是一个函数，这个时候也叫方法；<br>obj函数内的指针this，指向obj对象本身；</p><h2 id="javaScript内置对象-十个"><a href="#javaScript内置对象-十个" class="headerlink" title="javaScript内置对象(十个)"></a>javaScript内置对象(十个)</h2><p>1.Object对象        是所有JavaScript对象的超类(基类)<br>2.Array对象          数组对象—定义数组属性和方法<br>3.Boolean对象     布尔对象—布尔值相关<br>4.Date对象           日期对象—日期时间相关<br>5.Error对象           错误对象—处理程序错误<br>6.Function对象     函数对象—定义函数属性和方法<br>7.Math对象            数学对象—各种数学运算工具(不是构造函数)<br>8.Number对象       数字对象—定义数字属性和方法<br>9.RegExp对象        正则表达式对象—定义文本匹配与筛选规则<br>10.String对象        字符串对象—定义字符串属性和方法</p><h2 id="Date内置对象"><a href="#Date内置对象" class="headerlink" title="Date内置对象"></a>Date内置对象</h2><p>日期对象创建<br>时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总毫秒数（时间戳）<br>  var date = new Date();//当前时间的日期对象<br>  var data = new Date(2012,6,10);//2012年7月10号的日期对象</p><h3 id="get系列API"><a href="#get系列API" class="headerlink" title="get系列API"></a>get系列API</h3><p>getFullYear()<br>返回年<br>getMonth()<br>返回月份0—11<br>getDate()<br>返回某一天<br>getDay()<br>返回星期0-6<br>getHours()<br>返回小时<br>getMinutes()<br>返回分钟<br>getSeconds()<br>返回秒<br>getTime()<br>返回1970年1月1日午夜到指定日期（字符串）的毫秒数</p><h3 id="set系列API"><a href="#set系列API" class="headerlink" title="set系列API"></a>set系列API</h3><p>setFullYear()<br>设置年份<br>setMonth()<br>设置月<br>setDate()<br>设置天<br>setHours()<br>设置小时<br>setMinutes()<br>设置分钟<br>setSeconds()<br>设置秒<br>setTime()<br>使用毫秒的形式设置时间对象</p><h2 id="★注意"><a href="#★注意" class="headerlink" title="★注意:"></a>★注意:</h2><p>1、setDay( 这个真没有!!!!,星期是通过设定日期自动计算的 )<br>2、set系列API可以设置比当前范围更精细的时间<br>比如：setFullYear（2012，3，5）  设置日期为2018年4月5号<br>setHours（13，30，0）  设置时间为13:30:00</p><h3 id="getMonth："><a href="#getMonth：" class="headerlink" title="getMonth："></a>getMonth：</h3><p>可选,介于 0 ~ 11 之间：如果不填，取系统当月<br>-1 为去年的最后一个月<br>12 为明年的第一个月<br>13 为明年的第二个月</p><h3 id="getDay"><a href="#getDay" class="headerlink" title="getDay()"></a>getDay()</h3><p>返回星期 0-6</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象 </tag>
+            
+            <tag> math </tag>
+            
+            <tag> date </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS的BOM对象</title>
+      <link href="/posts/js-bom.html"/>
+      <url>/posts/js-bom.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="BOM（Browser-Object-Model-浏览器对象模型）"><a href="#BOM（Browser-Object-Model-浏览器对象模型）" class="headerlink" title="BOM（Browser Object Model  浏览器对象模型）"></a>BOM（Browser Object Model  浏览器对象模型）</h2><h3 id="window是全局浏览器内置顶级对象"><a href="#window是全局浏览器内置顶级对象" class="headerlink" title="window是全局浏览器内置顶级对象"></a>window是全局浏览器内置顶级对象</h3><p>表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）<br>Window 对象表示一个浏览器窗口或一个框架。<br>在客户端 JavaScript 中，Window 对象是全局对象，所有的表达式都在当前的环境中计算。<br>也就是说，要引用当前窗口根本不需要特殊的语法，可以把那个窗口的属性作为全局变量来使用。<br>例如，可以只写 document，而不必写 window.document。<br>同样，可以把当前窗口对象的方法当作函数来使用，如只写 alert()，而不必写 Window.alert()。<br>除了上面列出的属性和方法，Window 对象还实现了核心 JavaScript 所定义的所有全局属性和方法。</p><h3 id="1、全局变量默认是挂在window下的"><a href="#1、全局变量默认是挂在window下的" class="headerlink" title="1、全局变量默认是挂在window下的"></a>1、全局变量默认是挂在window下的</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var  a = 123;alert(window.a)//123</code></pre><h3 id="2、window下的子对象"><a href="#2、window下的子对象" class="headerlink" title="2、window下的子对象"></a>2、window下的子对象</h3><h4 id="（1）location"><a href="#（1）location" class="headerlink" title="（1）location"></a>（1）location</h4><p>window.location.href          当前页面的 URL，可以获取，可以修改（页面跳转）<br>window.location.hostname      web 主机的域名<br>window.location.pathname      当前页面的路径和文件名<br>window.location.port          web 主机的端口 （80 或 443）<br>window.location.protocol      所使用的 web 协议（http:// 或 https://）<br>window.location.search        请求参数（？后面的内容）</p><p>window.location.reload();<br>刷新页面，一般情况下给reload()传递一个true，让他刷新，并不使用缓存。缓存的东西一般为js文件，css文件等。<br>用这个方法可以让自己不能动的页面动起来了。刷新当前页面。</p><h4 id="（2）window-navigator"><a href="#（2）window-navigator" class="headerlink" title="（2）window.navigator"></a>（2）window.navigator</h4><p>navigator.appName      返回获取当前浏览器的名称。<br>navigator.appVersion    返回 获取当前浏览器的版本号。<br>navigator.platform        返回 当前计算机的操作系统。<br>以上属性已经在逐渐被抛弃了。一个新的属性将替代这些属性。</p><p>navigator.userAgent   返回浏览器信息（可用此属性判断当前浏览器）</p><h5 id="判断当前浏览器类型的代码："><a href="#判断当前浏览器类型的代码：" class="headerlink" title="判断当前浏览器类型的代码："></a>判断当前浏览器类型的代码：</h5><pre class=" language-lang-javascript"><code class="language-lang-javascript">function isBrowser() &#123;    var userAgent = navigator.userAgent;    //微信内置浏览器    if(userAgent.match(/MicroMessenger/i) == 'MicroMessenger') &#123;        return "MicroMessenger";    &#125;    //QQ内置浏览器    else if(userAgent.match(/QQ/i) == 'QQ') &#123;        return "QQ";    &#125;    //Chrome    else if(userAgent.match(/Chrome/i) == 'Chrome') &#123;        return "Chrome";    &#125;    //Opera    else if(userAgent.match(/Opera/i) == 'Opera') &#123;        return "Opera";    &#125;    //Firefox    else if(userAgent.match(/Firefox/i) == 'Firefox') &#123;        return "Firefox";    &#125;    //Safari    else if(userAgent.match(/Safari/i) == 'Safari') &#123;        return "Safari";    &#125;    //IE    else if(!!window.ActiveXObject || "ActiveXObject" in window) &#123;        return "IE";    &#125;    else &#123;        return "未定义:"+userAgent;    &#125;&#125;</code></pre><h4 id="（3）history"><a href="#（3）history" class="headerlink" title="（3）history"></a>（3）history</h4><p>history.go(1)    参数可写任意整数，正数前进，负数后退<br>history.back()   后退<br>history.forward() 前进</p><h4 id="（4）screen-屏幕"><a href="#（4）screen-屏幕" class="headerlink" title="（4）screen: 屏幕"></a>（4）screen: 屏幕</h4><p>window.screen.width 返回当前屏幕宽度(分辨率值)<br>window.screen.height 返回当前屏幕高度(分辨率值)</p><h4 id="（5）window下的弹框方法"><a href="#（5）window下的弹框方法" class="headerlink" title="（5）window下的弹框方法"></a>（5）window下的弹框方法</h4><p>alert()   prompt()  confirm()</p><h4 id="（6）定时器"><a href="#（6）定时器" class="headerlink" title="（6）定时器"></a>（6）定时器</h4><p>超时定时器        间隔定时器<br>setTimeout       setInterval<br>clearTimeout     clearInterval</p><h4 id="（7）window-onload"><a href="#（7）window-onload" class="headerlink" title="（7）window.onload"></a>（7）window.onload</h4><h4 id="（8）window-onscroll"><a href="#（8）window-onscroll" class="headerlink" title="（8）window.onscroll"></a>（8）window.onscroll</h4><p>var scrolltop=document.documentElement.scrollTop||document.body.scrollTop; //兼容</p><h4 id="（9）window-window-onresize"><a href="#（9）window-window-onresize" class="headerlink" title="（9）window.window.onresize"></a>（9）window.window.onresize</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BOM </tag>
+            
+            <tag> 定时器 </tag>
+            
+            <tag> window </tag>
             
         </tags>
       
@@ -1268,178 +1448,23 @@
     
     
     <entry>
-      <title>JS事件</title>
-      <link href="/posts/js-event-1.html"/>
-      <url>/posts/js-event-1.html</url>
+      <title>啊啊啊文章模板啊</title>
+      <link href="/posts/articletemplate.html"/>
+      <url>/posts/articletemplate.html</url>
       
-        <content type="html"><![CDATA[<h2 id="JS运行和编译"><a href="#JS运行和编译" class="headerlink" title="JS运行和编译"></a>JS运行和编译</h2><h3 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h3><p>查找基本语法有没有错误</p><h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><p>执行之前进行预解析<br>var、function关键字提前到当前作用域的顶部，变量默认值为undefined，函数默认值为函数体代码块，当函数与变量重名时，保留函数。</p><h2 id="变量生命周期"><a href="#变量生命周期" class="headerlink" title="变量生命周期"></a>变量生命周期</h2><p>全局变量的生命周期直至浏览器卸载页面才会结束。<br>局部变量只在函数的执行过程中存在，而在这个过程中会为局部变量在栈或堆上分配相应的空间，以存储它们的值，然后再函数中使用这些变量，直至函数结束</p><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="用户的行为：onclick、ondblclick、onfocus、onblur、window-onload"><a href="#用户的行为：onclick、ondblclick、onfocus、onblur、window-onload" class="headerlink" title="用户的行为：onclick、ondblclick、onfocus、onblur、window.onload"></a>用户的行为：onclick、ondblclick、onfocus、onblur、window.onload</h3><p>是用户跟页面的交互，当用户跟页面进行一些“交流”的时候，页面通过js就会触发一些事件，比如鼠标点击的时候就会触发onclick事件，给这个事件绑定一个函数，那么这个时候函数就会被调用，代码就会被执行</p><h3 id="事件类型："><a href="#事件类型：" class="headerlink" title="事件类型："></a>事件类型：</h3><p>鼠标事件：click，dbclick，mousedown，mouseup，mouseover，mouseout，mouseenter、     mouseleave、mousemove<br>鼠标滚轮：scroll，mousewheel<br>鼠标右键（上下文菜单：在不同环境下右键菜单不一样）：contextmenu<br>  mouseover：鼠标在元素身上移动穿过子元素的时候会被反复触发<br>  mouseenter：只是在进入元素的时候触发<br>键盘事件：keydown，keyup，keypress<br>表单事件：对表单元素操作之后会触发的事件<br>  单选框、多选框、下拉菜单 状态改变的时候会触发  onchange 事件<br>  表单提交的时候会触发 onsubmit ，触发在<form>元素身上</form></p><h2 id="this关键字-事件函数里面的this指的是事件触发对象"><a href="#this关键字-事件函数里面的this指的是事件触发对象" class="headerlink" title="this关键字:事件函数里面的this指的是事件触发对象"></a>this关键字:事件函数里面的this指的是事件触发对象</h2>]]></content>
+        <content type="html"><![CDATA[<div class="note info">前言</div><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul><li>项目</li></ul><p><img src="/posts/articletemplate.htm/图片链接" alt="引入图片"></p><p><code>正文一些需要高亮色的文字</code></p><p><a href="链接" class="LinkCard" target="_blank">引入链接</a></p><div style="position: relative; padding: 30% 45%;"> <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="视频地址去B站分享按钮下iframe里面的src属性值复制" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> </div>]]></content>
       
       
       <categories>
           
-          <category> JS基础 </category>
+          <category> 文章模板 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> this </tag>
-            
-            <tag> 事件 </tag>
-            
-            <tag> 变量生命周期 </tag>
-            
-            <tag> 运行编译 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS的MATH和Date对象</title>
-      <link href="/posts/js-math-date.html"/>
-      <url>/posts/js-math-date.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h2><p>对象的类型是Object。<br>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…<br>javaScript中万事万物皆对象<br>想要有对象怎么办？</p><h2 id="创建对象：（创建两种方式-字面量和new运算符）"><a href="#创建对象：（创建两种方式-字面量和new运算符）" class="headerlink" title="创建对象：（创建两种方式:字面量和new运算符）"></a>创建对象：（创建两种方式:字面量和new运算符）</h2><h3 id="1-New一个对象出来；"><a href="#1-New一个对象出来；" class="headerlink" title="1.New一个对象出来；"></a>1.New一个对象出来；</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = new Object();//找到对象了  >>>  第一个想到的就是属性；//给对象添加一个属性；obj.bianmei='哇真的变漂亮了' ;obj.say=function()&#123;    alert(this.bianmei);&#125;obj.say();delete obj.jian; //删除对象的属性</code></pre><p>obj的属性可以是一个函数，这个时候也叫方法；<br>obj函数内的指针this，指向obj对象本身；</p><h2 id="javaScript内置对象-十个"><a href="#javaScript内置对象-十个" class="headerlink" title="javaScript内置对象(十个)"></a>javaScript内置对象(十个)</h2><p>1.Object对象        是所有JavaScript对象的超类(基类)<br>2.Array对象          数组对象—定义数组属性和方法<br>3.Boolean对象     布尔对象—布尔值相关<br>4.Date对象           日期对象—日期时间相关<br>5.Error对象           错误对象—处理程序错误<br>6.Function对象     函数对象—定义函数属性和方法<br>7.Math对象            数学对象—各种数学运算工具(不是构造函数)<br>8.Number对象       数字对象—定义数字属性和方法<br>9.RegExp对象        正则表达式对象—定义文本匹配与筛选规则<br>10.String对象        字符串对象—定义字符串属性和方法</p><h2 id="Date内置对象"><a href="#Date内置对象" class="headerlink" title="Date内置对象"></a>Date内置对象</h2><p>日期对象创建<br>时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总毫秒数（时间戳）<br>  var date = new Date();//当前时间的日期对象<br>  var data = new Date(2012,6,10);//2012年7月10号的日期对象</p><h3 id="get系列API"><a href="#get系列API" class="headerlink" title="get系列API"></a>get系列API</h3><p>getFullYear()<br>返回年<br>getMonth()<br>返回月份0—11<br>getDate()<br>返回某一天<br>getDay()<br>返回星期0-6<br>getHours()<br>返回小时<br>getMinutes()<br>返回分钟<br>getSeconds()<br>返回秒<br>getTime()<br>返回1970年1月1日午夜到指定日期（字符串）的毫秒数</p><h3 id="set系列API"><a href="#set系列API" class="headerlink" title="set系列API"></a>set系列API</h3><p>setFullYear()<br>设置年份<br>setMonth()<br>设置月<br>setDate()<br>设置天<br>setHours()<br>设置小时<br>setMinutes()<br>设置分钟<br>setSeconds()<br>设置秒<br>setTime()<br>使用毫秒的形式设置时间对象</p><h2 id="★注意"><a href="#★注意" class="headerlink" title="★注意:"></a>★注意:</h2><p>1、setDay( 这个真没有!!!!,星期是通过设定日期自动计算的 )<br>2、set系列API可以设置比当前范围更精细的时间<br>比如：setFullYear（2012，3，5）  设置日期为2018年4月5号<br>setHours（13，30，0）  设置时间为13:30:00</p><h3 id="getMonth："><a href="#getMonth：" class="headerlink" title="getMonth："></a>getMonth：</h3><p>可选,介于 0 ~ 11 之间：如果不填，取系统当月<br>-1 为去年的最后一个月<br>12 为明年的第一个月<br>13 为明年的第二个月</p><h3 id="getDay"><a href="#getDay" class="headerlink" title="getDay()"></a>getDay()</h3><p>返回星期 0-6</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 对象 </tag>
-            
-            <tag> math </tag>
-            
-            <tag> date </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS函数</title>
-      <link href="/posts/js-function.html"/>
-      <url>/posts/js-function.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"><a href="#函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一" class="headerlink" title="函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一"></a>函数：一个工具，被封装好可重复执行的一段代码块，函数的功能相对单一</h2><p>把某一段代码放在函数里面进行封装，可以避免在非必要情况下调用该代码，也就是说我们可以让一段代码在特定情况下再去执行，而且每次需要执行这一段代码的时候只需调用一下这个函数即可（函数名）<br>我们在需要的时候可以调用一个封装好的函数，函数内的一些代码就会被执行，功能就会被实现</p><h3 id="系统函数："><a href="#系统函数：" class="headerlink" title="系统函数："></a>系统函数：</h3><p>parseInt()   alert()  prompt()  eval()</p><h3 id="函数的声明和使用"><a href="#函数的声明和使用" class="headerlink" title="函数的声明和使用"></a>函数的声明和使用</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">//通过function关键字声明一个函数，跟上函数名，一堆小括号，一堆花括号，花括号里面放代码块//提升到顶部function test()&#123;    //可重复执行的代码块&#125;  test();//表达式定义法//不会提升var test1 = function()&#123;    //可重复执行的代码块&#125;for (var i = 0; i < 10; i++) &#123;    test1();&#125;</code></pre><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>形参：形式参数，声明函数的时候写在小括号里面的参数，无需var<br>1.实参：实际参数，在函数调用的时候需要传递实际有值得参数<br>2.实参个数大于形参，多余实参自动舍弃<br>3.形参个数大于形参，多余形参默认为undefined<br>4.实参副本arguments：可以在函数内部使用arguments接收所传递过来的参数，是一个集合</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">function test()&#123;    console.log(arguments);    console.log(arguments.length);&#125;        test(1,2,3,5,6) // 打印 1,2,3,5,6   长度为5</code></pre><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域：变量的作用范围"><a href="#作用域：变量的作用范围" class="headerlink" title="作用域：变量的作用范围"></a>作用域：变量的作用范围</h4><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>作用范围为整个程序的执行范围<br>在函数体外部定义的变量就是全局变量<br>在函数体内部不使用var定义的也是全局变量</p><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>作用范围是某个函数体内部<br>在函数体内部通过var关键字定义的变量或者形参，都是局部变量<br>当局部变量与全局变量重名时，在函数体内部局部变量优先于全局变量</p><h4 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h4><p>变量的声明会提升至当前作用域的最顶端，但不会提升赋值</p><h3 id="return关键字"><a href="#return关键字" class="headerlink" title="return关键字"></a>return关键字</h3><p>1.结束函数的执行<br>2.交回函数执行权<br>3.返回一个结果到全局</p><h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>是一种数据结构，指的是数据存取的方式，当定义一个变量时，内存会开辟一段空间<br>栈（ Stack）：先进后出（FILO），在栈顶做插入（压栈）和删除操作（出栈）。</p><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>先进先出（FIFO），在队头做删除操作,在队尾做插入操作。</p><h4 id="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"><a href="#堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。" class="headerlink" title="堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。"></a>堆和它们不同，代码执行时系统动态分配，不存在是先进后出还是先进先出。</h4><h3 id="执行环境执行栈（也称执行上下文–execution-context）"><a href="#执行环境执行栈（也称执行上下文–execution-context）" class="headerlink" title="执行环境执行栈（也称执行上下文–execution context）"></a>执行环境执行栈（也称执行上下文–execution context）</h3><p>当JavaScript解释器初始化执行代码时，它首先默认进入全局执行环境，从此刻开始，函数的每次调用都会创建一个新的执行环境，每一个执行环境都会创建一个新的环境对象压入栈中。<br>当执行流进入一个函数时，函数的环境对象就会被压入一个环境栈中（execution stack）。在函数执行完后，栈将其环境弹出，把控制权返回给之前的执行环境。</p><h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>内层环境可以访问外层中的变量和函数，而外层环境不能访问内层的变量和函数</p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>程序调用自身的编程技巧称为递归（ recursion）。<br>递归，就是在运行的过程中调用自己，本质就是循环。<br>构成递归需具备的条件</p><ol><li>子问题须与原始问题为同样的事，且更为简单；</li><li>不能无限制地调用本身，须有个出口，化简为非递归状况处理。<br>由于递归是函数本身一层一层压栈，导致先入栈的不能出栈，空间占满以后就会造成堆栈溢出</li></ol><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1、利用递归求100的阶乘<br>2、编写函数计算任意数字的阶乘（两种方法）<br>3、函数和循环结合打印任意乘法表<br>4、编写函数实现：两个数平方的阶乘相加的和<br>要求：三个函数实现，一个求阶乘，一个求平方，第三个函数利用这两个函数求出最终结果<br>5、如果一个数恰好等于它的因数（除自身以外）之和，则称该数为“完全数” perfect number。<br>请列出m~n（m&lt;n）的所有完全数（要求用两个函数实现）</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JS </tag>
-            
-            <tag> function </tag>
-            
-            <tag> 函数 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS的BOM对象</title>
-      <link href="/posts/js-bom.html"/>
-      <url>/posts/js-bom.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="BOM（Browser-Object-Model-浏览器对象模型）"><a href="#BOM（Browser-Object-Model-浏览器对象模型）" class="headerlink" title="BOM（Browser Object Model  浏览器对象模型）"></a>BOM（Browser Object Model  浏览器对象模型）</h2><h3 id="window是全局浏览器内置顶级对象"><a href="#window是全局浏览器内置顶级对象" class="headerlink" title="window是全局浏览器内置顶级对象"></a>window是全局浏览器内置顶级对象</h3><p>表示浏览器中打开的窗口（没有应用于window对象的公开标准，不过所有浏览器都支持该对象）<br>Window 对象表示一个浏览器窗口或一个框架。<br>在客户端 JavaScript 中，Window 对象是全局对象，所有的表达式都在当前的环境中计算。<br>也就是说，要引用当前窗口根本不需要特殊的语法，可以把那个窗口的属性作为全局变量来使用。<br>例如，可以只写 document，而不必写 window.document。<br>同样，可以把当前窗口对象的方法当作函数来使用，如只写 alert()，而不必写 Window.alert()。<br>除了上面列出的属性和方法，Window 对象还实现了核心 JavaScript 所定义的所有全局属性和方法。</p><h3 id="1、全局变量默认是挂在window下的"><a href="#1、全局变量默认是挂在window下的" class="headerlink" title="1、全局变量默认是挂在window下的"></a>1、全局变量默认是挂在window下的</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var  a = 123;alert(window.a)//123</code></pre><h3 id="2、window下的子对象"><a href="#2、window下的子对象" class="headerlink" title="2、window下的子对象"></a>2、window下的子对象</h3><h4 id="（1）location"><a href="#（1）location" class="headerlink" title="（1）location"></a>（1）location</h4><p>window.location.href          当前页面的 URL，可以获取，可以修改（页面跳转）<br>window.location.hostname      web 主机的域名<br>window.location.pathname      当前页面的路径和文件名<br>window.location.port          web 主机的端口 （80 或 443）<br>window.location.protocol      所使用的 web 协议（http:// 或 https://）<br>window.location.search        请求参数（？后面的内容）</p><p>window.location.reload();<br>刷新页面，一般情况下给reload()传递一个true，让他刷新，并不使用缓存。缓存的东西一般为js文件，css文件等。<br>用这个方法可以让自己不能动的页面动起来了。刷新当前页面。</p><h4 id="（2）window-navigator"><a href="#（2）window-navigator" class="headerlink" title="（2）window.navigator"></a>（2）window.navigator</h4><p>navigator.appName      返回获取当前浏览器的名称。<br>navigator.appVersion    返回 获取当前浏览器的版本号。<br>navigator.platform        返回 当前计算机的操作系统。<br>以上属性已经在逐渐被抛弃了。一个新的属性将替代这些属性。</p><p>navigator.userAgent   返回浏览器信息（可用此属性判断当前浏览器）</p><h5 id="判断当前浏览器类型的代码："><a href="#判断当前浏览器类型的代码：" class="headerlink" title="判断当前浏览器类型的代码："></a>判断当前浏览器类型的代码：</h5><pre class=" language-lang-javascript"><code class="language-lang-javascript">function isBrowser() &#123;    var userAgent = navigator.userAgent;    //微信内置浏览器    if(userAgent.match(/MicroMessenger/i) == 'MicroMessenger') &#123;        return "MicroMessenger";    &#125;    //QQ内置浏览器    else if(userAgent.match(/QQ/i) == 'QQ') &#123;        return "QQ";    &#125;    //Chrome    else if(userAgent.match(/Chrome/i) == 'Chrome') &#123;        return "Chrome";    &#125;    //Opera    else if(userAgent.match(/Opera/i) == 'Opera') &#123;        return "Opera";    &#125;    //Firefox    else if(userAgent.match(/Firefox/i) == 'Firefox') &#123;        return "Firefox";    &#125;    //Safari    else if(userAgent.match(/Safari/i) == 'Safari') &#123;        return "Safari";    &#125;    //IE    else if(!!window.ActiveXObject || "ActiveXObject" in window) &#123;        return "IE";    &#125;    else &#123;        return "未定义:"+userAgent;    &#125;&#125;</code></pre><h4 id="（3）history"><a href="#（3）history" class="headerlink" title="（3）history"></a>（3）history</h4><p>history.go(1)    参数可写任意整数，正数前进，负数后退<br>history.back()   后退<br>history.forward() 前进</p><h4 id="（4）screen-屏幕"><a href="#（4）screen-屏幕" class="headerlink" title="（4）screen: 屏幕"></a>（4）screen: 屏幕</h4><p>window.screen.width 返回当前屏幕宽度(分辨率值)<br>window.screen.height 返回当前屏幕高度(分辨率值)</p><h4 id="（5）window下的弹框方法"><a href="#（5）window下的弹框方法" class="headerlink" title="（5）window下的弹框方法"></a>（5）window下的弹框方法</h4><p>alert()   prompt()  confirm()</p><h4 id="（6）定时器"><a href="#（6）定时器" class="headerlink" title="（6）定时器"></a>（6）定时器</h4><p>超时定时器        间隔定时器<br>setTimeout       setInterval<br>clearTimeout     clearInterval</p><h4 id="（7）window-onload"><a href="#（7）window-onload" class="headerlink" title="（7）window.onload"></a>（7）window.onload</h4><h4 id="（8）window-onscroll"><a href="#（8）window-onscroll" class="headerlink" title="（8）window.onscroll"></a>（8）window.onscroll</h4><p>var scrolltop=document.documentElement.scrollTop||document.body.scrollTop; //兼容</p><h4 id="（9）window-window-onresize"><a href="#（9）window-window-onresize" class="headerlink" title="（9）window.window.onresize"></a>（9）window.window.onresize</h4>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> BOM </tag>
-            
-            <tag> 定时器 </tag>
-            
-            <tag> window </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS程序执行</title>
-      <link href="/posts/program-execution.html"/>
-      <url>/posts/program-execution.html</url>
-      
-        <content type="html"><![CDATA[<p> 顺序结构：按照由上到下的顺序一行一行地执行的程序结构<br> 分支结构：根据不同的条件判断来决定程序执行走向的结构（也叫选择结构）<br> 循环结构：需要重复执行同一操作的程序结构称为循环结构。</p><h3 id="if-判断逻辑语句"><a href="#if-判断逻辑语句" class="headerlink" title="if 判断逻辑语句"></a>if 判断逻辑语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">if(true)&#123;    //会执行的语句&#125;if(false)&#123;    //会跳过不执行的语句&#125;if(判断条件)&#123; //当if括号中结果为true时执行语句1，否则执行语句2    //语句1&#125;else&#123;    //语句2&#125;if(判断条件1)&#123; //当条件1结果为true时执行语句1    //语句1&#125;else if(判断条件2)&#123; //当条件1结果为false而且条件2结果为true时执行语句2    //语句2&#125;else&#123; //当条件1条件2结果都为false时执行语句3    //语句3&#125;</code></pre><p>我们都知道，if括号中只需要布尔类型值。那么在if判断中，所有的数据类型都会被隐式转换为布尔类型。<br>注意：0、-0、null、””、false、undefined 或者 NaN在if条件里结果为false</p><h3 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h3><p>除了+运算符具有两层含义以外，- <em> /只有数学意义，所以当进行- </em> /运算的时候默认会将运算符两侧的数据类型隐式转换为数字类型，再进行运算。</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 2, b = "2";if(a == b)&#123;    alert("a和b相等");    // 会弹  &#125;if(a === b)&#123;    alert("a和b相等");    // 不会弹  &#125;if(1 == true)&#123;    alert("数字1是true");&#125;if(a = b)&#123;    alert("a和b相等");&#125;//一个等号代表赋值操作，结果为等号右边的值</code></pre><h3 id="switch-case多分支语句"><a href="#switch-case多分支语句" class="headerlink" title="switch case多分支语句"></a>switch case多分支语句</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">switch(语句)&#123;  //语句的结果与每一条case内容进行匹配    case 1:       alert(1);           break;        case 2:             alert(2);             break;        case 3:            alert(3);            break;        default:            alert(0);&#125;</code></pre><p>注意switch的应用场景（有多个确定值需要判断的时候）；<br>注意case穿透，要加break语句（如果程序没有发现break语句，那么解析器会继续向下解析）;</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var a = 1;switch(a)&#123;     case 1:       alert(1);    case 2:        alert(2);    case 3:        alert(3);    default:        alert(0);&#125;//每一个alert都会被执行，而且alert会阻断程序进程</code></pre><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>1.判断一个整数，属于哪个范围：大于0；小于0；等于0<br>2.判断一个整数是偶数还是奇数，并输出判断结果<br>3.开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适<br>4.判断一个三位数是否是水仙花数（如：153 = 1^3 + 5^3 + 3^3，那么153就是水仙花数）</p><h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><p>1.点击切换div颜色<br>2.输入分数，判定成绩等级<br>3.输入年份，计算某一年是否是闰年<br>4.输入月份，显示当月的天数，要求：利用case穿透简化代码<br>5.输入数字，显示星期几，如：输入0，弹出星期日，以此类推（两种方法）<br>6.设计一个猜拳游戏：<br>假设： 1代表石头 2代表剪刀 3代表 布<br>计算机每次随机出现1—3中的任意一个数（parseInt (Math.random()*3) + 1）<br>玩家也有三种状态，用玩家出的数和计算机出的数进行比对，按照游戏规则比出胜负。</p><h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><p>1.根据一个数字日期，判断这个日期是这一年的第几天<br>例如： 20160211，计算后结果为42<br>2.制作一个表单，包括用户名，密码，电话<br>要求：<br>1）做好看点<br>2）点击保存按钮时，使用JS判断用户的联系电话是否为纯数字，如果用户输入有错误，使用alert()弹框警告<br>3）判断用户名是否填写，如果空白，使用alert弹框警告<br>4）判断密码长度，必须大于8位，否则alert警告<br>提示：通过length属性取得字符串的长度</p><pre class=" language-lang-javascript"><code class="language-lang-javascript">var str = "hello";str.length // 得到长度</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JS </tag>
-            
-            <tag> if/else </tag>
-            
-            <tag> switch/case </tag>
-            
-            <tag> 显/隐式转换 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS循环结构</title>
-      <link href="/posts/js-loop.html"/>
-      <url>/posts/js-loop.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">while(条件)&#123;    //条件成立就会反复执行这里的代码&#125;var count = 0;while(count < 10)&#123;    count++;    document.write("Hello world");&#125;</code></pre><p>注意死循环： 没有终止条件的循环即为死循环，在代码中应尽量避免死循环</p><h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">do&#123;    //先执行一遍代码    //while条件成立再继续反复执行&#125;while(条件)</code></pre><h3 id="while和do…while循环的区别"><a href="#while和do…while循环的区别" class="headerlink" title="while和do…while循环的区别"></a>while和do…while循环的区别</h3><p>do…while循环至少会执行一遍，不管条件是否成立，但是while循环如果初始条件不成立一遍也不会执行。</p><h3 id="break和continue关键字"><a href="#break和continue关键字" class="headerlink" title="break和continue关键字"></a>break和continue关键字</h3><p>break：跳出循环体，整个循环结束<br>continue：结束本次循环进入下一次循环体</p><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">for (var i = 0; i < 10; i++) &#123;    console.log(i);&#125;</code></pre><p>如下图所示：注意for循环时的执行顺序,并且：for循环1，2，4步是可选的<br><!-- ![for的循环执行顺序](JS循环结构/for.png) --><br><img src="https://i.loli.net/2020/09/12/4homTRBp1gKLOe9.png" alt="loop.png"></p><h3 id="三种循环的联系和区别"><a href="#三种循环的联系和区别" class="headerlink" title="三种循环的联系和区别"></a>三种循环的联系和区别</h3><p>1、都是会反复执行的代码块<br>2、大部分情况下可以互相替换<br>3、do…while至少执行一次，while和for有可能0次，while不太能确定执行次数，for可以</p><h3 id="练习（while和for两种方式）"><a href="#练习（while和for两种方式）" class="headerlink" title="练习（while和for两种方式）"></a>练习（while和for两种方式）</h3><p>1.打印100以内所有偶数的和<br>2.求出1-1/2+1/3-1/4…..1/100的和<br>3.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出<br>4.打印九九乘法表<br>5.求1+2!+3!+…+20!的值<br>6.有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，按每一个格子是前一个格子的二倍（第四个格子放8个）计算，问棋盘上放的所有芝麻的重量是多少？<br>7.打印100–200之间所有能被3或者7整除的数<br>8.计算100的阶乘</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> JS基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> while </tag>
-            
-            <tag> do...while </tag>
-            
-            <tag> break和continue </tag>
-            
-            <tag> for </tag>
+            <tag> 标签 </tag>
             
         </tags>
       
@@ -1459,31 +1484,6 @@
         <tags>
             
             <tag> about-me </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>啊啊啊文章模板啊</title>
-      <link href="/posts/articletemplate.html"/>
-      <url>/posts/articletemplate.html</url>
-      
-        <content type="html"><![CDATA[<div class="note info">前言</div><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul><li>项目</li></ul><p><img src="/posts/articletemplate.htm/图片链接" alt="引入图片"></p><p><code>正文一些需要高亮色的文字</code></p><p><a href="链接" class="LinkCard" target="_blank">引入链接</a></p><div style="position: relative; padding: 30% 45%;"> <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="视频地址去B站分享按钮下iframe里面的src属性值复制" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> </div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文章模板 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 标签 </tag>
             
         </tags>
       
