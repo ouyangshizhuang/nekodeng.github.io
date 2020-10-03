@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-10-01T10:28:44.226Z</updated>
+  <updated>2020-10-03T07:54:21.837Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue-router</title>
+    <link href="https://nekodeng.gitee.io/posts/vue-router.html"/>
+    <id>https://nekodeng.gitee.io/posts/vue-router.html</id>
+    <published>2020-10-03T07:15:04.358Z</published>
+    <updated>2020-10-03T07:54:21.837Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言：vue-router是什么？为什么我们不像原来一样直接用 a 标签编写链接？如何使用？常见路由操作有哪些？&lt;/div&gt;
+
+&lt;h3 id=&quot;Vue-Router是什么&quot;&gt;&lt;a href=&quot;#Vue-Router是什么&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Vue基础" scheme="https://nekodeng.gitee.io/categories/Vue%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="vue-router" scheme="https://nekodeng.gitee.io/tags/vue-router/"/>
+    
+  </entry>
   
   <entry>
     <title>Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</title>
@@ -525,33 +552,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="CSS-SCSS代码规范" scheme="https://nekodeng.gitee.io/tags/CSS-SCSS%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS-this</title>
-    <link href="https://nekodeng.gitee.io/posts/js-this.html"/>
-    <id>https://nekodeng.gitee.io/posts/js-this.html</id>
-    <published>2020-09-04T14:28:49.931Z</published>
-    <updated>2020-09-23T09:03:29.066Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;this&quot;&gt;&lt;a href=&quot;#this&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="this" scheme="https://nekodeng.gitee.io/tags/this/"/>
-    
-    <category term="call/apply/bind方法" scheme="https://nekodeng.gitee.io/tags/call-apply-bind%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
