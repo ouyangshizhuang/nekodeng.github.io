@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nekodeng.gitee.io/photograph/index.html</loc>
+    <loc>https://nekodeng.gitee.io/gallery/%E5%B3%A8%E7%9C%89%E5%B1%B1%E4%B9%8B%E8%A1%8C/index.html</loc>
+    
+    <lastmod>2020-10-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/gallery/index.html</loc>
     
     <lastmod>2020-10-03</lastmod>
     

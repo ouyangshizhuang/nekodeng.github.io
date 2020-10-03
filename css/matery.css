@@ -660,7 +660,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.85em;
     margin-bottom: 20px;
     position: relative;
@@ -2422,7 +2422,7 @@ body.dark nav ul li:hover a span {
 .fa-chrome:before {
     color: #f14f05;
 }
-nav ul li:hover a[href="/count"] span, nav ul li:hover a[href="/photograph"] span {
+nav ul li:hover a[href="/count"] span, nav ul li:hover a[href="/gallery"] span {
     border: none!important;
 }
 /* .fab {
