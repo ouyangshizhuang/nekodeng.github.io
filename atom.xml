@@ -44,31 +44,6 @@
   </entry>
   
   <entry>
-    <title>Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</title>
-    <link href="https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html"/>
-    <id>https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html</id>
-    <published>2020-10-01T08:41:18.840Z</published>
-    <updated>2020-10-01T10:28:44.226Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言: 今天在部署写好的博客文章时，出现了git报错bad signature和index file corrupt和error：spawn</summary>
-        
-      
-    
-    
-    
-    <category term="Git" scheme="https://nekodeng.gitee.io/categories/Git/"/>
-    
-    
-    <category term="git报错index file corrupt和error：spawn failed" scheme="https://nekodeng.gitee.io/tags/git%E6%8A%A5%E9%94%99index-file-corrupt%E5%92%8Cerror%EF%BC%9Aspawn-failed/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Vue基础</title>
     <link href="https://nekodeng.gitee.io/posts/vue.html"/>
     <id>https://nekodeng.gitee.io/posts/vue.html</id>
@@ -92,6 +67,31 @@
     
     
     <category term="Vue基础" scheme="https://nekodeng.gitee.io/tags/Vue%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</title>
+    <link href="https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html"/>
+    <id>https://nekodeng.gitee.io/posts/git-error-index-file-corrupt.html</id>
+    <published>2020-09-27T16:34:14.000Z</published>
+    <updated>2020-10-03T08:03:25.285Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言: 今天在部署写好的博客文章时，出现了git报错bad signature和index file corrupt和error：spawn</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://nekodeng.gitee.io/categories/Git/"/>
+    
+    
+    <category term="git报错index file corrupt和error：spawn failed" scheme="https://nekodeng.gitee.io/tags/git%E6%8A%A5%E9%94%99index-file-corrupt%E5%92%8Cerror%EF%BC%9Aspawn-failed/"/>
     
   </entry>
   

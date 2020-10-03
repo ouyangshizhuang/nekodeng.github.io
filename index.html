@@ -27,10 +27,8 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-
     <link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"/>
     
-
     <script src="/libs/jquery/jquery.min.js"></script>
     <script>
         (function(){
@@ -149,6 +147,34 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>清单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/count">
+          
+          <span>统计</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/photograph">
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/contact" class="waves-effect waves-light">
       
       <span>留言板</span>
@@ -158,7 +184,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="javascript:;" class="waves-effect waves-light">
 
       
       <span>链接库</span>
@@ -273,6 +299,37 @@
 			
 			说说
 		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			清单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/count " style="margin-left:75px">
+				  
+		          <span>统计</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/photograph " style="margin-left:75px">
+				  
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -601,54 +658,6 @@ Vue Router是什么Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.j
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/git-error-index-file-corrupt.html">
-                        <div class="card-image">
-                            
-                            <img src="https://i.loli.net/2020/10/01/3anbX42Mev5RLJW.png" class="responsive-img" alt="Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法">
-                            
-                            <span class="card-title">Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言: 今天在部署写好的博客文章时，出现了git报错bad signature和index file corrupt和error：spawn failed，网上找了一堆解决办法，都没行，最后利用了巧妙地方法解决了。
-
-问题描述git报错ba
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Git/" class="post-category">
-                                    Git
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/git%E6%8A%A5%E9%94%99index-file-corrupt%E5%92%8Cerror%EF%BC%9Aspawn-failed/">
-                            <span class="chip bg-color">git报错index file corrupt和error：spawn failed</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/posts/vue.html">
                         <div class="card-image">
                             
@@ -688,6 +697,54 @@ Vue.js 是什么Vue (读音 /vjuː/，类似于 view) 是一套用于构建用�
                         
                         <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
                             <span class="chip bg-color">Vue基础</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/git-error-index-file-corrupt.html">
+                        <div class="card-image">
+                            
+                            <img src="https://i.loli.net/2020/10/01/3anbX42Mev5RLJW.png" class="responsive-img" alt="Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法">
+                            
+                            <span class="card-title">Git踩坑-git报错bad signature和index file corrupt和error：spawn failed的处理方法</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                前言: 今天在部署写好的博客文章时，出现了git报错bad signature和index file corrupt和error：spawn failed，网上找了一堆解决办法，都没行，最后利用了巧妙地方法解决了。
+
+问题描述git报错ba
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Git/" class="post-category">
+                                    Git
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/git%E6%8A%A5%E9%94%99index-file-corrupt%E5%92%8Cerror%EF%BC%9Aspawn-failed/">
+                            <span class="chip bg-color">git报错index file corrupt和error：spawn failed</span>
                         </a>
                         
                     </div>

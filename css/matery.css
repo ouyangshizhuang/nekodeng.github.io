@@ -1665,6 +1665,11 @@ body.dark ol li:before {
     border-radius: 50%;
     box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
+@media only screen and (max-width: 1030px) {
+    .ziwojieshao {
+        padding: 0!important;
+    }
+}    
 
 @media only screen and (min-width: 900px) {
     .cd-timeline-img {
@@ -1882,6 +1887,28 @@ body.dark ol li:before {
     color: #999;
     font-family: MV Boli;
 }
+body.dark .post-charts {
+    background-color: #fff;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+body.dark .post-charts .title {
+    color: #333;
+}
+.ziwojieshao {
+    padding: 0 118px;
+}
+.ziwojieshao ol {
+    padding-left: 6px;
+}
+.ziwojieshao ol li, .ziwojieshao p {
+    font-size: 1.22rem!important;
+    line-height: 1.6;
+    font-family: "Linux Biolinum","Noto Serif SC",Helvetica,Arial,Menlo,Monaco,monospace,sans-serif;
+}
+.ziwojieshao p a {
+    color: #42b983!important;
+}
 
 .post-charts,
 .my-projects,
@@ -1889,8 +1916,6 @@ body.dark ol li:before {
 .post-charts {
     padding: 0.5rem 1.5rem 0.8rem 1.5rem;
 }
-
-
 .post-charts,
 .title,
 .my-projects .title,
@@ -2346,8 +2371,14 @@ iframe[frameborder='no']{
 .nav-menu li .sub-nav, .menus_item_child:before {
     background-color: #000;
 }
+.chart {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 body.dark .card #category-radar {
-    background-color: #040405;
+    background-color: #fff;
+    opacity: 0.48;
+    border-radius: 10px;
 }
 body.dark #vcomments textarea {
     background: url(/medias/comment_bg.png) 100% 100% no-repeat;
@@ -2390,6 +2421,9 @@ body.dark nav ul li:hover a span {
 }
 .fa-chrome:before {
     color: #f14f05;
+}
+nav ul li:hover a[href="/count"] span, nav ul li:hover a[href="/photograph"] span {
+    border: none!important;
 }
 /* .fab {
     margin-right: 0.5rem;
@@ -2673,7 +2707,8 @@ hr:hover::before{
     position: absolute;
     top: 62px!important;
     list-style: none;
-    margin-left: -29px;
+    margin-left: -38px;
+    padding-top: 4px;
     color: #fff;
     display: none;
 }
