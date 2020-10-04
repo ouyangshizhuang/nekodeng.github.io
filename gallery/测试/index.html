@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2020/1, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="keywords" content="测试, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2020/1 | itsNekoDeng</title>
+    <title>测试 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -387,14 +387,75 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    <!-- 加密功能 -->
+
+    <script src="/libs/cryptojs/crypto-js.min.js"></script>
+    <script>
+        (function() {
+            let pwd = '';
+
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('该相册已加密，请输入密码访问')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误，将返回主页！');
+                    location.href = '/';
+                }
+            }
+        })();
+    </script>
+
+
+<script>
+    $(function () {
+        // 获取图片的宽度(200px)
+        let imgWidth = $('.mat').outerWidth(); // 200
+
+        waterfallHandler();
+
+        // 瀑布流处理
+        function waterfallHandler() {
+            // 获取图片的列数
+            let column = parseInt($(window).width() / imgWidth);
+
+            // 高度数组
+            let heightArr = [];
+            for(let i=0; i<column; i++) {
+                heightArr[i] = 0;
+            }
+
+            // 遍历所有图片进行定位处理
+            $.each($('.mat'), function (index, item) {
+                // 当前元素的高度
+                let itemHeight = $(item).outerHeight();
+                // 高度数组最小的高度
+                let minHeight = Math.min(...heightArr);
+                // 高度数组最小的高度的索引
+                let minIndex = heightArr.indexOf(minHeight);
+                
+                $(item).css({
+                    position: 'absolute',
+                    top: minHeight + 'px',
+                    left: minIndex * imgWidth + 'px'
+                });
+
+                heightArr[minIndex] += itemHeight;
+            });
+        }
+        
+        // 窗口大小改变
+        $(window).resize(function () {
+            waterfallHandler();
+        });
+    });
+</script>
+
+<!-- <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    
+                    测试
                  
             </div>
 
@@ -427,244 +488,215 @@
 
 
     </div>
-</div>
+</div> -->
 
-<main class="content">
+<link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
+<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
+<script src="/libs/MyGallery/js/baguetteBox.js"></script> 
+<style>    
+    .my-gallery .photo img {
+        transition: all 0.6s ease-in-out; 
+    }     
+    .my-gallery .photo:hover img {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }      
+      
+    .my-gallery {
+        margin: 20px auto;
+    }   
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 75%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 24px auto 12px;
+        
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
+    }
+    /* .my-gallery .photo img {
+        height: auto;
+    } */
 
-    
-    <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
+    .box {
+            position: relative;
+        }
+    .box img {
+        width: 350px;
+        vertical-align: top;
+        padding: 8px;
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+    .box img:hover {
+        transform: scale(1.05);
+    }
+    .page-footer {
+        display: none
+    }
+    body {
+        overflow-y: visible!important;
+    }
+    header {
+        background-color: #000;
+    }
+    @media only screen and (max-width: 1058px) {
+        .box {
+            margin-left: 145px;
+        }
+    }
+    @media only screen and (max-width: 770px) {
+        .box {
+            margin-left: 15px;
+        }
+    }
+    @media only screen and (max-width: 380px) {
+        .box {
+            margin-left: -5px;
+        }
+    }
+    @media only screen and (max-width: 323px) {
+        .box img {
+            width: 296px;
+            left: 0;
+        }
+    }
+
+</style>
+
+<div class="tag-title center-align">
+    <div class="miaoshus">
+        <div class="title center-align">
+            “ 
+                测试
+              ”
+        </div>
+        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
     </div>
+    
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
+<!-- 相册 -->
+<section class="gallery">
+    <div id="myGallery" class="my-gallery">
+        <div class="row">
+            <div class="box">
+            
+                
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+0 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" alt="img"+1 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+2 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+3 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+4 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+5 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="测试">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+6 >
+                        </a>
+                    
+                
+            
+        </div>
+        </div>
+    </div>
+</section>
 
-    
 
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
+
+<script>
+    baguetteBox.run('.gallery', {
+        // 配置参数
+        buttons:Boolean,//是否显示导航按钮。
+        noScrollbars:true,//是否在显示时隐藏滚动条。
+        titleTag:true,//是否使用图片上的title属性作为图片标题
+        async:false,//是否异步加载文件。
+        /*
+        afterShow:function(){//显示遮罩层之后的回调函数。   
+           $(".pressing").fadeIn();
         },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2019-10-04", "2020-10-04"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2019-10-04", 0], ["2019-10-05", 0], ["2019-10-06", 0], ["2019-10-07", 0], ["2019-10-08", 0], ["2019-10-09", 0], ["2019-10-10", 0], ["2019-10-11", 0], ["2019-10-12", 0], ["2019-10-13", 0], ["2019-10-14", 0], ["2019-10-15", 0], ["2019-10-16", 0], ["2019-10-17", 0], ["2019-10-18", 0], ["2019-10-19", 0], ["2019-10-20", 0], ["2019-10-21", 0], ["2019-10-22", 0], ["2019-10-23", 0], ["2019-10-24", 0], ["2019-10-25", 0], ["2019-10-26", 0], ["2019-10-27", 0], ["2019-10-28", 0], ["2019-10-29", 0], ["2019-10-30", 0], ["2019-10-31", 0], ["2019-11-01", 0], ["2019-11-02", 0], ["2019-11-03", 0], ["2019-11-04", 0], ["2019-11-05", 0], ["2019-11-06", 0], ["2019-11-07", 0], ["2019-11-08", 0], ["2019-11-09", 0], ["2019-11-10", 0], ["2019-11-11", 0], ["2019-11-12", 0], ["2019-11-13", 0], ["2019-11-14", 0], ["2019-11-15", 0], ["2019-11-16", 0], ["2019-11-17", 0], ["2019-11-18", 0], ["2019-11-19", 0], ["2019-11-20", 0], ["2019-11-21", 0], ["2019-11-22", 0], ["2019-11-23", 0], ["2019-11-24", 0], ["2019-11-25", 0], ["2019-11-26", 0], ["2019-11-27", 0], ["2019-11-28", 0], ["2019-11-29", 0], ["2019-11-30", 0], ["2019-12-01", 0], ["2019-12-02", 0], ["2019-12-03", 0], ["2019-12-04", 0], ["2019-12-05", 0], ["2019-12-06", 0], ["2019-12-07", 0], ["2019-12-08", 0], ["2019-12-09", 0], ["2019-12-10", 0], ["2019-12-11", 0], ["2019-12-12", 0], ["2019-12-13", 0], ["2019-12-14", 0], ["2019-12-15", 0], ["2019-12-16", 0], ["2019-12-17", 0], ["2019-12-18", 0], ["2019-12-19", 0], ["2019-12-20", 0], ["2019-12-21", 0], ["2019-12-22", 0], ["2019-12-23", 0], ["2019-12-24", 0], ["2019-12-25", 0], ["2019-12-26", 0], ["2019-12-27", 0], ["2019-12-28", 0], ["2019-12-29", 0], ["2019-12-30", 0], ["2019-12-31", 0], ["2020-01-01", 1], ["2020-01-02", 1], ["2020-01-03", 0], ["2020-01-04", 0], ["2020-01-05", 0], ["2020-01-06", 0], ["2020-01-07", 0], ["2020-01-08", 0], ["2020-01-09", 0], ["2020-01-10", 0], ["2020-01-11", 0], ["2020-01-12", 0], ["2020-01-13", 0], ["2020-01-14", 0], ["2020-01-15", 0], ["2020-01-16", 0], ["2020-01-17", 0], ["2020-01-18", 0], ["2020-01-19", 0], ["2020-01-20", 0], ["2020-01-21", 0], ["2020-01-22", 0], ["2020-01-23", 0], ["2020-01-24", 0], ["2020-01-25", 0], ["2020-01-26", 0], ["2020-01-27", 0], ["2020-01-28", 0], ["2020-01-29", 0], ["2020-01-30", 0], ["2020-01-31", 0], ["2020-02-01", 0], ["2020-02-02", 0], ["2020-02-03", 0], ["2020-02-04", 0], ["2020-02-05", 0], ["2020-02-06", 0], ["2020-02-07", 0], ["2020-02-08", 0], ["2020-02-09", 0], ["2020-02-10", 0], ["2020-02-11", 0], ["2020-02-12", 0], ["2020-02-13", 0], ["2020-02-14", 0], ["2020-02-15", 0], ["2020-02-16", 0], ["2020-02-17", 0], ["2020-02-18", 0], ["2020-02-19", 0], ["2020-02-20", 0], ["2020-02-21", 0], ["2020-02-22", 0], ["2020-02-23", 0], ["2020-02-24", 0], ["2020-02-25", 0], ["2020-02-26", 0], ["2020-02-27", 0], ["2020-02-28", 0], ["2020-02-29", 0], ["2020-03-01", 0], ["2020-03-02", 0], ["2020-03-03", 0], ["2020-03-04", 0], ["2020-03-05", 0], ["2020-03-06", 0], ["2020-03-07", 0], ["2020-03-08", 0], ["2020-03-09", 0], ["2020-03-10", 0], ["2020-03-11", 0], ["2020-03-12", 0], ["2020-03-13", 0], ["2020-03-14", 0], ["2020-03-15", 0], ["2020-03-16", 0], ["2020-03-17", 0], ["2020-03-18", 0], ["2020-03-19", 0], ["2020-03-20", 0], ["2020-03-21", 0], ["2020-03-22", 0], ["2020-03-23", 0], ["2020-03-24", 0], ["2020-03-25", 0], ["2020-03-26", 0], ["2020-03-27", 0], ["2020-03-28", 0], ["2020-03-29", 0], ["2020-03-30", 0], ["2020-03-31", 0], ["2020-04-01", 0], ["2020-04-02", 0], ["2020-04-03", 0], ["2020-04-04", 0], ["2020-04-05", 0], ["2020-04-06", 0], ["2020-04-07", 0], ["2020-04-08", 0], ["2020-04-09", 0], ["2020-04-10", 0], ["2020-04-11", 0], ["2020-04-12", 0], ["2020-04-13", 0], ["2020-04-14", 0], ["2020-04-15", 0], ["2020-04-16", 0], ["2020-04-17", 0], ["2020-04-18", 0], ["2020-04-19", 0], ["2020-04-20", 0], ["2020-04-21", 0], ["2020-04-22", 0], ["2020-04-23", 0], ["2020-04-24", 0], ["2020-04-25", 0], ["2020-04-26", 0], ["2020-04-27", 0], ["2020-04-28", 0], ["2020-04-29", 0], ["2020-04-30", 0], ["2020-05-01", 0], ["2020-05-02", 0], ["2020-05-03", 0], ["2020-05-04", 0], ["2020-05-05", 0], ["2020-05-06", 0], ["2020-05-07", 0], ["2020-05-08", 0], ["2020-05-09", 0], ["2020-05-10", 0], ["2020-05-11", 0], ["2020-05-12", 0], ["2020-05-13", 0], ["2020-05-14", 0], ["2020-05-15", 0], ["2020-05-16", 0], ["2020-05-17", 0], ["2020-05-18", 0], ["2020-05-19", 0], ["2020-05-20", 0], ["2020-05-21", 0], ["2020-05-22", 0], ["2020-05-23", 0], ["2020-05-24", 0], ["2020-05-25", 0], ["2020-05-26", 0], ["2020-05-27", 0], ["2020-05-28", 0], ["2020-05-29", 0], ["2020-05-30", 0], ["2020-05-31", 0], ["2020-06-01", 0], ["2020-06-02", 0], ["2020-06-03", 0], ["2020-06-04", 0], ["2020-06-05", 0], ["2020-06-06", 0], ["2020-06-07", 0], ["2020-06-08", 0], ["2020-06-09", 0], ["2020-06-10", 0], ["2020-06-11", 0], ["2020-06-12", 0], ["2020-06-13", 0], ["2020-06-14", 0], ["2020-06-15", 0], ["2020-06-16", 0], ["2020-06-17", 0], ["2020-06-18", 1], ["2020-06-19", 0], ["2020-06-20", 1], ["2020-06-21", 0], ["2020-06-22", 1], ["2020-06-23", 0], ["2020-06-24", 0], ["2020-06-25", 0], ["2020-06-26", 0], ["2020-06-27", 0], ["2020-06-28", 0], ["2020-06-29", 0], ["2020-06-30", 0], ["2020-07-01", 0], ["2020-07-02", 0], ["2020-07-03", 1], ["2020-07-04", 0], ["2020-07-05", 0], ["2020-07-06", 0], ["2020-07-07", 0], ["2020-07-08", 0], ["2020-07-09", 0], ["2020-07-10", 0], ["2020-07-11", 0], ["2020-07-12", 0], ["2020-07-13", 0], ["2020-07-14", 1], ["2020-07-15", 1], ["2020-07-16", 0], ["2020-07-17", 1], ["2020-07-18", 0], ["2020-07-19", 0], ["2020-07-20", 1], ["2020-07-21", 0], ["2020-07-22", 0], ["2020-07-23", 1], ["2020-07-24", 0], ["2020-07-25", 0], ["2020-07-26", 1], ["2020-07-27", 0], ["2020-07-28", 1], ["2020-07-29", 0], ["2020-07-30", 0], ["2020-07-31", 0], ["2020-08-01", 1], ["2020-08-02", 0], ["2020-08-03", 0], ["2020-08-04", 1], ["2020-08-05", 0], ["2020-08-06", 0], ["2020-08-07", 1], ["2020-08-08", 1], ["2020-08-09", 0], ["2020-08-10", 1], ["2020-08-11", 1], ["2020-08-12", 0], ["2020-08-13", 1], ["2020-08-14", 1], ["2020-08-15", 1], ["2020-08-16", 0], ["2020-08-17", 2], ["2020-08-18", 1], ["2020-08-19", 1], ["2020-08-20", 0], ["2020-08-21", 1], ["2020-08-22", 1], ["2020-08-23", 1], ["2020-08-24", 0], ["2020-08-25", 0], ["2020-08-26", 1], ["2020-08-27", 0], ["2020-08-28", 0], ["2020-08-29", 0], ["2020-08-30", 0], ["2020-08-31", 0], ["2020-09-01", 1], ["2020-09-02", 0], ["2020-09-03", 1], ["2020-09-04", 3], ["2020-09-05", 0], ["2020-09-06", 1], ["2020-09-07", 1], ["2020-09-08", 0], ["2020-09-09", 1], ["2020-09-10", 2], ["2020-09-11", 1], ["2020-09-12", 1], ["2020-09-13", 2], ["2020-09-14", 0], ["2020-09-15", 0], ["2020-09-16", 1], ["2020-09-17", 0], ["2020-09-18", 1], ["2020-09-19", 1], ["2020-09-20", 1], ["2020-09-21", 0], ["2020-09-22", 1], ["2020-09-23", 1], ["2020-09-24", 1], ["2020-09-25", 1], ["2020-09-26", 0], ["2020-09-27", 0], ["2020-09-28", 1], ["2020-09-29", 0], ["2020-09-30", 1], ["2020-10-01", 0], ["2020-10-02", 0], ["2020-10-03", 1], ["2020-10-04", 0]]
-        }]
+        afterHide:function(){//隐藏遮罩层之后的回调函数。 
+           $(".pressing").fadeOut(); 
+        }
+        //preload:5 预加载多少个文件。
+        // onChange: function(currentIndex, imagesCount){} 图片改变时的回调函数 
+        // overlayBackgroundColor:'rgba(0,0,0,0.8)' 遮罩层的背景颜色
+        */
+    });
 
-    };
+    start()
+        $(window).on('scroll', function(){
+         start();
+    })
 
-    myChart.setOption(option);
+    function start(){
+          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+        $('.gallery img').not('[data-isLoaded]').each(function(){
+            var $node = $(this)
+            if( isShow($node) ){
+                loadImg($node);
+            }
+        });
+     }
+
+    //判断一个元素是不是出现在窗口(视野)
+    function isShow($node){
+        return $node.offset().top <= $(window).height() + $(window).scrollTop();
+    }
+    //加载图片
+    function loadImg($img){
+    //.attr(值)
+    //.attr(属性名称,值)
+        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+        $img.attr('data-isLoaded', 1);//已加载的图片做标记
+    }
+
 </script>
-
-    
-
-    
-
-    <div id="cd-timeline" class="container">
-        
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2020">2020</a>
-            </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2020/01">01</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>02</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/articletemplate.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="啊啊啊文章模板啊">
-                                
-                                <span class="card-title">啊啊啊文章模板啊</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    前言
-
-标题
-项目
-
-
-正文一些需要高亮色的文字
-引入链接
-   
-
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-01-02
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF/" class="post-category">
-                                    文章模板
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E6%A0%87%E7%AD%BE/"><span class="chip bg-color">标签</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>01</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/about-me.html">
-                            <div class="card-image">
-                                
-                                <img src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" class="responsive-img" alt="about-me">
-                                
-                                <span class="card-title">about-me</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    Hello Everyone!
-欢迎来到我的个人博客，我将在这里和大家分享我在前端学习路上的一些知识和经历
-
-可以称呼我 nekodeng
-
-梦想是成为一位优秀的 Web Front-end Developer
-
-
-Life was lik
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-user fa-fw"></i>
-                                    NekoDeng
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/about-me/"><span class="chip bg-color">about-me</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-    </div>
-
-</main>
-
 
 
 

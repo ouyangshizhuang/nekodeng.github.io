@@ -404,7 +404,51 @@
     </script>
 
 
-<div class="bg-cover pd-header about-cover">
+<script>
+    $(function () {
+        // 获取图片的宽度(200px)
+        let imgWidth = $('.mat').outerWidth(); // 200
+
+        waterfallHandler();
+
+        // 瀑布流处理
+        function waterfallHandler() {
+            // 获取图片的列数
+            let column = parseInt($(window).width() / imgWidth);
+
+            // 高度数组
+            let heightArr = [];
+            for(let i=0; i<column; i++) {
+                heightArr[i] = 0;
+            }
+
+            // 遍历所有图片进行定位处理
+            $.each($('.mat'), function (index, item) {
+                // 当前元素的高度
+                let itemHeight = $(item).outerHeight();
+                // 高度数组最小的高度
+                let minHeight = Math.min(...heightArr);
+                // 高度数组最小的高度的索引
+                let minIndex = heightArr.indexOf(minHeight);
+                
+                $(item).css({
+                    position: 'absolute',
+                    top: minHeight + 'px',
+                    left: minIndex * imgWidth + 'px'
+                });
+
+                heightArr[minIndex] += itemHeight;
+            });
+        }
+        
+        // 窗口大小改变
+        $(window).resize(function () {
+            waterfallHandler();
+        });
+    });
+</script>
+
+<!-- <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -444,7 +488,7 @@
 
 
     </div>
-</div>
+</div> -->
 
 <link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
 <!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
@@ -457,11 +501,9 @@
         opacity: 0.6;
         transform: scale(1.05);
     }      
-    .card .card-content {
-        padding: 24px 24px 24px 24px;
-    }      
+      
     .my-gallery {
-        margin: 0;
+        margin: 20px auto;
     }   
     .miaoshus {
         padding: 20px;
@@ -469,72 +511,143 @@
         color: #969696;
         position: relative;
         display: inline-block;
-        width: 95%;
+        width: 75%;
         background: #fbfbfb50;
         border-radius: 10px;
         font-size: 16px;
-        margin: 12px auto;
+        margin: 24px auto 12px;
+        
     }
     body.dark .miaoshus {
         background: 0 0;
         border: 1px dashed #888;
     }
-    .my-gallery .photo img {
+    /* .my-gallery .photo img {
         height: auto;
+    } */
+
+    .box {
+            position: relative;
+        }
+    .box img {
+        width: 350px;
+        vertical-align: top;
+        padding: 8px;
+        border-radius: 10px;
+        transition: all 0.5s;
     }
+    .box img:hover {
+        transform: scale(1.05);
+    }
+    .page-footer {
+        display: none
+    }
+    body {
+        overflow-y: visible!important;
+    }
+    header {
+        background-color: #000;
+    }
+    @media only screen and (max-width: 1058px) {
+        .box {
+            margin-left: 145px;
+        }
+    }
+    @media only screen and (max-width: 770px) {
+        .box {
+            margin-left: 15px;
+        }
+    }
+    @media only screen and (max-width: 380px) {
+        .box {
+            margin-left: -5px;
+        }
+    }
+    @media only screen and (max-width: 323px) {
+        .box img {
+            width: 296px;
+            left: 0;
+        }
+    }
+
 </style>
 
-<main class="content">
-    <div class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fa"></i>
-                    <div class="miaoshus">这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。</div>
-                </div>
+<div class="tag-title center-align">
+    <div class="miaoshus">
+        <div class="title center-align">
+            “ 
+                峨眉山之行
+              ”
+        </div>
+        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
+    </div>
+    
+</div>
 
-                <!-- 相册 -->
-                <section class="gallery">
-                    <div id="myGallery" class="my-gallery">
-                        <div class="row">
-                            
-                                
-                                
-                                    
-                                    <div class="photo col s12 m6 l4" data-aos="fade-up">
-                                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="峨眉山之行">
-                                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+0 >
-                                        </a>
-                                    </div>
-                                
-                                    
-                                    <div class="photo col s12 m6 l4" data-aos="fade-up">
-                                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" data-caption="峨眉山之行">
-                                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" alt="img"+1 >
-                                        </a>
-                                    </div>
-                                
-                                    
-                                    <div class="photo col s12 m6 l4" data-aos="fade-up">
-                                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="峨眉山之行">
-                                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+2 >
-                                        </a>
-                                    </div>
-                                
-                                    
-                                    <div class="photo col s12 m6 l4" data-aos="fade-up">
-                                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="峨眉山之行">
-                                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+3 >
-                                        </a>
-                                    </div>
-                                
-                            
-                        </div>
-                    </div>
-                </section>
-            </div>
+<!-- 相册 -->
+<section class="gallery">
+    <div id="myGallery" class="my-gallery">
+        <div class="row">
+            <div class="box">
+            
+                
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+0 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" alt="img"+1 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+2 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+3 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+4 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+5 >
+                        </a>
+                    
+                
+                    
+                    
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="峨眉山之行">
+                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+6 >
+                        </a>
+                    
+                
+            
+        </div>
         </div>
     </div>
+</section>
+
+
 
 <script>
     baguetteBox.run('.gallery', {
@@ -563,7 +676,7 @@
 
     function start(){
           //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-        $('.container img').not('[data-isLoaded]').each(function(){
+        $('.gallery img').not('[data-isLoaded]').each(function(){
             var $node = $(this)
             if( isShow($node) ){
                 loadImg($node);
@@ -585,7 +698,7 @@
 
 </script>
 
-</main>
+
 
     <footer class="page-footer bg-color">
     

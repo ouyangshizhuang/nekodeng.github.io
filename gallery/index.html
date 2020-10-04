@@ -387,8 +387,7 @@
 
 </header>
 
-    
-<div class="bg-cover pd-header about-cover">
+    <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -429,10 +428,36 @@
 
     </div>
 </div>
-
-<!-- Created by hehung on 20191208 -- >
 <!-- 增加相册显示的特效样式 -->
 <style>
+    .photo {
+        padding: 0 40px!important;
+        display: inline-block;
+        position: relative;
+        transition: all .6s;
+    }
+    .biaotiss {
+        padding: 8px 10px;
+        color: #a9a9b3;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .img-item {
+        padding: .2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 1px 2px 2px 0 #aaa;
+        transition: all .4s cubic-bezier(.63,.15,.03,1.12);
+        margin-bottom: 20px;
+        
+    }
+    .photo:nth-child(odd) {
+        transform: rotateZ(-5deg);
+    }    
+    .photo:nth-child(even) {
+        transform: rotateZ(5deg);
+    }
     .text_des{
         position: absolute;
         width: 92%;
@@ -462,7 +487,27 @@
         transition-delay: 0.2s;    */
     }
     .my-gallery .photo img {
-        border-radius: 1px;
+        border-radius: 10px;
+        height: 240px;
+    }
+    .card .card-content {
+        padding: 24px 24px 24px 24px;
+    }
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 95%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 12px auto;
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
     }
 
      /*大屏幕下(桌面类)的样式*/
@@ -486,27 +531,21 @@
             transition: all 0.4s ease-out;
         }
         .img-item a:hover img{
-            opacity: 0.5;
-            transform: scale(1.05);
+            opacity: 0.8;
+            transform: scale(1.01);
         }
-        .img-item a:hover .text_des{
-        /*    opacity: 1;   */
+        /* .img-item a:hover .text_des{
             transform: scale(1.05); 
         }
         .img-item a:hover .animate-text{
             transform: translateX(0);
             opacity: 1; 
-        }
+        }  */
     }
-
-
     /*小屏幕下(桌面类)的样式*/
-    @media only screen and (max-width: 992px) {
-        .img-item a img{
-            opacity: 0.75;
-        }
-        .animate-text {
-            opacity: 1;
+    @media only screen and (max-width: 500px) {
+        .my-gallery .photo img {
+            height: 186px;
         }
     }
 
@@ -517,8 +556,10 @@
         <div class="card">
             <div class="card-content">
                 <div class="tag-title center-align">
-                    <i class="fa"></i>
-                    &nbsp;&nbsp;光影流年
+                    <div class="miaoshus">
+                        <div class="title center-align">“ 光影流年 ”</div>
+                        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
+                    </div>
                 </div>
                 <div class="my-gallery">
                     <div class="row">
@@ -528,19 +569,43 @@
                         
                             
                             
-                            <div class="photo col s12 m6 l4" data-aos="zoom-in-up">
+                            <div class="photo col s12 m6 l4">
                                 <div class="img-item">
                                     <a href="./峨眉山之行">
                                         <img src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" class="responsive-img" alt="img"+0 />
-                                        <div class="text_des">
+                                        <div class="biaotiss">峨眉山之行</div>
+                                        <!-- <div class="text_des">
                                             
                                                 <h3 class="animate-text">峨眉山之行</h3>
                                                 <p class="animate-text">峨眉山之行</p>
                                             
-
-                                        </div>
+                                        </div> -->
                                     </a>
                                 </div>
+                                
+
+
+                            </div>
+                            
+                        
+                            
+                            
+                            <div class="photo col s12 m6 l4">
+                                <div class="img-item">
+                                    <a href="./测试">
+                                        <img src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" class="responsive-img" alt="img"+1 />
+                                        <div class="biaotiss">测试</div>
+                                        <!-- <div class="text_des">
+                                            
+                                                <h3 class="animate-text">测试</h3>
+                                                <p class="animate-text">测试</p>
+                                            
+                                        </div> -->
+                                    </a>
+                                </div>
+                                
+
+
                             </div>
                             
                         
