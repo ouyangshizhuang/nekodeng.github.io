@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="测试, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="keywords" content="西双版纳之行, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>测试 | itsNekoDeng</title>
+    <title>西双版纳之行 | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -45,8 +45,8 @@
         })();
         </script>
         
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -404,50 +404,6 @@
     </script>
 
 
-<script>
-    $(function () {
-        // 获取图片的宽度(200px)
-        let imgWidth = $('.mat').outerWidth(); // 200
-
-        waterfallHandler();
-
-        // 瀑布流处理
-        function waterfallHandler() {
-            // 获取图片的列数
-            let column = parseInt($(window).width() / imgWidth);
-
-            // 高度数组
-            let heightArr = [];
-            for(let i=0; i<column; i++) {
-                heightArr[i] = 0;
-            }
-
-            // 遍历所有图片进行定位处理
-            $.each($('.mat'), function (index, item) {
-                // 当前元素的高度
-                let itemHeight = $(item).outerHeight();
-                // 高度数组最小的高度
-                let minHeight = Math.min(...heightArr);
-                // 高度数组最小的高度的索引
-                let minIndex = heightArr.indexOf(minHeight);
-                
-                $(item).css({
-                    position: 'absolute',
-                    top: minHeight + 'px',
-                    left: minIndex * imgWidth + 'px'
-                });
-
-                heightArr[minIndex] += itemHeight;
-            });
-        }
-        
-        // 窗口大小改变
-        $(window).resize(function () {
-            waterfallHandler();
-        });
-    });
-</script>
-
 <!-- <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -455,7 +411,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    测试
+                    西双版纳之行
                  
             </div>
 
@@ -501,10 +457,12 @@
         opacity: 0.6;
         transform: scale(1.05);
     }      
-      
     .my-gallery {
         margin: 20px auto;
     }   
+    .miaoshus .title {
+        font-family: MV Boli;
+    }
     .miaoshus {
         padding: 20px;
         border: 1px dashed #e6e6e6;
@@ -522,10 +480,9 @@
         background: 0 0;
         border: 1px dashed #888;
     }
-    /* .my-gallery .photo img {
-        height: auto;
-    } */
-
+    body {
+        overflow: visible!important;
+    }
     .box {
             position: relative;
         }
@@ -548,6 +505,9 @@
     header {
         background-color: #000;
     }
+    .biaotiss {
+            font-family: MV Boli;
+        }   
     @media only screen and (max-width: 1058px) {
         .box {
             margin-left: 145px;
@@ -563,7 +523,6 @@
             display: none;
         }
     }
-    
     @media only screen and (max-width: 380px) {
         .box {
             margin-left: -5px;
@@ -575,19 +534,18 @@
             left: 0;
         }
     }
-
 </style>
 
 <div class="tag-title center-align">
     <div class="miaoshus">
         <div class="title center-align">
             “ 
-                测试
+                西双版纳之行
               ”
         </div>
+        “ 光影流年 ”
         “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
     </div>
-    
 </div>
 
 <!-- 相册 -->
@@ -598,63 +556,113 @@
             
                 
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+0 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/KSbywl3qHDrc6Uz.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/KSbywl3qHDrc6Uz.jpg" alt="img"+0 >
+                        </a>                   
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/18/DoFEbNARG47HXSW.jpg" alt="img"+1 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/WTEy2bapZQRzkwB.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/WTEy2bapZQRzkwB.jpg" alt="img"+1 >
+                        </a>                   
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+2 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/xT1PVM3ECOuscFt.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/xT1PVM3ECOuscFt.jpg" alt="img"+2 >
+                        </a>                   
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+3 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/nPAJtDgT7FUb83C.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/nPAJtDgT7FUb83C.jpg" alt="img"+3 >
+                        </a>                   
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/17/cRIsL1YOvnmFldt.jpg" alt="img"+4 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/9XHkK4eB2vJELrj.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/9XHkK4eB2vJELrj.jpg" alt="img"+4 >
+                        </a>                   
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/10/01/UXTqvQFd4u7DkMB.jpg" alt="img"+5 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/ueS1v5gr3HKkaGx.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/ueS1v5gr3HKkaGx.jpg" alt="img"+5 >
+                        </a>                   
                 
-                    
-                    
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" data-caption="测试">
-                            <img class="mat" src="/medias/loading.gif" data-src="https://i.loli.net/2020/09/21/ERQMu4sqHadbzVv.jpg" alt="img"+6 >
-                        </a>
-                    
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/TAS3rt9BWkUJe21.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/TAS3rt9BWkUJe21.jpg" alt="img"+6 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/lzYDPwZNeQ5j14a.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/lzYDPwZNeQ5j14a.jpg" alt="img"+7 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/xYn4agc5u3vwqR7.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/xYn4agc5u3vwqR7.jpg" alt="img"+8 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/Pb3aUVioQ8ZJhjW.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/Pb3aUVioQ8ZJhjW.jpg" alt="img"+9 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/kbHx1YAtrMXSROs.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/kbHx1YAtrMXSROs.jpg" alt="img"+10 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/Q8JHV7zBUSTcPFu.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/Q8JHV7zBUSTcPFu.jpg" alt="img"+11 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/z9s7fxMne8gjPBT.jpg" data-caption="西双版纳之行">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/z9s7fxMne8gjPBT.jpg" alt="img"+12 >
+                        </a>                   
                 
             
         </div>
         </div>
     </div>
 </section>
-
-
-
+<script>
+    $(function () {
+        // 获取图片的宽度(200px)
+        let imgWidth = $('.mat').outerWidth(); // 200
+        waterfallHandler();
+        // 瀑布流处理
+        function waterfallHandler() {
+            // 获取图片的列数
+            let column = parseInt($(window).width() / imgWidth);
+            // 高度数组
+            let heightArr = [];
+            for(let i=0; i<column; i++) {
+                heightArr[i] = 0;
+            }
+            // 遍历所有图片进行定位处理
+            $.each($('.mat'), function (index, item) {
+                // 当前元素的高度
+                let itemHeight = $(item).outerHeight();
+                // 高度数组最小的高度
+                let minHeight = Math.min(...heightArr);
+                // 高度数组最小的高度的索引
+                let minIndex = heightArr.indexOf(minHeight);
+                
+                $(item).css({
+                    position: 'absolute',
+                    top: minHeight + 'px',
+                    left: minIndex * imgWidth + 'px'
+                });
+                heightArr[minIndex] += itemHeight;
+            });
+        }
+        // 窗口大小改变
+        $(window).resize(function () {
+            waterfallHandler();
+        });
+    });
+</script>
 <script>
     baguetteBox.run('.gallery', {
         // 配置参数
@@ -662,17 +670,6 @@
         noScrollbars:true,//是否在显示时隐藏滚动条。
         titleTag:true,//是否使用图片上的title属性作为图片标题
         async:false,//是否异步加载文件。
-        /*
-        afterShow:function(){//显示遮罩层之后的回调函数。   
-           $(".pressing").fadeIn();
-        },
-        afterHide:function(){//隐藏遮罩层之后的回调函数。 
-           $(".pressing").fadeOut(); 
-        }
-        //preload:5 预加载多少个文件。
-        // onChange: function(currentIndex, imagesCount){} 图片改变时的回调函数 
-        // overlayBackgroundColor:'rgba(0,0,0,0.8)' 遮罩层的背景颜色
-        */
     });
 
     start()
@@ -701,7 +698,6 @@
         $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
         $img.attr('data-isLoaded', 1);//已加载的图片做标记
     }
-
 </script>
 
 
@@ -778,7 +774,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">49.9k</span>&nbsp;
+                class="white-color">52.5k</span>&nbsp;
             
             
             

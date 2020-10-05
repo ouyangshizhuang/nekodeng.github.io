@@ -45,8 +45,8 @@
         })();
         </script>
         
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -440,6 +440,53 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/ssh-key.html">
+                        <div class="card-image">
+                            
+                            <img src="https://i.loli.net/2020/09/22/6gkGnOEDSJb72V8.jpg" class="responsive-img" alt="ssh-key配置">
+                            
+                            <span class="card-title">ssh-key配置</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                1.检查ssh key 是否存在ls -al ~/.ssh如果key存在，会有id_rsa和id_rsa.pub可以直接将key复制到远程GitHub上。
+如果key不存在，生成key在命令行中输入：ssh-keygen -t rsa -C
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    JS基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/ssh-key/">
+                            <span class="chip bg-color">ssh-key</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -1029,60 +1076,6 @@ function newObj(name,age)&#123;
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/express.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="express应用程序生成器">
-                            
-                            <span class="card-title">express应用程序生成器</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                express 应用程序生成器安装：$ npm install express-generator -g
-npm list -g —depth=0 查看全局安装的插件
-npx 临时使用的命令，临时安装插件时使用，用完之后删除
-npx exp
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/NodeJS/" class="post-category">
-                                    NodeJS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/express%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%94%9F%E6%88%90%E5%99%A8/">
-                            <span class="chip bg-color">express应用程序生成器</span>
-                        </a>
-                        
-                        <a href="/tags/NodeJS/">
-                            <span class="chip bg-color">NodeJS</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 
@@ -1188,7 +1181,7 @@ npx exp
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">49.9k</span>&nbsp;
+                class="white-color">52.5k</span>&nbsp;
             
             
             

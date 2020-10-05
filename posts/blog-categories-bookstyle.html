@@ -45,8 +45,8 @@
         })();
         </script>
         
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -546,7 +546,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    820
+                    812
                 </div>
                 
 
@@ -579,19 +579,20 @@
 <li>2、然后，定位到href=”&lt;%- url_for(category.path) %&gt;”的a标签位置：<pre><code>&lt;!-- 定位到该位置 --&gt;
 &lt;a href=&quot;&lt;%- url_for(category.path) %&gt;&quot; title=&quot;&lt;%- category.name %&gt;: &lt;%- category.length %&gt;&quot;&gt;
 </code></pre></li>
-<li>3、直接将该a标签里面的内容全部替换为以下代码：<pre><code>&lt;div class=&quot;moleskine-wrapper&quot;&gt;
-  &lt;div class=&quot;moleskine-notebook&quot;&gt;
-      &lt;div class=&quot;chip notebook-cover center-align waves-effect waves-light
-      &lt;% if (isCategory &amp;&amp; category.name == page.category) &amp;#123; %&gt; chip-active &lt;% &amp;#125; else &amp;#123; %&gt; chip-default &lt;% &amp;#125; %&gt;&quot;
-              style=&quot;background-color: &lt;%- color %&gt;;&quot;&gt;                                               
-          &lt;div class=&quot;notebook-skin
-              &lt;% if (isCategory &amp;&amp; category.name == page.category) &amp;#123; %&gt; chip-active &lt;% &amp;#125; else &amp;#123; %&gt; chip-default &lt;% &amp;#125; %&gt;&quot;
-              &gt;&lt;%- category.name %&gt;                                  
+<li><p>3、直接将该a标签里面的内容全部替换为以下代码：</p>
+<pre><code>  &lt;div class=&quot;moleskine-wrapper&quot;&gt;
+      &lt;div class=&quot;moleskine-notebook&quot;&gt;
+          &lt;div class=&quot;chip notebook-cover center-align waves-effect waves-light
+          &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %&gt; chip-active &lt;% &#125; else &#123; %&gt; chip-default &lt;% &#125; %&gt;&quot;
+                  style=&quot;background-color: &lt;%- color %&gt;;&quot;&gt;                                               
+              &lt;div class=&quot;notebook-skin
+                  &lt;% if (isCategory &amp;&amp; category.name == page.category) &#123; %&gt; chip-active &lt;% &#125; else &#123; %&gt; chip-default &lt;% &#125; %&gt;&quot;
+                  &gt;&lt;%- category.name %&gt;                                  
+              &lt;/div&gt;
           &lt;/div&gt;
+          &lt;div class=&quot;notebook-page dotted&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;notebook-page dotted&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
 </code></pre></li>
 </ul>
 <h3 id="设置css样式"><a href="#设置css样式" class="headerlink" title="设置css样式"></a>设置css样式</h3><p>这部分同样放在此<code>category-cloud.ejs</code>文件即可。</p>
@@ -1700,7 +1701,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">49.9k</span>&nbsp;
+                class="white-color">52.5k</span>&nbsp;
             
             
             

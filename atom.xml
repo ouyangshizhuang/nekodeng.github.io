@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-10-03T07:59:21.667Z</updated>
+  <updated>2020-10-05T10:14:50.865Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于给hexo博客增加相册页面（实现瀑布流相册）</title>
+    <link href="https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html"/>
+    <id>https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html</id>
+    <published>2020-10-05T09:06:49.321Z</published>
+    <updated>2020-10-05T10:14:50.865Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info&quot;&gt;前言: 本文是关于给自己的博客网站添加一个相册页面，并且实现瀑布流相册效果，基于matery主题，其他主题亦可参考。&lt;/div&gt;
+
+&lt;h3 id=&quot;新建相册页面&quot;&gt;&lt;a href=&quot;#新建相册页面&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="关于hexo博客" scheme="https://nekodeng.gitee.io/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="增加瀑布流相册页面" scheme="https://nekodeng.gitee.io/tags/%E5%A2%9E%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E7%9B%B8%E5%86%8C%E9%A1%B5%E9%9D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue-router</title>
@@ -127,7 +154,7 @@
     <link href="https://nekodeng.gitee.io/posts/blog-categories-bookstyle.html"/>
     <id>https://nekodeng.gitee.io/posts/blog-categories-bookstyle.html</id>
     <published>2020-09-24T08:38:43.077Z</published>
-    <updated>2020-09-24T09:46:19.410Z</updated>
+    <updated>2020-10-05T03:46:21.425Z</updated>
     
     
       
@@ -527,31 +554,6 @@ url = window.location.href; /* 获取完整URL</summary>
     <category term="Git使用流程" scheme="https://nekodeng.gitee.io/tags/Git%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
     
     <category term="Git公钥配置" scheme="https://nekodeng.gitee.io/tags/Git%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS-SCSS代码规范</title>
-    <link href="https://nekodeng.gitee.io/posts/css-scss.html"/>
-    <id>https://nekodeng.gitee.io/posts/css-scss.html</id>
-    <published>2020-09-05T16:34:14.000Z</published>
-    <updated>2020-10-01T15:05:40.987Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-注释规范&quot;&gt;&lt;a href=&quot;#1-注释规范&quot; class=&quot;headerlink&quot; title=&quot;1 注释规范&quot;&gt;&lt;/a&gt;1 注释规范&lt;/h2&gt;&lt;h2 id=&quot;2-缩进-空格-换行规范&quot;&gt;&lt;a href=&quot;#2-缩进-空格-换行规范&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="CSS-SCSS" scheme="https://nekodeng.gitee.io/categories/CSS-SCSS/"/>
-    
-    
-    <category term="CSS-SCSS代码规范" scheme="https://nekodeng.gitee.io/tags/CSS-SCSS%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
