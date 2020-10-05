@@ -45,8 +45,8 @@
         })();
         </script>
         
-<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -546,14 +546,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    14 分
                 </div>
                 
 
@@ -570,6 +570,10 @@
             <div id="articleContent">
                 <div class="note info">前言: 本文是关于给自己的博客网站添加一个相册页面，并且实现瀑布流相册效果，基于matery主题，其他主题亦可参考。</div>
 
+<ul>
+<li>首先，直接上效果图，详细浏览地址：<br><a href="https://nekodeng.gitee.io/gallery/" class="LinkCard" target="_blank">关于给hexo博客增加相册页面（实现瀑布流相册）</a></li>
+</ul>
+<p><img src="https://i.loli.net/2020/10/05/9XhxmzlRn3iM7fI.png" alt="相册页面"><br><img src="https://i.loli.net/2020/10/05/wqgKjcEi58APJ3o.png" alt="相册图片展示页面"></p>
 <h3 id="新建相册页面"><a href="#新建相册页面" class="headerlink" title="新建相册页面"></a>新建相册页面</h3><ol>
 <li>在站点的<code>source</code>文件夹下面新建一个<code>gallery</code>相册页面。<pre><code>hexo new page gallery
 </code></pre></li>
@@ -1038,11 +1042,29 @@ password:
     &#125;
 &lt;/script&gt;
 </code></pre><ul>
-<li>为了实现懒加载，在这里需要在站点主题文件夹下的<code>medias</code>文件夹下面放入一个用于懒加载的图片<code>loading.svg</code> ，这里你可以参考使用我的图片，</li>
+<li>为了实现懒加载，在这里需要在站点主题文件夹下的<code>medias</code>文件夹下面放入一个用于懒加载的图片<code>loading.svg</code> ，这里你可以直接使用我的加载svg，地址<a href="https://nekodeng.gitee.io/medias/loading.svg">https://nekodeng.gitee.io/medias/loading.svg</a></li>
 </ul>
-<p><code>正文一些需要高亮色的文字</code></p>
-<p><a href="链接" class="LinkCard" target="_blank">引入链接</a></p>
-<div style="position: relative; padding: 30% 45%;"> <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="视频地址去B站分享按钮下iframe里面的src属性值复制" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> </div>
+<h3 id="编辑主题-config-yml文件内容"><a href="#编辑主题-config-yml文件内容" class="headerlink" title="编辑主题_config.yml文件内容"></a>编辑主题_config.yml文件内容</h3><p>在站点主题_config.yml文件下新增以下内容</p>
+<pre><code># 增加了图片页面
+gallery: 
+  title: 光影流年   #标题
+  icon: fa         #这个显示相册页面的图标
+  icon2: fa        #这个显示自己的具体相册里面的相册的图标
+
+PhotoVerifyPassword:
+  enable: true
+  promptMessage: 该相册已加密，请输入密码访问
+  errorMessage: 密码错误，将返回主页！
+</code></pre><h3 id="编辑主题导航栏加入相册按钮"><a href="#编辑主题导航栏加入相册按钮" class="headerlink" title="编辑主题导航栏加入相册按钮"></a>编辑主题导航栏加入相册按钮</h3><p>在站点主题<code>_config.yml</code>文件下<code>menu</code>菜单下新增gallery页面。<br>这应是第一步做的事，新建页面后应该立即添加，因为很容易忘却。</p>
+<pre><code># 配置菜单导航的名称、路径和图标icon.
+menu:
+  gallery
+    url: /gallery
+</code></pre><ul>
+<li>最后，完成，引用我的相册页面dec来结束：</li>
+<li>“ 光影流年 ”</li>
+<li>“ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”</li>
+</ul>
 
             </div>
             <hr/>
@@ -1714,9 +1736,12 @@ password:
                         
                             前言: 本文是关于给自己的博客网站添加一个相册页面，并且实现瀑布流相册效果，基于matery主题，其他主题亦可参考。
 
-新建相册页面
-在站点的source文件夹下面新建一个gallery相册页面。hexo new page gallery
 
+首先，直接上效果图，详细浏览地址：关于给hexo博客增加相册页面（实现瀑布流相册）
+
+
+新建相册页面
+在站点的sour
                         
                     </div>
                     <div class="publish-info">
@@ -2035,7 +2060,7 @@ Vue Router是什么Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.j
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">52.5k</span>&nbsp;
+                class="white-color">52.7k</span>&nbsp;
             
             
             
