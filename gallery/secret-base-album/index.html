@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: math, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="keywords" content="secret-base-album, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: math | itsNekoDeng</title>
+    <title>secret-base-album | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -387,14 +387,31 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    <!-- 加密功能 -->
+
+    <script src="/libs/cryptojs/crypto-js.min.js"></script>
+    <script>
+        (function() {
+            let pwd = 'df54310dfaffbee7b5503ec2cbc6f47eb23a81e24e84e038592e63b8dd2d9f46';
+
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('🐈这里是博主的加密相册，请输入密码才可访问哒~')).toString(CryptoJS.enc.Hex)) {
+                    alert('🐈密码wrong，sorry，将返回相册页面哦~');
+                    location.href = '/gallery';
+                }
+            }
+        })();
+    </script>
+
+
+<!-- <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    
+                    secret-base-album
                  
             </div>
 
@@ -427,64 +444,245 @@
 
 
     </div>
-</div>
-<style>
-    .bg-cover {
-        height: 44vh;
+</div> -->
+
+<link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
+<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
+<script src="/libs/MyGallery/js/baguetteBox.js"></script> 
+<style>    
+    .my-gallery .photo img {
+        transition: all 0.6s ease-in-out; 
+    }     
+    .my-gallery .photo:hover img {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }      
+    .my-gallery {
+        margin: 20px auto;
+    }   
+    .miaoshus .title {
+        font-family: MV Boli;
+    }
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 75%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 24px auto 12px;
+        
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
+    }
+    body {
+        overflow: visible!important;
+    }
+    .box {
+            position: relative;
+        }
+    .box img {
+        width: 350px;
+        vertical-align: top;
+        padding: 8px;
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+    .box img:hover {
+        transform: scale(1.05);
+    }
+    .page-footer {
+        display: none
+    }
+    body {
+        overflow-y: visible!important;
+    }
+    header {
+        background-color: #000;
+    }
+    .biaotiss {
+            font-family: MV Boli;
+        }   
+    canvas {
+        opacity: 0.3!important;
+    }
+    @media only screen and (max-width: 1058px) {
+        .box {
+            margin-left: 145px;
+        }
+    }
+    @media only screen and (max-width: 770px) {
+        .box {
+            margin-left: 15px;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        #previous-button, #next-button {
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 380px) {
+        .box {
+            margin-left: -5px;
+        }
+    }
+    @media only screen and (max-width: 323px) {
+        .box img {
+            width: 296px;
+            left: 0;
+        }
     }
 </style>
-<main class="content">
-    <div class="tag-title center-align">
-        <div class="notice">
-            <div class="notice-content" id="poem"></div>
-            <div class="notice-content" id="info"></div>
+
+<div class="tag-title center-align">
+    <div class="miaoshus">
+        <div class="title center-align">
+            “ 
+                secret-base-album
+              ”
         </div>
-        <script>
-            $.get("https://v1.hitokoto.cn?c=d&c=h",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
-        </script>
+        “ 光影流年 ”
+        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
     </div>
+</div>
 
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
+<!-- 相册 -->
+<section class="gallery">
+    <div id="myGallery" class="my-gallery">
+        <div class="row">
+            <div class="box">
             
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="对象, math, date" data-aos="fade-up">
-                <div class="card">
-                    <a href="/posts/js-math-date.html">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS的MATH和Date对象">
-                            
-                            <span class="card-title">JS的MATH和Date对象</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/JS%E5%9F%BA%E7%A1%80/" class="post-category">
-                                JS基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/FsWj8Qa1Xgzue3b.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/FsWj8Qa1Xgzue3b.jpg" alt="img"+0 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/lREImLirnXuMByW.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/lREImLirnXuMByW.jpg" alt="img"+1 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/K1Rrks9bumWZ28d.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/K1Rrks9bumWZ28d.jpg" alt="img"+2 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/qOTa4pZLEF8vfG3.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/qOTa4pZLEF8vfG3.jpg" alt="img"+3 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/bIHg4aZhfsmjpDu.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/bIHg4aZhfsmjpDu.jpg" alt="img"+4 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/aRBpqO5AtlsdHgr.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/aRBpqO5AtlsdHgr.jpg" alt="img"+5 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/skm5eI9PbcZLSi8.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/skm5eI9PbcZLSi8.jpg" alt="img"+6 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/pH6bAVEKJNtqRLk.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/pH6bAVEKJNtqRLk.jpg" alt="img"+7 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/06/yU38rlaPNvb2igX.jpg" data-caption="secret-base-album">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/06/yU38rlaPNvb2igX.jpg" alt="img"+8 >
+                        </a>                   
+                
             
         </div>
-    </article>
-</main>
+        </div>
+    </div>
+</section>
 
+<script>
+    $(function () {
+        // 获取图片的宽度(200px)
+        let imgWidth = $('.mat').outerWidth(); // 200
+        waterfallHandler();
+        // 瀑布流处理
+        function waterfallHandler() {
+            // 获取图片的列数
+            let column = parseInt($(window).width() / imgWidth);
+            // 高度数组
+            let heightArr = [];
+            for(let i=0; i<column; i++) {
+                heightArr[i] = 0;
+            }
+            // 遍历所有图片进行定位处理
+            $.each($('.mat'), function (index, item) {
+                // 当前元素的高度
+                let itemHeight = $(item).outerHeight();
+                // 高度数组最小的高度
+                let minHeight = Math.min(...heightArr);
+                // 高度数组最小的高度的索引
+                let minIndex = heightArr.indexOf(minHeight);
+                
+                $(item).css({
+                    position: 'absolute',
+                    top: minHeight + 'px',
+                    left: minIndex * imgWidth + 'px'
+                });
+                heightArr[minIndex] += itemHeight;
+            });
+        }
+        // 窗口大小改变
+        $(window).resize(function () {
+            waterfallHandler();
+        });
+    });
+</script>
+<script>
+    baguetteBox.run('.gallery', {
+        // 配置参数
+        buttons:Boolean,//是否显示导航按钮。
+        noScrollbars:true,//是否在显示时隐藏滚动条。
+        titleTag:true,//是否使用图片上的title属性作为图片标题
+        async:false,//是否异步加载文件。
+    });
+
+    start()
+        $(window).on('scroll', function(){
+         start();
+    })
+
+    function start(){
+          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+        $('.gallery img').not('[data-isLoaded]').each(function(){
+            var $node = $(this)
+            if( isShow($node) ){
+                loadImg($node);
+            }
+        });
+     }
+
+    //判断一个元素是不是出现在窗口(视野)
+    function isShow($node){
+        return $node.offset().top <= $(window).height() + $(window).scrollTop();
+    }
+    //加载图片
+    function loadImg($img){
+    //.attr(值)
+    //.attr(属性名称,值)
+        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+        $img.attr('data-isLoaded', 1);//已加载的图片做标记
+    }
+</script>
 
 
 

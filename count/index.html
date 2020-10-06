@@ -609,6 +609,48 @@
 </script>
 
             </div>
+            
+                
+<div id="myGallery" class="my-gallery">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="far"></i>&nbsp;&nbsp;重难点-“ 知识点 ”-汇总统计图
+    </div>
+    <div class="row">
+        
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/js.png">
+                <img src="/medias/featureimages/js.png" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/prototype.png">
+                <img src="/medias/featureimages/prototype.png" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/closure.png">
+                <img src="/medias/featureimages/closure.png" class="responsive-img">
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let animateClass = 'animated pulse';
+        $('#myGallery .photo').hover(function () {
+            $(this).addClass(animateClass);
+        }, function () {
+            $(this).removeClass(animateClass);
+        });
+    });
+</script>
+            
         </div>
     </div>
 </main>
@@ -686,7 +728,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">52.7k</span>&nbsp;
+                class="white-color">52.8k</span>&nbsp;
             
             
             

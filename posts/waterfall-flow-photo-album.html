@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于给hexo博客增加相册页面（实现瀑布流相册）, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="keywords" content="关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于给hexo博客增加相册页面（实现瀑布流相册） | itsNekoDeng</title>
+    <title>关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册） | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -396,7 +396,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于给hexo博客增加相册页面（实现瀑布流相册）</h1>
+                    <h1 class="description center-align post-title">关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</h1>
                 </div>
             </div>
         </div>
@@ -546,7 +546,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    3k
                 </div>
                 
 
@@ -598,9 +598,15 @@ type: &quot;galleries&quot;
 layout: &quot;galleries&quot;
 password: 
 ---
-</code></pre><div class="note info">注意：此处的galleries代表接下里要新增的galleries.ejs文件，而password是给相册设置访问密码，后续会讲到。</div>
+</code></pre><h4 id="实现加密相册"><a href="#实现加密相册" class="headerlink" title="实现加密相册"></a>实现加密相册</h4><div class="note info">注意：此处的galleries代表接下里要新增的galleries.ejs文件，而password是给相册设置访问密码。</div>
 
-<h3 id="新建相册的json文件"><a href="#新建相册的json文件" class="headerlink" title="新建相册的json文件"></a>新建相册的json文件</h3><ol>
+<p>在上面<code>index.md</code>文件中，可以实现加密功能，加密使用<code>SHA256</code>加密，所以在加密前需要先将你的密码转换成<code>SHA256格式</code>然后输入到最上面的创建相片页面的index.md的<code>password</code>里面。至于SHA256加密，请自行网上搜索在线生成，例如: <a target="_blank" rel="noopener" href="http://www.ttmd5.com/hash.php?type=9">http://www.ttmd5.com/hash.php?type=9</a></p>
+<h3 id="编辑主题导航栏加入相册按钮"><a href="#编辑主题导航栏加入相册按钮" class="headerlink" title="编辑主题导航栏加入相册按钮"></a>编辑主题导航栏加入相册按钮</h3><p>在站点主题<code>_config.yml</code>文件下<code>menu</code>菜单下新增gallery页面。<br>这应是第一步做的事，新建页面后应该立即添加，因为很容易忘却。</p>
+<pre><code># 配置菜单导航的名称、路径和图标icon.
+menu:
+  gallery
+    url: /gallery
+</code></pre><h3 id="新建相册的json文件"><a href="#新建相册的json文件" class="headerlink" title="新建相册的json文件"></a>新建相册的json文件</h3><ol>
 <li><p>同样在站点的<code>source</code>文件夹下面新建一个<code>gallery.json</code>文件。<br>设置文件内容：（以我的为例，使用时修改成自己的）<br>这里图片是放在图床上的，可自定义修改图片链接。</p>
 <pre><code> [
    &#123;
@@ -1055,11 +1061,6 @@ PhotoVerifyPassword:
   enable: true
   promptMessage: 该相册已加密，请输入密码访问
   errorMessage: 密码错误，将返回主页！
-</code></pre><h3 id="编辑主题导航栏加入相册按钮"><a href="#编辑主题导航栏加入相册按钮" class="headerlink" title="编辑主题导航栏加入相册按钮"></a>编辑主题导航栏加入相册按钮</h3><p>在站点主题<code>_config.yml</code>文件下<code>menu</code>菜单下新增gallery页面。<br>这应是第一步做的事，新建页面后应该立即添加，因为很容易忘却。</p>
-<pre><code># 配置菜单导航的名称、路径和图标icon.
-menu:
-  gallery
-    url: /gallery
 </code></pre><ul>
 <li>最后，完成，引用我的相册页面dec来结束：</li>
 <li>“ 光影流年 ”</li>
@@ -1725,9 +1726,9 @@ menu:
                 <a href="/posts/waterfall-flow-photo-album.html">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2020/10/05/DCyiIm3K1JBqphc.jpg" class="responsive-img" alt="关于给hexo博客增加相册页面（实现瀑布流相册）">
+                        <img src="https://i.loli.net/2020/10/05/DCyiIm3K1JBqphc.jpg" class="responsive-img" alt="关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）">
                         
-                        <span class="card-title">关于给hexo博客增加相册页面（实现瀑布流相册）</span>
+                        <span class="card-title">关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2059,7 +2060,7 @@ Vue Router是什么Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.j
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">52.7k</span>&nbsp;
+                class="white-color">52.8k</span>&nbsp;
             
             
             
