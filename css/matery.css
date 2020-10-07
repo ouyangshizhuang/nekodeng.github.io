@@ -2424,7 +2424,7 @@ body.dark nav ul li:hover a span {
 .fa-chrome:before {
     color: #f14f05;
 }
-nav ul li:hover a[href="/count"] span, nav ul li:hover a[href="/gallery"] span {
+nav ul li:hover a[href="/count"] span, nav ul li:hover a[href="/gallery"] span, nav ul li:hover a[href="/essay"] span {
     border: none!important;
 }
 /* .fab {

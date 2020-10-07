@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-10-06T03:46:32.481Z</updated>
+  <updated>2020-10-07T15:05:49.314Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>啊啊啊这是随笔文章模板啊</title>
+    <link href="https://nekodeng.gitee.io/posts/essay-1.html"/>
+    <id>https://nekodeng.gitee.io/posts/essay-1.html</id>
+    <published>2020-10-07T11:21:06.340Z</published>
+    <updated>2020-10-07T15:05:49.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;ipage&quot;&gt;
+    &lt;div class=&quot;ititle&quot;&gt;作文题目&lt;/div&gt;
+  &lt;div class=&quot;izhengwen&quot;&gt;
+   </summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://nekodeng.gitee.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://nekodeng.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</title>
@@ -528,33 +556,6 @@ url = window.location.href; /* 获取完整URL</summary>
     
     
     <category term="浏览器地址栏输入url地址发生的事" scheme="https://nekodeng.gitee.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%9C%B0%E5%9D%80%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git使用流程</title>
-    <link href="https://nekodeng.gitee.io/posts/use-git.html"/>
-    <id>https://nekodeng.gitee.io/posts/use-git.html</id>
-    <published>2020-09-07T07:23:06.200Z</published>
-    <updated>2020-10-01T10:51:59.368Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;写在前面的话：史上最浅显易懂的Git教程！推荐廖雪峰的教程！&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Git" scheme="https://nekodeng.gitee.io/categories/Git/"/>
-    
-    
-    <category term="Git使用流程" scheme="https://nekodeng.gitee.io/tags/Git%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
-    
-    <category term="Git公钥配置" scheme="https://nekodeng.gitee.io/tags/Git%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   

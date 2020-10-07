@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>啊啊啊这是随笔文章模板啊</title>
+      <link href="/posts/essay-1.html"/>
+      <url>/posts/essay-1.html</url>
+      
+        <content type="html"><![CDATA[<div class="ipage">    <div class="ititle">作文题目</div>  <div class="izhengwen">    <p>本来抱着大哭一场的念头去观摩将爱情进行到底，结果从头笑到尾。波尔多那一场戏，徐静蕾对李亚鹏说："带我走吧。"李亚鹏答："大象怎么办？"（大象是徐静蕾的儿子）。结果您猜怎么着？邻座一个观众很严肃的说：装冰箱呀！</p>    <p>今天全家看湖南卫视播放的古装片的时候，突然很脑残的问我爸：爸，你说我为什么要叫你做爸呢？——我爸弱弱的回答：你也可以叫我阿玛。。。</p>    <p>病童："打针前为什么要擦棉球？" 父亲："那是酒精，先把你的屁股擦醉了，再打针就不痛了。" 病童："可是我还是痛呀！" 父亲："那是因为你屁股的酒量好啊！"</p>    <p>今天全家看湖南卫视播放的古装片的时候，突然很脑残的问我爸：爸，你说我为什么要叫你做爸呢？——我爸弱弱的回答：你也可以叫我阿玛。。。</p>    <p>病童："打针前为什么要擦棉球？" 父亲："那是酒精，先把你的屁股擦醉了，再打针就不痛了。" 病童："可是我还是痛呀！" 父亲："那是因为你屁股的酒量好啊！"</p>  </div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于给hexo博客增加相册页面（实现瀑布流相册，实现加密相册）</title>
       <link href="/posts/waterfall-flow-photo-album.html"/>
       <url>/posts/waterfall-flow-photo-album.html</url>
