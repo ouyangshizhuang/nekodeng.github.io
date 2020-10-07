@@ -2044,7 +2044,9 @@ body.dark .post-charts .title {
     border: 1px solid #FF2A68;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
-
+.vemoji {
+    width: 68px!important;
+}
 .my-gallery {
     margin: 0.2rem auto 0;
     padding: 0 1.2rem;
