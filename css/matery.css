@@ -1155,8 +1155,6 @@ body.dark .aplayer.aplayer-fixed .aplayer-info {
 body.dark .nav-item a:hover span {
     border-bottom: 1px solid rgba(255, 255, 255, .7);
 }
-
-
 #artDetail .article-tag .chip:hover {
     color: #42b983;
 }
@@ -1821,7 +1819,7 @@ body.dark ol li:before {
 }
 
 .post-statis .statis .name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #777;
 }
 
@@ -1870,7 +1868,7 @@ body.dark ol li:before {
 
 .profile .author .career {
     margin: 8px 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #777;
     font-family: MV Boli;
@@ -1920,7 +1918,8 @@ body.dark .post-charts .title {
 .chip .notebook-skin,
 .bg-cover .description,
 .frind-ship .title h1,
-.frind-ship .title p
+.frind-ship .title p,
+.post-statis .statis
 {
     font-family: 'Architects Daughter', cursive!important;
 }

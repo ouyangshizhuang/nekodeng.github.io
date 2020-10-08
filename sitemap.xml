@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nekodeng.gitee.io/posts/essay-1.html</loc>
+    <loc>https://nekodeng.gitee.io/posts/imitation-paper-essay.html</loc>
+    
+    <lastmod>2020-10-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/posts/essay-demo.html</loc>
     
     <lastmod>2020-10-08</lastmod>
     
@@ -1377,6 +1384,20 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2020-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/tags/hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E9%9A%8F%E7%AC%94%E9%A1%B5%E9%9D%A2/</loc>
+    <lastmod>2020-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nekodeng.gitee.io/tags/%E4%BB%BF%E4%BF%A1%E7%BA%B8%E4%BD%9C%E4%B8%9A%E7%BA%B8%E6%A0%B7%E5%BC%8F/</loc>
     <lastmod>2020-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
