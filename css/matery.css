@@ -2302,10 +2302,12 @@ img.vimg:hover {
     background: white;
 }
 
+
 /* 响应式 */
 #maina li span div p img {
     max-width: 100%;
     margin-top: 12px!important;
+    border-radius: 10px;
 }
 #maina li span div p {
     margin-right: 10px;
