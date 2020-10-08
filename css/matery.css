@@ -1404,6 +1404,7 @@ thead {
     color: #3C4858;
     font-size: 1.4rem;
     font-weight: 400;
+    font-family: 'Architects Daughter', cursive!important;
 }
 .friends-container .tag-title {
     font-size: 1.4rem!important;
@@ -1895,17 +1896,37 @@ body.dark .post-charts .title {
 }
 .ziwojieshao {
     padding: 0 118px;
+    font-family: 'Architects Daughter', cursive!important;
 }
 .ziwojieshao ol {
     padding-left: 6px;
+    font-family: 'Architects Daughter', cursive!important;
 }
 .ziwojieshao ol li, .ziwojieshao p {
-    font-size: 1.22rem!important;
+    font-size: 1.38rem!important;
     line-height: 1.6;
-    font-family: "Linux Biolinum","Noto Serif SC",Helvetica,Arial,Menlo,Monaco,monospace,sans-serif;
+    font-family: 'Architects Daughter', cursive!important;
 }
 .ziwojieshao p a {
     color: #42b983!important;
+}
+
+#vcomments p,
+.v[data-class=v] .vcards .vcard .vhead,
+.bozhushuo,
+.friends-container .tag-title,
+.my-gallery .title,
+.miaoshus .title,
+.chip .notebook-skin,
+.bg-cover .description,
+.frind-ship .title h1,
+.frind-ship .title p
+{
+    font-family: 'Architects Daughter', cursive!important;
+}
+
+.frind-ship .title p {
+    font-size: 1.1rem;
 }
 
 .post-charts,
@@ -2301,8 +2322,24 @@ img.vimg:hover {
     /* bg color = bg color under block */
     background: white;
 }
-
-
+/* 使用webkit内核的浏览器 */
+.vheader input::-webkit-input-placeholder,
+.vedit textarea::-webkit-input-placeholder
+{
+    color: #333;
+    opacity: 0.75;
+    font-size: 0.9rem;
+}    
+body.dark .vheader input::-webkit-input-placeholder,
+body.dark .vedit textarea::-webkit-input-placeholder
+{
+    color: #f0f0f0;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+.v[data-class=v] {
+    font-size: 18px!important;
+}
 /* 响应式 */
 #maina li span div p img {
     max-width: 100%;
@@ -2876,18 +2913,12 @@ body.dark .notice {
     width: 95%;
     background: #fbfbfb50;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 17.5px;
 }
 .notice-content {
     display: initial;
     vertical-align: middle;
 }
-
-
-
-
-
-
 
 /* 文章分类书本样式 */
 
