@@ -697,13 +697,15 @@ header .go-back i {
 .music-player .title,
 .video-player .title {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.22rem;
     font-weight: 400;
+    font-family: 'Architects Daughter', cursive!important;
 }
 
 .dream .text {
-    opacity: .6;
-    font-size: 0.88rem;
+    opacity: .8;
+    font-size: 1.1rem;
+    font-family: 'Architects Daughter', cursive!important;
 }
 
 .music-player,

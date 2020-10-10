@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于给hexo博客增加视频vlog页面（主要引入哔哩哔哩视频）</title>
+      <link href="/posts/hexo-vlog-page.html"/>
+      <url>/posts/hexo-vlog-page.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言: 这里是博主的vlog区，博主也是B站的一名普通up🐖，欢迎观看交流。本文基于matery主题，主要引入哔哩哔哩视频。</div><h3 id="新建视频页面"><a href="#新建视频页面" class="headerlink" title="新建视频页面"></a>新建视频页面</h3><ol><li>在source文件下新建一个<code>video</code>文件</li><li>在该文件里新建一个<code>index.md</code>文件，其中文件内容为：</li></ol><pre><code>---title: videotype: &quot;video&quot;layout: &quot;video&quot;---</code></pre><ol><li>在主题配置文件<code>_config.yml</code>下，增加音乐页面链接和标题</li></ol><pre><code>video:  url: /video</code></pre><h3 id="新建video-ejs文件"><a href="#新建video-ejs文件" class="headerlink" title="新建video.ejs文件"></a>新建video.ejs文件</h3><p>在主题<code>layout</code>文件下新建<code>video.ejs</code>文件，<br>这里在<code>video.ejs</code>文件直接贴代码即可，修改视频<code>src</code>路径即可。源代码如下：</p><pre><code>&lt;!-- vlog模块 --&gt;&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;    &lt;iframe style=&quot;        position: absolute;         width: 100%;         height: 100%;         left: 0; top: 0;&quot;         src=&quot;//player.bilibili.com/player.html?aid=80181162&amp;bvid=BV1qJ41147r7&amp;cid=137214952&amp;page=1&amp;high_quality=1&quot;         scrolling=&quot;no&quot;         border=&quot;0&quot;         frameborder=&quot;no&quot;         framespacing=&quot;0&quot;         allowfullscreen=&quot;true&quot;&gt;    &lt;/iframe&gt;&lt;/div&gt;</code></pre><p>效果展示：<br><a href="https://nekodeng.gitee.io/videos/" class="LinkCard" target="_blank">itsNekoDeng vlog</a></p><div class="note info">总结：若想要在博客文章md文件中引入也是可以的，直接粘贴上述ejs文件代码即可。</div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 关于hexo博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo博客增加视频vlog页面 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于给hexo博客增加音乐页面（使用Aplayer和MetingJS插件）</title>
       <link href="/posts/hexo-music-aplayer.html"/>
       <url>/posts/hexo-music-aplayer.html</url>

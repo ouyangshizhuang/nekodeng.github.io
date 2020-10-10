@@ -6,7 +6,7 @@
   <link href="https://nekodeng.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://nekodeng.gitee.io/"/>
-  <updated>2020-10-10T02:55:54.860Z</updated>
+  <updated>2020-10-10T13:50:09.479Z</updated>
   <id>https://nekodeng.gitee.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于给hexo博客增加视频vlog页面（主要引入哔哩哔哩视频）</title>
+    <link href="https://nekodeng.gitee.io/posts/hexo-vlog-page.html"/>
+    <id>https://nekodeng.gitee.io/posts/hexo-vlog-page.html</id>
+    <published>2020-10-30T07:34:14.000Z</published>
+    <updated>2020-10-10T13:50:09.479Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="关于hexo博客" scheme="https://nekodeng.gitee.io/categories/%E5%85%B3%E4%BA%8Ehexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="hexo博客增加视频vlog页面" scheme="https://nekodeng.gitee.io/tags/hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E8%A7%86%E9%A2%91vlog%E9%A1%B5%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于给hexo博客增加音乐页面（使用Aplayer和MetingJS插件）</title>
     <link href="https://nekodeng.gitee.io/posts/hexo-music-aplayer.html"/>
     <id>https://nekodeng.gitee.io/posts/hexo-music-aplayer.html</id>
-    <published>2020-10-18T06:34:14.000Z</published>
-    <updated>2020-10-10T02:55:54.860Z</updated>
+    <published>2020-10-23T06:34:14.000Z</published>
+    <updated>2020-10-10T13:42:43.797Z</updated>
     
     
       
@@ -47,8 +72,8 @@
     <title>Chrome小恐龙跑酷</title>
     <link href="https://nekodeng.gitee.io/posts/chrome-dragon-game.html"/>
     <id>https://nekodeng.gitee.io/posts/chrome-dragon-game.html</id>
-    <published>2020-10-15T05:34:14.000Z</published>
-    <updated>2020-10-10T02:58:32.453Z</updated>
+    <published>2020-10-17T05:34:14.000Z</published>
+    <updated>2020-10-10T13:42:54.259Z</updated>
     
     
       
@@ -523,33 +548,6 @@
     <category term="懒/预加载" scheme="https://nekodeng.gitee.io/tags/%E6%87%92-%E9%A2%84%E5%8A%A0%E8%BD%BD/"/>
     
     <category term="CDN" scheme="https://nekodeng.gitee.io/tags/CDN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用JS获取当前页面的URL(网址信息)</title>
-    <link href="https://nekodeng.gitee.io/posts/get-url.html"/>
-    <id>https://nekodeng.gitee.io/posts/get-url.html</id>
-    <published>2020-09-11T14:47:27.594Z</published>
-    <updated>2020-09-22T12:34:36.163Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot; language-lang-javascript&quot;&gt;&lt;code class=&quot;language-lang-javascript&quot;&gt;var url;
-
-url = window.location.href; /* 获取完整URL</summary>
-        
-      
-    
-    
-    
-    <category term="JS基础" scheme="https://nekodeng.gitee.io/categories/JS%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="JS获取当前页面的URL" scheme="https://nekodeng.gitee.io/tags/JS%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84URL/"/>
     
   </entry>
   
