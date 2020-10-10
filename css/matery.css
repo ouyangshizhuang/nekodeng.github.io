@@ -2470,7 +2470,8 @@ body.dark nav ul li:hover a span {
 nav ul li:hover a[href="/count"] span,
 nav ul li:hover a[href="/gallery"] span,
 nav ul li:hover a[href="/essay"] span,
-nav ul li:hover a[href="/musics"] span
+nav ul li:hover a[href="/musics"] span,
+nav ul li:hover a[href="/videos"] span
   {
     border: none!important;
 }
