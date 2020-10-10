@@ -200,6 +200,13 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
+        <a href="/musics">
+          
+          <span>音乐台</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/friends">
           
           <span>友情链接</span>
@@ -369,6 +376,14 @@
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+		          <span>音乐台</span>
+                  </a>
+                </li>
               
                 <li>
 
@@ -937,13 +952,18 @@
 </main>
 
 
-    <footer class="page-footer bg-color">
+    <style>
+    .youpaiyunlogo {
+        height: 26px;
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+<footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
-        
-        display: none;
         
         font-size: 12px;
         font-weight: 700;
@@ -951,8 +971,6 @@
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -972,20 +990,25 @@
 <div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+        <meting-js class="hidess col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="5279114612"
+                   id="3155294100"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
                    loop='all'
-                   order='random'
+                   order='list'
                    preload='auto'
                    volume='0.7'
                    list-folded='true'
         >
         </meting-js>
+        <style>
+            .hidess .aplayer-lrc {
+                display: none!important;
+            }
+        </style>
     </div>
 </div>
 
@@ -1008,8 +1031,15 @@
             &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+            <a>Cloud storage</a> service and <a>CDN</a> acceleration provider
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="本站CDN加速/云存储由又拍云提供">
+                <img src="/medias/youpaiyun-logo.png" class="youpaiyunlogo" />
+            </a>
+            
+            <br>
+            
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">54.5k</span>&nbsp;
+                class="white-color">55k</span>&nbsp;
             
             
             
@@ -1179,6 +1209,6 @@ $(function () {
  
     <script type="text/javascript" src="/js/click_show_text.js"></script>
     <script src="/js/linkcard.js"></script>
-</body>
 
+</body>
 </html>

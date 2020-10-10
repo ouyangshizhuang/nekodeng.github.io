@@ -200,6 +200,13 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
+        <a href="/musics">
+          
+          <span>音乐台</span>
+        </a>
+      </li>
+      
+      <li>
         <a href="/friends">
           
           <span>友情链接</span>
@@ -372,6 +379,14 @@
               
                 <li>
 
+                  <a href="/musics " style="margin-left:75px">
+				  
+		          <span>音乐台</span>
+                  </a>
+                </li>
+              
+                <li>
+
                   <a href="/friends " style="margin-left:75px">
 				  
 		          <span>友情链接</span>
@@ -432,6 +447,13 @@
             height: 64vh;
         }
     }
+    iframe {
+        width: 60%;
+        margin: 0 auto;
+    }
+    body.dark iframe {
+        opacity: 0.7;
+    }
 </style>
 
 <div class="bg-cover pd-header about-cover">
@@ -484,21 +506,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">58</a></span>
+    <span class="count"><a href="/">60</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">16</a></span>
+    <span class="count"><a href="/categories">17</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">125</a></span>
+    <span class="count"><a href="/tags">128</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -514,21 +536,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">58</a></span>
+    <span class="count"><a href="/">60</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">16</a></span>
+    <span class="count"><a href="/categories">17</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">125</a></span>
+    <span class="count"><a href="/tags">128</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -600,6 +622,8 @@
                         <li>一只AKA十万伏特皮卡丘，想要成为优秀的Web Front-end Developer，梦想是世界和平，想要发光发热，不止于此。</li>
                         <li>关于网站名称，取名为 “ NekoDeng ”，原因是当初注册Google邮箱的时候需要一个英文名，想了好久才取名叫neko，然后再加上我的姓氏，很土啦，就这样。</li>
                         <li>天蝎座，喜欢篮球，从热火时期开始关注Lebron James，湖人总冠军，宝藏歌曲《达尔文》，待续...</li>
+                        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=5248060&amp;auto=1&amp;height=66">博主的宝藏歌曲</iframe>
+                        
                     </ol>
                     <h3>🕛 为什么写博客</h3>
                     <p>很长时间了，总是想写点什么，无关风月，就是想写点什么。无论是记录知识点，总结技能树，人生长谈，风花雪月之事，都可以有一个存档的地方，对于复盘，回忆，都是一个极好的方谭。</p>
@@ -1053,13 +1077,18 @@
 </main>
 
 
-    <footer class="page-footer bg-color">
+    <style>
+    .youpaiyunlogo {
+        height: 26px;
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+<footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
-        
-        display: none;
         
         font-size: 12px;
         font-weight: 700;
@@ -1067,8 +1096,6 @@
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -1088,20 +1115,25 @@
 <div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+        <meting-js class="hidess col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="5279114612"
+                   id="3155294100"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
                    loop='all'
-                   order='random'
+                   order='list'
                    preload='auto'
                    volume='0.7'
                    list-folded='true'
         >
         </meting-js>
+        <style>
+            .hidess .aplayer-lrc {
+                display: none!important;
+            }
+        </style>
     </div>
 </div>
 
@@ -1124,8 +1156,15 @@
             &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+            <a>Cloud storage</a> service and <a>CDN</a> acceleration provider
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="本站CDN加速/云存储由又拍云提供">
+                <img src="/medias/youpaiyun-logo.png" class="youpaiyunlogo" />
+            </a>
+            
+            <br>
+            
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">54.5k</span>&nbsp;
+                class="white-color">55k</span>&nbsp;
             
             
             
@@ -1295,6 +1334,6 @@ $(function () {
  
     <script type="text/javascript" src="/js/click_show_text.js"></script>
     <script src="/js/linkcard.js"></script>
-</body>
 
+</body>
 </html>

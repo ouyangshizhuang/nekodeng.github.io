@@ -1909,8 +1909,6 @@ body.dark .post-charts .title {
     color: #42b983!important;
 }
 
-#vcomments p,
-.v[data-class=v] .vcards .vcard .vhead,
 .bozhushuo,
 .friends-container .tag-title,
 .my-gallery .title,
@@ -2345,6 +2343,15 @@ body.dark .vedit textarea::-webkit-input-placeholder
     margin-top: 12px!important;
     border-radius: 10px;
 }
+/* 实现首字放大效果 */
+#maina li span div p::first-letter {
+    font-size: 26px;
+}
+#vcomments p::first-letter {
+    font-size: 1.45rem;
+}
+
+
 #maina li span div p {
     margin-right: 10px;
     margin-bottom: 9px;
@@ -2460,7 +2467,11 @@ body.dark nav ul li:hover a span {
 .fa-chrome:before {
     color: #f14f05;
 }
-nav ul li:hover a[href="/count"] span, nav ul li:hover a[href="/gallery"] span, nav ul li:hover a[href="/essay"] span {
+nav ul li:hover a[href="/count"] span,
+nav ul li:hover a[href="/gallery"] span,
+nav ul li:hover a[href="/essay"] span,
+nav ul li:hover a[href="/musics"] span
+  {
     border: none!important;
 }
 /* .fab {
@@ -2546,7 +2557,14 @@ body.dark header .side-nav .menu-list a
 body.dark .bg-cover .post-title {
     color: rgba(255, 255, 255, 0.9);
 }
-
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+    font-size: 15px!important;
+    font-weight: 400!important;
+    color: #292828!important;
+}
+.aplayer-list-title {
+    color: #666!important;
+}
 body.dark a
 {
     color: rgba(255, 255, 255, 0.75);
@@ -2571,7 +2589,9 @@ body.dark header .side-nav .menu-list .m-nav-show
 {
     background-color: #12121c;
 }
-body.dark .aplayer{background: #2f3742!important;}
+body.dark .aplayer{
+    opacity: 0.9;
+}
 body.dark img, body.dark strong {
     filter: brightness(.7);
 }
