@@ -2347,7 +2347,7 @@ body.dark .vedit textarea::-webkit-input-placeholder
 }
 /* 实现首字放大效果 */
 #maina li span div p::first-letter {
-    font-size: 26px;
+    font-size: 23px;
 }
 #vcomments p::first-letter {
     font-size: 1.45rem;
