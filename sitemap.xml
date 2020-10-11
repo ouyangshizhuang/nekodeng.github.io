@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nekodeng.gitee.io/count/index.html</loc>
+    
+    <lastmod>2020-10-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nekodeng.gitee.io/posts/chrome-dragon-game.html</loc>
     
     <lastmod>2020-10-11</lastmod>
@@ -115,13 +122,6 @@
   
   <url>
     <loc>https://nekodeng.gitee.io/qingdan/index.html</loc>
-    
-    <lastmod>2020-10-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nekodeng.gitee.io/count/index.html</loc>
     
     <lastmod>2020-10-03</lastmod>
     
