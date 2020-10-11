@@ -1057,6 +1057,15 @@ body.dark .publish-date {
 }
 /* 修改小屏幕下logo文字样式. */
 @media only screen and (max-width: 600px) {
+    .poem-wrap p:nth-of-type(1) {
+        font-size: 19px!important;
+    }
+    .poem-wrap p:nth-of-type(2) {
+        font-size: 16px!important;
+    }
+    .poem-wrap h1 {
+        font-size: 22px;
+    }
     header .brand-logo .logo-span {
         display: none;
     }

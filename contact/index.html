@@ -219,7 +219,7 @@
       <li>
         <a href="/musics">
           
-          <span>音乐台</span>
+          <span>music</span>
         </a>
       </li>
       
@@ -418,7 +418,7 @@
 
                   <a href="/musics " style="margin-left:75px">
 				  
-		          <span>音乐台</span>
+		          <span>music</span>
                   </a>
                 </li>
               
@@ -503,12 +503,24 @@
         bottom: 79.25px;
     }
     .bg-cover {
+        height: 110vh;
+        background-position-y: -82vh;
         background-image: url("/medias/banner/contactbg.jpg")!important;
         -webkit-filter: brightness(.8)!important;
         filter: brightness(.8)!important;
     }
     .bg-cover::before {
         background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+    }
+    @media only screen and (max-width: 1090px) {
+        .bg-cover {
+            background-position-y: 0;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .about-cover {
+            height: 64vh;
+        }
     }
 </style>
 <main class="content">
