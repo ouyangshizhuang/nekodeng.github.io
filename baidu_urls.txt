@@ -1,6 +1,7 @@
 https://nekodeng.gitee.io/posts/hexo-vlog-page.html
 https://nekodeng.gitee.io/posts/hexo-music-aplayer.html
 https://nekodeng.gitee.io/posts/chrome-dragon-game.html
+https://nekodeng.gitee.io/posts/essay-today-is-a-day.html
 https://nekodeng.gitee.io/posts/imitation-paper-essay.html
 https://nekodeng.gitee.io/posts/essay-demo.html
 https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html
