@@ -582,9 +582,19 @@
         line-height: 48px;
         font-size: 1.4rem;
     }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
 </style>
 <div class="row">
-        <div id="main-content" class="col s12 m12 l9">
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="增加瀑布流相册页面">
             <style>
     .ititle {
         margin: 15px 0;
@@ -1929,12 +1939,10 @@ PhotoVerifyPassword:
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            tips~：桌面端点击右侧竖排 “ 从上至下 ” “ 第三个按钮 ”，展开阅读效果更佳哦~
-
-这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~
+                            这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~
     节选自《你若安好便是晴天》- 前言
   
-  几场梅雨，几卷荷风，江南已是烟水迷
+  几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。这个季节，许多人都在打听关于莲荷的消息，以及茉莉在黄昏浮动
                         
                     </div>
                     <div class="publish-info">
@@ -2081,24 +2089,29 @@ Vue Router是什么Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.j
 
 
         </div>
+        
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        
+        <div class="toc-widget" data-spmid="增加瀑布流相册页面">
             <div class="toc-title">
                 <i class="far fa-list-alt"></i>
                 &nbsp;&nbsp;目录
             </div>
             <div id="toc-content"></div>
         </div>
+        
     </div>
 </div>
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="增加瀑布流相册页面">
     <a class="btn-floating btn-large bg-color">
         <i class="fas fa-list-ul"></i>
     </a>
 </div>
+
 
 
 <script src="/libs/tocbot/tocbot.min.js"></script>

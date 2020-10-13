@@ -582,9 +582,19 @@
         line-height: 48px;
         font-size: 1.4rem;
     }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
 </style>
 <div class="row">
-        <div id="main-content" class="col s12 m12 l9">
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="gulp">
             <style>
     .ititle {
         margin: 15px 0;
@@ -1686,24 +1696,29 @@ SVN与Git的最主
 
 
         </div>
+        
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        
+        <div class="toc-widget" data-spmid="gulp">
             <div class="toc-title">
                 <i class="far fa-list-alt"></i>
                 &nbsp;&nbsp;目录
             </div>
             <div id="toc-content"></div>
         </div>
+        
     </div>
 </div>
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="gulp">
     <a class="btn-floating btn-large bg-color">
         <i class="fas fa-list-ul"></i>
     </a>
 </div>
+
 
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
