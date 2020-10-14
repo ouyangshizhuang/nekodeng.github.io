@@ -1,0 +1,1298 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="chromedragon, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="description" content="专注于Web,分享生活,分享知识">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="baidu-site-verification" content="code-8VjAnGhv8m" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>chromedragon | itsNekoDeng</title>
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"/>
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https'){
+           bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+          }
+          else{
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+          }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+        </script>
+        
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNekoDeng" type="application/atom+xml">
+</head>
+
+
+<body>
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        //  else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        // document.body.classList.add('dark');
+        // } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">itsNekoDeng</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/archives">
+          
+          <span>日历</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/count">
+          
+          <span>统计</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>清单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/videos">
+          
+          <span>vlog</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/musics">
+          
+          <span>music</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/gallery">
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/essay">
+          
+          <span>随笔</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/shuoshuo" class="waves-effect waves-light">
+      
+      <span>说说</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>链接库</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <span>友情链接</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/collection">
+          
+          <span>网址收藏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lakers-championship">
+          
+          <span>湖人总冠军</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>实验室</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/ticktack">
+          
+          <span>ticktack</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/chromedragon">
+          
+          <span>chromedragon</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">itsNekoDeng</div>
+        <div class="logo-desc">
+            
+            专注于Web,分享生活,分享知识
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+		          <span>日历</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/count " style="margin-left:75px">
+				  
+		          <span>统计</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			清单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/videos " style="margin-left:75px">
+				  
+		          <span>vlog</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+		          <span>music</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/gallery " style="margin-left:75px">
+				  
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/essay " style="margin-left:75px">
+				  
+		          <span>随笔</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/shuoshuo" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw"></i>
+			
+			说说
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			链接库
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+		          <span>友情链接</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/collection " style="margin-left:75px">
+				  
+		          <span>网址收藏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/lakers-championship " style="margin-left:75px">
+				  
+		          <span>湖人总冠军</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			实验室
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/ticktack " style="margin-left:75px">
+				  
+		          <span>ticktack</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/chromedragon " style="margin-left:75px">
+				  
+		          <span>chromedragon</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    chromedragon
+                 
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['坚持打卡，有源源就有我！',''],
+                        startDelay: 200,
+                        typeSpeed: 120,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+<style>
+    .bg-cover {
+        background-image: url("https://7.dusays.com/2020/10/14/dc1def2d1f96b.jpg")!important;
+    }
+    .bg-cover::before {
+        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+    }
+    .card-content {
+        padding: 12px!important;
+    }
+    hr {
+        margin: 8px auto 12px;
+    }
+    .miaoshus {
+        padding: 12px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 95%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 12px auto;
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
+    }
+</style>
+<main class="content">
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                    <div class="note info">前言: 偶然间在一个大佬博客里发现的，挺有趣的，就是离线状态下chrome浏览器会出现的那个小游戏。文章链接：<a href="https://www.xsy.fun/archives/170/" target="_blank">将Chrome离线小恐龙嵌入博客</a></div>
+                    <div class="note info">
+                    操作介绍：先点击小恐龙<br>
+                    开始游戏：再按 “空格键” 或者 “点击屏幕” <br>
+                    跳跃：“空格键”  <br>
+                    爬行： ↓ <br>
+                    如果<i style="color: #e96900;">小恐龙未出现</i>，或者右上角时间数值未变或者较慢，请<i style="color: #e96900;">ctr+F5</i>刷新网站，
+                    加载速度略慢请等待。
+                    <br>
+                    支持手机，电脑，等设备玩耍，点击屏幕开始和跳跃。
+                    </div>
+                    <iframe width="100%" height="200px" src="https://api.dlizi.com:555/dinogame/index.html"  frameborder="no" border="0"  scrolling="no" marginwidth="0" marginheight="0" ></iframe>
+                    
+            </div>
+        </div>
+      
+        <div class="card">
+            
+
+            
+
+            
+
+            
+
+            
+            <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" id="vcomments-top" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
+        appId: 'ysvnqo0g9aYuoLJrPTp6YHg0-9Nh9j0Va',
+        appKey: '9tav2tXFWVNi2qvR8mQsjvJ1',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '12',
+        lang: 'zh-cn',
+        placeholder: '欢迎指点江山，无需登录即可评论留言哒~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+
+        adminEmailMd5: '80a023e11167a78a35f72ef4dd0a48f4',
+
+        master: ["80a023e11167a78a35f72ef4dd0a48f4"],
+        friends: ["371e125e381e2967651635900798a6b2"],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        // tagMeta: '博主,小伙伴,访客',
+        // master: '80a023e11167a78a35f72ef4dd0a48f4',
+        // friends: '371e125e381e2967651635900798a6b2',
+        
+        // 设置Bilibili表情包地址
+        emojiCDN: '//cdn.jsdelivr.net/gh/blogimg/emotion/', 
+        // 表情title和图片映射
+        emojiMaps: {
+            "blob_blobnomcookie" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnomcookie.png",
+"blob_blobnomchristmas" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnomchristmas.png",
+"blob_blobnom" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnom.png",
+"blob_blobnogood" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnogood.png",
+"blob_blobno" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobno.png",
+"blob_blobnitro" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnitro.png",
+"blob_blobninja" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobninja.png",
+"blob_blobnight" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnight.png",
+"blob_blobneutral" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobneutral.png",
+"blob_blobnervous2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnervous2.png",
+"blob_blobnervous" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnervous.png",
+"blob_blobnerd" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnerd.png",
+"blob_wumpusblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/wumpusblob.png",
+"blob_wolfiriblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/wolfiriblob.png",
+"blob_thinkingwithblobs" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/thinkingwithblobs.png",
+"blob_superblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/superblob.png",
+"blob_rickblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/rickblob.png",
+"blob_reindeerblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/reindeerblob.png",
+"blob_RedTick" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/RedTick.png",
+"blob_rainblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/rainblob.png",
+"blob_pusheenblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/pusheenblob.png",
+"blob_pikablob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/pikablob.png",
+"blob_photoblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/photoblob.png",
+"blob_pandablob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/pandablob.png",
+"blob_notlikeblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/notlikeblob.png",
+"blob_nikoblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/nikoblob.png",
+"blob_nellyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/nellyblob.png",
+"blob_kirbyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/kirbyblob.png",
+"blob_jakeblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/jakeblob.png",
+"blob_greentick" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/greentick.png",
+"blob_googlewhale" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/googlewhale.png",
+"blob_blobbot" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbot.png",
+"blob_blobbored" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbored.png",
+"blob_blobboost" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobboost.png",
+"blob_blobblush" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobblush.png",
+"blob_blobbanhammer" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbanhammer.png",
+"blob_blobbandage" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbandage.png",
+"blob_blobaww" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobaww.png",
+"blob_blobawkward" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobawkward.png",
+"blob_blobaviator" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobaviator.png",
+"blob_blobartist" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobartist.png",
+"blob_blobangry" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobangry.png",
+"blob_blobangery" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobangery.png",
+"blob_blobangel" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobangel.png",
+"blob_blobamused" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobamused.png",
+"blob_blob3c" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blob3c.png",
+"blob_blob0w0" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blob0w0.png",
+"blob_blob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blob.png",
+"blob_b4nzyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/b4nzyblob.png",
+"blob_b1nzyblob2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/b1nzyblob2.png",
+"blob_b1nzyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/b1nzyblob.png",
+
+"bilibili_热词系列_“狼火”" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_“狼火”.png",
+"bilibili_热词系列_知识增加" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_知识增加.png",
+"bilibili_热词系列_张三" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_张三.png",
+"bilibili_热词系列_有内味了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_有内味了.jpg",
+"bilibili_热词系列_我裂开了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我裂开了.png",
+"bilibili_热词系列_我哭了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我哭了.jpg",
+"bilibili_热词系列_问号" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_问号.png",
+"bilibili_热词系列_危" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_危.jpg",
+"bilibili_热词系列_你细品" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_你细品.jpg",
+"bilibili_热词系列_猛男必看" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_猛男必看.jpg",
+"bilibili_热词系列_害" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_害.jpg",
+"bilibili_热词系列_咕咕" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_咕咕.jpg",
+"bilibili_热词系列_递话筒" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_递话筒.png",
+"bilibili_热词系列_标准结局" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_标准结局.png",
+"bilibili_热词系列_爱了爱了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_爱了爱了.png",
+"bilibili_热词系列_知识盲区" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_知识盲区.png",
+"bilibili_热词系列_镇站之宝" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_镇站之宝.png",
+"bilibili_热词系列_真香" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_真香.png",
+"bilibili_热词系列_有生之年" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_有生之年.png",
+"bilibili_热词系列_爷关更" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_爷关更.png",
+"bilibili_热词系列_秀" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_秀.png",
+"bilibili_热词系列_下次一定" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_下次一定.png",
+"bilibili_热词系列_我太南了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我太南了.png",
+"bilibili_热词系列_我酸了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我酸了.png",
+"bilibili_热词系列_我全都要" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我全都要.png",
+"bilibili_热词系列_完结撒花" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_完结撒花.png",
+"bilibili_热词系列_神仙UP" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_神仙UP.png",
+"bilibili_热词系列_三连" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_三连.png",
+"bilibili_热词系列_你币有了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_你币有了.png",
+"bilibili_热词系列_妙啊" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_妙啊.png",
+"bilibili_热词系列_可以" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_可以.png",
+"bilibili_热词系列_高产" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_高产.png",
+"bilibili_热词系列_大师球" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_大师球.png",
+"bilibili_热词系列_打卡" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_打卡.png",
+"bilibili_热词系列_锤" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_锤.png",
+"bilibili_热词系列_吹爆" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_吹爆.png",
+"bilibili_热词系列_不愧是你" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_不愧是你.png",
+"bilibili_热词系列_奥力给" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_奥力给.png",
+"bilibili_热词系列_AWSL" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_AWSL.png",
+"bilibili_热词系列_狼火" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_狼火.png",
+
+"custom_37" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/097cd88f446efae87cb27de38c5eed15.png",
+"custom_36" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/ec2166501d29bc1eb7380c22944db462.png",
+"custom_35" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/8ca39f96c182e51cd752dde464157c2e.png",
+"custom_34" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/0a65c5dd18872b56605c08f7bae2e8c8.png",
+"custom_33" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/ec3edbfe84684fdb1680307d261c3c7b.png",
+"custom_32" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/31.webp",
+"custom_31" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/30.gif",
+"custom_30" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/29.webp",
+"custom_29" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/28.webp",
+"custom_28" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/27.webp",
+"custom_27" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/26.webp",
+"custom_26" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/25.jpg",
+"custom_25" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/24.webp",
+"custom_24" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/23.webp",
+"custom_23" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/22.webp",
+"custom_22" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/21.webp",
+"custom_21" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/20.webp",
+"custom_20" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/19.webp",
+"custom_19" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/18.jpg",
+"custom_18" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/17.webp",
+"custom_17" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/16.webp",
+"custom_16" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/15.webp",
+"custom_15" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/14.webp",
+"custom_14" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/13.webp",
+"custom_13" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/12.webp",
+"custom_12" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/11.webp",
+"custom_11" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/10.webp",
+"custom_10" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/9.webp",
+"custom_9" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/8.webp",
+"custom_8" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/7.webp",
+"custom_7" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/6.gif",
+"custom_6" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/5.gif",
+"custom_5" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/4.jpg",
+"custom_4" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/3.jpg",
+"custom_3" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/2.webp",
+"custom_2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/1.webp",
+"custom_1" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@master/2020/04/19/c3164053d300cc5cca5e4dc3311842dc.png",
+"custom_0" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@master/2020/04/19/6b5e768e524c8441ba66184bfdd86d4d.png",
+
+        }
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
+
+            
+			
+			
+        </div>
+    </div>
+</main>
+
+
+    <style>
+    .youpaiyunlogo {
+        height: 26px;
+        display: inline-block;
+        vertical-align: top;
+    }
+</style>
+<footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="hidess col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="3155294100"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+        <style>
+            .hidess .aplayer-lrc {
+                display: none!important;
+            }
+        </style>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <!-- 访客地图 -->
+        <div class="col s12 m3 l3 social-link" id="visitmap">
+            <a target="_blank" rel="noopener" href="https://clustrmaps.com/site/1bd51" title="访客地图"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=n&d=JSX4QImR_CbfKkKdutTHIpP3sfxcCP34C8RWeldK8mk&co=000000&ct=ffffff" /></a>
+        </div>
+        
+        <!-- 版权信息 -->
+        <div class="col s12 m6 l6 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">NekoDeng</a>
+            &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            <a>Cloud storage</a> service and <a>CDN</a> acceleration provider
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="本站CDN加速/云存储由又拍云提供">
+                <img src="/medias/youpaiyun-logo.png" class="youpaiyunlogo" />
+            </a>
+            
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
+                class="white-color">56k</span>&nbsp;
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                &nbsp;<i class="far fa-eye"></i>&nbsp;Total visits: &nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;
+            </span>
+            
+            
+            <br>
+            
+            <span id="sitetime">running time</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span class= 'white-color'>"+diffDays+"</span>" + " d " + "<span class= 'white-color'>"+diffHours+"</span>" +
+                            " h " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " m " + "<span class= 'white-color'>"+diffSeconds+"</span>" + " s";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span class= 'white-color'>"+diffYears+"</span>" + " y " + "<span class= 'white-color'>"+diffDays+"</span>" +
+                            " d " + "<span class= 'white-color'>"+diffHours+"</span>" + " h " + "<span class= 'white-color'>"+diffMinutes+"</span>" + " m " +"<span class= 'white-color'>"+ diffSeconds+"</span>" + " s";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m3 l3 social-link social-statis">
+    <a href="https://github.com/nekodeng" class="tooltipped" target="_blank" data-tooltip="GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:mailto:dyfeliwa@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2536194075" class="tooltipped" target="_blank" data-tooltip="QQ 2536194075" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+</div>
+    </div>
+    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="javascript(0)">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+    
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <!--动态线条背景-->
+    <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+ 
+    <script type="text/javascript" src="/js/click_show_text.js"></script>
+    <script src="/js/linkcard.js"></script>
+
+</body>
+</html>
