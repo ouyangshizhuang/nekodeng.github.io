@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="西双版纳之行, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
+    <meta name="keywords" content="hotreview, nekodeng,itsNekoDeng,HTML,CSS,JavaScript,JQuery,React,Vue.js">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>西双版纳之行 | itsNekoDeng</title>
+    <title>hotreview | itsNekoDeng</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -543,31 +543,14 @@
 
 </header>
 
-    <!-- 加密功能 -->
-
-    <script src="/libs/cryptojs/crypto-js.min.js"></script>
-    <script>
-        (function() {
-            let pwd = '';
-
-            if (pwd && pwd.length > 0) {
-                if (pwd !== CryptoJS.SHA256(prompt('🐈这里是博主的加密相册，请输入密码才可访问哒~')).toString(CryptoJS.enc.Hex)) {
-                    alert('🐈密码wrong，sorry，将返回相册页面哦~');
-                    location.href = '/gallery';
-                }
-            }
-        })();
-    </script>
-
-
-<!-- <div class="bg-cover pd-header about-cover">
+    <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    西双版纳之行
+                    hotreview
                  
             </div>
 
@@ -600,269 +583,535 @@
 
 
     </div>
-</div> -->
+</div>
+<style>
+    .bg-cover {
+        background-image: url("https://7.dusays.com/2020/10/15/377168ba23f0a.png")!important;
+    }
+    .bg-cover::before {
+        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+    }
+</style>
+<main class="content">
+    <div class="container">
+        <!-- 社会语录这一块 -->
+        <style>
+            .btns a {
+                text-decoration: none;
+                border: 2px solid blueviolet;
+                padding: 5px;
+                color: #6f6f6f;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                position: relative;
+                display: inline-block;
+                margin: 20px auto 8px;               
+            }
+            body.dark .btns a::before, body.dark .btns a::after {
+                background-color: #282c34;
+            }
+            .btns a::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: -2px;
+                width: calc(100% + 6px);
+                height: calc(100% - 10px);
+                background-color: #eceffc;
+                transition: all 0.5s ease-in-out;
+                transform: scaleY(1);
+            }
+            .btns a::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: -5px;
+                width: calc(100% - 10px);
+                height: calc(100% + 10px);
+                background-color: #eceffc;
+                transition: all 0.5s ease-in-out;
+                transform: scaleX(1);
+            }
+            #susays {
+                position: relative;
+                z-index: 3;
+                font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+            }
+            .huans {
+                position: relative;
+                z-index: 3;
+            }
+            .cardbg {
+                background: rgb(236, 239, 252);
+                padding: 16px 36px;
+            }
+            body.dark code {
+                background-color: #eef7fa;
+            }
+            .btns img {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10px;
+                
+            }
+        </style>
+        <div class="card cardbg">
+            <div class="note info">精神小伙，那社会语录真的是铁铁的，然后就想起一言API了哈哈哈嗝儿，于是就 ...... 社会语录API，老铁，整一个？<code>安排？</code></a></div>
+            <div class="btns center-align">
+                <img src="https://7.dusays.com/2020/10/15/e66a2d82254eb.jpg">
+                <br>
+                <a><font size="5"><span id="susays">社会没有将与帅，只有实力这一块。</span></font></a>
+                <br>
+                <a href="javascript:location.reload()"><span class="huans">下一句</span></a>
+            </div>
+            <script src="https://cdn.ipayy.net/fcc/api.php?way=a"></script>
+            <script>
+                fetch("https://cdn.ipayy.net/says/new/api.php?encode=json")
+                .then(res => res.json())
+                .then(data => susays.innerText = data.say);
+            </script>
+            <script src="https://cdn.ipayy.net/says/my.js"></script>
+        </div>
 
-<link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
-<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
-<script src="/libs/MyGallery/js/baguetteBox.js"></script> 
-<style>    
-    #sma {
-        bottom: 150px;
+
+
+
+        <div class="card">
+            
+
+            
+
+            
+
+            
+
+            
+            <style>
+    .valine-card {
+        margin: 1.5rem auto;
     }
-    .my-gallery .photo img {
-        transition: all 0.6s ease-in-out; 
-    }     
-    .my-gallery .photo:hover img {
-        opacity: 0.6;
-        transform: scale(1.05);
-    }      
-    .my-gallery {
-        margin: 20px auto;
-    }   
-    .miaoshus .title {
-        font-family: MV Boli;
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
     }
-    .miaoshus {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 75%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 24px auto 12px;
-        
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
     }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
     }
-    body {
-        overflow: visible!important;
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
     }
-    .box {
-            position: relative;
-        }
-    .box img {
-        width: 350px;
-        vertical-align: top;
-        padding: 8px;
-        border-radius: 10px;
-        transition: all 0.5s;
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
     }
-    .box img:hover {
-        transform: scale(1.05);
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
     }
-    .page-footer {
-        display: none
+
+    #vcomments ol li {
+        list-style-type: decimal;
     }
-    body {
-        overflow-y: visible!important;
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
     }
-    header {
-        background-color: #000;
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
     }
-    .biaotiss {
-            font-family: MV Boli;
-        }   
-    canvas {
-        opacity: 0.3!important;
+
+    #vcomments ul li {
+        list-style-type: disc;
     }
-    @media only screen and (max-width: 1058px) {
-        .box {
-            margin-left: 145px;
-        }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
     }
-    @media only screen and (max-width: 770px) {
-        .box {
-            margin-left: 15px;
-        }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
     }
-    @media only screen and (max-width: 500px) {
-        #previous-button, #next-button {
-            display: none;
-        }
+
+    #vcomments table, th, td {
+        border: 0;
     }
-    @media only screen and (max-width: 380px) {
-        .box {
-            margin-left: -5px;
-        }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
     }
-    @media only screen and (max-width: 323px) {
-        .box img {
-            width: 296px;
-            left: 0;
-        }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
     }
 </style>
 
-<div class="tag-title center-align">
-    <div class="miaoshus">
-        <div class="title center-align">
-            “ 
-                西双版纳之行
-              ”
-        </div>
-        “ 光影流年 ”
-        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”
+<div class="card valine-card" id="vcomments-top" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
     </div>
 </div>
 
-<!-- 相册 -->
-<section class="gallery">
-    <div id="myGallery" class="my-gallery">
-        <div class="row">
-            <div class="box">
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
+        appId: 'ysvnqo0g9aYuoLJrPTp6YHg0-9Nh9j0Va',
+        appKey: '9tav2tXFWVNi2qvR8mQsjvJ1',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '12',
+        lang: 'zh-cn',
+        placeholder: '欢迎指点江山，无需登录即可评论留言哒~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+
+        adminEmailMd5: '80a023e11167a78a35f72ef4dd0a48f4',
+
+        master: ["80a023e11167a78a35f72ef4dd0a48f4"],
+        friends: ["371e125e381e2967651635900798a6b2"],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        // tagMeta: '博主,小伙伴,访客',
+        // master: '80a023e11167a78a35f72ef4dd0a48f4',
+        // friends: '371e125e381e2967651635900798a6b2',
+        
+        // 设置Bilibili表情包地址
+        emojiCDN: '//cdn.jsdelivr.net/gh/blogimg/emotion/', 
+        // 表情title和图片映射
+        emojiMaps: {
+            "blob_blobnomcookie" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnomcookie.png",
+"blob_blobnomchristmas" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnomchristmas.png",
+"blob_blobnom" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnom.png",
+"blob_blobnogood" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnogood.png",
+"blob_blobno" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobno.png",
+"blob_blobnitro" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnitro.png",
+"blob_blobninja" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobninja.png",
+"blob_blobnight" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnight.png",
+"blob_blobneutral" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobneutral.png",
+"blob_blobnervous2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnervous2.png",
+"blob_blobnervous" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnervous.png",
+"blob_blobnerd" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobnerd.png",
+"blob_wumpusblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/wumpusblob.png",
+"blob_wolfiriblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/wolfiriblob.png",
+"blob_thinkingwithblobs" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/thinkingwithblobs.png",
+"blob_superblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/superblob.png",
+"blob_rickblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/rickblob.png",
+"blob_reindeerblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/reindeerblob.png",
+"blob_RedTick" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/RedTick.png",
+"blob_rainblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/rainblob.png",
+"blob_pusheenblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/pusheenblob.png",
+"blob_pikablob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/pikablob.png",
+"blob_photoblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/photoblob.png",
+"blob_pandablob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/pandablob.png",
+"blob_notlikeblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/notlikeblob.png",
+"blob_nikoblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/nikoblob.png",
+"blob_nellyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/nellyblob.png",
+"blob_kirbyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/kirbyblob.png",
+"blob_jakeblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/jakeblob.png",
+"blob_greentick" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/greentick.png",
+"blob_googlewhale" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/googlewhale.png",
+"blob_blobbot" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbot.png",
+"blob_blobbored" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbored.png",
+"blob_blobboost" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobboost.png",
+"blob_blobblush" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobblush.png",
+"blob_blobbanhammer" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbanhammer.png",
+"blob_blobbandage" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobbandage.png",
+"blob_blobaww" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobaww.png",
+"blob_blobawkward" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobawkward.png",
+"blob_blobaviator" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobaviator.png",
+"blob_blobartist" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobartist.png",
+"blob_blobangry" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobangry.png",
+"blob_blobangery" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobangery.png",
+"blob_blobangel" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobangel.png",
+"blob_blobamused" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blobamused.png",
+"blob_blob3c" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blob3c.png",
+"blob_blob0w0" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blob0w0.png",
+"blob_blob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/blob.png",
+"blob_b4nzyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/b4nzyblob.png",
+"blob_b1nzyblob2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/b1nzyblob2.png",
+"blob_b1nzyblob" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/blob/b1nzyblob.png",
+
+"bilibili_热词系列_“狼火”" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_“狼火”.png",
+"bilibili_热词系列_知识增加" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_知识增加.png",
+"bilibili_热词系列_张三" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_张三.png",
+"bilibili_热词系列_有内味了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_有内味了.jpg",
+"bilibili_热词系列_我裂开了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我裂开了.png",
+"bilibili_热词系列_我哭了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我哭了.jpg",
+"bilibili_热词系列_问号" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_问号.png",
+"bilibili_热词系列_危" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_危.jpg",
+"bilibili_热词系列_你细品" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_你细品.jpg",
+"bilibili_热词系列_猛男必看" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_猛男必看.jpg",
+"bilibili_热词系列_害" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_害.jpg",
+"bilibili_热词系列_咕咕" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_咕咕.jpg",
+"bilibili_热词系列_递话筒" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_递话筒.png",
+"bilibili_热词系列_标准结局" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_标准结局.png",
+"bilibili_热词系列_爱了爱了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_爱了爱了.png",
+"bilibili_热词系列_知识盲区" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_知识盲区.png",
+"bilibili_热词系列_镇站之宝" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_镇站之宝.png",
+"bilibili_热词系列_真香" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_真香.png",
+"bilibili_热词系列_有生之年" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_有生之年.png",
+"bilibili_热词系列_爷关更" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_爷关更.png",
+"bilibili_热词系列_秀" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_秀.png",
+"bilibili_热词系列_下次一定" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_下次一定.png",
+"bilibili_热词系列_我太南了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我太南了.png",
+"bilibili_热词系列_我酸了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我酸了.png",
+"bilibili_热词系列_我全都要" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_我全都要.png",
+"bilibili_热词系列_完结撒花" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_完结撒花.png",
+"bilibili_热词系列_神仙UP" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_神仙UP.png",
+"bilibili_热词系列_三连" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_三连.png",
+"bilibili_热词系列_你币有了" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_你币有了.png",
+"bilibili_热词系列_妙啊" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_妙啊.png",
+"bilibili_热词系列_可以" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_可以.png",
+"bilibili_热词系列_高产" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_高产.png",
+"bilibili_热词系列_大师球" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_大师球.png",
+"bilibili_热词系列_打卡" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_打卡.png",
+"bilibili_热词系列_锤" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_锤.png",
+"bilibili_热词系列_吹爆" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_吹爆.png",
+"bilibili_热词系列_不愧是你" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_不愧是你.png",
+"bilibili_热词系列_奥力给" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_奥力给.png",
+"bilibili_热词系列_AWSL" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_AWSL.png",
+"bilibili_热词系列_狼火" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/bilibili/热词系列_狼火.png",
+
+"custom_37" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/097cd88f446efae87cb27de38c5eed15.png",
+"custom_36" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/ec2166501d29bc1eb7380c22944db462.png",
+"custom_35" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/8ca39f96c182e51cd752dde464157c2e.png",
+"custom_34" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/0a65c5dd18872b56605c08f7bae2e8c8.png",
+"custom_33" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/22/ec3edbfe84684fdb1680307d261c3c7b.png",
+"custom_32" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/31.webp",
+"custom_31" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/30.gif",
+"custom_30" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/29.webp",
+"custom_29" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/28.webp",
+"custom_28" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/27.webp",
+"custom_27" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/26.webp",
+"custom_26" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/25.jpg",
+"custom_25" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/24.webp",
+"custom_24" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/23.webp",
+"custom_23" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/22.webp",
+"custom_22" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/21.webp",
+"custom_21" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/20.webp",
+"custom_20" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/19.webp",
+"custom_19" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/18.jpg",
+"custom_18" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/17.webp",
+"custom_17" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/16.webp",
+"custom_16" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/15.webp",
+"custom_15" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/14.webp",
+"custom_14" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/13.webp",
+"custom_13" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/12.webp",
+"custom_12" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/11.webp",
+"custom_11" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/10.webp",
+"custom_10" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/9.webp",
+"custom_9" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/8.webp",
+"custom_8" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/7.webp",
+"custom_7" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/6.gif",
+"custom_6" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/5.gif",
+"custom_5" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/4.jpg",
+"custom_4" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/3.jpg",
+"custom_3" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/2.webp",
+"custom_2" : "https://cdn.jsdelivr.net/gh/blogimg/emotion/custom/1.webp",
+"custom_1" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@master/2020/04/19/c3164053d300cc5cca5e4dc3311842dc.png",
+"custom_0" : "https://cdn.jsdelivr.net/gh/blogimg/picbed@master/2020/04/19/6b5e768e524c8441ba66184bfdd86d4d.png",
+
+        }
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
+
             
-                
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/KSbywl3qHDrc6Uz.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/KSbywl3qHDrc6Uz.jpg" alt="img"+0 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/WTEy2bapZQRzkwB.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/WTEy2bapZQRzkwB.jpg" alt="img"+1 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/xT1PVM3ECOuscFt.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/xT1PVM3ECOuscFt.jpg" alt="img"+2 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/nPAJtDgT7FUb83C.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/nPAJtDgT7FUb83C.jpg" alt="img"+3 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/9XHkK4eB2vJELrj.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/9XHkK4eB2vJELrj.jpg" alt="img"+4 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/ueS1v5gr3HKkaGx.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/ueS1v5gr3HKkaGx.jpg" alt="img"+5 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/TAS3rt9BWkUJe21.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/TAS3rt9BWkUJe21.jpg" alt="img"+6 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/lzYDPwZNeQ5j14a.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/lzYDPwZNeQ5j14a.jpg" alt="img"+7 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/xYn4agc5u3vwqR7.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/xYn4agc5u3vwqR7.jpg" alt="img"+8 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/Pb3aUVioQ8ZJhjW.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/Pb3aUVioQ8ZJhjW.jpg" alt="img"+9 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/kbHx1YAtrMXSROs.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/kbHx1YAtrMXSROs.jpg" alt="img"+10 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/Q8JHV7zBUSTcPFu.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/Q8JHV7zBUSTcPFu.jpg" alt="img"+11 >
-                        </a>                   
-                
-                                       
-                        <a target="_blank" rel="noopener" href="https://i.loli.net/2020/10/05/z9s7fxMne8gjPBT.jpg" data-caption="西双版纳之行">
-                            <img class="mat" src="/medias/loading.svg" data-src="https://i.loli.net/2020/10/05/z9s7fxMne8gjPBT.jpg" alt="img"+12 >
-                        </a>                   
-                
-            
-        </div>
+			
+			
         </div>
     </div>
-</section>
-
-<script>
-    $(function () {
-        // 获取图片的宽度(200px)
-        let imgWidth = $('.mat').outerWidth(); // 200
-        waterfallHandler();
-        // 瀑布流处理
-        function waterfallHandler() {
-            // 获取图片的列数
-            let column = parseInt($(window).width() / imgWidth);
-            // 高度数组
-            let heightArr = [];
-            for(let i=0; i<column; i++) {
-                heightArr[i] = 0;
-            }
-            // 遍历所有图片进行定位处理
-            $.each($('.mat'), function (index, item) {
-                // 当前元素的高度
-                let itemHeight = $(item).outerHeight();
-                // 高度数组最小的高度
-                let minHeight = Math.min(...heightArr);
-                // 高度数组最小的高度的索引
-                let minIndex = heightArr.indexOf(minHeight);
-                
-                $(item).css({
-                    position: 'absolute',
-                    top: minHeight + 'px',
-                    left: minIndex * imgWidth + 'px'
-                });
-                heightArr[minIndex] += itemHeight;
-            });
-        }
-        // 窗口大小改变
-        $(window).resize(function () {
-            waterfallHandler();
-        });
-    });
-</script>
-<script>
-    baguetteBox.run('.gallery', {
-        // 配置参数
-        buttons:Boolean,//是否显示导航按钮。
-        noScrollbars:true,//是否在显示时隐藏滚动条。
-        titleTag:true,//是否使用图片上的title属性作为图片标题
-        async:false,//是否异步加载文件。
-    });
-
-    start()
-        $(window).on('scroll', function(){
-         start();
-    })
-
-    function start(){
-          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-        $('.gallery img').not('[data-isLoaded]').each(function(){
-            var $node = $(this)
-            if( isShow($node) ){
-                loadImg($node);
-            }
-        });
-     }
-
-    //判断一个元素是不是出现在窗口(视野)
-    function isShow($node){
-        return $node.offset().top <= $(window).height() + $(window).scrollTop();
-    }
-    //加载图片
-    function loadImg($img){
-    //.attr(值)
-    //.attr(属性名称,值)
-        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
-        $img.attr('data-isLoaded', 1);//已加载的图片做标记
-    }
-</script>
-
+</main>
 
 
     <style>
