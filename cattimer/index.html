@@ -259,13 +259,6 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/cattimer">
-          
-          <span>cattimer</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/hotreview">
           
           <span>hotreview</span>
@@ -283,6 +276,13 @@
         <a href="/chromedragon">
           
           <span>chromedragon</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/cattimer">
+          
+          <span>cattimer</span>
         </a>
       </li>
       
@@ -512,14 +512,6 @@
               
                 <li>
 
-                  <a href="/cattimer " style="margin-left:75px">
-				  
-		          <span>cattimer</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/hotreview " style="margin-left:75px">
 				  
 		          <span>hotreview</span>
@@ -539,6 +531,14 @@
                   <a href="/chromedragon " style="margin-left:75px">
 				  
 		          <span>chromedragon</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/cattimer " style="margin-left:75px">
+				  
+		          <span>cattimer</span>
                   </a>
                 </li>
               
@@ -565,6 +565,9 @@
     .card-content {
         padding: 12px!important;
     }
+    #sma {
+        display: none;
+    }
     .cat {
         width: 1100px;
         height: 450px;
@@ -578,36 +581,30 @@
         display: flex;
         flex-direction: row;
     }
-    #background {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: white;
-    }
     .navbar-fixed {
         position: fixed;
     }
     header .nav-transparent {
         background-color: #000!important;
     }
+    .backs {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+    }
     /* 修改小屏幕下logo文字样式. */
-    @media screen and (max-width: 1060px) {
-        #cat {
-            width: 100%;
-            left: 0px;
-            margin-left: 0px;
-            justify-content: center;
+    @media screen and (max-width: 1080px) {
+        .cat {
+            transform: translateX(-41px);
         }
     }
 </style>
-<div id="background"></div>
-<main class="content">
-    <div class="container">
-        <div class="cat card">
-            <iframe src="https://cn.easycattimer.com/"  frameborder="no" border="0"  scrolling="no" marginwidth="0" marginheight="0" ></iframe>
-        </div>
-    </div>
-</main>
+
+<div class="backs"></div>
+<div class="cat">
+    <iframe src="https://cn.easycattimer.com/"  frameborder="no" border="0"  scrolling="no" marginwidth="0" marginheight="0" ></iframe>
+</div>
         
 
 
