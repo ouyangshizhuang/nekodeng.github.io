@@ -259,16 +259,16 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/ticktack">
+        <a href="/hotreview">
           
-          <span>ticktack</span>
+          <span>hotreview</span>
         </a>
       </li>
       
       <li>
-        <a href="/hotreview">
+        <a href="/ticktack">
           
-          <span>hotreview</span>
+          <span>ticktack</span>
         </a>
       </li>
       
@@ -505,17 +505,17 @@
               
                 <li>
 
-                  <a href="/ticktack " style="margin-left:75px">
+                  <a href="/hotreview " style="margin-left:75px">
 				  
-		          <span>ticktack</span>
+		          <span>hotreview</span>
                   </a>
                 </li>
               
                 <li>
 
-                  <a href="/hotreview " style="margin-left:75px">
+                  <a href="/ticktack " style="margin-left:75px">
 				  
-		          <span>hotreview</span>
+		          <span>ticktack</span>
                   </a>
                 </li>
               
@@ -658,10 +658,32 @@
             /* 修改小屏幕下logo文字样式. */
             @media only screen and (max-width: 600px) {
                 .bg-cover {
-                    height: 35vh;
+                    height: 32vh;
                 }
             }
+            source, audio {
+                outline: none;
+                border: 0;
+            }
+            .audiobtn {
+                margin: 30px auto 10px;               
+            }
+            .poem-wrap {
+                margin: 40px auto 20px;
+            }
+            .kuandus {
+                width: 66px!important;
+            }
+            .kuandus a {
+                display: inline-block;
+                padding: 6px;
+            }
+            .kuandus a span {
+                color: #797979;
+            }
         </style>
+        
+        <!-- 社会语录模块 -->
         <div class="card cardbg">
             <div class="note info">精神小伙，那社会语录真的是铁铁的，然后就想起一言API了哈哈哈嗝儿，于是就 ...... 社会语录API，老铁，整一个？<code>安排？</code></a></div>
             <div class="btns center-align">
@@ -678,8 +700,92 @@
                 .then(data => susays.innerText = data.say);
             </script>
             <script src="https://cdn.ipayy.net/says/my.js"></script>
+            <div class="audiobtn center-align">
+                <audio controls>
+                    <source id="tts_source" type="audio/mpeg" src="http://tts.baidu.com/text2audio/text2audio?lan=zh&amp;ie=UTF-8&amp;spd=4.5&amp;text=
+                    社会语录，老铁，开始给你安排，
+                    精神语录网上抄，小心钢棍身上飘，
+                    王八摸头必有所求，大哥摸头必有所愁，大哥你潇洒人世走，王八它快乐水中游，
+                    下山猛虎战群狼，败者为寇胜者为王，
+                    社会没有遮天树 只有一物，降一物，
+                    万般皆是命，半点不由人，你看我还有几分像从前，
+                    我年轻需要你指点，但不需要你指指点点，
+                    青春献给小酒桌，醉生梦死就是喝，
+                    只怪自我，太年轻，是人是狗没分清，
+                    社会道路一条条，社会哥得配上社会摇，
+                    你有你的故事，我有我的背景，不是很硬，但你别碰，
+                    我见过她所有的样子，我只想要看看她不属于我的样子，
+                    世界那么乱，你装纯给谁看，
+                    现在的小伙装社会，小姑娘，她装太妹，喝点酒她如痴如醉，你给我装鸡毛黑社会，
+                    人生如梦一盘棋，大小流氓请少提，
+                    展翅翱翔做气质流氓，不慌不忙在咱们来日方长，
+                    可能你路子很野，很牛逼，但我不待见你，你就是傻逼，
+                    你是我新鲜感褪去后仅存的心动，
+                    小皮鞋配牛仔裤，俩腿一迈，流氓步，
+                    做事分清眉眼高低，耗子没事儿别舔猫逼，
+                    你强归你强 我做我的王，
+                    得不到就是得不到，别总说你不想要，
+                    关公骑马战千里，你要排面我给你，
+                    手拿扎枪烽火令，小伙注定社会命。
+                    老铁，安排到此结束，下次再来。
+                    ">
+                </audio>
+            </div>
         </div>
 
+        <!-- 网易云热评模块 -->
+        <div class="card cardbg">
+            <div class="note info">今天你网抑云了吗？兄弟们，到点了到点了，都给我哭~ 呜呜呜呜呜...，夜间11：59：59，来不及了解释了，<code>上车？</code></a></div>
+                <div class="btns center-align">
+                    <img src="https://7.dusays.com/2020/10/16/f6f3e72b9ef97.jpg">
+                </div>
+                <!-- 加入网易云音乐热门评论，实时更新 --> 
+                <div class="poem-wrap"> 
+                    <div class="poem-border poem-left"></div>
+                    <div class="poem-border poem-right"></div>
+                    <h1>网抑云热评</h1>
+                    <p id="poem">loading...</p>
+                    <p id="info">loading...</p>
+                </div>
+                <div class="poem-wrap kuandus center-align">
+                    <div class="poem-border poem-left"></div>
+                    <div class="poem-border poem-right"></div>
+                    <a href="javascript:location.reload()"><span class="huans">下一句</span></a>
+                </div>
+                <script>
+                    $.get("https://v1.hitokoto.cn?c=j",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
+                </script>
+
+                <div class="audiobtn center-align">
+                    <audio controls>
+                        <source id="tts_source" type="audio/mpeg" src="http://tts.baidu.com/text2audio/text2audio?lan=zh&amp;ie=UTF-8&amp;spd=4.8&amp;text=
+                        兄弟，要开始网抑云了哦。
+                        遗憾吗，那么喜欢连张合影都没有。
+                        你回头看了我一眼，我记了好多年。
+                        我们听过无数的道理，却仍旧过不好这一生。
+                        生而为人，我很抱歉。
+                        希望你没有动态的日子里都在好好生活。
+                        你走的时候，没有一丝停留。
+                        我今天失恋了，陌生人能给我点个赞吗。
+                        我喜欢你，从满心欢喜到满目疮疾。
+                        你说爱情爱要两情相悦,否则,所有的喜欢都是心酸。
+                        下雨了，我说的不是天气。
+                        世界上最令人激动的一件事情是，你原本以为没有机会靠近的人。竟然爱上了你。
+                        你叫我听的歌我都觉得有意义，
+                        你说的电影我都觉得有深意，你口中的风景我都觉得好美丽，不过是因为我喜欢你。
+                        我记忆中三次最强烈的心跳，分别发生在上课被老师点名，
+                        下楼梯一脚踩空，还有你对我微笑的时候。
+                        到点了，已黑化，好想爱这个世界。
+                        我有一个朋友很喜欢李诞的这一句情诗：起初，大雨中百鬼夜行，我们混在其中，比鬼还高兴。
+                        数学里说，过程错了，就是错了。
+                        后来我发现，太浓烈的东西总是不长久，
+                        应了那句老话，第一眼就心动的人没法做朋友。
+                        见到你那一刻我心里有场海啸，可我静静站着，没有让任何人知道。
+                        喜欢一个人的时候，吸进去那么多勇气，呼出来的都是叹息。
+                        好了，兄弟们，今天就到此为止吧，明天依旧元气满满哦。                        ">
+                    </audio>
+                </div>
+        </div>
 
 
 
