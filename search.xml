@@ -56,11 +56,11 @@
     
     
     <entry>
-      <title>Chrome小恐龙跑酷游戏</title>
+      <title>Chrome小恐龙跑酷游戏加强版</title>
       <link href="/posts/chrome-dragon-game.html"/>
       <url>/posts/chrome-dragon-game.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言: 偶然间在一个大佬博客里发现的，挺有趣的，就是离线状态下chrome浏览器会出现的那个小游戏。</div><div class="note info">操作介绍：先点击小恐龙<br>开始游戏：再按 “空格键” 或者 “点击屏幕” <br>跳跃：“空格键”  <br>爬行： ↓ <br>如果右上角时间数值未变或者较慢，请多点击空格或刷新网站加载速度略慢请等待。<br>支持手机，电脑，等设备玩耍，点击屏幕开始和跳跃。</div><iframe align="center" width="100%" height="200px" src="https://api.dlizi.com:555/dinogame/index.html" frameborder="no" border="0" scrolling="no" marginwidth="0" marginheight="0" style="border: 1px solid #d8d5d5;"></iframe><p>转载自：<br><a href="https://www.xsy.fun/archives/170/" class="LinkCard" target="_blank">将Chrome离线小恐龙嵌入博客</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言: 离线状态下chrome浏览器会出现的那个小游戏，然后这个是加强版，可以使用道具。</div><div class="note info">操作介绍：<br>开始游戏：首先点击屏幕 <br>跳跃：注意是“点击屏幕” ！<br>道具：跳跃后捡到的道具，使用下方对应26字母键盘键<br>支持手机，电脑，等设备玩耍，点击屏幕开始和跳跃。</div><div><iframe width="100%" height="488px" src="https://dinoswords.gg/" frameborder="no" border="0" scrolling="no" marginwidth="0" marginheight="0"></iframe></div><p><a href="https://nekodeng.gitee.io/chromedragon/" class="LinkCard" target="_blank">Chrome小恐龙跑酷游戏加强版</a></p>]]></content>
       
       
       <categories>
