@@ -2487,7 +2487,8 @@ nav ul li:hover a[href="/archives"] span,
 nav ul li:hover a[href="/lakers-championship"] span,
 nav ul li:hover a[href="/ticktack"] span,
 nav ul li:hover a[href="/chromedragon"] span,
-nav ul li:hover a[href="/hotreview"] span
+nav ul li:hover a[href="/hotreview"] span,
+nav ul li:hover a[href="/cattimer"] span
   {
     border: none!important;
 }
